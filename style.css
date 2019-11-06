@@ -1,0 +1,38 @@
+#background{
+  max-width: 100%;
+  padding: 0em;
+  margin:0em;
+  border: 0em;
+}
+
+body{
+  padding:0em;
+  margin:0em;
+  background-color: #0d0d0d;
+}
+#navigation {
+  margin: 0em;
+  padding: 0em;
+  height:2em;
+  width: 100%;
+  background-color: #1a1a1a;
+  position: sticky;
+  top:0;
+}
+#navigation button{
+  color: white;
+  border:none;
+  background-color: #1a1a1a;
+  float:left;
+  padding: 0em;
+  margin: 0em;
+  text-align: center;
+  height: 2em;
+  width: 16.666%;
+  font-size: 1em;
+}
+
+p {
+  color:white;
+  font-size: 4em;
+}
