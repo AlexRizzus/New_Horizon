@@ -8,31 +8,54 @@
 body{
   padding:0em;
   margin:0em;
-  background-color: #0d0d0d;
+  background-color: #1a1a1a;
+  font-family: Helvetica;
+  color: #d3d3d3
 }
 #navigation {
   margin: 0em;
   padding: 0em;
-  height:2em;
+  height:2.6em;
   width: 100%;
-  background-color: #1a1a1a;
+  background-color: #1d1d1d;
   position: sticky;
   top:0;
 }
 #navigation button{
   color: white;
   border:none;
-  background-color: #1a1a1a;
+  background-color: #1d1d1d;
   float:left;
-  padding: 0em;
+  padding: 0.6em;
   margin: 0em;
   text-align: center;
   height: 2em;
   width: 16.666%;
-  font-size: 1em;
+  font-size: 1.2em;
 }
-
-p {
-  color:white;
+#content p {
+  color: #d3d3d3;
   font-size: 4em;
+}
+#footer {
+  background-color: #1d1d1d;
+  padding: 0.6em 2em;
+}
+#footer p{
+  width:100%;
+  float:left;
+}
+#white-button {
+  background-color: #1a1a1a;
+  color: white;
+  border: 0.2em solid white;
+  border-radius: 0.5em;
+  padding: 0.3em;
+  font-size: 1em;
+  transition-duration: 0.4s;
+  float:right;
+}
+#white-button:hover {
+  background-color:white;
+  color:black;
 }
