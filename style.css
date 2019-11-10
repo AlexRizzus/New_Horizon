@@ -15,7 +15,7 @@ body{
 #navigation {
   margin: 0em;
   padding: 0em;
-  height:2.6em;
+  height: auto;
   width: 100%;
   background-color: #1d1d1d;
   position: sticky;
@@ -26,7 +26,7 @@ body{
   border:none;
   background-color: #1d1d1d;
   float:left;
-  padding: 0.6em;
+  padding: 0em;
   margin: 0em;
   text-align: center;
   height: 2em;
@@ -35,7 +35,12 @@ body{
 }
 #content p {
   color: #d3d3d3;
-  font-size: 4em;
+}
+.left-text {
+  float:left;
+  max-width: 45%;
+  padding-left: 1em;
+  font-size: 2em;
 }
 #footer {
   background-color: #1d1d1d;
@@ -58,4 +63,12 @@ body{
 #white-button:hover {
   background-color:white;
   color:black;
+}
+
+.right-content {
+  max-width: 45%;
+  padding:1em;
+  border-radius: 3em;
+  float:right;
+  padding-top: 4em;
 }
