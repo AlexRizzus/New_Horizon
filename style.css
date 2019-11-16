@@ -8,9 +8,9 @@
 body{
   padding:0em;
   margin:0em;
-  background-color: #1a1a1a;
+  background-color: #0f0f0f;
   font-family: Helvetica;
-  color: #d3d3d3
+  color: #d3d3d3;
 }
 #navigation {
   margin: 0em;
@@ -58,21 +58,39 @@ body{
   grid-area: d;
   font-size: 3em;
   text-align: center;
-  align:center;
   align-items: center;
   padding:1.2em 3em;
+}
+
+.item5 {
+  grid-area: e;
+  font-size: 3em;
+  text-align: center;
+  align-items: center;
+  padding:1.2em 3em;
+}
+
+.item6 {
+  grid-area: f;
+}
+
+.item6 img{
+  max-width: 80%;
+  align-self: center;
+  margin-top: 10%;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
-  grid-template-areas: 'a a a b''c c d d';
+  grid-template-areas: 'a a a b''c c d d''e e f f';
   grid-gap: 1em;
+  grid-row-gap: 3em;
   padding:1em;
   margin-top:5.5em;
 }
 .mission-home {
-  background-color:#009900;
+  background-color:#33ff33;
   color:#d3d3d3;
   border-radius: 1em;
   margin: 1em;
@@ -87,7 +105,6 @@ body{
 }
 #footer {
   background-color: #1d1d1d;
-  padding: 0.6em 2em;
 }
 #footer p{
   width:100%;
@@ -95,7 +112,7 @@ body{
 
 }
 .white-button {
-  background-color: #1a1a1a;
+  background-color: #0a0a0a;
   color: white;
   border: 0.2em solid white;
   border-radius: 0.5em;
