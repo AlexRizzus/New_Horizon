@@ -1,30 +1,30 @@
-#background{
-  max-width: 100%;
+#background {
+  width: 100%;
+  height:auto;
   padding: 0em;
   margin:0em;
   border: 0em;
 }
-
-body{
+body {
   padding:0em;
   margin:0em;
-  background-color: #0f0f0f;
-  font-family: Helvetica;
+  background-color: #001115;
+  font-family: 'Oswald', sans-serif;
   color: #d3d3d3;
 }
 #navigation {
   margin: 0em;
-  padding: 0em;
-  height: auto;
+  padding: 1em;
+  height: 2.5em;
   width: 100%;
-  background-color: #1d1d1d;
+  background-color: #002125;
   position: sticky;
   top:0;
 }
-#navigation button{
+#navigation button {
   color: white;
   border:none;
-  background-color: #1d1d1d;
+  background-color: #002125;
   float:left;
   padding: 0em;
   margin: 0em;
@@ -33,7 +33,6 @@ body{
   width: 16.666%;
   font-size: 1.2em;
 }
-
 .item1 {
   grid-area: a;
   font-size: 2.6em;
@@ -53,7 +52,6 @@ body{
   grid-area: c;
   margin: 0em 5em;
 }
-
 .item4 {
   grid-area: d;
   font-size: 3em;
@@ -61,7 +59,6 @@ body{
   align-items: center;
   padding:1.2em 3em;
 }
-
 .item5 {
   grid-area: e;
   font-size: 3em;
@@ -69,17 +66,14 @@ body{
   align-items: center;
   padding:1.2em 3em;
 }
-
 .item6 {
   grid-area: f;
 }
-
-.item6 img{
+.item6 img {
   max-width: 80%;
   align-self: center;
   margin-top: 10%;
 }
-
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
@@ -99,17 +93,17 @@ body{
   padding-top:0.5em;
   text-decoration: none;
 }
-.mission-home a{
+.mission-home a {
   text-decoration: underline;
   color: #d3d3d3;
 }
 #footer {
-  background-color: #1d1d1d;
+  background-color: #002125;
   height: 3em;
   padding:1em;
 }
 .find-more-button {
-  background-color: #0a0a0a;
+  background-color: #001115;
   color: white;
   border: 0.2em solid white;
   border-radius: 0.5em;
@@ -123,7 +117,7 @@ body{
   color:black;
 }
 .login-button {
-  background-color: #0a0a0a;
+  background-color: #002125;
   color: white;
   border: 0.2em solid white;
   border-radius: 0.5em;
