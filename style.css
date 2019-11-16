@@ -105,13 +105,10 @@ body{
 }
 #footer {
   background-color: #1d1d1d;
+  height: 3em;
+  padding:1em;
 }
-#footer p{
-  width:100%;
-  float:left;
-
-}
-.white-button {
+.find-more-button {
   background-color: #0a0a0a;
   color: white;
   border: 0.2em solid white;
@@ -121,7 +118,21 @@ body{
   font-size: 0.5em;
   transition-duration: 0.4s;
 }
-.white-button:hover {
+.find-more-button:hover {
+  background-color:white;
+  color:black;
+}
+.login-button {
+  background-color: #0a0a0a;
+  color: white;
+  border: 0.2em solid white;
+  border-radius: 0.5em;
+  padding: 0.3em;
+  margin:0em;
+  font-size: 1em;
+  transition-duration: 0.4s;
+}
+.login-button:hover {
   background-color:white;
   color:black;
 }
