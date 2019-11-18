@@ -1,32 +1,64 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<!DOCTYPE html>
+<html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>NEW HORIZON</title>
-    <meta name="title" content="New Horizon - we bring your dreams to space" />
+    <meta name="title" content="Sito New Horizon" />
     <meta name= "description" content="Home page of New Horizon s.p.a. company"/>
     <meta name= "keywords" content = "New, Horizon, New Horizon, Space, Shuttle, Moon, Mars, Earth, Spazio, Terra, Luna, Marte"/>
     <meta name="language" content="italian it"/>
     <meta name="author" content="Alessandro Rizzo, Emanuele Cisotto, Davide Lazzaro e Paolo Scialpi"/>
     <link href="style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald:500&display=swap" rel="stylesheet">
   </head>
   <body>
     <img src="images/background-home-1.jpg" id="background" alt="background image"/>
-    <nav id="navigation">
-            <button href="#">Home</button>
-            <button href="#">Esplorazioni</button>
-            <button href="#">Chi siamo</button>
-            <button href="#">Servizi</button>
-            <button href="#">Ricerca & Sviluppo</button>
-            <button href="#">Contattaci</button>
-    </nav>
-    <div id="content">
-    <p class = "left-text">New Horizon è una compagnia non governativa leader nelle esplorazioni spaziali per scopi scientifici, abbiamo collaborato con diverse agenzie spaziali governative per molte missioni spaziali costruendo
-    sonde e componenti dei lanciatori. Abbiamo lanciato missioni indipendenti all'interno e oltre il sistema solare, la nostra azienda conta più di 10000 dipendenti tra tecnici, ricercatori e astronauti.</p>
-    <img src="images/iss.jpg"  class = "right-content" alt="astronauta in missione attorno alla terra"/>
+    <div id="navigation">
+            <button href="#" class="position" tabindex="1">Home</button>
+            <button href="#" tabindex="2">Esplorazioni</button>
+            <button href="#" tabindex="3">Chi siamo</button>
+            <button href="#" tabindex="4">Servizi</button>
+            <button href="#" tabindex="5">Ricerca &amp; Sviluppo</button>
+            <button href="contattaci.html" tabindex="6">Contattaci</button>
+    </div>
+    <div class="grid-container">
+      <div class="item1"><p tabindex="7">New Horizon è una compagnia non governativa leader nelle esplorazioni spaziali per scopi scientifici, abbiamo collaborato con diverse agenzie spaziali governative per molte missioni spaziali costruendo
+        sonde e componenti dei lanciatori.</p></div>
+      <div class="item2"><img src="images/astronaut-cartoon.png" alt="astronauta"/></div>
+      <div class="item3">
+        <h1 tabindex="8">Ultime missioni</h1>
+      <div class="mission-home" tabindex="9">
+        <h2>Mission 1</h2>
+        <p>iniziata il: / / /</p>
+        <p>status: ----------</p>
+        <a href="#" tabindex="10">scopri di più</a>
+      </div>
+      <div class="mission-home" tabindex="11">
+        <h2>Mission 1</h2>
+        <p>iniziata il: / / /</p>
+        <p>status: ----------</p>
+        <a href="#" tabindex="12">scopri di più</a>
+      </div>
+      <div class="mission-home" tabindex="13" tabindex="1">
+        <h2>Mission 1</h2>
+        <p>iniziata il: / / /</p>
+        <p>status: ----------</p>
+        <a href="#" tabindex="14">scopri di più</a>
+      </div>
+    </div>
+    <div class="item4">
+      <p tabindex="15">Partecipiamo a missioni in tutto il sistema solare e anche oltre in collaborazione con le altre agenzie spaziali</br>
+      <button type="button" class="find-more-button" name="missioni-scopri" tabindex="16">scopri di più</button></p>
+    </div>
+    <div class="item5" tabindex="17"><p>Ad oggi abbiamo sedi sparse in tutto il mondo, centri di ricerca in Europa e Stati Uniti, osservatori in sud-America e centri di lancio in Asia. Ma in futuro... <br/>
+      <button type="button" class="find-more-button" name="missioni-scopri" tabindex="18">scopri di più</button></p></div>
+    <div class="item6"><img src="images/lunar-base.png" alt="base lunare"/></div>
+    <div class="item7"><img src="images/telescope.png" alt="telescopio"/></div>
+    <div class="item8" tabindex="19"><p> Nel mentre studiamo lo spazio da qui e utilizziamo quei dati per fabbricare sonde più efficienti.</br><button type="button" class="find-more-button" name="missioni-scopri" tabindex="20">scopri di più</button></p></div>
+
     </div>
 <div id="footer">
-  <p>Follow us on: <a href="#">Twitter</a> <a href="#">Facebbok</a> <a href="#">Instagram</a> <button type="button" id="white-button" name="Login">Login</button> </p>
+  <p tabindex="21">Follow us on: <a href="#">Twitter</a> <a href="#">Facebbok</a> <a href="#">Instagram</a> <button type="button" class="login-button" name="Login">Login</button> </p>
 </div>
 </body>
 </html>
