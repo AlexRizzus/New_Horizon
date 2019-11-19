@@ -187,3 +187,53 @@ body {
   margin-left: 7%;
   height: auto;
 }
+
+.subtitle_cont{
+  font-size: 2.5em;
+}
+
+#green_data{
+  display: grid;
+  grid-template-columns: 0.33fr 1fr 1fr;
+  grid-template-areas:  'i1 t1 t1'
+                        'i2 t2 t2';
+  grid-gap: 0.1em;
+  align-items: center;
+}
+
+#curio_icon1{
+  grid-area: i1;
+}
+
+#curio_icon2{
+  grid-area: i2;
+}
+
+.curio_icon{
+
+  margin: 0.5em;
+  color: white;
+}
+
+.icon{
+  max-width: 1em;
+  max-height: 1em;
+  vertical-align: baseline;
+  margin: 0em 0.5em 0em 0.5em;
+}
+
+#curio_data1{
+    grid-area: t1;
+}
+
+#curio_data2{
+    grid-area: t2;
+}
+
+.curio_data{
+  margin: 1em;
+  padding: 0.25em;
+  max-width: 35em;
+  background-color: #00ff99;
+  color: #000;
+}
