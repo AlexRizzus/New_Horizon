@@ -29,7 +29,7 @@ body {
   margin: 0em;
   text-align: center;
   height: 2.6em;
-  width: 16.666%;
+  width: 14.285%;
   font-size: 1.6em;
 }
 
@@ -43,7 +43,7 @@ body {
   margin: 0em;
   text-align: center;
   height: 2.6em;
-  width: 16.666%;
+  width: 14.285%;
   font-size: 1.6em;
 }
 .item1 {
@@ -112,7 +112,7 @@ body {
 .mission-home {
   background-color:#33ff33;
   color:#d3d3d3;
-  border-radius: 1em;
+  border-radius: 0.4em;
   margin: 1em;
   padding-left:4em;
   padding-bottom:1em;
@@ -128,12 +128,22 @@ body {
   width: 100%;
 }
 #footer {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-areas: 'a m b';
+  grid-gap: 0.5em;
+  margin-top:5.5em;
   text-align: center;
-  column-count: 3;
-  column-width: 33.333%;
   background-color: #002125;
-  height: 3em;
-  padding:1em;
+  height: 7em;
+  margin-bottom:0em;
+}
+.validation {
+  grid-area: a;
+  padding:1.4em;
+}
+.validation a{
+  padding: 0em 1em;
 }
 .find-more-button {
   background-color: #001115;
@@ -163,8 +173,17 @@ body {
   background-color:white;
   color:black;
 }
+.social{
+  grid-area: b;
+  margin: 0em;
+  padding:1.6em;
+}
+.info {
+  grid-area: m;
+  text-align: center;
+}
 .footer-icon {
   width: 6%;
-  margin-left: 1em;
+  margin-left: 7%;
   height: auto;
 }
