@@ -124,10 +124,11 @@ body {
   padding-bottom:1em;
   padding-top:0.5em;
   text-decoration: none;
+  box-shadow: -0.3em 0.3em 0.3em 0.05em #838383;
 }
 .mission-home a {
   text-decoration: underline;
-  color: #d3d3d3;
+  color: #002125;
 }
 .right-content{
   height: 100%;
@@ -155,7 +156,7 @@ body {
   background-color: #001115;
   color: white;
   border: 0.2em solid white;
-  border-radius: 0.5em;
+  border-radius: 0.4em;
   padding: 0.3em;
   margin:0em;
   font-size: 0.5em;
