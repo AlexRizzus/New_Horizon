@@ -198,11 +198,17 @@ body {
 
 #green_data{
   display: grid;
+  margin: 2em;
   grid-template-columns: 0.33fr 1fr 1fr;
   grid-template-areas:  'i1 t1 t1'
                         'i2 t2 t2';
   grid-gap: 0.1em;
   align-items: center;
+}
+
+#contentAbout{
+  margin: 1em;
+  font-size: 1.2em;
 }
 
 #curio_icon1{
@@ -236,10 +242,50 @@ body {
 
 .curio_data{
   margin: 1em;
-  padding: 0.25em;
+  border-radius: 0.2em;
+  box-shadow: 0.2em 0.2em 1em 0.005em #63cf80;
+  padding: 0.25em 1em 0.25em 1em;
   max-width: 35em;
   background-color: #00ff99;
   color: #000;
+}
+
+
+#collab-vantaggi{
+  display: grid;
+  grid-template-areas: 'cv1 cv2 cv3 cv4''cv5 cv6 cv7 cv8';
+  align-items: center;
+  justify-content: start;
+  justify-items: center;
+  grid-column-gap: 1em;
+}
+#collab_vantaggio1{
+  grid-area: cv1;
+}
+#collab_vantaggio2{
+  grid-area: cv3;
+}
+#collab_vantaggio3{
+  grid-area: cv5;
+}
+#collab_vantaggio4{
+  grid-area: cv7;
+}
+.collab_icon{
+  width: 4em;
+  height: 4em;
+}
+#collab_icon1{
+  grid-area: cv2;
+}
+#collab_icon2{
+  grid-area: cv4;
+}
+#collab_icon3{
+  grid-area: cv6;
+}
+#collab_icon4{
+  grid-area: cv8;
 }
 }
 @media screen and (max-width: 1099px){
