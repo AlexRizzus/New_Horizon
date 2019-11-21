@@ -49,6 +49,7 @@ body {
   width: 14.285%;
   font-size: 1.4em;
   font-family: 'Oswald', sans-serif;
+    box-shadow: 0em 0em 1em 0.2em #e3e3e3;
 }
 .item1 {
   grid-area: a;
@@ -209,9 +210,18 @@ body {
 }
 
 #contentAbout{
-  margin: 1em;
-  font-size: 1.2em;
+    margin: 1em;
 }
+
+#contentAbout abbr{
+  text-decoration: none;
+}
+
+#contentAbout h1{
+    font-size: 1.2em;
+}
+
+#contentAbout
 
 #curio_icon1{
   grid-area: i1;
