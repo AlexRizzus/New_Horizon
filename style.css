@@ -291,6 +291,10 @@ body {
     width: 14.285%;
     font-size: 1.2em;
   }
+  #navigation .position img {
+    height: 2em;
+    width: auto;
+  }
   .item1 {
     grid-area: a;
     font-size: 2.6em;
