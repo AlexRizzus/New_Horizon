@@ -32,7 +32,8 @@ body {
   text-align: center;
   height: 2.6em;
   width: 14.285%;
-  font-size: 1.6em;
+  font-size: 1.4em;
+  font-family: 'Oswald', sans-serif;
 }
 
 #navigation .position {
@@ -46,7 +47,8 @@ body {
   text-align: center;
   height: 2.6em;
   width: 14.285%;
-  font-size: 1.6em;
+  font-size: 1.4em;
+  font-family: 'Oswald', sans-serif;
 }
 .item1 {
   grid-area: a;
@@ -322,6 +324,7 @@ body {
     height: 2.6em;
     width: 14.285%;
     font-size: 1.2em;
+    font-family: 'Oswald', sans-serif;
   }
 
   #navigation .position {
@@ -336,6 +339,7 @@ body {
     height: 2.6em;
     width: 14.285%;
     font-size: 1.2em;
+    font-family: 'Oswald', sans-serif;
   }
   #navigation .position img {
     height: 2em;
