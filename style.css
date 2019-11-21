@@ -175,6 +175,7 @@ body {
 
 #green_data{
   display: grid;
+  margin: 2em;
   grid-template-columns: 0.33fr 1fr 1fr;
   grid-template-areas:  'i1 t1 t1'
                         'i2 t2 t2';
@@ -213,7 +214,9 @@ body {
 
 .curio_data{
   margin: 1em;
-  padding: 0.25em;
+  border-radius: 0.2em;
+  box-shadow: 0.2em 0.2em 1em 0.005em #63cf80;
+  padding: 0.25em 1em 0.25em 1em;
   max-width: 35em;
   background-color: #00ff99;
   color: #000;
