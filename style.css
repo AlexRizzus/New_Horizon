@@ -206,6 +206,11 @@ body {
   align-items: center;
 }
 
+#contentAbout{
+  margin: 1em;
+  font-size: 1.2em;
+}
+
 #curio_icon1{
   grid-area: i1;
 }
