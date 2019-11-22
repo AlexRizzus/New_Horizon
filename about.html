@@ -3,32 +3,73 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>NEW HORIZON</title>
-    <meta name="title" content="New Horizon - we bring your dreams to space" />
+    <meta name="title" content="New Horizon - Chi siamo" />
     <meta name= "description" content="Who we are about New Horizon s.p.a. company"/>
     <meta name= "keywords" content = "New, Horizon, New Horizon, Chi siamo"/>
     <meta name="language" content="italian it"/>
     <meta name="author" content="Alessandro Rizzo, Emanuele Cisotto, Davide Lazzaro e Paolo Scialpi"/>
+      <link href="https://fonts.googleapis.com/css?family=Oswald:500&amp;display=swap" rel="stylesheet"/> 
     <link href="style.css" rel="stylesheet" type="text/css" media="all" />
   </head>
   <body>
     <nav id="navigation">
-            <button href="#">Home</button>
-            <button href="#">Esplorazioni</button>
-            <button href="#">Chi siamo</button>
-            <button href="#">Servizi</button>
-            <button href="#">Ricerca & Sviluppo</button>
-            <button href="#">Contattaci</button>
+<<<<<<< HEAD
+      <button onclick="location.href='index.html'" tabindex="1">Home</button>
+      <button onclick="location.href='missioni.html'" tabindex="2">Esplorazioni</button>
+      <button onclick="location.href='about.html'" class="position" tabindex="3" disabled>Chi siamo</button>
+      <button onclick="location.href='servizi.html'" tabindex="4">Servizi</button>
+      <button onclick="location.href='ricerca.html'" tabindex="5">Ricerca &amp; Sviluppo</button>
+      <button onclick="location.href='contattaci.html'" tabindex="6">Contattaci</button>
+=======
+      <button onclick="location.href='index.html'" tabindex="1" xml:lang="en">Home</button>
+      <button onclick="location.href='missioni.html'" tabindex="2">Esplorazioni</button>
+      <button onclick="location.href='about.html'" class="position" tabindex="3" disabled>Chi siamo</button>
+      <button onclick="location.href='collaborazioni.html'" tabindex="4">Collaborazioni</button>
+      <button onclick="location.href='servizi.html'" tabindex="5">Ricerca</button>
+      <button onclick="location.href='ricerca.html'" tabindex="6">Contattaci</button>
+      <button onclick="location.href='contattaci.html'" tabindex="7" xml:lang="en">Login</button>
+>>>>>>> d1035d45408b615e5bd0898d957213fe4f0aed1a
     </nav>
-    <div id="content">
+    <div id="contentAbout" class="content">
       <h1 class = "block1">LA NASCITA DELL'AZIENDA</h1>
       <p class = "block1">Da sogno a realtà. L'azienda nasce in un <span xml:lang="fr">garage</span>, come le altre più grandi compagnie note (<abbr title="exempli gratia">e.g.</abbr> <span xml:lang=en>Google, Apple</span>, <abbr title="eccetera">ecc</abbr>)
       per poi crescere sino a diventare una grande compagnia con una sede dall'estensione di 6 <abbr title="chilometri quadrati">km²</abbr>.</p>
       <h1 class = "block2">I NOSTRI IDEALI</h1>
       <p>La nostra azienda esiste anche per promuovere lo sviluppo scientifico, quello tecnologico e la ricerca necessari a permettere, un domani, all'uomo di andare a colonizzare nuovi pianeti. Tuttavia non stiamo trascurando la nostra amata Terra, pertanto usiamo quanta più energia pulita possibile per le nostre attività.
       </p>
+      <h2 class="subtitle_cont"><img class="icon" src="images/greenenergy.png" alt="icona dell'energia pulita"/>Energia pulita</h2>
+      <div id="green_data">
+        <img id="curio_icon1" class="curio_icon" src="images/solare.png" alt="icona di una pala eolica"/>
+        <div id="curio_data1" class="curio_data">
+          <h3>Pannelli fotovoltaici</h2>
+          <p>1 000 000 di pannelli fotovoltaici sono attualmente usati dalla nostra compagnia per alimentare gran parte delle strutture.</p>
+          <p>Fino a 4200 <abbr title="Kilowatt ora">kWh</abbr> di potenza erogata da ciascun pannello (in base all'orario del giorno e alla nitidezza del cielo).</p>
+          <p>Sino ad ora sono stati prodotti 131 400 <abbr title="terawatt">TW</abbr> di energia pulita grazie a questi moduli.</p>
+          <p>Sono stati salvati 3 400 000 alberi grazie ai nostri pannelli fotovoltaici.</p>
+        </div>
+        <img id="curio_icon2" class="curio_icon" src="images/eolica.png" alt="icona di un pannello solare"/>
+        <div id="curio_data2" class="curio_data">
+          <h3>Pale eoliche</h2>
+          <p>30 000 pale eoliche sono attualmente usate dalla nostra compagnia per ricaricare mezzi di trasporto terrestri elettrici e le batterie per le strumentazioni spaziali.</p>
+          <p>Fino a 75 000 <abbr title="Kilowatt ora">kWh</abbr> di potenza erogata da ciascuna pala (in base all'intensità e la direzione del vento).</p>
+          <p>Sino ad ora sono stati prodotti 118 260 <abbr title="terawatt">TW</abbr> di energia pulita grazie a questi impianti eolici.</p>
+          <p>Sono stati salvati 3 060 000 alberi grazie alle nostre pale eoliche.</p>
+        </div>
+      </div>
     </div>
-<div id="footer">
-  <p>Follow us on: <a href="#">Twitter</a> <a href="#">Facebbok</a> <a href="#">Instagram</a> <button type="button" id="white-button" name="Login">Login</button> </p>
-</div>
+    <div id="footer">
+      <p class="validation">
+        <a href="http://validator.w3.org/check?uri=referer"><img
+          src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="CSS Valido!" />
+        </a>
+      </p>
+      <p class ="info">New Horizon<br/> con la collaborazione di:<br/>Alessandro Rizzo, Paolo Scialpi, Davide Lazzaro, Emanuele Cisotto</p>
+      <div class="social"><p>  Seguici su: <img src="images/twitter.png" class="footer-icon" alt="twitter logo"/> <img src="images/facebook.png" class="footer-icon" alt="facebook logo"/> <img src="images/instagram.png" class="footer-icon" alt="instagram logo"/></p>
+      </div>
+    </div>
 </body>
 </html>
