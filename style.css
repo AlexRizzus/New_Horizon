@@ -9,7 +9,7 @@
 body {
   padding:0em;
   margin:0em;
-  background-color: #001115;
+  background-image: linear-gradient(to bottom, #000206, #004650);
   font-family: 'Oswald', sans-serif;
   color: #d3d3d3;
 }
@@ -49,7 +49,7 @@ body {
   width: 14.285%;
   font-size: 1.4em;
   font-family: 'Oswald', sans-serif;
-    box-shadow: 0em 0em 1em 0.2em #e3e3e3;
+  box-shadow: 0em 0.3em 0.3em -0.1em #838383
 }
 .item1 {
   grid-area: a;
