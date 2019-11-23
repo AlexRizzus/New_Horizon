@@ -1,11 +1,8 @@
 /* Style for New Horizon tecweb project*/
 @media screen and (min-width: 1100px){
-#background {
-  width: 100%;
-  height:auto;
-  padding: 0em;
-  margin:0em;
-}
+
+/*--------------GENERAL PURPOSE CSS------------------------------------------*/
+
 body {
   padding:0em;
   margin:0em;
@@ -50,6 +47,61 @@ body {
   font-size: 1.4em;
   font-family: 'Oswald', sans-serif;
   box-shadow: 0em 0.3em 0.3em -0.1em #838383
+}
+#footer {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-areas: 'a m b';
+  grid-gap: 0.5em;
+  margin-top:5.5em;
+  text-align: center;
+  background-color: #002125;
+  height: 7em;
+  margin-bottom:0em;
+}
+.validation {
+  grid-area: a;
+  padding:1.4em;
+}
+.validation a{
+  padding: 0em 1em;
+}
+.footer-login-button {
+  background-color: #002125;
+  color: white;
+  border: 0.2em solid white;
+  border-radius: 0.5em;
+  padding: 0.3em;
+  margin:0em;
+  font-size: 1em;
+  transition-duration: 0.4s;
+}
+.footer-login-button:hover {
+  background-color:white;
+  color:black;
+}
+.social{
+  grid-area: b;
+  margin: 0em;
+  padding:1.6em;
+}
+.info {
+  grid-area: m;
+  text-align: center;
+}
+.footer-icon {
+  width: 6%;
+  margin-left: 7%;
+  height: auto;
+}
+
+/*---------------HOME PAGE----------------------------------------*/
+
+#background {
+  width: 100%;
+  height:auto;
+  padding: 0em;
+  margin:0em;
 }
 .item1 {
   grid-area: a;
@@ -122,7 +174,7 @@ body {
   border-radius: 0.4em;
   margin-top: 3em;
   padding-left:4em;
-  padding-bottom:1em;
+  padding-bottom:2em;
   padding-top:0.5em;
   text-decoration: none;
   box-shadow: -0.3em 0.3em 0.3em 0.05em #838383;
@@ -130,28 +182,6 @@ body {
 .mission-home a {
   text-decoration: underline;
   color: #002125;
-}
-.right-content{
-  height: 100%;
-  width: 100%;
-}
-#footer {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr 1fr;
-  grid-template-areas: 'a m b';
-  grid-gap: 0.5em;
-  margin-top:5.5em;
-  text-align: center;
-  background-color: #002125;
-  height: 7em;
-  margin-bottom:0em;
-}
-.validation {
-  grid-area: a;
-  padding:1.4em;
-}
-.validation a{
-  padding: 0em 1em;
 }
 .find-more-button {
   background-color: #001115;
@@ -167,39 +197,12 @@ body {
   background-color:white;
   color:black;
 }
-.login-button {
-  background-color: #002125;
-  color: white;
-  border: 0.2em solid white;
-  border-radius: 0.5em;
-  padding: 0.3em;
-  margin:0em;
-  font-size: 1em;
-  transition-duration: 0.4s;
-}
-.login-button:hover {
-  background-color:white;
-  color:black;
-}
-.social{
-  grid-area: b;
-  margin: 0em;
-  padding:1.6em;
-}
-.info {
-  grid-area: m;
-  text-align: center;
-}
-.footer-icon {
-  width: 6%;
-  margin-left: 7%;
-  height: auto;
-}
 
 .subtitle_cont{
   font-size: 2.5em;
 }
 
+<<<<<<< HEAD
 #contentAbout{
     margin: 5em;
 }
@@ -223,6 +226,9 @@ body {
     margin: 0em 3em 0em 3em;
     text-align: justify;
 }
+=======
+/*-----------------CHI SIAMO----------------------------------------------*/
+>>>>>>> 784d62d0efb3856f8af185ef901ddf77dcda632d
 
 #green_data{
   display: grid;
@@ -291,6 +297,7 @@ body {
   color: #fff;
 }
 
+/*----------------------------COLLABORAZIONI----------------------------------*/
 
 #collab-vantaggi{
   display: grid;
@@ -328,14 +335,73 @@ body {
 #collab_icon4{
   grid-area: cv8;
 }
+
+/* ------------ LOGIN ------------------------------------ */
+
+.login-content{
+  text-align: center;
+  align-content: center;
+}
+.login-content h1{
+    font-size: 4em;
+}
+.login-content a{
+  color: #d3d3d3
+}
+.login-content p{
+  margin-top: 1.5em;
+}
+#login{
+  background-color: #001115;
+}
+
+.login-box{
+  background-color: #d3d3d3;
+  padding: 4em 0em;
+  margin: 1em 25%;
+  color: #002125;
+  border-radius: 0.4em;
+}
+.login-box img{
+  padding: 0em;
+  margin-right:0.6em;
+  width: 2.8em;
+  height:3.2em;
+  vertical-align: middle;
+}
+.login-box input{
+  margin: 1em 0em;
+  height: 2.5em;
+  margin-right: 2em;
+  font-size: 1.3em;
+  width:18em;
+  border: 0.2em;
+  border-color: #002125;
+  border-radius: 0.3em;
+  text-align: center;
+}
+.login-button {
+  background-color: #d3d3d3;
+  color: #002125;
+  border: 0.2em solid #002125;
+  border-radius: 0.3em;
+  padding: 0.3em;
+  margin:0em;
+  font-size: 1.1em;
+  transition-duration: 0.4s;
+  font-weight: bold;
+  margin-top: 1em;
+}
+.login-button:hover {
+  background-color:#002125;
+  color:#d3d3d3;
+}
+
 }
 @media screen and (max-width: 1099px){
-  #background {
-    width: 100%;
-    height:auto;
-    padding: 0em;
-    margin:0em;
-  }
+
+  /*----------------GENERAL PURPOSE CSS------------------------------------*/
+
   body {
     padding:0em;
     margin:0em;
@@ -383,6 +449,48 @@ body {
   #navigation .position img {
     height: 2em;
     width: auto;
+  }
+  #footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'a b';
+    grid-gap: 0.5em;
+    margin-top:5.5em;
+    text-align: center;
+    background-color: #002125;
+    height: 7em;
+    margin-bottom:0em;
+  }
+  .validation {
+    grid-area: a;
+    padding:1.4em;
+  }
+  .validation a{
+    padding: 0em 1em;
+  }
+  .social{
+    grid-area: b;
+    margin: 0em;
+    padding:1.6em;
+  }
+  .info {
+    grid-area: m;
+    text-align: center;
+    display: none;
+  }
+  .footer-icon {
+    width: 9%;
+    margin-left: 7%;
+    height: auto;
+  }
+
+  /*----------------HOME PAGE------------------------------------------------*/
+
+  #background {
+    width: 100%;
+    height:auto;
+    padding: 0em;
+    margin:0em;
   }
   .item1 {
     grid-area: a;
@@ -471,24 +579,6 @@ body {
     text-decoration: underline;
     color: #002125;
   }
-  #footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'a b';
-    grid-gap: 0.5em;
-    margin-top:5.5em;
-    text-align: center;
-    background-color: #002125;
-    height: 7em;
-    margin-bottom:0em;
-  }
-  .validation {
-    grid-area: a;
-    padding:1.4em;
-  }
-  .validation a{
-    padding: 0em 1em;
-  }
   .find-more-button {
     background-color: #001115;
     color: white;
@@ -503,20 +593,66 @@ body {
     background-color:white;
     color:black;
   }
-  .social{
-    grid-area: b;
-    margin: 0em;
-    padding:1.6em;
-  }
-  .info {
-    grid-area: m;
+
+  /* --------------- LOGIN --------------------------------------------- */
+
+  .login-content{
     text-align: center;
-    display: none;
+    align-content: center;
   }
-  .footer-icon {
-    width: 9%;
-    margin-left: 7%;
-    height: auto;
+  .login-content h1{
+      font-size: 4em;
+  }
+  .login-content a{
+    color: #d3d3d3
+  }
+  .login-content p{
+    margin-top: 1.5em;
+  }
+  #login{
+    background-color: #001115;
+  }
+
+  .login-box{
+    background-color: #d3d3d3;
+    padding: 4em 0em;
+    margin: 1em 10%;
+    color: #002125;
+    border-radius: 0.4em;
+  }
+  .login-box img{
+    padding: 0em;
+    margin-right:0.6em;
+    width: 2.8em;
+    height:3.2em;
+    vertical-align: middle;
+  }
+  .login-box input{
+    margin: 1em 0em;
+    height: 2.5em;
+    margin-right: 2em;
+    font-size: 1.3em;
+    width:18em;
+    border: 0.2em;
+    border-color: #002125;
+    border-radius: 0.3em;
+    text-align: center;
+  }
+  .login-button {
+    background-color: #d3d3d3;
+    color: #002125;
+    border: 0.2em solid #002125;
+    border-radius: 0.3em;
+    padding: 0.3em;
+    margin:0em;
+    font-size: 1.2  em;
+    transition-duration: 0.4s;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+  .login-button:hover {
+    background-color:#002125;
+    color:#d3d3d3;
   }
 
 }
