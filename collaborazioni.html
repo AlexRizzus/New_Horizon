@@ -13,41 +13,47 @@
   </head>
 
   <body>
-    <nav id="navigation">
-            <button href="#">Home</button>
-            <button href="#">Esplorazioni</button>
-            <button href="#">Chi siamo</button>
-            <button href="#">Servizi</button>
-            <button href="#">Ricerca & Sviluppo</button>
-            <button href="#">Contattaci</button>
-    </nav>
-    <div id="groups">
-      <h1 class = "group1">COLLABORA CON NOI</h1>
-        <h2 class = "group1">Partners</h2>
-        <h2 class = "group1">Incontra il team</h2>
-          <p class = "group1"> NOME COGNOME FOTO? ####
+    <div id="navigation">
+            <button onclick="location.href='index.html'" tabindex="1" xml:lang="en">Home</button>
+            <button onclick="location.href='missioni.html'" tabindex="2">Esplorazioni</button>
+            <button onclick="location.href='about.html'" tabindex="3">Chi siamo</button>
+            <button onclick="location.href='collaborazioni.html'" class="position"  disabled="disabled" tabindex="4">Collaborazioni</button>
+            <button onclick="location.href='ricerca.html'" tabindex="5">Ricerca</button>
+            <button onclick="location.href='contattaci.html'" tabindex="6">Contattaci</button>
+            <button onclick="location.href='login.html'" tabindex="7" xml:lang="en">Login</button>
+            <link href="https://fonts.googleapis.com/css?family=Oswald:500&amp;display=swap" rel="stylesheet"/>
+    </div>
+    <div id="contentCollab">
+      <h1>COLLABORA CON NOI</h1>
+        <h2>Partners</h2>
+        <div id="Partners">
+        <p id = "center">I nostri principali partens:</p>
+        <a href="https://www.nasa.gov/"><img class="Partners" src="images/nasa.jpg" alt="logo nasa"/></a>
+        <a href="https://www.asi.it/"><img class="Partners" src="images/asi.png" alt="logo asi"/></a>
+        <a href="https://www.esa.int/"><img class="Partners" src="images/esa.jpg" alt="logo esa"/></a>
+        <a href="https://www.unipd.it/"><img class="Partners" src="images/unipd.png" alt="logo unipd"/></a>
+        <a href="https://maunakeaobservatories.org/"><img class="Partners" src="images/maunakea.jfif" alt="logo maunakea"/></a>
+        <a href="http://www.cnsa.gov.cn/"><img class="Partners" src="images/cnsa.png" alt="logo cnsa"/></a>
+        </div>
+        <h2>Incontra il team</h2>
+          <p> NOME COGNOME FOTO? ####
             Questo è il cuore pulsante di New Horizon, l’anima che muove questa grande azienda spaziale.
             Al Core Team si affianca un numero consistente di altri professionisti, figure consolidate nel team, persone sulle quali contare che condividono i nostri ideali e principi di squadra! </p>
-        <h2 class = "group1">Opportunità di lavoro</h2>
-          <p>Lavorare in una delle nostre sedi ti porterà ad avere dei vantaggi:
+        <h2>Opportunità di lavoro</h2>
+        <p id = "center">Lavorare in una delle nostre sedi ti porterà ad avere dei vantaggi:</p> <br>
             <div id="collab-vantaggi">
-            <p id=collab_vantaggio1>flessibilità oraria</p> <img id="collab_icon1" class="collab_icon" src="images/entertaiment.png" alt="icona entertaiment"/>
-            <p id=collab_vantaggio2>corsi di formazione</p> <img id="collab_icon2" class="collab_icon" src="images/blackLanguage.png" alt="icona blackLanguage"/>
-            <p id=collab_vantaggio3>buoni pasto</p> <img id="collab_icon3" class="collab_icon" src="images/bar.png" alt="icona bar"/>
-            <p id=collab_vantaggio4>performance bonus</p> <img id="collab_icon4" class="collab_icon" src="images/performance_bonus.png" alt="icona performance_bonus"/>
+                <p id=collab_vantaggio1>flessibilità oraria</p> <img id="collab_icon1" class="collab_icon" src="images/orologio.png" alt="icona orologio"/>
+                <p id=collab_vantaggio2>corsi di formazione</p> <img id="collab_icon2" class="collab_icon" src="images/libro.png" alt="icona libro"/>
+                <p id=collab_vantaggio3>buoni pasto</p> <img id="collab_icon3" class="collab_icon" src="images/pasto.png" alt="icona pasto"/>
+                <p id=collab_vantaggio4>performance bonus</p> <img id="collab_icon4" class="collab_icon" src="images/performance_bonus.png" alt="icona performance_bonus"/>
             </div>
-          </p>
-
-
-      <h1 class = "group2">VENITE A TROVARCI</h2>
-
-        <h2 class = "group2">Scuole e Università</h2>
+      <h1>VENITE A TROVARCI</h2>
+        <h2>Scuole e Università</h2>
           <p>Organizza con la tua scuola una visita guidata in una nostra sede, centro o osservatorio: verrete accolti da un professionista che vi presenterà in dettaglio il nostro lavoro e i nostri obbiettivi, sia raggiunti che futuri!</p>
-        <h2 class = "group2">Prenota la tua visita al nostro telescopio!</h2>
-          <p class = "group2">Il <abbr title="Giant Horizon Telescope">GHT</abbr> è un telescopio di elevate prestazioni ancora in fase di miglioramenti ma che è gia disponibile per una tua visita!</p>
+        <h2>Prenota la tua visita al nostro telescopio!</h2>
+          <p>Il <abbr title="Giant Horizon Telescope">GHT</abbr> è un telescopio di elevate prestazioni ancora in fase di miglioramenti ma che è gia disponibile per una tua visita!</p>
 
     </div>
-
     <div id="footer">
       <p class="validation">
         <a href="http://validator.w3.org/check?uri=referer"><img

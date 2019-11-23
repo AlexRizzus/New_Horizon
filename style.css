@@ -249,10 +249,21 @@ body {
   align-items: center;
 }
 
+.subtitle_cont{
+    margin: 0em 0.5em 0.5em 0.5em;
+}
+
+#icon_fact{
+  vertical-align: 0.0em;
+}
+
 #subtitle_energia_pulita{
   grid-area: st;
-  margin: 0em 0.5em 0.5em 0.5em;
   align-self: start;
+}
+
+#subtitle_sviluppo{
+  margin: 2em 0em 0em 1.5em;
 }
 
 #green_data h3{
@@ -286,6 +297,13 @@ body {
   margin: 0em 0.5em 0em 0.5em;
 }
 
+.iconNoMargin{
+  max-width: 1.75em;
+  max-height: 1.75em;
+  vertical-align: -0.5em;
+  margin: 0.3em;
+}
+
 #curio_data1{
     grid-area: t1;
 }
@@ -297,17 +315,91 @@ body {
 .curio_data{
   margin: 1em;
   border-radius: 0.2em;
-  box-shadow: 0.2em 0.2em 1em 0.005em #63cf80;
+  box-shadow: 0.2em 0.2em 1em 0.005em #d3d3d3;
   padding: 0.25em 1em 0.25em 1em;
   max-width: 35em;
-  background-color: #1a75ff;
-  color: #fff;
+  background-color: #d3d3d3;
+  color: #002125;
+}
+/*-----------------------------CONTATTCI--------------------------------------*/
+#descrizione{
+  display: grid;
+  margin: 2em;
+  grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
+  grid-template-rows: 2fr 1fr 2fr 1.3fr 1fr 1fr 5fr 1fr;
+  grid-template-areas:
+    'a1 a2 a3 a4 a5'
+    'b1 b2 b3 b4 b5'
+    'c1 c2 c2 c2 c5'
+    'd1 d2 d3 d4 d5'
+    'e1 e2 e3 e4 e5'
+    'f1 f2 f3 f4 f5'
+    'g1 g2 g3 g4 g5'
+    'h1 h2 h3 h4 h5';
+  grid-gap: 0.1em;
+  align-items: center;
+}
+#testo_pulsante_form{
+  grid-area: a2;
+
+}
+#pulsante_form{
+  grid-area: b2;
+
+}
+#testo_pulsante_mail{
+  grid-area: a3;
+}
+#pulsante_email{
+  grid-area: b3;
+}
+#testo_numero_tel{
+  grid-area: a4;
+}
+#numero_tel{
+  grid-area: b4;
+}
+#testo_social{
+  grid-area: c2;
+}
+#immagine_insta{
+  grid-area: d2;
+}
+#immagine_face{
+  grid-area: d3;
+}
+#immagine_twit{
+  grid-area: d4;
+}
+
+#validation2{
+  grid-area: b;
+  padding:1.4em;
+}
+.validation2 b{
+    padding: 0em 1em;
+
 }
 
 /*----------------------------COLLABORAZIONI----------------------------------*/
 
+#contentCollab #center{
+  text-align: center;
+}
+#Partners{
+  text-align: center;
+}
+.Partners{
+  width: 7em;
+  height: 7em;
+  margin: 3em;
+}
 #collab-vantaggi{
+  margin-left: 8em;
+  margin-right: 8em;
+  text-align: center;
   display: grid;
+  grid-template-columns: 4fr 1fr 4fr 1fr;
   grid-template-areas: 'cv1 cv2 cv3 cv4''cv5 cv6 cv7 cv8';
   align-items: center;
   justify-content: start;
@@ -341,6 +433,34 @@ body {
 }
 #collab_icon4{
   grid-area: cv8;
+}
+
+#contentCollab{
+      margin: 5em;
+  }
+
+#contentCollab abbr{
+    text-decoration: none;
+  }
+
+#contentCollab h1{
+    text-align: center;
+    font-size: 2.6em;
+    margin-top: 1.5em;
+  }
+
+#contentCollab h2{
+    text-align: center;
+    font-size: 2em;
+  }
+
+#contentCollab p{
+    font-size: 1.8em;
+    margin: 0em 3em 0em 3em;
+    text-align: justify;
+  }
+
+
 }
 
 /* ------------ LOGIN ------------------------------------ */
@@ -405,10 +525,11 @@ body {
 }
 
 }
-@media screen and (max-width: 1099px){
+
 
   /*----------------GENERAL PURPOSE CSS------------------------------------*/
 
+@media screen and (max-width: 1099px){
   body {
     padding:0em;
     margin:0em;
