@@ -297,8 +297,20 @@ body {
 
 /*----------------------------COLLABORAZIONI----------------------------------*/
 
+#Partners{
+  text-align: center;
+}
+.Partners{
+  width: 7em;
+  height: 7em;
+  margin: 2em;
+}
 #collab-vantaggi{
+  margin-left: 8em;
+  margin-right: 8em;
+  text-align: center;
   display: grid;
+  grid-template-columns: 4fr 1fr 4fr 1fr;
   grid-template-areas: 'cv1 cv2 cv3 cv4''cv5 cv6 cv7 cv8';
   align-items: center;
   justify-content: start;
@@ -332,6 +344,33 @@ body {
 }
 #collab_icon4{
   grid-area: cv8;
+}
+
+#contentCollab{
+      margin: 5em;
+  }
+
+#contentCollab abbr{
+    text-decoration: none;
+  }
+
+#contentCollab h1{
+    text-align: center;
+    font-size: 2.6em;
+  }
+
+#contentCollab h2{
+    text-align: center;
+    font-size: 1.95em;
+  }
+
+#contentCollab p{
+    font-size: 1.8em;
+    margin: 0em 3em 0em 3em;
+    text-align: justify;
+  }
+
+
 }
 
 /* ------------ LOGIN ------------------------------------ */
