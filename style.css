@@ -297,13 +297,16 @@ body {
 
 /*----------------------------COLLABORAZIONI----------------------------------*/
 
+#contentCollab #center{
+  text-align: center;
+}
 #Partners{
   text-align: center;
 }
 .Partners{
   width: 7em;
   height: 7em;
-  margin: 2em;
+  margin: 3em;
 }
 #collab-vantaggi{
   margin-left: 8em;
@@ -357,11 +360,12 @@ body {
 #contentCollab h1{
     text-align: center;
     font-size: 2.6em;
+    margin-top: 1.5em;
   }
 
 #contentCollab h2{
     text-align: center;
-    font-size: 1.95em;
+    font-size: 2em;
   }
 
 #contentCollab p{
