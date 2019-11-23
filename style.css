@@ -294,6 +294,65 @@ body {
   background-color: #1a75ff;
   color: #fff;
 }
+/*-----------------------------CONTATTCI--------------------------------------*/
+#descrizione{
+  display: grid;
+  margin: 2em;
+  grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
+  grid-template-rows: 2fr 1fr 2fr 1.3fr 1fr 1fr 5fr 1fr;
+  grid-template-areas:
+    'a1 a2 a3 a4 a5'
+    'b1 b2 b3 b4 b5'
+    'c1 c2 c2 c2 c5'
+    'd1 d2 d3 d4 d5'
+    'e1 e2 e3 e4 e5'
+    'f1 f2 f3 f4 f5'
+    'g1 g2 g3 g4 g5'
+    'h1 h2 h3 h4 h5';
+  grid-gap: 0.1em;
+  align-items: center;
+}
+#testo_pulsante_form{
+  grid-area: a2;
+
+}
+#pulsante_form{
+  grid-area: b2;
+
+}
+#testo_pulsante_mail{
+  grid-area: a3;
+}
+#pulsante_email{
+  grid-area: b3;
+}
+#testo_numero_tel{
+  grid-area: a4;
+}
+#numero_tel{
+  grid-area: b4;
+}
+#testo_social{
+  grid-area: c2;
+}
+#immagine_insta{
+  grid-area: d2;
+}
+#immagine_face{
+  grid-area: d3;
+}
+#immagine_twit{
+  grid-area: d4;
+}
+
+#validation2{
+  grid-area: b;
+  padding:1.4em;
+}
+.validation2 b{
+    padding: 0em 1em;
+
+}
 
 /*----------------------------COLLABORAZIONI----------------------------------*/
 
@@ -439,10 +498,11 @@ body {
 }
 
 }
-@media screen and (max-width: 1099px){
+
 
   /*----------------GENERAL PURPOSE CSS------------------------------------*/
 
+@media screen and (max-width: 1099px){
   body {
     padding:0em;
     margin:0em;
