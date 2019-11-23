@@ -20,13 +20,23 @@
             <button onclick="location.href='collaborazioni.html'" tabindex="4">Collaborazioni</button>
             <button onclick="location.href='ricerca.html'" tabindex="5">Ricerca</button>
             <button onclick="location.href='contattaci.html'" tabindex="6">Contattaci</button>
-            <button onclick="location.href='login.html'" class="position" disabled="disabled" tabindex="7" xml:lang="en">Login</button>
+            <button onclick="location.href='login.html'" disabled="disabled" tabindex="7" xml:lang="en">Login</button>
     </div>
     <div class="login-content">
-        <h1>L O G I N</h1>
+        <h1>REGISTRATI</h1>
         <div class="login-box">
-        <h2>Inserisci username e password</h2>
-          <img src="images/icons8-astronaut-48.png" alt="User astronauta"> <input type="text" name="username" placeholder="username"/><br/>
+        <h2>Inserisci le tue credenziali</h2>
+          <img src="images/icons8-astronaut-48.png" alt="User astronauta"/> <input type="text" name="nome" placeholder="Nome"/><br>
+          <img src="images/icons8-astronaut-48.png" alt="User astronauta"/> <input type="text" name="cognome" placeholder="Cognome"/><br/>
+          <img src="images/icons8-astronaut-48.png" alt="User astronauta"/> <input type="text" name="et&agrave;" placeholder="et&agrave;"/><br/>
+          <img src="images/icons8-astronaut-48.png" alt="User astronauta"/> <input list="sesso" name="sesso" placeholder="sesso"/><br/>
+          <datalist id="sesso">
+            <option value="Maschio">
+            <option value="Femmina">
+            <option value="Altro">
+          </datalist>
+          <img src="images/icons8-astronaut-48.png" alt="User astronauta"> <input type="email" name="username" placeholder="email"/><br/>
+          <img src="images/icons8-astronaut-48.png" alt="User astronauta"/> <input type="text" name="username" placeholder="username"/><br/>
           <img src="images/icons8-key-64.png" alt="Chiave"> <input type="password" name="password" placeholder="Password"/><br/>
           <button type="button" name="submit" class="login-button">Conferma</button>
         </div>
