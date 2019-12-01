@@ -460,9 +460,6 @@ body {
     text-align: justify;
   }
 
-
-}
-
 /* ------------ LOGIN ------------------------------------ */
 
 .login-content{
@@ -484,7 +481,7 @@ body {
 
 .login-box{
   background-color: #d3d3d3;
-  padding: 4em 0em;
+  padding: 3em 0em;
   margin: 1em 25%;
   color: #002125;
   border-radius: 0.4em;
@@ -497,6 +494,17 @@ body {
   vertical-align: middle;
 }
 .login-box input{
+  margin: 1em 0em;
+  height: 2.5em;
+  margin-right: 2em;
+  font-size: 1.3em;
+  width:18em;
+  border: 0.2em;
+  border-color: #002125;
+  border-radius: 0.3em;
+  text-align: center;
+}
+.login-box select{
   margin: 1em 0em;
   height: 2.5em;
   margin-right: 2em;
@@ -523,13 +531,17 @@ body {
   background-color:#002125;
   color:#d3d3d3;
 }
-
+.login-box p{
+  padding-top: 1em;
+  font-size:0.8em;
+}
 }
 
 
   /*----------------GENERAL PURPOSE CSS------------------------------------*/
 
 @media screen and (max-width: 1099px){
+
   body {
     padding:0em;
     margin:0em;
@@ -766,6 +778,17 @@ body {
     border-radius: 0.3em;
     text-align: center;
   }
+  .login-box select{
+    margin: 1em 0em;
+    height: 2.5em;
+    margin-right: 2em;
+    font-size: 1.3em;
+    width:18em;
+    border: 0.2em;
+    border-color: #002125;
+    border-radius: 0.3em;
+    text-align: center;
+  }
   .login-button {
     background-color: #d3d3d3;
     color: #002125;
@@ -773,7 +796,7 @@ body {
     border-radius: 0.3em;
     padding: 0.3em;
     margin:0em;
-    font-size: 1.2  em;
+    font-size: 1.2em;
     transition-duration: 0.4s;
     font-weight: bold;
     margin-top: 1em;
