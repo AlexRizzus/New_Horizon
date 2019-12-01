@@ -23,17 +23,19 @@
           <button onclick="location.href='login.html'" tabindex="7" xml:lang="en">Login</button>
   </div>
       <div id="descrizione">
-        <p id="testo_pulsante_form">Compila questa form dopo esserti autenticato per richiedere informazioni direttamente dal sito </p>
-        <button id="pulsante_form" type="button" name="compilaLaForm"> <a href="#formid"> Compila</a></button>
-        <p id="testo_pulsante_mail" >Scrivici una mail per collaborazioni </p>
+        <p id="testo_pulsante_form">Compila questa form dopo esserti autenticato per richiedere informazioni direttamente dal sito, in questo modo potrai vedere la nostra risposta
+        nella sezione messaggi del tuo profilo </p>
+        <button id="pulsante_form" type="button" name="compilaLaForm" > <a href="#formid"> Compila</a></button>
+        <p id="testo_pulsante_mail" >Puoi contattarci via mail per ogni tipo di comunicazione o richiesta e saremo lieti di risponderti il prima possibile </p>
         <button id="pulsante_email" type="button" name="scriviMail"><a href="mailto:newhorizon@gmail.com?subject=informazioni">Scrivici</a></button>
         <p id="testo_numero_tel">Chiama il nostro numero verde attivo dalle 10 AM alle 19 PM </p> <br>
         <button id="numero_tel" type="button" name="button">800-133-4567</button>
         <p id="testo_social">Seguici sui social pi&ugrave popolari per restare aggiornato sulle nostre attivit&agrave o per vedere spettacolari immagini catturate dalle nostre sonde </p>
-        <img id="immagine_insta" src="images/instagram.png" alt="link per instagram">
+        <img id="immagine_insta" src="images/instagram.png" alt="link per instagram" >
         <img id="immagine_face"src="images/facebook.png" alt="link per facebook">
         <img id="immagine_twit"src="images/twitter.png" alt="link per twitter">
-
+        <p id="form_text">Utilizza questa form per contattarci, ti risponderemo il prima possibile, il nostro messaggio ti arriver&agrave
+        direttamente nella casella <span><a href="messaggi.html">messaggi</a></span> del tuo profilo</p>
       <form id="formid" class="form" action="form.php" method="post">
         <input list="oggetti" name="oggetti">
           <datalist id="oggetti">
@@ -43,7 +45,7 @@
             <option value="Una richiesta scientifica">
             <option value="Altro">
           </datalist>
-          <input type="submit" name="pulsante invio"> <br>
+          <input id="invio" type="submit" name="pulsante invio"> <br>
         <textarea name="testo" rows="10" cols="100" placeholder="Scrivi qui il tuo messaggio."></textarea>
       </form>
     </div>
@@ -52,7 +54,7 @@
           <a href="http://validator.w3.org/check?uri=referer">
             <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
         </p>
-        <p class ="info">New Horizon<br/> con la collaborazione di:<br/>Alessandro Rizzo, Paolo Scialpi, Davide Lazzaro, Emanuele Cisotto</p>
+        <p class ="info">New Horizon<br/> con la collaborazione di:<br/>Cisotto Emanuele, Lazzaro Davide, Rizzo Alessandro, Scialpi Paolo</p>
         <p id="validation2">
         <a href="http://jigsaw.w3.org/css-validator/check/referer">
             <img style="border:0;width:88px;height:31px"
