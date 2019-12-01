@@ -186,7 +186,6 @@ body {
   padding-bottom:2em;
   padding-top:0.5em;
   text-decoration: none;
-  box-shadow: -0.3em 0.3em 0.3em 0.05em #838383;
 }
 .mission-home a {
   text-decoration: underline;
@@ -572,7 +571,7 @@ body {
   body {
     padding:0em;
     margin:0em;
-    background-color: #001115;
+    background-image: linear-gradient(to bottom, #000206, #005660);
     font-family: 'Oswald', sans-serif;
     color: #d3d3d3;
   }
