@@ -297,6 +297,13 @@ body {
   margin: 0em 0.5em 0em 0.5em;
 }
 
+.iconM{
+  max-width: 5em;
+  max-height: 5em;
+  vertical-align: -2.0em;
+  margin: 0em 0.5em 0em 0.5em;
+}
+
 .iconNoMargin{
   max-width: 1.75em;
   max-height: 1.75em;
@@ -321,6 +328,11 @@ body {
   background-color: #d3d3d3;
   color: #002125;
 }
+
+#our_team p{
+  text-align: center;
+}
+
 /*-----------------------------CONTATTCI--------------------------------------*/
 #descrizione{
   display: grid;
@@ -735,6 +747,104 @@ body {
   .find-more-button:hover {
     background-color:white;
     color:black;
+  }
+
+  /*-----------------CHI SIAMO----------------------------------------------*/
+
+  #green_data{
+    display: grid;
+    margin: 2em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.25fr 0.675fr 0.75fr;
+    grid-template-areas:  'st t1 t1'
+                          'i1 t1 t1'
+                          'i2 t2 t2';
+    grid-gap: 0.1em;
+    align-items: center;
+  }
+
+  .subtitle_cont{
+      margin: 0em 0.5em 0.5em 0.5em;
+  }
+
+  #icon_fact{
+    vertical-align: 0.0em;
+  }
+
+  #subtitle_energia_pulita{
+    grid-area: st;
+    align-self: start;
+  }
+
+  #subtitle_sviluppo{
+    margin: 2em 0em 0em 1.5em;
+  }
+
+  #green_data h3{
+    font-size: 2em;
+    margin: 0.25em;
+  }
+
+  #green_data p{
+    font-size: 1.3em;
+  }
+
+  #curio_icon1{
+    grid-area: i1;
+    align-self: start;
+  }
+
+  #curio_icon2{
+    grid-area: i2;
+  }
+
+  .curio_icon{
+
+    margin: 0.5em;
+    color: white;
+  }
+
+  .icon{
+    max-width: 1.75em;
+    max-height: 1.75em;
+    vertical-align: -0.5em;
+    margin: 0em 0.5em 0em 0.5em;
+  }
+
+  .iconM{
+    max-width: 5em;
+    max-height: 5em;
+    vertical-align: -2.0em;
+    margin: 0em 0.5em 0em 0.5em;
+  }
+
+  .iconNoMargin{
+    max-width: 1.75em;
+    max-height: 1.75em;
+    vertical-align: -0.5em;
+    margin: 0.3em;
+  }
+
+  #curio_data1{
+      grid-area: t1;
+  }
+
+  #curio_data2{
+      grid-area: t2;
+  }
+
+  .curio_data{
+    margin: 1em;
+    border-radius: 0.2em;
+    box-shadow: 0.2em 0.2em 1em 0.005em #d3d3d3;
+    padding: 0.25em 1em 0.25em 1em;
+    max-width: 35em;
+    background-color: #d3d3d3;
+    color: #002125;
+  }
+
+  #our_team p{
+    text-align: center;
   }
 
   /* --------------- LOGIN --------------------------------------------- */
