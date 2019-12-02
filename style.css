@@ -764,18 +764,37 @@ body {
 
   #green_data{
     display: grid;
-    margin: 2em;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.25fr 0.675fr 0.75fr;
-    grid-template-areas:  'st t1 t1'
-                          'i1 t1 t1'
-                          'i2 t2 t2';
+    margin: 1em;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    grid-template-areas:  'st'
+                          'i1'
+                          't1'
+                          'i2'
+                          't2';
     grid-gap: 0.1em;
     align-items: center;
   }
 
+  #contentAbout h1{
+    font-size: 3em;
+    text-align: center;
+  }
+
+  #contentAbout h2{
+    text-align: left;
+    font-size: 2em;
+  }
+
+  #contentAbout p{
+    text-align: left;
+    font-size: 1.8em;
+    margin: 0.8em;
+  }
+
   .subtitle_cont{
-      margin: 0em 0.5em 0.5em 0.5em;
+      margin: 0em;
   }
 
   #icon_fact{
@@ -784,11 +803,10 @@ body {
 
   #subtitle_energia_pulita{
     grid-area: st;
-    align-self: start;
   }
 
   #subtitle_sviluppo{
-    margin: 2em 0em 0em 1.5em;
+    margin-left: 0.5em;
   }
 
   #green_data h3{
@@ -796,13 +814,12 @@ body {
     margin: 0.25em;
   }
 
-  #green_data p{
+  #contentAbout#green_data p{
     font-size: 1.3em;
   }
 
   #curio_icon1{
     grid-area: i1;
-    align-self: start;
   }
 
   #curio_icon2{
@@ -810,9 +827,11 @@ body {
   }
 
   .curio_icon{
-
+    justify-self: center;
     margin: 0.5em;
     color: white;
+    max-width: 8em;
+    max-height: 8em;
   }
 
   .icon{
@@ -823,9 +842,9 @@ body {
   }
 
   .iconM{
-    max-width: 5em;
-    max-height: 5em;
-    vertical-align: -2.0em;
+    max-width: 3.5em;
+    max-height: 3.5em;
+    vertical-align: -1.5em;
     margin: 0em 0.5em 0em 0.5em;
   }
 
@@ -837,10 +856,12 @@ body {
   }
 
   #curio_data1{
+      justify-self: center;
       grid-area: t1;
   }
 
   #curio_data2{
+      justify-self: center;
       grid-area: t2;
   }
 
@@ -856,6 +877,11 @@ body {
 
   #our_team p{
     text-align: center;
+    margin: 0.1em;
+  }
+
+  #our_team .name{
+    font-size: 3em;
   }
 
   /* --------------- LOGIN --------------------------------------------- */
