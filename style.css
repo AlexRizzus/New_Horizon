@@ -566,7 +566,7 @@ body {
 
   /*----------------GENERAL PURPOSE CSS------------------------------------*/
 
-@media screen and (max-width: 1099px){
+@media screen and (max-width: 1099px) and (min-width: 750px) and (orientation:landscape){
 
   body {
     padding:0em;
@@ -955,5 +955,9 @@ body {
     background-color:#002125;
     color:#d3d3d3;
   }
+
+}
+
+@media screen and (max-width: 749px){
 
 }
