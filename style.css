@@ -240,16 +240,14 @@ body {
   display: grid;
   margin: 2em;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.25fr 0.675fr 0.75fr;
-  grid-template-areas:  'st t1 t1'
-                        'i1 t1 t1'
+  grid-template-areas:  'i1 t1 t1'
                         'i2 t2 t2';
   grid-gap: 0.1em;
   align-items: center;
 }
 
 .subtitle_cont{
-    margin: 0em 0.5em 0.5em 0.5em;
+    margin: 0em 0.5em 0.5em 0.3em;
 }
 
 #icon_fact{
@@ -257,12 +255,11 @@ body {
 }
 
 #subtitle_energia_pulita{
-  grid-area: st;
   align-self: start;
 }
 
 #subtitle_sviluppo{
-  margin: 2em 0em 0em 1.5em;
+  margin: 2em 0em 0em 0.3em;
 }
 
 #green_data h3{
@@ -767,9 +764,8 @@ body {
     margin: 1em;
     text-align: center;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
-    grid-template-areas:  'st'
-                          'i1'
+    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr;
+    grid-template-areas:  'i1'
                           't1'
                           'i2'
                           't2';
