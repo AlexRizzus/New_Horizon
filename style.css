@@ -405,7 +405,21 @@ body {
 }
 
 /*----------------------------COLLABORAZIONI----------------------------------*/
-
+#Team{
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-areas: 'ct1 ct2';
+}
+#astronauti
+{
+  grid-area: ct1;
+  width: 13em;
+  height: 13em;
+}
+#cuore
+{
+  grid-area: ct2;
+}
 #contentCollab #center{
   text-align: center;
 }
