@@ -33,6 +33,11 @@ body {
   font-family: 'Oswald', sans-serif;
   transition-duration: 0.5s;
 }
+
+#mobile_menu{
+  display: none;
+}
+
 #navigation button:hover{
   font-size:1.6em;
   background-color: #003135;
@@ -577,7 +582,7 @@ body {
 
   /*----------------GENERAL PURPOSE CSS------------------------------------*/
 
-@media screen and (max-width: 1099px) and (min-width: 750px) and (orientation:landscape){
+@media screen and (max-width: 1099px) and (min-width: 750px){
 
   body {
     padding:0em;
@@ -627,6 +632,11 @@ body {
     height: 2em;
     width: auto;
   }
+
+  #mobile_menu{
+    display: none;
+  }
+
   #footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -968,6 +978,216 @@ body {
 
 }
 
-@media screen and (max-width: 749px){
+@media screen and (max-width: 749px) and (orientation: portrait)
+{
+  /*----------------GENERAL PURPOSE CSS------------------------------------*/
+  body {
+    padding:0em;
+    margin:0em;
+    background-image: linear-gradient(to bottom, #000206, #005660);
+    font-family: 'Oswald', sans-serif;
+    color: #d3d3d3;
+  }
+  #navigation {
+    margin-top: -0.3em;
+    padding: 0em;
+    height: 3.2em;
+    width: 100%;
+    background-color: #002125;
+    position: sticky;
+    top:0;
+  }
+  #navigation button {
+    color: white;
+    border:none;
+    background-color: #002125;
+    float:left;
+    padding: 0em;
+    margin: 0em;
+    text-align: center;
+    height: 2.6em;
+    width: 14.285%;
+    font-size: 1.2em;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  #mobile_menu{
+    display: block;
+  }
+
+  #navigation .position {
+    color: #002125;
+    background-color: #d3d3d3;
+    border:none;
+    float:left;
+    font-weight: bold;
+    padding: 0em;
+    margin: 0em;
+    text-align: center;
+    height: 2.6em;
+    width: 14.285%;
+    font-size: 1.2em;
+    font-family: 'Oswald', sans-serif;
+  }
+  #navigation .position img {
+    height: 2em;
+    width: auto;
+  }
+  #footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'a b';
+    grid-gap: 0.5em;
+    margin-top:5.5em;
+    text-align: center;
+    background-color: #002125;
+    height: 7em;
+    margin-bottom:0em;
+  }
+  .validation {
+    grid-area: a;
+    padding:1.4em;
+  }
+  .validation a{
+    padding: 0em 1em;
+  }
+  .social{
+    grid-area: b;
+    margin: 0em;
+    padding:1.6em;
+  }
+  .info {
+    grid-area: m;
+    text-align: center;
+    display: none;
+  }
+  .footer-icon {
+    width: 9%;
+    margin-left: 7%;
+    height: auto;
+  }
+
+  /*-----------------CHI SIAMO----------------------------------------------*/
+
+  #green_data{
+    display: grid;
+    margin: 1em;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr;
+    grid-template-areas:  'i1'
+                          't1'
+                          'i2'
+                          't2';
+    grid-gap: 0.1em;
+    align-items: center;
+  }
+
+  #contentAbout h1{
+    font-size: 3em;
+    text-align: center;
+  }
+
+  #contentAbout h2{
+    text-align: left;
+    font-size: 2em;
+  }
+
+  #contentAbout p{
+    text-align: left;
+    font-size: 1.8em;
+    margin: 0.8em;
+  }
+
+  .subtitle_cont{
+      margin: 0em;
+  }
+
+  #icon_fact{
+    vertical-align: 0.0em;
+  }
+
+  #subtitle_energia_pulita{
+    grid-area: st;
+  }
+
+  #subtitle_sviluppo{
+    margin-left: 0.5em;
+  }
+
+  #green_data h3{
+    font-size: 2em;
+    margin: 0.25em;
+  }
+
+  #contentAbout#green_data p{
+    font-size: 1.3em;
+  }
+
+  #curio_icon1{
+    grid-area: i1;
+  }
+
+  #curio_icon2{
+    grid-area: i2;
+  }
+
+  .curio_icon{
+    justify-self: center;
+    margin: 0.5em;
+    color: white;
+    max-width: 8em;
+    max-height: 8em;
+  }
+
+  .icon{
+    max-width: 1.75em;
+    max-height: 1.75em;
+    vertical-align: -0.5em;
+    margin: 0em 0.5em 0em 0.5em;
+  }
+
+  .iconM{
+    max-width: 3.5em;
+    max-height: 3.5em;
+    vertical-align: -1.5em;
+    margin: 0em 0.5em 0em 0.5em;
+  }
+
+  .iconNoMargin{
+    max-width: 1.75em;
+    max-height: 1.75em;
+    vertical-align: -0.5em;
+    margin: 0.3em;
+  }
+
+  #curio_data1{
+      justify-self: center;
+      grid-area: t1;
+  }
+
+  #curio_data2{
+      justify-self: center;
+      grid-area: t2;
+  }
+
+  .curio_data{
+    margin: 1em;
+    border-radius: 0.2em;
+    box-shadow: 0.2em 0.2em 1em 0.005em #d3d3d3;
+    padding: 0.25em 1em 0.25em 1em;
+    max-width: 35em;
+    background-color: #d3d3d3;
+    color: #002125;
+  }
+
+  #our_team p{
+    text-align: center;
+    margin: 0.1em;
+  }
+
+  #our_team .name{
+    font-size: 3em;
+  }
 
 }
