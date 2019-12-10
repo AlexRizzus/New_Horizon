@@ -338,8 +338,8 @@ body {
 #descrizione{
   display: grid;
   margin: 2em;
-  grid-template-columns: 0.3fr 1fr 1fr 1fr 0.3fr;
-  grid-template-rows: 1.5fr 0.5fr 2fr 1.3fr 1fr 1fr 5fr 1fr;
+  grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
+  grid-template-rows: 1.5fr 0.5fr 0.5fr 0.7fr 1fr 1fr 5fr;
   grid-template-areas:
     'a1 a2 a3 a4 a5'
     'b1 b2 b3 b4 b5'
@@ -347,9 +347,8 @@ body {
     'd1 d2 d3 d4 d5'
     'e1 e2 e3 e4 e5'
     'f1 f2 f2 f2 f4'
-    'g1 g2 g2 g2 g5'
-    'h1 h2 h3 h4 h5';
-  grid-gap: 2em;
+    'g1 g2 g2 g2 g5';
+  grid-gap: 4em;
 
 }
 #testo_pulsante_form{
@@ -368,6 +367,10 @@ body {
 }
 #pulsante_email{
   grid-area: b3;
+  font-size: 1.5em;
+}
+#pulsante_email:hover{
+  font-size: 1.7em;
 }
 #testo_numero_tel{
   grid-area: a4;
@@ -384,14 +387,23 @@ body {
 #immagine_insta{
   grid-area: d2;
   max-width: 30%;
+  justify-self: center;
+}
+#immagine_insta:hover{
+  max-width: 35%;
+  transition: .5s;
 }
 #immagine_face{
   grid-area: d3;
     max-width: 30%;
+    justify-self: center;
+
 }
 #immagine_twit{
   grid-area: d4;
     max-width: 30%;
+    justify-self: center;
+
 }
 #form_text{
   grid-area: f2;
