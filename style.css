@@ -186,6 +186,7 @@ body {
   padding-bottom:2em;
   padding-top:0.5em;
   text-decoration: none;
+  box-shadow: -0.3em 0.3em 0.3em 0.05em #838383;
 }
 .mission-home a {
   text-decoration: underline;
@@ -240,14 +241,16 @@ body {
   display: grid;
   margin: 2em;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:  'i1 t1 t1'
+  grid-template-rows: 0.25fr 0.675fr 0.75fr;
+  grid-template-areas:  'st t1 t1'
+                        'i1 t1 t1'
                         'i2 t2 t2';
   grid-gap: 0.1em;
   align-items: center;
 }
 
 .subtitle_cont{
-    margin: 0em 0.5em 0.5em 0.3em;
+    margin: 0em 0.5em 0.5em 0.5em;
 }
 
 #icon_fact{
@@ -255,11 +258,12 @@ body {
 }
 
 #subtitle_energia_pulita{
+  grid-area: st;
   align-self: start;
 }
 
 #subtitle_sviluppo{
-  margin: 2em 0em 0em 0.3em;
+  margin: 2em 0em 0em 1.5em;
 }
 
 #green_data h3{
@@ -293,13 +297,6 @@ body {
   margin: 0em 0.5em 0em 0.5em;
 }
 
-.iconM{
-  max-width: 5em;
-  max-height: 5em;
-  vertical-align: -2.0em;
-  margin: 0em 0.5em 0em 0.5em;
-}
-
 .iconNoMargin{
   max-width: 1.75em;
   max-height: 1.75em;
@@ -324,59 +321,86 @@ body {
   background-color: #d3d3d3;
   color: #002125;
 }
-
-#our_team p{
-  text-align: center;
-}
-
 /*-----------------------------CONTATTCI--------------------------------------*/
+.testo{
+  margin: 0em;
+}
 #descrizione{
   display: grid;
   margin: 2em;
   grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
-  grid-template-rows: 1.5fr 0.5fr 0.5fr 0.7fr 1fr 1fr 5fr;
+  grid-template-rows:  1.5fr 0.5fr 0.7fr 1fr 1fr 5fr;
   grid-template-areas:
-    'a1 a2 a3 a4 a5'
     'b1 b2 b3 b4 b5'
     'c1 c2 c2 c2 c5'
     'd1 d2 d3 d4 d5'
     'e1 e2 e3 e4 e5'
     'f1 f2 f2 f2 f4'
     'g1 g2 g2 g2 g5';
-  grid-gap: 4em;
+  grid-gap: 2em;
 
 }
 #testo_pulsante_form{
-  grid-area: a2;
+  grid-area: b2;
+  font-size: 1.2em;
   text-align: center;
-
+  background-color: #006699;
+  border-radius: 5px;
+  padding: 1em;
 }
 #pulsante_form{
   grid-area: b2;
-
-
+  max-height: 30%;
+  font-size: 1.5em;
+  align-self: end;
+  min-width: 80%;
+  justify-self:center;
+  margin: 1em;
+}
+#pulsante_form:hover{
+  font-size: 1.7em;
+  margin:0.82em;
 }
 #testo_pulsante_mail{
-  grid-area: a3;
+  grid-area: b3;
   text-align: center;
+  font-size: 1.2em;
+  background-color: #006699;
+  border-radius: 5px;
+  padding: 1em;
 }
 #pulsante_email{
   grid-area: b3;
   font-size: 1.5em;
+  max-height: 30%;
+  align-self: end;
+  min-width: 80%;
+  justify-self:center;
+  border: 1em;
+  margin: 0.2em;
 }
 #pulsante_email:hover{
   font-size: 1.7em;
+  max-width: 80%;
 }
 #testo_numero_tel{
-  grid-area: a4;
+  grid-area: b4;
   text-align: center;
+  font-size: 1.2em;
 }
 #numero_tel{
   grid-area: b4;
+  max-height: 30%;
+  font-size: 1.5em;
+  align-self: end;
+}
+#numero_tel:hover{
+  font-size: 1.7em;
 }
 #testo_social{
   grid-area: c2;
   text-align: center;
+  font-size: 1.4em;
 
 }
 #immagine_insta{
@@ -417,21 +441,7 @@ body {
 }
 
 /*----------------------------COLLABORAZIONI----------------------------------*/
-#Team{
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-template-areas: 'ct1 ct2';
-}
-#astronauti
-{
-  grid-area: ct1;
-  width: 13em;
-  height: 13em;
-}
-#cuore
-{
-  grid-area: ct2;
-}
+
 #contentCollab #center{
   text-align: center;
 }
@@ -509,6 +519,9 @@ body {
     text-align: justify;
   }
 
+
+}
+
 /* ------------ LOGIN ------------------------------------ */
 
 .login-content{
@@ -530,7 +543,7 @@ body {
 
 .login-box{
   background-color: #d3d3d3;
-  padding: 3em 0em;
+  padding: 4em 0em;
   margin: 1em 25%;
   color: #002125;
   border-radius: 0.4em;
@@ -543,17 +556,6 @@ body {
   vertical-align: middle;
 }
 .login-box input{
-  margin: 1em 0em;
-  height: 2.5em;
-  margin-right: 2em;
-  font-size: 1.3em;
-  width:18em;
-  border: 0.2em;
-  border-color: #002125;
-  border-radius: 0.3em;
-  text-align: center;
-}
-.login-box select{
   margin: 1em 0em;
   height: 2.5em;
   margin-right: 2em;
@@ -580,21 +582,17 @@ body {
   background-color:#002125;
   color:#d3d3d3;
 }
-.login-box p{
-  padding-top: 1em;
-  font-size:0.8em;
-}
+
 }
 
 
   /*----------------GENERAL PURPOSE CSS------------------------------------*/
 
-@media screen and (max-width: 1099px) and (min-width: 750px) and (orientation:landscape){
-
+@media screen and (max-width: 1099px){
   body {
     padding:0em;
     margin:0em;
-    background-image: linear-gradient(to bottom, #000206, #005660);
+    background-color: #001115;
     font-family: 'Oswald', sans-serif;
     color: #d3d3d3;
   }
@@ -783,129 +781,6 @@ body {
     color:black;
   }
 
-  /*-----------------CHI SIAMO----------------------------------------------*/
-
-  #green_data{
-    display: grid;
-    margin: 1em;
-    text-align: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr;
-    grid-template-areas:  'i1'
-                          't1'
-                          'i2'
-                          't2';
-    grid-gap: 0.1em;
-    align-items: center;
-  }
-
-  #contentAbout h1{
-    font-size: 3em;
-    text-align: center;
-  }
-
-  #contentAbout h2{
-    text-align: left;
-    font-size: 2em;
-  }
-
-  #contentAbout p{
-    text-align: left;
-    font-size: 1.8em;
-    margin: 0.8em;
-  }
-
-  .subtitle_cont{
-      margin: 0em;
-  }
-
-  #icon_fact{
-    vertical-align: 0.0em;
-  }
-
-  #subtitle_energia_pulita{
-    grid-area: st;
-  }
-
-  #subtitle_sviluppo{
-    margin-left: 0.5em;
-  }
-
-  #green_data h3{
-    font-size: 2em;
-    margin: 0.25em;
-  }
-
-  #contentAbout#green_data p{
-    font-size: 1.3em;
-  }
-
-  #curio_icon1{
-    grid-area: i1;
-  }
-
-  #curio_icon2{
-    grid-area: i2;
-  }
-
-  .curio_icon{
-    justify-self: center;
-    margin: 0.5em;
-    color: white;
-    max-width: 8em;
-    max-height: 8em;
-  }
-
-  .icon{
-    max-width: 1.75em;
-    max-height: 1.75em;
-    vertical-align: -0.5em;
-    margin: 0em 0.5em 0em 0.5em;
-  }
-
-  .iconM{
-    max-width: 3.5em;
-    max-height: 3.5em;
-    vertical-align: -1.5em;
-    margin: 0em 0.5em 0em 0.5em;
-  }
-
-  .iconNoMargin{
-    max-width: 1.75em;
-    max-height: 1.75em;
-    vertical-align: -0.5em;
-    margin: 0.3em;
-  }
-
-  #curio_data1{
-      justify-self: center;
-      grid-area: t1;
-  }
-
-  #curio_data2{
-      justify-self: center;
-      grid-area: t2;
-  }
-
-  .curio_data{
-    margin: 1em;
-    border-radius: 0.2em;
-    box-shadow: 0.2em 0.2em 1em 0.005em #d3d3d3;
-    padding: 0.25em 1em 0.25em 1em;
-    max-width: 35em;
-    background-color: #d3d3d3;
-    color: #002125;
-  }
-
-  #our_team p{
-    text-align: center;
-    margin: 0.1em;
-  }
-
-  #our_team .name{
-    font-size: 3em;
-  }
-
   /* --------------- LOGIN --------------------------------------------- */
 
   .login-content{
@@ -950,17 +825,6 @@ body {
     border-radius: 0.3em;
     text-align: center;
   }
-  .login-box select{
-    margin: 1em 0em;
-    height: 2.5em;
-    margin-right: 2em;
-    font-size: 1.3em;
-    width:18em;
-    border: 0.2em;
-    border-color: #002125;
-    border-radius: 0.3em;
-    text-align: center;
-  }
   .login-button {
     background-color: #d3d3d3;
     color: #002125;
@@ -968,7 +832,7 @@ body {
     border-radius: 0.3em;
     padding: 0.3em;
     margin:0em;
-    font-size: 1.2em;
+    font-size: 1.2  em;
     transition-duration: 0.4s;
     font-weight: bold;
     margin-top: 1em;
@@ -977,9 +841,5 @@ body {
     background-color:#002125;
     color:#d3d3d3;
   }
-
-}
-
-@media screen and (max-width: 749px){
 
 }
