@@ -327,12 +327,36 @@ body {
   color: #002125;
 }
 /*-----------------------------CONTATTCI--------------------------------------*/
+
+body {
+  padding:0em;
+  margin:0em;
+  background-image: linear-gradient(to bottom, black, #005660);
+  font-family: 'Oswald', sans-serif;
+  color: #d3d3d3;
+}
+.header{
+  position: relative;
+  z-index: -1;
+}
+.aurora{
+  width: 100%;
+}
+.titolo{
+  position: absolute;
+ top: 20%;
+ left: 35%;
+ transform: translate(-30%, -40%);
+ font-weight: bold;
+ font-size: 3em;
+ min-width: 80%;
+}
 .testo{
   margin: 0em;
 }
 #descrizione{
   display: grid;
-  margin: 2em;
+  margin: 1em;
   grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
   grid-template-rows:  1.5fr 0.5fr 0.7fr 1fr 1fr 5fr;
   grid-template-areas:
@@ -342,65 +366,95 @@ body {
     'e1 e2 e3 e4 e5'
     'f1 f2 f2 f2 f4'
     'g1 g2 g2 g2 g5';
-  grid-gap: 2em;
+  grid-gap: 1em;
 
 }
 #testo_pulsante_form{
   grid-area: b2;
-  font-size: 1.2em;
+  padding-top: 2em;
   text-align: center;
-  background-color: #006699;
-  border-radius: 5px;
-  padding: 1em;
+  font-size: 1.4em;
+  background-image: linear-gradient(to bottom, #000d33, #330033);
+  border-radius: 10px;
+  border: 3px hsl(300, 100%, 20%) solid;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+
 }
 #pulsante_form{
   grid-area: b2;
   max-height: 30%;
-  font-size: 1.5em;
-  align-self: end;
+  font-size: 1.6em;
   min-width: 80%;
   justify-self:center;
   margin: 1em;
+  background-color: inherit;
+  border-radius: 10px;
+  color: white;
 }
 #pulsante_form:hover{
-  font-size: 1.7em;
-  margin:0.82em;
+  max-width: 80%;
+  background-color: rgba(250, 250, 250, 0.6);
+  color: black;
+  font-weight: bold;
+
 }
 #testo_pulsante_mail{
   grid-area: b3;
+  padding-top: 2em;
   text-align: center;
-  font-size: 1.2em;
-  background-color: #006699;
-  border-radius: 5px;
-  padding: 1em;
+  font-size: 1.4em;
+  background-image: linear-gradient(to bottom, #000d33, #330033);
+  border-radius: 10px;
+  border: 3px hsl(300, 100%, 20%) solid;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 #pulsante_email{
   grid-area: b3;
-  font-size: 1.5em;
+  font-size: 1.6em;
   max-height: 30%;
-  align-self: end;
   min-width: 80%;
   justify-self:center;
-  border: 1em;
-  margin: 0.2em;
+  margin: 1em;
+  background-color: inherit;
+  border-radius: 10px;
+  color: white;
 }
 #pulsante_email:hover{
-  font-size: 1.7em;
   max-width: 80%;
+  background-color: rgba(250, 250, 250, 0.6);
+  color: black;
+  font-weight: bold;
 }
 #testo_numero_tel{
   grid-area: b4;
+  padding-top: 2em;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.4em;
+  background-image: linear-gradient(to bottom, #000d33, #330033);
+  border-radius: 10px;
+  border: 3px hsl(300, 100%, 20%) solid;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 #numero_tel{
   grid-area: b4;
   max-height: 30%;
-  font-size: 1.5em;
-  align-self: end;
+  font-size: 1.6em;
+  max-height: 30%;
+  min-width: 80%;
+  justify-self:center;
+  margin: 1em;
+  background-color: inherit;
+  border-radius: 10px;
+  color: white;
 }
 #numero_tel:hover{
-  font-size: 1.7em;
+  max-width: 80%;
+  background-color: rgba(250, 250, 250, 0.6);
+  color: black;
+  font-weight: bold;
 }
 #testo_social{
   grid-area: c2;
