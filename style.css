@@ -502,6 +502,40 @@ body {
 
 /*----------------------------COLLABORAZIONI----------------------------------*/
 
+#Team{
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-areas: 'ct1 ct2';
+}
+#astronauti
+{
+  grid-area: ct1;
+  width: 13em;
+  height: 13em;
+  border-radius: 1em;
+}
+#Team.p
+{
+  grid-area: ct2;
+}
+
+#Meeting{
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  grid-template-areas: 'cm1 cm2';
+}
+#meetimage
+{
+  grid-area: cm2;
+  width: 18em;
+  height: 10em;
+  border-radius: 1em;
+}
+#Meeting.p
+{
+  grid-area: cm1;
+}
+
 #contentCollab #center{
   text-align: center;
 }
@@ -512,6 +546,7 @@ body {
   width: 7em;
   height: 7em;
   margin: 3em;
+  border-radius: 1em;
 }
 #collab-vantaggi{
   margin-left: 8em;
