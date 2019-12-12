@@ -614,9 +614,6 @@ body {
     text-align: justify;
   }
 
-
-}
-
 /* ------------ LOGIN ------------------------------------ */
 
 .login-content{
@@ -677,12 +674,17 @@ body {
   background-color:#002125;
   color:#d3d3d3;
 }
-
 }
-
 
   /*----------------GENERAL PURPOSE CSS------------------------------------*/
 @media screen and (max-width: 1099px) and (min-width: 750px){
+
+  .Partners{
+    width: 7em;
+    height: 7em;
+    margin: 3em;
+    border-radius: 1em;
+  }
 
   body {
     padding:0em;
