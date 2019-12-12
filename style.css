@@ -33,7 +33,16 @@ body {
   font-family: 'Oswald', sans-serif;
   transition-duration: 0.5s;
 }
+<<<<<<< HEAD
 .navigation button:hover{
+=======
+
+#mobile_menu{
+  display: none;
+}
+
+#navigation button:hover{
+>>>>>>> d261906ea07c2346f9b042d99ec0e5d57690a654
   font-size:1.6em;
   background-color: #003135;
 }
@@ -57,6 +66,7 @@ body {
   font-size:1.4em;
   background-color:#d3d3d3;
 }
+
 #footer {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr;
@@ -186,6 +196,7 @@ body {
   padding-bottom:2em;
   padding-top:0.5em;
   text-decoration: none;
+  box-shadow: -0.3em 0.3em 0.3em 0.05em #838383;
 }
 .mission-home a {
   text-decoration: underline;
@@ -240,14 +251,16 @@ body {
   display: grid;
   margin: 2em;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:  'i1 t1 t1'
+  grid-template-rows: 0.25fr 0.675fr 0.75fr;
+  grid-template-areas:  'st t1 t1'
+                        'i1 t1 t1'
                         'i2 t2 t2';
   grid-gap: 0.1em;
   align-items: center;
 }
 
 .subtitle_cont{
-    margin: 0em 0.5em 0.5em 0.3em;
+    margin: 0em 0.5em 0.5em 0.5em;
 }
 
 #icon_fact{
@@ -255,11 +268,12 @@ body {
 }
 
 #subtitle_energia_pulita{
+  grid-area: st;
   align-self: start;
 }
 
 #subtitle_sviluppo{
-  margin: 2em 0em 0em 0.3em;
+  margin: 2em 0em 0em 1.5em;
 }
 
 #green_data h3{
@@ -293,13 +307,6 @@ body {
   margin: 0em 0.5em 0em 0.5em;
 }
 
-.iconM{
-  max-width: 5em;
-  max-height: 5em;
-  vertical-align: -2.0em;
-  margin: 0em 0.5em 0em 0.5em;
-}
-
 .iconNoMargin{
   max-width: 1.75em;
   max-height: 1.75em;
@@ -324,75 +331,192 @@ body {
   background-color: #d3d3d3;
   color: #002125;
 }
-
-#our_team p{
+/*-----------------------------CONTATTCI--------------------------------------*/
+#navigation {
+  margin-top: -0.3em;
+  padding: 0em;
+  height: 3.2em;
+  width: 100%;
+  background-color: #002125;
+  position: sticky;
+  top:0;
+  margin-bottom: 1em;
+}
+body {
+  padding:0em;
+  margin:0em;
+  background-image: linear-gradient(to bottom, #0d0d0d, #005660);
+  font-family: 'Oswald', sans-serif;
+  color: #d3d3d3;
+}
+.header{
+  position: relative;
+  z-index: -2;
   text-align: center;
 }
+.aurora{
+  width: 100%;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+.titolo{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  border-radius: 10px;
+  width: 80%;
+  padding: 2%;
+  font-size: 3vw;
+  text-align: center;
+  max-height: 70%;
 
-/*-----------------------------CONTATTCI--------------------------------------*/
+}
+.testo{
+  margin: 0em;
+}
 #descrizione{
   display: grid;
-  margin: 2em;
-  grid-template-columns: 0.3fr 1fr 1fr 1fr 0.3fr;
-  grid-template-rows: 1.5fr 0.5fr 2fr 1.3fr 1fr 1fr 5fr 1fr;
+  margin: 1em;
+  grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
+  grid-template-rows:  1.5fr 0.5fr 0.7fr 1fr 1fr 5fr;
   grid-template-areas:
-    'a1 a2 a3 a4 a5'
     'b1 b2 b3 b4 b5'
     'c1 c2 c2 c2 c5'
     'd1 d2 d3 d4 d5'
     'e1 e2 e3 e4 e5'
     'f1 f2 f2 f2 f4'
-    'g1 g2 g2 g2 g5'
-    'h1 h2 h3 h4 h5';
-  grid-gap: 2em;
+    'g1 g2 g2 g2 g5';
+  grid-gap: 1em;
 
 }
 #testo_pulsante_form{
-  grid-area: a2;
+  grid-area: b2;
+  padding-top: 2em;
   text-align: center;
+  font-size: calc(1vw + 0.5vh + 0.5vmin);
+  background-image: linear-gradient(to bottom, #000d33, #330033);
+  border-radius: 10px;
+  border: 3px hsl(300, 100%, 20%) solid;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 
 }
 #pulsante_form{
   grid-area: b2;
-
+  max-height: 30%;
+  font-size: calc(1.2vw + 0.5vh + 0.5vmin);
+  min-width: 80%;
+  justify-self:center;
+  margin: 1em;
+  background-color: inherit;
+  border-radius: 10px;
+  color: white;
+}
+#pulsante_form:hover{
+  max-width: 80%;
+  background-color: rgba(250, 250, 250, 0.6);
+  color: black;
+  font-weight: bold;
 
 }
 #testo_pulsante_mail{
-  grid-area: a3;
+  grid-area: b3;
+  padding-top: 2em;
   text-align: center;
+  font-size: calc(1vw + 0.5vh + 0.5vmin);
+  background-image: linear-gradient(to bottom, #000d33, #330033);
+  border-radius: 10px;
+  border: 3px hsl(300, 100%, 20%) solid;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 #pulsante_email{
   grid-area: b3;
+  font-size: calc(1.2vw + 0.5vh + 0.5vmin);
+  max-height: 30%;
+  min-width: 80%;
+  justify-self:center;
+  margin: 1em;
+  background-color: inherit;
+  border-radius: 10px;
+  color: white;
+}
+#pulsante_email:hover{
+  max-width: 80%;
+  background-color: rgba(250, 250, 250, 0.6);
+  color: black;
+  font-weight: bold;
 }
 #testo_numero_tel{
-  grid-area: a4;
+  grid-area: b4;
+  padding-top: 2em;
   text-align: center;
+  font-size: calc(1vw + 0.5vh + 0.5vmin);
+  background-image: linear-gradient(to bottom, #000d33, #330033);
+  border-radius: 10px;
+  border: 3px hsl(300, 100%, 20%) solid;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 #numero_tel{
   grid-area: b4;
+  max-height: 30%;
+  font-size: calc(1.2vw + 0.5vh + 0.5vmin);
+  max-height: 30%;
+  min-width: 80%;
+  justify-self:center;
+  margin: 1.2em;
+  background-color: inherit;
+  border-radius: 10px;
+  color: white;
+}
+#numero_tel:hover{
+  max-width: 80%;
+  background-color: rgba(250, 250, 250, 0.6);
+  color: black;
+  font-weight: bold;
 }
 #testo_social{
   grid-area: c2;
   text-align: center;
+  font-size: calc(1.5vw + 0.5vh + 0.5vmin);
 
 }
 #immagine_insta{
   grid-area: d2;
   max-width: 30%;
+  justify-self: center;
+}
+#immagine_insta:hover{
+  max-width: 35%;
+  transition: .5s;
 }
 #immagine_face{
   grid-area: d3;
     max-width: 30%;
+    justify-self: center;
+
 }
 #immagine_twit{
   grid-area: d4;
     max-width: 30%;
+    justify-self: center;
+
 }
 #form_text{
   grid-area: f2;
+  font-size: calc(1.5vw + 0.5vh + 0.5vmin);
+  text-align: center;
 }
 #formid{
   grid-area: g2;
+  background-color: inherit;
 }
 
 #validation2{
@@ -406,6 +530,42 @@ body {
 
 /*----------------------------COLLABORAZIONI----------------------------------*/
 
+#Team{
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-areas: 'ct1 ct2';
+}
+#astronauti
+{
+  grid-area: ct1;
+  width: 13em;
+  height: 13em;
+  border-radius: 1em;
+  align-self: center;
+}
+#Team.p
+{
+  grid-area: ct2;
+}
+
+#Meeting{
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  grid-template-areas: 'cm1 cm2';
+}
+#meetimage
+{
+  grid-area: cm2;
+  width: 18em;
+  height: 10em;
+  border-radius: 1em;
+  align-self: center;
+}
+#Meeting.p
+{
+  grid-area: cm1;
+}
+
 #contentCollab #center{
   text-align: center;
 }
@@ -415,14 +575,13 @@ body {
 .Partners{
   width: 7em;
   height: 7em;
-  margin: 3em;
+  margin: 1em;
+  border-radius: 1em;
 }
 #collab-vantaggi{
-  margin-left: 8em;
-  margin-right: 8em;
   text-align: center;
   display: grid;
-  grid-template-columns: 4fr 1fr 4fr 1fr;
+  grid-template-columns: 400px 1fr 400px 1fr;
   grid-template-areas: 'cv1 cv2 cv3 cv4''cv5 cv6 cv7 cv8';
   align-items: center;
   justify-content: start;
@@ -504,7 +663,7 @@ body {
 
 .login-box{
   background-color: #d3d3d3;
-  padding: 3em 0em;
+  padding: 4em 0em;
   margin: 1em 25%;
   color: #002125;
   border-radius: 0.4em;
@@ -517,17 +676,6 @@ body {
   vertical-align: middle;
 }
 .login-box input{
-  margin: 1em 0em;
-  height: 2.5em;
-  margin-right: 2em;
-  font-size: 1.3em;
-  width:18em;
-  border: 0.2em;
-  border-color: #002125;
-  border-radius: 0.3em;
-  text-align: center;
-}
-.login-box select{
   margin: 1em 0em;
   height: 2.5em;
   margin-right: 2em;
@@ -554,21 +702,20 @@ body {
   background-color:#002125;
   color:#d3d3d3;
 }
-.login-box p{
-  padding-top: 1em;
-  font-size:0.8em;
 }
-}
-
 
   /*----------------GENERAL PURPOSE CSS------------------------------------*/
+<<<<<<< HEAD
 
 @media screen and (min-width: 750px) and (max-width:1099px){
+=======
+@media screen and (max-width: 1099px) and (min-width: 750px){
+>>>>>>> d261906ea07c2346f9b042d99ec0e5d57690a654
 
   body {
     padding:0em;
     margin:0em;
-    background-image: linear-gradient(to bottom, #000206, #005660);
+    background-color: #001115;
     font-family: 'Oswald', sans-serif;
     color: #d3d3d3;
   }
@@ -616,6 +763,11 @@ body {
     height: 2em;
     width: auto;
   }
+
+  #mobile_menu{
+    display: none;
+  }
+
   #footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -760,6 +912,297 @@ body {
     color:black;
   }
 
+  /* --------------- COLLABORAZIONI --------------------------------------------- */
+
+  #Team{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: 'ct1 ct2';
+  }
+  #astronauti
+  {
+    grid-area: ct1;
+    width: 13em;
+    height: 13em;
+    border-radius: 1em;
+    align-self: center;
+  }
+  #Team.p
+  {
+    grid-area: ct2;
+  }
+
+  #Meeting{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-areas: 'cm1 cm2';
+  }
+  #meetimage
+  {
+    grid-area: cm2;
+    width: 18em;
+    height: 10em;
+    border-radius: 1em;
+    align-self: center;
+  }
+  #Meeting.p
+  {
+    grid-area: cm1;
+  }
+
+  #contentCollab #center{
+    text-align: center;
+  }
+  #Partners{
+    text-align: center;
+  }
+  .Partners{
+    width: 6em;
+    height: 6em;
+    margin: 1em;
+    border-radius: 1em;
+  }
+  #collab-vantaggi{
+    margin-right: 4em;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 10fr 1fr 10fr 1fr;
+    grid-template-areas: 'cv1 cv2 cv3 cv4''cv5 cv6 cv7 cv8';
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    grid-column-gap: 1em;
+    justify-self: center;
+  }
+
+  #collab_vantaggio1{
+    grid-area: cv1;
+  }
+  #collab_vantaggio2{
+    grid-area: cv3;
+  }
+  #collab_vantaggio3{
+    grid-area: cv5;
+  }
+  #collab_vantaggio4{
+    grid-area: cv7;
+  }
+  .collab_icon{
+    width: 4em;
+    height: 4em;
+  }
+  #collab_icon1{
+    grid-area: cv2;
+  }
+  #collab_icon2{
+    grid-area: cv4;
+  }
+  #collab_icon3{
+    grid-area: cv6;
+  }
+  #collab_icon4{
+    grid-area: cv8;
+  }
+
+  #contentCollab{
+        margin: 5em;
+    }
+
+  #contentCollab abbr{
+      text-decoration: none;
+    }
+
+  #contentCollab h1{
+      text-align: center;
+      font-size: 2.6em;
+      margin-top: 1.5em;
+    }
+
+  #contentCollab h2{
+      text-align: center;
+      font-size: 2em;
+      margin-top: 1.5em;
+    }
+
+  #contentCollab p{
+      font-size: 1.8em;
+      margin: 0em 1em 0em 1em;
+      text-align: justify;
+    }
+
+
+  /* --------------- LOGIN --------------------------------------------- */
+
+  .login-content{
+    text-align: center;
+    align-content: center;
+  }
+  .login-content h1{
+      font-size: 4em;
+  }
+  .login-content a{
+    color: #d3d3d3
+  }
+  .login-content p{
+    margin-top: 1.5em;
+  }
+  #login{
+    background-color: #001115;
+  }
+
+  .login-box{
+    background-color: #d3d3d3;
+    padding: 4em 0em;
+    margin: 1em 10%;
+    color: #002125;
+    border-radius: 0.4em;
+  }
+  .login-box img{
+    padding: 0em;
+    margin-right:0.6em;
+    width: 2.8em;
+    height:3.2em;
+    vertical-align: middle;
+  }
+  .login-box input{
+    margin: 1em 0em;
+    height: 2.5em;
+    margin-right: 2em;
+    font-size: 1.3em;
+    width:18em;
+    border: 0.2em;
+    border-color: #002125;
+    border-radius: 0.3em;
+    text-align: center;
+  }
+  .login-button {
+    background-color: #d3d3d3;
+    color: #002125;
+    border: 0.2em solid #002125;
+    border-radius: 0.3em;
+    padding: 0.3em;
+    margin:0em;
+    font-size: 1.2  em;
+    transition-duration: 0.4s;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+  .login-button:hover {
+    background-color:#002125;
+    color:#d3d3d3;
+  }
+
+}
+
+@media screen and (max-width: 749px) and (orientation: portrait)
+{
+  /*----------------GENERAL PURPOSE CSS------------------------------------*/
+  body {
+    padding:0em;
+    margin:0em;
+    background-image: linear-gradient(to bottom, #000206, #005660);
+    font-family: 'Oswald', sans-serif;
+    color: #d3d3d3;
+  }
+  #navigation {
+    margin-top: -0.3em;
+    padding: 0em;
+    height: 3.2em;
+    width: 100%;
+    background-color: #002125;
+    position: sticky;
+    top:0;
+  }
+  #navigation button {
+    color: white;
+    border:none;
+    background-color: #002125;
+    padding: 0em;
+    margin: 0em;
+    text-align: center;
+    height: 2.6em;
+    width: 14.285%;
+    font-size: 1.2em;
+    font-family: 'Oswald', sans-serif;
+  }
+  #navigation .position img {
+    height: 2em;
+    width: auto;
+  }
+
+  #mobile_menu{
+    position: sticky;
+    float: right;
+    display: block;
+  }
+  #mobile_menu img{
+    max-width: 2em;
+    max-height: 2em;
+  }
+  #mobile_menu div{
+    position: sticky;
+  }
+
+  #drop_content{
+    float: right;
+    display: inline-block;
+  }
+
+  #navigation .drop_down_button{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    margin-top: 1em;
+    right: 0.8em;
+    background-color: #03fccf;
+  }
+
+  #mobile_button_1{
+    top: 2em;
+  }
+
+  #mobile_button_2{
+    top: 5em;
+  }
+
+  #navigation .standard_button{
+    display: none;
+  }
+
+  #footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'a b';
+    grid-gap: 0.5em;
+    margin-top:5.5em;
+    text-align: center;
+    background-color: #002125;
+    height: 7em;
+    margin-bottom:0em;
+  }
+  .validation {
+    grid-area: a;
+    padding:1.4em;
+  }
+  .validation a{
+    padding: 0em 1em;
+  }
+  .social{
+    grid-area: b;
+    margin: 0em;
+    padding:1.6em;
+  }
+  .info {
+    grid-area: m;
+    text-align: center;
+    display: none;
+  }
+  .footer-icon {
+    width: 9%;
+    margin-left: 7%;
+    height: auto;
+  }
+
   /*-----------------CHI SIAMO----------------------------------------------*/
 
   #green_data{
@@ -883,6 +1326,7 @@ body {
     font-size: 3em;
   }
 
+<<<<<<< HEAD
   /* --------------- LOGIN --------------------------------------------- */
 
   .login-content{
@@ -1202,4 +1646,6 @@ body {
 
 @media screen and (max-height: 409px) and (orientation: landscape){
 
+=======
+>>>>>>> d261906ea07c2346f9b042d99ec0e5d57690a654
 }
