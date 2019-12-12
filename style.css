@@ -332,7 +332,7 @@ body {
 body {
   padding:0em;
   margin:0em;
-  background-image: linear-gradient(to bottom, black, #005660);
+  background-image: linear-gradient(to bottom, #0d0d0d, #005660);
   font-family: 'Oswald', sans-serif;
   color: #d3d3d3;
 }
