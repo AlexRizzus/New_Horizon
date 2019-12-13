@@ -1,6 +1,6 @@
 /* Style for New Horizon tecweb project*/
-@media screen and (min-width: 1100px){
-
+@media screen and (min-width: 1100px)
+{
 /*--------------GENERAL PURPOSE CSS------------------------------------------*/
 
 body {
@@ -33,16 +33,14 @@ body {
   font-family: 'Oswald', sans-serif;
   transition-duration: 0.5s;
 }
-<<<<<<< HEAD
-.navigation button:hover{
-=======
-
+.navigation button:hover
+{
+}
 #mobile_menu{
   display: none;
 }
 
 #navigation button:hover{
->>>>>>> d261906ea07c2346f9b042d99ec0e5d57690a654
   font-size:1.6em;
   background-color: #003135;
 }
@@ -332,16 +330,6 @@ body {
   color: #002125;
 }
 /*-----------------------------CONTATTCI--------------------------------------*/
-#navigation {
-  margin-top: -0.3em;
-  padding: 0em;
-  height: 3.2em;
-  width: 100%;
-  background-color: #002125;
-  position: sticky;
-  top:0;
-  margin-bottom: 1em;
-}
 body {
   padding:0em;
   margin:0em;
@@ -351,7 +339,7 @@ body {
 }
 .header{
   position: relative;
-  z-index: -2;
+  z-index: -1;
   text-align: center;
 }
 .aurora{
@@ -364,17 +352,17 @@ body {
  top: 50%;
  left: 50%;
  transform: translate(-50%, -50%);
- background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  border-radius: 10px;
-  width: 80%;
-  padding: 2%;
-  font-size: 3vw;
-  text-align: center;
-  max-height: 70%;
+ background-color: rgb(0,0,0);
+ background-color: rgba(0,0,0, 0.6);
+ color: white;
+ font-weight: bold;
+ border: 3px solid #f1f1f1;
+ border-radius: 10px;
+ width: 80%;
+ padding: 2%;
+ font-size: 3vw;
+ text-align: center;
+ max-height: 70%;
 
 }
 .testo{
@@ -492,10 +480,11 @@ body {
   grid-area: d2;
   max-width: 30%;
   justify-self: center;
+  padding: 5%;
+  background-color: white;
 }
 #immagine_insta:hover{
-  max-width: 35%;
-  transition: .5s;
+
 }
 #immagine_face{
   grid-area: d3;
@@ -705,12 +694,8 @@ body {
 }
 
   /*----------------GENERAL PURPOSE CSS------------------------------------*/
-<<<<<<< HEAD
 
 @media screen and (min-width: 750px) and (max-width:1099px){
-=======
-@media screen and (max-width: 1099px) and (min-width: 750px){
->>>>>>> d261906ea07c2346f9b042d99ec0e5d57690a654
 
   body {
     padding:0em;
