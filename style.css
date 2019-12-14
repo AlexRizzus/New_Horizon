@@ -1,8 +1,6 @@
 /* Style for New Horizon tecweb project*/
 @media screen and (min-width: 1100px){
 
-@media screen and (min-width: 1100px)
-{
 /*--------------GENERAL PURPOSE CSS------------------------------------------*/
 
 body {
@@ -12,7 +10,6 @@ body {
   font-family: 'Oswald', sans-serif;
   color: #d3d3d3;
 }
-#navigation {
 .navigation {
   margin-top: -0.3em;
   padding: 0em;
@@ -22,7 +19,6 @@ body {
   position: sticky;
   top:0;
 }
-#navigation button {
 .navigation button {
   color: white;
   border:none;
@@ -40,17 +36,13 @@ body {
 
 .navigation button:hover
 {
+  font-size:1.6em;
+  background-color: #003135;
 }
 #mobile_menu{
   display: none;
 }
 
-#navigation button:hover{
-  font-size:1.6em;
-  background-color: #003135;
-}
-
-#navigation .position {
 .navigation .position {
   color: #002125;
   background-color: #d3d3d3;
@@ -66,7 +58,6 @@ body {
   font-family: 'Oswald', sans-serif;
   box-shadow: 0em 0.3em 0.3em -0.1em #838383;
 }
-#navigation .position:hover {
 .navigation .position:hover {
   font-size:1.4em;
   background-color:#d3d3d3;
@@ -337,8 +328,7 @@ body {
   color: #002125;
 }
 /*-----------------------------CONTATTCI--------------------------------------*/
-<<<<<<< HEAD
-#navigation {
+.navigation {
   margin-top: -0.3em;
   padding: 0em;
   height: 3.2em;
@@ -349,8 +339,6 @@ body {
   margin-bottom: 1em;
   z-index: 2;
 }
-=======
->>>>>>> ec77eff75f10b1ce1a48cdf62a46fd02e945bd67
 body {
   padding:0em;
   margin:0em;
@@ -526,7 +514,6 @@ body {
   max-width: 30%;
   justify-self: center;
   padding: 5%;
-<<<<<<< HEAD
   filter: blur(3px);
   transition: 0.6s;
 }
@@ -535,7 +522,6 @@ body {
   max-width: 34%;
   transition: 0.6s;
   padding:3%;
-=======
 }
 #immagine_insta:hover{
 
