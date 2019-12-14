@@ -33,13 +33,7 @@ body {
   font-family: 'Oswald', sans-serif;
   transition-duration: 0.5s;
 }
-<<<<<<< HEAD
 .navigation button:hover{
-=======
-
-.navigation button:hover
-{
->>>>>>> 9fd433819f9b5216fc45dc1db277961f4f244288
   font-size:1.6em;
   background-color: #003135;
 }
@@ -599,7 +593,7 @@ body {
   transition: .5s;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
   opacity: 0.5;
-  z-index: 0;
+  z-index: 1;
 }
 #foto_social2:hover{
   max-width: 150%;
@@ -820,11 +814,7 @@ body {
 }
 
   /*----------------GENERAL PURPOSE CSS------------------------------------*/
-<<<<<<< HEAD
 
-=======
-@media screen and (max-width: 1099px) and (min-width: 750px){
->>>>>>> 9fd433819f9b5216fc45dc1db277961f4f244288
 @media screen and (min-width: 750px) and (max-width:1099px){
 
   body {
