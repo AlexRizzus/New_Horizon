@@ -747,7 +747,72 @@ body {
     margin: 0em 3em 0em 3em;
     text-align: justify;
   }
+/* ------------ RICERCA ------------------------------------ */
+#contentResearch{
+  display: grid;
+  grid-gap: 0.1em;
+  grid-template-areas:  't1 t1 t1'
+                        'd1 d1 i1'
+                        't2 t2 t2'
+                        's1 s1 im1'
+                        'p1 p1 im1'
+                        't3 t3 t3'
+                        ;
+}
 
+#contentResearch h1{
+  font-size: 2.5em;
+  text-align: center;
+}
+
+#contentResearch h2{
+  margin-left: 1.5em;
+  font-size: 2.0em;
+}
+
+#contentResearch p{
+  margin: 2em;
+  font-size: 1.4em;
+}
+
+#title_avanguardia{
+  grid-area: t1;
+}
+
+#d1{
+  grid-area: d1;
+}
+
+#n1{
+  justify-content: center;
+  align-self: center;
+  max-width: 6em;
+  grid-area: i1;
+  transform: rotate(30deg);
+}
+
+#title_scoperte{
+  grid-area: t2;
+}
+
+#subtitle_buco{
+  grid-area: s1;
+}
+
+#div_buco{
+  grid-area: p1;
+}
+
+#img_buco{
+  grid-area: im1;
+  max-width: 20em;
+  border-radius: 4em;
+  align-self: center;
+}
+
+#title_attrezzature{
+  grid-area: t3;
+}
 /* ------------ LOGIN ------------------------------------ */
 
 .login-content{
