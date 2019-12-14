@@ -33,16 +33,7 @@ body {
   font-family: 'Oswald', sans-serif;
   transition-duration: 0.5s;
 }
-<<<<<<< HEAD
 .navigation button:hover{
-=======
-
-#mobile_menu{
-  display: none;
-}
-
-#navigation button:hover{
->>>>>>> d261906ea07c2346f9b042d99ec0e5d57690a654
   font-size:1.6em;
   background-color: #003135;
 }
@@ -705,12 +696,8 @@ body {
 }
 
   /*----------------GENERAL PURPOSE CSS------------------------------------*/
-<<<<<<< HEAD
 
 @media screen and (min-width: 750px) and (max-width:1099px){
-=======
-@media screen and (max-width: 1099px) and (min-width: 750px){
->>>>>>> d261906ea07c2346f9b042d99ec0e5d57690a654
 
   body {
     padding:0em;
@@ -1326,7 +1313,6 @@ body {
     font-size: 3em;
   }
 
-<<<<<<< HEAD
   /* --------------- LOGIN --------------------------------------------- */
 
   .login-content{
@@ -1420,6 +1406,7 @@ body {
 
 .nav-tgl {
   margin-top: 2em;
+  margin-left:2.2em;
   display: inline-block;
   float:right;
   justify-self:right;
@@ -1498,6 +1485,11 @@ body {
   visibility: visible;
   clip-path: circle(100%);
 }
+.active.desktop {
+  display: block;
+  z-index: 101;
+}
+
   #footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1646,6 +1638,4 @@ body {
 
 @media screen and (max-height: 409px) and (orientation: landscape){
 
-=======
->>>>>>> d261906ea07c2346f9b042d99ec0e5d57690a654
 }
