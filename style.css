@@ -337,6 +337,7 @@ body {
   position: sticky;
   top:0;
   margin-bottom: 1em;
+  z-index: 2;
 }
 body {
   padding:0em;
@@ -347,7 +348,7 @@ body {
 }
 .header{
   position: relative;
-  z-index: -2;
+  z-index: -1;
   text-align: center;
 }
 .aurora{
@@ -365,12 +366,12 @@ body {
   color: white;
   font-weight: bold;
   border: 3px solid #f1f1f1;
-  border-radius: 10px;
   width: 80%;
   padding: 2%;
   font-size: 3vw;
   text-align: center;
   max-height: 70%;
+  text-shadow: 2px 2px 4px #000000;
 
 }
 .testo{
@@ -380,12 +381,13 @@ body {
   display: grid;
   margin: 1em;
   grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
-  grid-template-rows:  1.5fr 0.5fr 0.7fr 1fr 1fr 5fr;
+  grid-template-rows:  1.5fr 0.5fr 0.5fr 0.5fr 2.5fr 1fr 1fr;
   grid-template-areas:
     'b1 b2 b3 b4 b5'
     'c1 c2 c2 c2 c5'
     'd1 d2 d3 d4 d5'
-    'e1 e2 e3 e4 e5'
+    'e1 e2 e2 e2 e5'
+    'k1 k2 k3 k4 k5'
     'f1 f2 f2 f2 f4'
     'g1 g2 g2 g2 g5';
   grid-gap: 1em;
@@ -397,10 +399,10 @@ body {
   text-align: center;
   font-size: calc(1vw + 0.5vh + 0.5vmin);
   background-image: linear-gradient(to bottom, #000d33, #330033);
-  border-radius: 10px;
-  border: 3px hsl(300, 100%, 20%) solid;
   padding-left: 0.5em;
   padding-right: 0.5em;
+  text-shadow: 2px 2px 4px #000000;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
 
 }
 #pulsante_form{
@@ -411,8 +413,10 @@ body {
   justify-self:center;
   margin: 1em;
   background-color: inherit;
-  border-radius: 10px;
   color: white;
+  border-radius: 2px;
+  border-color: rgba(115, 64, 191, 0.5);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
 }
 #pulsante_form:hover{
   max-width: 80%;
@@ -427,10 +431,10 @@ body {
   text-align: center;
   font-size: calc(1vw + 0.5vh + 0.5vmin);
   background-image: linear-gradient(to bottom, #000d33, #330033);
-  border-radius: 10px;
-  border: 3px hsl(300, 100%, 20%) solid;
   padding-left: 0.5em;
   padding-right: 0.5em;
+  text-shadow: 2px 2px 4px #000000;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
 }
 #pulsante_email{
   grid-area: b3;
@@ -440,8 +444,10 @@ body {
   justify-self:center;
   margin: 1em;
   background-color: inherit;
-  border-radius: 10px;
-  color: white;
+  color:#F0F8FF;
+  border-radius: 2px;
+  border-color: rgba(115, 64, 191, 0.5);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
 }
 #pulsante_email:hover{
   max-width: 80%;
@@ -455,10 +461,10 @@ body {
   text-align: center;
   font-size: calc(1vw + 0.5vh + 0.5vmin);
   background-image: linear-gradient(to bottom, #000d33, #330033);
-  border-radius: 10px;
-  border: 3px hsl(300, 100%, 20%) solid;
   padding-left: 0.5em;
   padding-right: 0.5em;
+  text-shadow: 2px 2px 4px #000000;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
 }
 #numero_tel{
   grid-area: b4;
@@ -469,8 +475,10 @@ body {
   justify-self:center;
   margin: 1.2em;
   background-color: inherit;
-  border-radius: 10px;
   color: white;
+  border-radius: 2px;
+  border-color: rgba(115, 64, 191, 0.5);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
 }
 #numero_tel:hover{
   max-width: 80%;
@@ -482,33 +490,127 @@ body {
   grid-area: c2;
   text-align: center;
   font-size: calc(1.5vw + 0.5vh + 0.5vmin);
-
+  text-shadow: 2px 2px 4px #000000;
+  background-color: rgba(200,255,210, 0.1);
+  border: 3px solid rgba(200,255,210, 0.1);
 }
+#testo_social:hover{
+  background-color: rgba(100,100,100, 0.3);
+}
+
 #immagine_insta{
   grid-area: d2;
   max-width: 30%;
   justify-self: center;
+  padding: 5%;
+  filter: blur(3px);
+  transition: 0.6s;
 }
 #immagine_insta:hover{
-  max-width: 35%;
-  transition: .5s;
+  filter: blur(0px);
+  max-width: 34%;
+  transition: 0.6s;
+  padding:3%;
+
 }
 #immagine_face{
   grid-area: d3;
-    max-width: 30%;
-    justify-self: center;
+  max-width: 30%;
+  justify-self: center;
+  padding: 5%;
+  filter: blur(3px);
+  transition: 0.6s;
+}
+#immagine_face:hover{
+  filter: blur(0px);
+  max-width: 34%;
+  transition: 0.6s;
+  padding:3%;
 
 }
 #immagine_twit{
   grid-area: d4;
     max-width: 30%;
     justify-self: center;
+    padding: 5%;
+    filter: blur(3px);
+    transition: 0.6s;
 
+}
+#immagine_twit:hover{
+  filter: blur(0px);
+  max-width: 34%;
+  transition: 0.6s;
+  padding:3%;
+
+}
+#testo_foto_social{
+  grid-area: e2;
+  font-size: calc(1.1vw + 0.5vh + 0.5vmin);
+  text-align: center;
+  background-color: rgba(200,255,210, 0.1);
+  box-shadow: 2px;
+  font-style: italic;
+  text-shadow: 2px 2px 4px #000000;
+  padding: 1%;
+  border: 3px solid rgba(200,255,210, 0.1);
+  }
+#testo_foto_social:hover{
+  background-color: rgba(100,100,100, 0.3);
+}
+#foto_social1{
+  grid-area: k2;
+  max-width: 80%;
+  justify-self:center;
+  border-radius: 2px;
+  transition: .5s;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  z-index: 0;
+}
+#foto_social1:hover{
+  max-width: 120%;
+  transition: .5s;
+  opacity: 1;
+  z-index: 1;
+}
+#foto_social2{
+  grid-area: k3;
+  max-width: 80%;
+  justify-self:center;
+  border-radius: 2px;
+  transition: .5s;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  z-index: 0;
+}
+#foto_social2:hover{
+  max-width: 150%;
+  transition: .5s;
+  opacity: 1;
+  z-index: 1;
+}
+#foto_social3{
+  grid-area: k4;
+  max-width: 80%;
+  justify-self:center;
+  border-radius: 2px;
+  transition: .5s;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  z-index: 0;
+}
+#foto_social3:hover{
+  max-width: 120%;
+  transition: .5s;
+  opacity: 1;
+  z-index: 1;
 }
 #form_text{
   grid-area: f2;
   font-size: calc(1.5vw + 0.5vh + 0.5vmin);
   text-align: center;
+  text-shadow: 2px 2px 4px #000000;
 }
 #formid{
   grid-area: g2;
