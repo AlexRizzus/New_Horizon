@@ -1,6 +1,8 @@
 /* Style for New Horizon tecweb project*/
 @media screen and (min-width: 1100px){
 
+@media screen and (min-width: 1100px)
+{
 /*--------------GENERAL PURPOSE CSS------------------------------------------*/
 
 body {
@@ -11,6 +13,7 @@ body {
   color: #d3d3d3;
 }
 #navigation {
+.navigation {
   margin-top: -0.3em;
   padding: 0em;
   height: 3.2em;
@@ -20,6 +23,7 @@ body {
   top:0;
 }
 #navigation button {
+.navigation button {
   color: white;
   border:none;
   background-color: #002125;
@@ -34,6 +38,9 @@ body {
   transition-duration: 0.5s;
 }
 
+.navigation button:hover
+{
+}
 #mobile_menu{
   display: none;
 }
@@ -44,6 +51,7 @@ body {
 }
 
 #navigation .position {
+.navigation .position {
   color: #002125;
   background-color: #d3d3d3;
   border:none;
@@ -59,6 +67,7 @@ body {
   box-shadow: 0em 0.3em 0.3em -0.1em #838383;
 }
 #navigation .position:hover {
+.navigation .position:hover {
   font-size:1.4em;
   background-color:#d3d3d3;
 }
@@ -328,6 +337,7 @@ body {
   color: #002125;
 }
 /*-----------------------------CONTATTCI--------------------------------------*/
+<<<<<<< HEAD
 #navigation {
   margin-top: -0.3em;
   padding: 0em;
@@ -339,6 +349,8 @@ body {
   margin-bottom: 1em;
   z-index: 2;
 }
+=======
+>>>>>>> ec77eff75f10b1ce1a48cdf62a46fd02e945bd67
 body {
   padding:0em;
   margin:0em;
@@ -372,6 +384,17 @@ body {
   text-align: center;
   max-height: 70%;
   text-shadow: 2px 2px 4px #000000;
+ background-color: rgb(0,0,0);
+ background-color: rgba(0,0,0, 0.6);
+ color: white;
+ font-weight: bold;
+ border: 3px solid #f1f1f1;
+ border-radius: 10px;
+ width: 80%;
+ padding: 2%;
+ font-size: 3vw;
+ text-align: center;
+ max-height: 70%;
 
 }
 .testo{
@@ -503,6 +526,7 @@ body {
   max-width: 30%;
   justify-self: center;
   padding: 5%;
+<<<<<<< HEAD
   filter: blur(3px);
   transition: 0.6s;
 }
@@ -511,6 +535,9 @@ body {
   max-width: 34%;
   transition: 0.6s;
   padding:3%;
+=======
+}
+#immagine_insta:hover{
 
 }
 #immagine_face{
@@ -804,6 +831,7 @@ body {
 
   /*----------------GENERAL PURPOSE CSS------------------------------------*/
 @media screen and (max-width: 1099px) and (min-width: 750px){
+@media screen and (min-width: 750px) and (max-width:1099px){
 
   body {
     padding:0em;
@@ -833,6 +861,9 @@ body {
     width: 14.285%;
     font-size: 1.2em;
     font-family: 'Oswald', sans-serif;
+  }
+  #hamburger{
+    visibility: hidden;
   }
 
   #navigation .position {
@@ -1415,5 +1446,324 @@ body {
   #our_team .name{
     font-size: 3em;
   }
+
+  /* --------------- LOGIN --------------------------------------------- */
+
+  .login-content{
+    text-align: center;
+    align-content: center;
+  }
+  .login-content h1{
+      font-size: 4em;
+  }
+  .login-content a{
+    color: #d3d3d3
+  }
+  .login-content p{
+    margin-top: 1.5em;
+  }
+  #login{
+    background-color: #001115;
+  }
+
+  .login-box{
+    background-color: #d3d3d3;
+    padding: 4em 0em;
+    margin: 1em 10%;
+    color: #002125;
+    border-radius: 0.4em;
+  }
+  .login-box img{
+    padding: 0em;
+    margin-right:0.6em;
+    width: 2.8em;
+    height:3.2em;
+    vertical-align: middle;
+  }
+  .login-box input{
+    margin: 1em 0em;
+    height: 2.5em;
+    margin-right: 2em;
+    font-size: 1.3em;
+    width:18em;
+    border: 0.2em;
+    border-color: #002125;
+    border-radius: 0.3em;
+    text-align: center;
+  }
+  .login-box select{
+    margin: 1em 0em;
+    height: 2.5em;
+    margin-right: 2em;
+    font-size: 1.3em;
+    width:18em;
+    border: 0.2em;
+    border-color: #002125;
+    border-radius: 0.3em;
+    text-align: center;
+  }
+  .login-button {
+    background-color: #d3d3d3;
+    color: #002125;
+    border: 0.2em solid #002125;
+    border-radius: 0.3em;
+    padding: 0.3em;
+    margin:0em;
+    font-size: 1.2em;
+    transition-duration: 0.4s;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+  .login-button:hover {
+    background-color:#002125;
+    color:#d3d3d3;
+  }
+
+}
+
+@media screen and (max-width: 749px) and (orientation: portrait){
+  body {
+    padding:0em;
+    margin:0em;
+    background-image: linear-gradient(to bottom, #000206, #005660);
+    font-family: 'Oswald', sans-serif;
+    color: #d3d3d3;
+  }
+  .navigation {
+    height:0em;
+    position: sticky;
+    width:100%
+  }
+  .navigation .desktop{
+    display:none;
+  }
+
+.nav-tgl {
+  margin-top: 2em;
+  display: inline-block;
+  float:right;
+  justify-self:right;
+  width:4em;
+  height:4em;
+  position: fixed;
+  z-index: 100;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  background: #fff;
+  text-align: center;
+}
+.nav-tgl > span {
+  display: inline-block;
+  position: relative;
+  height: 2px;
+  width: 34px;
+  border-radius: 1px;
+  background: #293335;
+  vertical-align: middle;
+}
+.nav-tgl > span:before, .nav-tgl > span:after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  height: 2px;
+  border-radius: 1px;
+  background: #293335;
+  transition: all 200ms;
+}
+.nav-tgl > span:before {
+  top: -11px;
+  left: 3px;
+  width: 28px;
+}
+.nav-tgl > span:after {
+  top: 11px;
+  left: 6px;
+  width: 22px;
+}
+.nav-tgl:focus {
+  outline: none;
+}
+.nav-tgl:hover > span:after, .nav-tgl:hover > span:before {
+  width: 34px;
+  left: 0;
+}
+.nav-tgl.toggled > span {
+  height: 0;
+}
+.nav-tgl.toggled > span:after, .nav-tgl.toggled > span:before {
+  top: 0px;
+  left: 0;
+  width: 34px;
+}
+.nav-tgl.toggled > span:after {
+  transform: rotate(-45deg);
+}
+.nav-tgl.toggled > span:before {
+  transform: rotate(45deg);
+}
+
+.navigation:before {
+  content: '';
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.98);
+  transition: all 500ms ease-in-out;
+  clip-path: circle(30px at calc(100% - 65px) 65px);
+  visibility: hidden;
+}
+
+.active.navigation:before {
+  visibility: visible;
+  clip-path: circle(100%);
+}
+  #footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'a b';
+    grid-gap: 0.5em;
+    margin-top:5.5em;
+    text-align: center;
+    background-color: #002125;
+    height: 7em;
+    margin-bottom:0em;
+  }
+  .validation {
+    grid-area: a;
+    padding:1.4em;
+  }
+  .validation a{
+    padding: 0em 1em;
+  }
+  .social{
+    grid-area: b;
+    margin: 0em;
+    padding:1.6em;
+  }
+  .info {
+    grid-area: m;
+    text-align: center;
+    display: none;
+  }
+  .footer-icon {
+    width: 9%;
+    margin-left: 7%;
+    height: auto;
+  }
+
+  /*----------------HOME PAGE------------------------------------------------*/
+
+  #background {
+    display: none;
+    width: 100%;
+    height:auto;
+    padding: 0em;
+    margin:0em;
+  }
+  .item1 {
+    grid-area: a;
+    font-size: 2.6em;
+    text-align: center;
+    padding: 0em 2em;
+  }
+  .item2 {
+    grid-area: b;
+  }
+  .item2 img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+  .item3 {
+    text-align: center;
+    grid-area: c;
+    padding: 0% 4%;
+  }
+  .item4 {
+    grid-area: d;
+    font-size: 3em;
+    text-align: center;
+    align-items: center;
+    padding:1.2em 3em;
+  }
+  .item5 {
+    grid-area: e;
+    font-size: 3em;
+    text-align: center;
+    align-items: center;
+    padding:1.2em 3em;
+  }
+  .item6 {
+    grid-area: f;
+
+  }
+  .item6 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+  .item7 {
+    grid-area: g;
+
+  }
+  .item7 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+
+  .item8 {
+    grid-area: h;
+    font-size: 3em;
+    text-align: center;
+    align-items: center;
+    padding:1.2em 3em;
+  }
+
+  .grid-container {
+    padding-top: 5em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'b' 'a' 'd' 'c' 'f' 'e' 'g' 'h';
+    grid-gap: 1em;
+    grid-row-gap: 3em;
+  }
+  .mission-home {
+    display: inline-block;
+    background-color:#d3d3d3;
+    color:#002125;
+    width: 28%;
+    border-radius: 0.4em;
+    margin: 1em;
+    padding-bottom:5em;
+    padding-top:1em;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .mission-home a {
+    text-decoration: underline;
+    color: #002125;
+  }
+  .find-more-button {
+    background-color: #001115;
+    color: white;
+    border: 0.2em solid white;
+    border-radius: 0.5em;
+    padding: 0.3em;
+    margin:0em;
+    font-size: 0.5em;
+    transition-duration: 0.4s;
+  }
+  .find-more-button:hover {
+    background-color:white;
+    color:black;
+  }
+}
+
+@media screen and (max-height: 409px) and (orientation: landscape){
 
 }
