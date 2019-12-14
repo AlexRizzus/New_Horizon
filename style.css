@@ -33,9 +33,13 @@ body {
   font-family: 'Oswald', sans-serif;
   transition-duration: 0.5s;
 }
+<<<<<<< HEAD
+.navigation button:hover{
+=======
 
 .navigation button:hover
 {
+>>>>>>> 9fd433819f9b5216fc45dc1db277961f4f244288
   font-size:1.6em;
   background-color: #003135;
 }
@@ -813,7 +817,11 @@ body {
 }
 
   /*----------------GENERAL PURPOSE CSS------------------------------------*/
+<<<<<<< HEAD
+
+=======
 @media screen and (max-width: 1099px) and (min-width: 750px){
+>>>>>>> 9fd433819f9b5216fc45dc1db277961f4f244288
 @media screen and (min-width: 750px) and (max-width:1099px){
 
   body {
@@ -1523,6 +1531,7 @@ body {
 
 .nav-tgl {
   margin-top: 2em;
+  margin-left:2.2em;
   display: inline-block;
   float:right;
   justify-self:right;
@@ -1601,6 +1610,11 @@ body {
   visibility: visible;
   clip-path: circle(100%);
 }
+.active.desktop {
+  display: block;
+  z-index: 101;
+}
+
   #footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
