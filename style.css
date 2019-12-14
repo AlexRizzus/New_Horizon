@@ -392,7 +392,7 @@ body {
   display: grid;
   margin: 1em;
   grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
-  grid-template-rows:  1.5fr 0.5fr 0.5fr 0.5fr 2.5fr 1fr 1fr;
+  grid-template-rows:  1.5fr 0.5fr 0.5fr 0.5fr 2.2fr 0.5fr 1fr;
   grid-template-areas:
     'b1 b2 b3 b4 b5'
     'c1 c2 c2 c2 c5'
@@ -522,9 +522,6 @@ body {
   max-width: 34%;
   transition: 0.6s;
   padding:3%;
-}
-#immagine_insta:hover{
-
 }
 #immagine_face{
   grid-area: d3;
