@@ -10,14 +10,14 @@
 
 </head>
 <body>
-  <div id="navigation">
-          <button onclick="location.href='index.html'" tabindex="1" xml:lang="en">Home</button>
-          <button onclick="location.href='missioni.html'" tabindex="2">Esplorazioni</button>
-          <button onclick="location.href='about.html'" tabindex="3">Chi siamo</button>
-          <button onclick="location.href='collaborazioni.html'" tabindex="4">Collaborazioni</button>
-          <button onclick="location.href='ricerca.html'" tabindex="5">Ricerca</button>
-          <button onclick="location.href='contattaci.html'" class="position" tabindex="6" disabled="disabled" >Contattaci</button>
-          <button onclick="location.href='login.html'" tabindex="7" xml:lang="en">Login</button>
+  <div class="navigation">
+    <button class="desktop" onclick="location.href='index.html'"  xml:lang="en">Home</button>
+    <button class="desktop" onclick="location.href='missioni.html'" tabindex="2">Esplorazioni</button>
+    <button class="desktop" onclick="location.href='about.html'" tabindex="3">Chi siamo</button>
+    <button class="desktop" onclick="location.href='collaborazioni.html'" tabindex="4">Collaborazioni</button>
+    <button class="desktop" onclick="location.href='ricerca.html'" tabindex="5">Ricerca</button>
+    <button class="desktop" onclick="location.href='contattaci.html'" tabindex="6" disabled="disabled" class="position">Contattaci</button>
+    <button class="desktop" onclick="location.href='login.html'" tabindex="7" xml:lang="en">Login</button>
   </div>
   <div class="header">
     <img class="aurora" src="images/aurora_boreale_tagliata3.jpg" alt="immagine aurora boreale">
@@ -28,9 +28,13 @@
         <p class="testo" id="testo_pulsante_mail" >Puoi contattarci via mail per ogni tipo di comunicazione o richiesta e saremo lieti di risponderti il prima possibile <button id="pulsante_email" type="button" name="scriviMail" onclick="location='mailto:newhorizon@gmail.com?subject=informazioni'">Scrivici</button></p>
         <p class="testo" id="testo_numero_tel">Chiama il nostro numero verde attivo dalle 10 AM alle 19 PM <button id="numero_tel" type="button" name="button">800-133-4567</button> </p>
         <p id="testo_social">Seguici sui social pi&ugrave popolari per restare aggiornato sulle nostre attivit&agrave o per vedere spettacolari immagini catturate dalle nostre sonde </p>
-        <img id="immagine_insta" src="images/instagram.png" alt="link per instagram" >
-        <img id="immagine_face"src="images/facebook.png" alt="link per facebook">
-        <img id="immagine_twit"src="images/twitter.png" alt="link per twitter">
+        <img id="immagine_insta" src="images/instagram.png" alt="link per instagram"/>
+        <img id="immagine_face"src="images/facebook.png" alt="link per facebook"/>
+        <img id="immagine_twit"src="images/twitter.png" alt="link per twitter"/>
+        <p id="testo_foto_social" >Ecco alcuni dei nostri scatti migliori</p>
+        <img id="foto_social1" src="images/foto_social11.jpg" alt="foto spazio profondo"/>
+        <img id="foto_social2"src="images/foto_social2.jpg" alt="foto nebulosa"/>
+        <img id="foto_social3"src="images/foto_social33.jpg" alt="foto galassia"/>
         <p id="form_text">Utilizza questa form per contattarci, ti risponderemo il prima possibile, il nostro messaggio ti arriver&agrave
         direttamente nella casella <span><a href="messaggi.html">messaggi</a></span> del tuo profilo</p>
       <form id="formid" class="form" action="form.php" method="post">
