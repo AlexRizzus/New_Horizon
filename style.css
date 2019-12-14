@@ -33,13 +33,7 @@ body {
   font-family: 'Oswald', sans-serif;
   transition-duration: 0.5s;
 }
-<<<<<<< HEAD
 .navigation button:hover{
-=======
-
-.navigation button:hover
-{
->>>>>>> 9fd433819f9b5216fc45dc1db277961f4f244288
   font-size:1.6em;
   background-color: #003135;
 }
