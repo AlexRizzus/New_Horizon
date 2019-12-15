@@ -242,6 +242,10 @@ body {
     text-align: justify;
 }
 
+#our_team p{
+  text-align: center;
+}
+
 /*-----------------CHI SIAMO----------------------------------------------*/
 
 #green_data{
@@ -304,6 +308,13 @@ body {
   margin: 0em 0.5em 0em 0.5em;
 }
 
+.iconM{
+  max-width: 5em;
+  max-height: 5em;
+  vertical-align: -2.0em;
+  margin: 0em 0.5em 0em 0.5em;
+}
+
 .iconNoMargin{
   max-width: 1.75em;
   max-height: 1.75em;
@@ -327,6 +338,10 @@ body {
   max-width: 35em;
   background-color: #d3d3d3;
   color: #002125;
+
+  #our_team p{
+  text-align: center;
+  }
 }
 /*-----------------------------CONTATTCI--------------------------------------*/
 .navigation {
@@ -992,6 +1007,128 @@ body {
   .find-more-button:hover {
     background-color:white;
     color:black;
+  }
+  /*-----------------CHI SIAMO----------------------------------------------*/
+
+  #green_data{
+    display: grid;
+    margin: 1em;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr;
+    grid-template-areas:  'i1'
+                          't1'
+                          'i2'
+                          't2';
+    grid-gap: 0.1em;
+    align-items: center;
+  }
+
+  #contentAbout h1{
+    font-size: 3em;
+    text-align: center;
+  }
+
+  #contentAbout h2{
+    text-align: left;
+    font-size: 2em;
+  }
+
+  #contentAbout p{
+    text-align: left;
+    font-size: 1.8em;
+    margin: 0.8em;
+  }
+
+  .subtitle_cont{
+      margin: 0em;
+  }
+
+  #icon_fact{
+    vertical-align: 0.0em;
+  }
+
+  #subtitle_energia_pulita{
+    grid-area: st;
+  }
+
+  #subtitle_sviluppo{
+    margin-left: 0.5em;
+  }
+
+  #green_data h3{
+    font-size: 2em;
+    margin: 0.25em;
+  }
+
+  #contentAbout#green_data p{
+    font-size: 1.3em;
+  }
+
+  #curio_icon1{
+    grid-area: i1;
+  }
+
+  #curio_icon2{
+    grid-area: i2;
+  }
+
+  .curio_icon{
+    justify-self: center;
+    margin: 0.5em;
+    color: white;
+    max-width: 8em;
+    max-height: 8em;
+  }
+
+  .icon{
+    max-width: 1.75em;
+    max-height: 1.75em;
+    vertical-align: -0.5em;
+    margin: 0em 0.5em 0em 0.5em;
+  }
+
+  .iconM{
+    max-width: 3.5em;
+    max-height: 3.5em;
+    vertical-align: -1.5em;
+    margin: 0em 0.5em 0em 0.5em;
+  }
+
+  .iconNoMargin{
+    max-width: 1.75em;
+    max-height: 1.75em;
+    vertical-align: -0.5em;
+    margin: 0.3em;
+  }
+
+  #curio_data1{
+      justify-self: center;
+      grid-area: t1;
+  }
+
+  #curio_data2{
+      justify-self: center;
+      grid-area: t2;
+  }
+
+  .curio_data{
+    margin: 1em;
+    border-radius: 0.2em;
+    box-shadow: 0.2em 0.2em 1em 0.005em #d3d3d3;
+    padding: 0.25em 1em 0.25em 1em;
+    max-width: 35em;
+    background-color: #d3d3d3;
+    color: #002125;
+  }
+
+  #our_team p{
+    text-align: center;
+    margin: 0.1em;
+  }
+
+  #our_team .name{
+    font-size: 3em;
   }
 
   /* --------------- COLLABORAZIONI --------------------------------------------- */
