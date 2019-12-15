@@ -309,8 +309,8 @@ body {
 }
 
 .iconM{
-  max-width: 5em;
-  max-height: 5em;
+  max-width: 10em;
+  max-height: 10em;
   vertical-align: -2.0em;
   margin: 0em 0.5em 0em 0.5em;
 }
@@ -338,11 +338,63 @@ body {
   max-width: 35em;
   background-color: #d3d3d3;
   color: #002125;
-
-  #our_team p{
-  text-align: center;
-  }
 }
+  #grid_team{
+  display: grid;
+  grid-gap: 0.1em;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:  'c ct l lt'
+                        'r rt s st';
+  }
+
+  #grid_team p{
+    margin: 0em;
+  }
+
+  #cisottoIMG{
+    justify-self: right;
+    grid-area: c;
+  }
+
+  #lazzaroIMG{
+    justify-self: right;
+    grid-area: l;
+  }
+
+  #rizzoIMG{
+    justify-self: right;
+    grid-area: r;
+  }
+
+  #scialpiIMG{
+    justify-self: right;
+    grid-area: s;
+  }
+
+  #ct{
+    justify-self: left;
+    align-self: center;
+    grid-area: ct;
+  }
+
+  #lt{
+    justify-self: left;
+    align-self: center;
+    grid-area: lt;
+  }
+
+  #rt{
+    justify-self: left;
+    align-self: center;
+    grid-area: rt;
+  }
+
+  #st{
+    justify-self: left;
+    align-self: center;
+    grid-area: st;
+  }
 /*-----------------------------CONTATTCI--------------------------------------*/
 .navigation {
   margin-top: -0.3em;
@@ -1088,13 +1140,6 @@ body {
     margin: 0em 0.5em 0em 0.5em;
   }
 
-  .iconM{
-    max-width: 3.5em;
-    max-height: 3.5em;
-    vertical-align: -1.5em;
-    margin: 0em 0.5em 0em 0.5em;
-  }
-
   .iconNoMargin{
     max-width: 1.75em;
     max-height: 1.75em;
@@ -1128,7 +1173,82 @@ body {
   }
 
   #our_team .name{
-    font-size: 3em;
+    font-size: 2em;
+  }
+
+  .iconM{
+    max-width: 18em;
+    max-height: 18em;
+    vertical-align: -1.5em;
+    margin: 0em 0.5em 0em 0.5em;
+  }
+
+  #grid_team{
+  display: grid;
+  margin: 1em;
+  grid-gap: 0.1em;
+  grid-template-rows: 1fr 0.25fr 1fr 0.25fr 1fr 0.25fr 1fr 0.25fr;
+  grid-template-areas:  'c' 'ct' 'l' 'lt' 'r' 'rt' 's' 'st';
+  }
+
+  #grid_team p{
+    margin: 0em 0.5em 0em 0.5em;
+  }
+
+  #cisottoIMG{
+    justify-self: left;
+    margin-left: 10em;
+    align-self: end;
+    grid-area: c;
+  }
+
+  #lazzaroIMG{
+    justify-self: right;
+    margin-right: 10em;
+    align-self: end;
+    grid-area: l;
+  }
+
+  #rizzoIMG{
+    justify-self: left;
+    margin-left: 10em;
+    align-self: center;
+    grid-area: r;
+  }
+
+  #scialpiIMG{
+    justify-self: right;
+    margin-right: 10em;
+    align-self: end;
+    grid-area: s;
+  }
+
+  #grid_team #ct{
+    justify-self: left;
+    margin-left: 5em;
+    align-self: start;
+    grid-area: ct;
+  }
+
+  #grid_team #lt{
+    justify-self: right;
+    margin-right: 5em;
+    align-self: start;
+    grid-area: lt;
+  }
+
+  #grid_team #rt{
+    justify-self: left;
+    margin-left: 7em;
+    align-self: start;
+    grid-area: rt;
+  }
+
+  #grid_team #st{
+    justify-self: right;
+    margin-right: 5em;
+    align-self: start;
+    grid-area: st;
   }
 
   /* --------------- COLLABORAZIONI --------------------------------------------- */
@@ -1747,20 +1867,30 @@ body {
     align-items: center;
   }
 
+  #contentAbout{
+    margin-right: 4em;
+    margin left: 4em;
+  }
+
   #contentAbout h1{
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
   }
 
   #contentAbout h2{
     text-align: left;
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   #contentAbout p{
     text-align: left;
-    font-size: 1.8em;
+    font-size: 1.3em;
     margin: 0.8em;
+  }
+
+  #firstTitle{
+      padding-top: 0.67em;
+      margin-top: 0em;
   }
 
   .subtitle_cont{
@@ -1812,8 +1942,8 @@ body {
   }
 
   .iconM{
-    max-width: 3.5em;
-    max-height: 3.5em;
+    max-width: 7em;
+    max-height: 7em;
     vertical-align: -1.5em;
     margin: 0em 0.5em 0em 0.5em;
   }
@@ -1851,7 +1981,7 @@ body {
   }
 
   #our_team .name{
-    font-size: 3em;
+    font-size: 1.5em;
   }
 /*---------------------CONTATTACI-------------------------------*/
 .header{
