@@ -663,12 +663,13 @@ body {
 #contentResearch{
   display: grid;
   grid-gap: 0.1em;
-  grid-template-areas:  't1 t1 t1'
-                        'd1 d1 i1'
-                        't2 t2 t2'
-                        's1 s1 im1'
-                        'p1 p1 im1'
-                        't3 t3 t3'
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:  't1 t1 t1 t1'
+                        'i1 d1 d1 d1'
+                        't2 t2 t2 t2'
+                        's1 s1 s1 im1'
+                        'p1 p1 p1 im1'
+                        't3 t3 t3 t3'
                         ;
 }
 
@@ -696,7 +697,7 @@ body {
 }
 
 #n1{
-  justify-content: center;
+  justify-self: center;
   align-self: center;
   max-width: 6em;
   grid-area: i1;
