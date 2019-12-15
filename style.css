@@ -1979,7 +1979,7 @@ body {
   }
 }
 
-@media screen and (max-height: 409px) and (orientation: landscape){
+@media screen and (max-width: 749px) and (orientation: landscape){
 
 
 /*-------------------------CONTATTACI------------------------------*/
