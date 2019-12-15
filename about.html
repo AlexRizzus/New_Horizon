@@ -13,11 +13,6 @@
   </head>
   <body>
     <nav class="navigation">
-      <button id="mobile_menu" onclick="show_hide_mobile_menu()"><img src="images/menu.png" alt="menú ad amburgher"></button>
-      <div id="drop_content">
-        <button id="mobile_button_1" class="drop_down_button" onclick="location.href='index.html'">Icona home</button>
-        <button id="mobile_button_2" class="drop_down_button" onclick="location.href='about.html'">Icona chi siamo</button>
-      </div>
       <button class="standard_button" onclick="location.href='index.html'" tabindex="1" xml:lang="en">Home</button>
       <button class="standard_button" onclick="location.href='missioni.html'" tabindex="2">Esplorazioni</button>
       <button class="standard_button" onclick="location.href='about.html'" class="position" tabindex="3" disabled>Chi siamo</button>
@@ -81,18 +76,5 @@
       <div class="social"><p>  Seguici su: <img src="images/twitter.png" class="footer-icon" alt="twitter logo"/> <img src="images/facebook.png" class="footer-icon" alt="facebook logo"/> <img src="images/instagram.png" class="footer-icon" alt="instagram logo"/></p>
       </div>
     </div>
-
-    <script>
-      function show_hide_mobile_menu() {
-        var click = document.getElementById("drop_content");
-        if(click.style.display === "none")
-        {
-          click.style.display = "block";
-        }
-        else {
-          click.style.display = "none";
-        }
-      }
-    </script>
 </body>
 </html>
