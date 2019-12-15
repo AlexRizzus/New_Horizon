@@ -1313,429 +1313,6 @@ body {
 
 }
 
-@media screen and (min-width: 25000px) and (orientation: portrait)
-{
-  /*----------------GENERAL PURPOSE CSS------------------------------------*/
-  body {
-    padding:0em;
-    margin:0em;
-    background-image: linear-gradient(to bottom, #000206, #005660);
-    font-family: 'Oswald', sans-serif;
-    color: #d3d3d3;
-  }
-  .navigation {
-    margin-top: -0.3em;
-    padding: 0em;
-    height: 3.2em;
-    width: 100%;
-    background-color: #002125;
-    position: sticky;
-    top:0;
-  }
-  .navigation button {
-    color: white;
-    border:none;
-    background-color: #002125;
-    padding: 0em;
-    margin: 0em;
-    text-align: center;
-    height: 2.6em;
-    width: 14.285%;
-    font-size: 1.2em;
-    font-family: 'Oswald', sans-serif;
-  }
-  .navigation .position img {
-    height: 2em;
-    width: auto;
-  }
-  #mobile_menu{
-    position: sticky;
-    float: right;
-    display: block;
-  }
-  #mobile_menu img{
-    max-width: 2em;
-    max-height: 2em;
-  }
-  #mobile_menu div{
-    position: sticky;
-  }
-
-  #drop_content{
-    float: right;
-    display: inline-block;
-  }
-
-  .navigation .drop_down_button{
-    display: block;
-    position: absolute;
-    z-index: 1;
-    margin-top: 1em;
-    right: 0.8em;
-    background-color: #03fccf;
-  }
-
-  #mobile_button_1{
-    top: 2em;
-  }
-
-  #mobile_button_2{
-    top: 5em;
-  }
-
-  .navigation .standard_button{
-    display: none;
-  }
-
-  #footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'a b';
-    grid-gap: 0.5em;
-    margin-top:5.5em;
-    text-align: center;
-    background-color: #002125;
-    height: 7em;
-    margin-bottom:0em;
-  }
-  .validation {
-    grid-area: a;
-    padding:1.4em;
-  }
-  .validation a{
-    padding: 0em 1em;
-  }
-  .social{
-    grid-area: b;
-    margin: 0em;
-    padding:1.6em;
-  }
-  .info {
-    grid-area: m;
-    text-align: center;
-    display: none;
-  }
-  .footer-icon {
-    width: 9%;
-    margin-left: 7%;
-    height: auto;
-  }
-
-  /*-----------------CHI SIAMO----------------------------------------------*/
-
-  #green_data{
-    display: grid;
-    margin: 1em;
-    text-align: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr;
-    grid-template-areas:  'i1'
-                          't1'
-                          'i2'
-                          't2';
-    grid-gap: 0.1em;
-    align-items: center;
-  }
-
-  #contentAbout h1{
-    font-size: 3em;
-    text-align: center;
-  }
-
-  #contentAbout h2{
-    text-align: left;
-    font-size: 2em;
-  }
-
-  #contentAbout p{
-    text-align: left;
-    font-size: 1.8em;
-    margin: 0.8em;
-  }
-
-  .subtitle_cont{
-      margin: 0em;
-  }
-
-  #icon_fact{
-    vertical-align: 0.0em;
-  }
-
-  #subtitle_energia_pulita{
-    grid-area: st;
-  }
-
-  #subtitle_sviluppo{
-    margin-left: 0.5em;
-  }
-
-  #green_data h3{
-    font-size: 2em;
-    margin: 0.25em;
-  }
-
-  #contentAbout#green_data p{
-    font-size: 1.3em;
-  }
-
-  #curio_icon1{
-    grid-area: i1;
-  }
-
-  #curio_icon2{
-    grid-area: i2;
-  }
-
-  .curio_icon{
-    justify-self: center;
-    margin: 0.5em;
-    color: white;
-    max-width: 8em;
-    max-height: 8em;
-  }
-
-  .icon{
-    max-width: 1.75em;
-    max-height: 1.75em;
-    vertical-align: -0.5em;
-    margin: 0em 0.5em 0em 0.5em;
-  }
-
-  .iconM{
-    max-width: 3.5em;
-    max-height: 3.5em;
-    vertical-align: -1.5em;
-    margin: 0em 0.5em 0em 0.5em;
-  }
-
-  .iconNoMargin{
-    max-width: 1.75em;
-    max-height: 1.75em;
-    vertical-align: -0.5em;
-    margin: 0.3em;
-  }
-
-  #curio_data1{
-      justify-self: center;
-      grid-area: t1;
-  }
-
-  #curio_data2{
-      justify-self: center;
-      grid-area: t2;
-  }
-
-  .curio_data{
-    margin: 1em;
-    border-radius: 0.2em;
-    box-shadow: 0.2em 0.2em 1em 0.005em #d3d3d3;
-    padding: 0.25em 1em 0.25em 1em;
-    max-width: 35em;
-    background-color: #d3d3d3;
-    color: #002125;
-  }
-
-  #our_team p{
-    text-align: center;
-    margin: 0.1em;
-  }
-
-  #our_team .name{
-    font-size: 3em;
-  }
-/*---------------------CONATTACI-------------------------------*/
-.navigation {
-  margin-top: -0.3em;
-  padding: 0em;
-  height: 3.2em;
-  width: 100%;
-  background-color: #002125;
-  position: sticky;
-  top:0;
-  margin-bottom: 1em;
-  z-index: 2;
-}
-body {
-  padding:0em;
-  margin:0em;
-  background-image: linear-gradient(to bottom, #0d0d0d, #005660);
-  font-family: 'Oswald', sans-serif;
-  color: #d3d3d3;
-}
-.header{
-  position: relative;
-  z-index: -1;
-  text-align: center;
-}
-.aurora{
-  width: 100%;
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-}
-.titolo{
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
- background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  width: 80%;
-  padding: 2%;
-  font-size: 3vw;
-  text-align: center;
-  max-height: 70%;
-  text-shadow: 2px 2px 4px #000000;
- background-color: rgb(0,0,0);
- background-color: rgba(0,0,0, 0.6);
- color: white;
- font-weight: bold;
- border: 3px solid #f1f1f1;
- border-radius: 10px;
- width: 80%;
- padding: 2%;
- font-size: 3vw;
- text-align: center;
- max-height: 70%;
-}
-.testo{
-  margin: 0em;
-}
-.testo_pulsanti_contattaci{
-  margin-top:1em;
-  margin-bottom: 1em;
-  padding-top: 2em;
-  text-align: center;
-  position: relative;
-  left: 5%;
-  font-size: calc(1vw + 0.5vh + 1vmin);
-  background-image: linear-gradient(to bottom, #000d33, #330033);
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  text-shadow: 2px 2px 4px #000000;
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
-  max-width: 80%;
-}
-.pulsanti_contattaci{
-  max-height: 30%;
-  font-size: calc(1.2vw + 0.5vh + 1.5vmin);
-  min-width: 80%;
-  margin: 0.5em;
-  margin-left: 1em;
-  margin-right: 1em;
-  justify-self:center;
-  background-color: inherit;
-  color: white;
-  border-radius: 2px;
-  border-color: rgba(115, 64, 191, 0.5);
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
-}
-.testo_generico_contattaci{
-  text-align: center;
-  position:relative;
-  left:5%;
-  font-size: calc(1.5vw + 0.5vh + 1vmin);
-  text-shadow: 2px 2px 4px #000000;
-  background-color: rgba(200,255,210, 0.1);
-  border: 3px solid rgba(200,255,210, 0.1);
-  max-width: 90%;
-}
-#immagine_insta{
-  margin: 5%;
-  margin-left: 15%;
-  max-width: 15%;
-}
-#immagine_face{
-  margin: 5%;
-  max-width: 15%;
-}
-#immagine_twit{
-  margin: 5%;
-  max-width: 15%;
-}
-.foto_social{
-  max-width: 70%;
-  position:relative;
-  left:10%;
-  margin: 1em;
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
-}
-  /* --------------- LOGIN --------------------------------------------- */
-
-  .login-content{
-    text-align: center;
-    align-content: center;
-  }
-  .login-content h1{
-      font-size: 4em;
-  }
-  .login-content a{
-    color: #d3d3d3
-  }
-  .login-content p{
-    margin-top: 1.5em;
-  }
-  #login{
-    background-color: #001115;
-  }
-
-  .login-box{
-    background-color: #d3d3d3;
-    padding: 4em 0em;
-    margin: 1em 10%;
-    color: #002125;
-    border-radius: 0.4em;
-  }
-  .login-box img{
-    padding: 0em;
-    margin-right:0.6em;
-    width: 2.8em;
-    height:3.2em;
-    vertical-align: middle;
-  }
-  .login-box input{
-    margin: 1em 0em;
-    height: 2.5em;
-    margin-right: 2em;
-    font-size: 1.3em;
-    width:18em;
-    border: 0.2em;
-    border-color: #002125;
-    border-radius: 0.3em;
-    text-align: center;
-  }
-  .login-box select{
-    margin: 1em 0em;
-    height: 2.5em;
-    margin-right: 2em;
-    font-size: 1.3em;
-    width:18em;
-    border: 0.2em;
-    border-color: #002125;
-    border-radius: 0.3em;
-    text-align: center;
-  }
-  .login-button {
-    background-color: #d3d3d3;
-    color: #002125;
-    border: 0.2em solid #002125;
-    border-radius: 0.3em;
-    padding: 0.3em;
-    margin:0em;
-    font-size: 1.2em;
-    transition-duration: 0.4s;
-    font-weight: bold;
-    margin-top: 1em;
-  }
-  .login-button:hover {
-    background-color:#002125;
-    color:#d3d3d3;
-  }
-
-}
-
 @media screen and (max-width: 749px) and (orientation: portrait){
   body {
     padding:0em;
@@ -2017,6 +1594,301 @@ body {
     background-color:white;
     color:black;
   }
+  /*-----------------CHI SIAMO----------------------------------------------*/
+
+  #green_data{
+    display: grid;
+    margin: 1em;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr;
+    grid-template-areas:  'i1'
+                          't1'
+                          'i2'
+                          't2';
+    grid-gap: 0.1em;
+    align-items: center;
+  }
+
+  #contentAbout h1{
+    font-size: 3em;
+    text-align: center;
+  }
+
+  #contentAbout h2{
+    text-align: left;
+    font-size: 2em;
+  }
+
+  #contentAbout p{
+    text-align: left;
+    font-size: 1.8em;
+    margin: 0.8em;
+  }
+
+  .subtitle_cont{
+      margin: 0em;
+  }
+
+  #icon_fact{
+    vertical-align: 0.0em;
+  }
+
+  #subtitle_energia_pulita{
+    grid-area: st;
+  }
+
+  #subtitle_sviluppo{
+    margin-left: 0.5em;
+  }
+
+  #green_data h3{
+    font-size: 2em;
+    margin: 0.25em;
+  }
+
+  #contentAbout#green_data p{
+    font-size: 1.3em;
+  }
+
+  #curio_icon1{
+    grid-area: i1;
+  }
+
+  #curio_icon2{
+    grid-area: i2;
+  }
+
+  .curio_icon{
+    justify-self: center;
+    margin: 0.5em;
+    color: white;
+    max-width: 8em;
+    max-height: 8em;
+  }
+
+  .icon{
+    max-width: 1.75em;
+    max-height: 1.75em;
+    vertical-align: -0.5em;
+    margin: 0em 0.5em 0em 0.5em;
+  }
+
+  .iconM{
+    max-width: 3.5em;
+    max-height: 3.5em;
+    vertical-align: -1.5em;
+    margin: 0em 0.5em 0em 0.5em;
+  }
+
+  .iconNoMargin{
+    max-width: 1.75em;
+    max-height: 1.75em;
+    vertical-align: -0.5em;
+    margin: 0.3em;
+  }
+
+  #curio_data1{
+      justify-self: center;
+      grid-area: t1;
+  }
+
+  #curio_data2{
+      justify-self: center;
+      grid-area: t2;
+  }
+
+  .curio_data{
+    margin: 1em;
+    border-radius: 0.2em;
+    box-shadow: 0.2em 0.2em 1em 0.005em #d3d3d3;
+    padding: 0.25em 1em 0.25em 1em;
+    max-width: 35em;
+    background-color: #d3d3d3;
+    color: #002125;
+  }
+
+  #our_team p{
+    text-align: center;
+    margin: 0.1em;
+  }
+
+  #our_team .name{
+    font-size: 3em;
+  }
+/*---------------------CONTATTACI-------------------------------*/
+.header{
+  position: relative;
+  z-index: -1;
+  text-align: center;
+}
+.aurora{
+  width: 100%;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+.titolo{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  width: 80%;
+  padding: 2%;
+  font-size: 3vw;
+  text-align: center;
+  max-height: 70%;
+  text-shadow: 2px 2px 4px #000000;
+ background-color: rgb(0,0,0);
+ background-color: rgba(0,0,0, 0.6);
+ color: white;
+ font-weight: bold;
+ border: 3px solid #f1f1f1;
+ border-radius: 10px;
+ width: 80%;
+ padding: 2%;
+ font-size: 3vw;
+ text-align: center;
+ max-height: 70%;
+}
+.testo{
+  margin: 0em;
+}
+.testo_pulsanti_contattaci{
+  margin-top:1em;
+  margin-bottom: 1em;
+  padding-top: 2em;
+  text-align: center;
+  position: relative;
+  left: 5%;
+  font-size: calc(1vw + 0.5vh + 1vmin);
+  background-image: linear-gradient(to bottom, #000d33, #330033);
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  text-shadow: 2px 2px 4px #000000;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+  max-width: 80%;
+}
+.pulsanti_contattaci{
+  max-height: 30%;
+  font-size: calc(1.2vw + 0.5vh + 1.5vmin);
+  min-width: 80%;
+  margin: 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  justify-self:center;
+  background-color: inherit;
+  color: white;
+  border-radius: 2px;
+  border-color: rgba(115, 64, 191, 0.5);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+}
+.testo_generico_contattaci{
+  text-align: center;
+  position:relative;
+  left:5%;
+  font-size: calc(1.5vw + 0.5vh + 1vmin);
+  text-shadow: 2px 2px 4px #000000;
+  background-color: rgba(200,255,210, 0.1);
+  border: 3px solid rgba(200,255,210, 0.1);
+  max-width: 90%;
+}
+#immagine_insta{
+  margin: 5%;
+  margin-left: 15%;
+  max-width: 15%;
+}
+#immagine_face{
+  margin: 5%;
+  max-width: 15%;
+}
+#immagine_twit{
+  margin: 5%;
+  max-width: 15%;
+}
+.foto_social{
+  max-width: 70%;
+  position:relative;
+  left:10%;
+  margin: 1em;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+}
+  /* --------------- LOGIN --------------------------------------------- */
+
+  .login-content{
+    text-align: center;
+    align-content: center;
+  }
+  .login-content h1{
+      font-size: 4em;
+  }
+  .login-content a{
+    color: #d3d3d3
+  }
+  .login-content p{
+    margin-top: 1.5em;
+  }
+  #login{
+    background-color: #001115;
+  }
+
+  .login-box{
+    background-color: #d3d3d3;
+    padding: 4em 0em;
+    margin: 1em 10%;
+    color: #002125;
+    border-radius: 0.4em;
+  }
+  .login-box img{
+    padding: 0em;
+    margin-right:0.6em;
+    width: 2.8em;
+    height:3.2em;
+    vertical-align: middle;
+  }
+  .login-box input{
+    margin: 1em 0em;
+    height: 2.5em;
+    margin-right: 2em;
+    font-size: 1.3em;
+    width:18em;
+    border: 0.2em;
+    border-color: #002125;
+    border-radius: 0.3em;
+    text-align: center;
+  }
+  .login-box select{
+    margin: 1em 0em;
+    height: 2.5em;
+    margin-right: 2em;
+    font-size: 1.3em;
+    width:18em;
+    border: 0.2em;
+    border-color: #002125;
+    border-radius: 0.3em;
+    text-align: center;
+  }
+  .login-button {
+    background-color: #d3d3d3;
+    color: #002125;
+    border: 0.2em solid #002125;
+    border-radius: 0.3em;
+    padding: 0.3em;
+    margin:0em;
+    font-size: 1.2em;
+    transition-duration: 0.4s;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+  .login-button:hover {
+    background-color:#002125;
+    color:#d3d3d3;
+  }
+
 }
 
 @media screen and (max-width: 749px) and (orientation: landscape){
