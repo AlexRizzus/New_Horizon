@@ -40,6 +40,9 @@ body {
 #mobile_menu{
   display: none;
 }
+.nav-tgl{
+  display: none;
+}
 
 .navigation .position {
   color: #002125;
@@ -839,7 +842,9 @@ body {
     height: 2em;
     width: auto;
   }
-
+.nav-tgl{
+  display: none;
+}
   #mobile_menu{
     display: none;
   }
@@ -1342,7 +1347,6 @@ body {
     height: 2em;
     width: auto;
   }
-
   #mobile_menu{
     position: sticky;
     float: right;
@@ -2014,9 +2018,6 @@ body {
   }
 }
 
-<<<<<<< HEAD
-@media screen and (max-width:749px) and (orientation: landscape){
-=======
 @media screen and (max-width: 749px) and (orientation: landscape){
 
 
@@ -2117,7 +2118,6 @@ body {
     border-color: rgba(115, 64, 191, 0.5);
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
   }
->>>>>>> 3093406554c4b99f1678f35cf78ec1e552918195
 
   .testo_generico_contattaci{
     text-align: center;
