@@ -1,4 +1,4 @@
-/* Style for New Horizon tecweb project*/
+ /* Style for New Horizon tecweb project*/
 @media screen and (min-width: 1100px){
 
 /*--------------GENERAL PURPOSE CSS------------------------------------------*/
@@ -811,12 +811,8 @@ body {
 }
 
   /*----------------GENERAL PURPOSE CSS------------------------------------*/
-<<<<<<< HEAD
 
 @media screen and (min-width: 750px) and (max-width:1099px){
-=======
-@media screen and (max-width: 1099px) and (min-width: 750px){
->>>>>>> 37fc2a0dcdab24bef30b73072226a7e5f2622f25
 
   body {
     padding:0em;
@@ -1416,7 +1412,7 @@ body {
 
 }
 
-@media screen and (max-width: 749px) and (orientation: portrait)
+@media screen and (min-width: 25000px) and (orientation: portrait)
 {
   /*----------------GENERAL PURPOSE CSS------------------------------------*/
   body {
@@ -1790,24 +1786,50 @@ body {
     color: #d3d3d3;
   }
   .navigation {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: '. . a''. z .''. b .''. c .''. d .''. e .''. f .''. g .''. h .';
+    grid-gap: 0.5em;
+    grid-row-gap: 1em;
     height:0em;
-    position: sticky;
-    width:100%
+    position: fixed;
+    width:100%;
+    z-index:10;
+    justify-content: center;
   }
   .navigation .desktop{
     display:none;
   }
+  .navigation .button0{
+    grid-area: z;
+  }
+  .navigation .button1{
+    grid-area: b;
+  }
+  .navigation .button2{
+    grid-area: c;
+  }
+  .navigation .button3  {
+    grid-area: d;
+  }
+  .navigation .button4{
+    grid-area: e;
+  }
+  .navigation .button5{
+    grid-area: f;
+  }
+  .navigation .button6  {
+    grid-area: g;
+  }
 
 .nav-tgl {
-  margin-top: 2em;
-  margin-left:2.2em;
+  grid-area: a;
+  margin-top: 20%;
+  margin-left: 22%;
   display: inline-block;
-  float:right;
-  justify-self:right;
   width:4em;
   height:4em;
-  position: fixed;
-  z-index: 100;
+  z-index: 1;
   border: none;
   border-radius: 50%;
   padding: 0;
@@ -1863,25 +1885,33 @@ body {
 .nav-tgl.toggled > span:before {
   transform: rotate(45deg);
 }
+.nav-tgl.toggled {
+  background-color: #002545;
+}
 
 .navigation:before {
   content: '';
   position: fixed;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.98);
+  background: rgba(255, 255, 255, 0.98);
   transition: all 500ms ease-in-out;
-  clip-path: circle(30px at calc(100% - 65px) 65px);
+  clip-path: circle(30px at calc(100%) 0%);
   visibility: hidden;
 }
 
 .active.navigation:before {
   visibility: visible;
   clip-path: circle(100%);
+  z-index: -1;
 }
-.active.desktop {
-  display: block;
-  z-index: 101;
+.active.desktop{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+  width:70%;
+  height: auto;
+  z-index: 1;
 }
 
   #footer {
@@ -2030,6 +2060,6 @@ body {
   }
 }
 
-@media screen and (max-height: 409px) and (orientation: landscape){
+@media screen and (max-width:749px) and (orientation: landscape){
 
 }
