@@ -251,10 +251,9 @@ body {
 #green_data{
   display: grid;
   margin: 2em;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.25fr 0.675fr 0.75fr;
-  grid-template-areas:  'st t1 t1'
-                        'i1 t1 t1'
+  grid-template-columns: 0.33fr 0.66fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:  'i1 t1 t1'
                         'i2 t2 t2';
   grid-gap: 0.1em;
   align-items: center;
@@ -288,7 +287,6 @@ body {
 
 #curio_icon1{
   grid-area: i1;
-  align-self: start;
 }
 
 #curio_icon2{
@@ -1064,10 +1062,8 @@ body {
 
   #green_data{
     display: grid;
-    margin: 1em;
+    margin: 0em 1em 1em 1em;
     text-align: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr;
     grid-template-areas:  'i1'
                           't1'
                           'i2'
@@ -1077,19 +1073,20 @@ body {
   }
 
   #contentAbout h1{
-    font-size: 3em;
+    font-size: 2.25em;
     text-align: center;
   }
 
   #contentAbout h2{
     text-align: left;
-    font-size: 2em;
+    font-size: 1.6em;
+    padding-top: 1em;
   }
 
   #contentAbout p{
     text-align: left;
-    font-size: 1.8em;
-    margin: 0.8em;
+    font-size: 1.3em;
+    margin: 1.8em;
   }
 
   .subtitle_cont{
@@ -1187,8 +1184,17 @@ body {
   display: grid;
   margin: 1em;
   grid-gap: 0.1em;
-  grid-template-rows: 1fr 0.25fr 1fr 0.25fr 1fr 0.25fr 1fr 0.25fr;
-  grid-template-areas:  'c' 'ct' 'l' 'lt' 'r' 'rt' 's' 'st';
+  grid-template-areas:  'c  .'
+                        'c  .'
+                        'c  l'
+                        'ct l'
+                        'r  l'
+                        'r  lt'
+                        'r  s'
+                        'rt s'
+                        '.  s'
+                        '.  st'
+                        ;
   }
 
   #grid_team p{
@@ -1196,59 +1202,47 @@ body {
   }
 
   #cisottoIMG{
-    justify-self: left;
-    margin-left: 10em;
     align-self: end;
     grid-area: c;
   }
 
   #lazzaroIMG{
-    justify-self: right;
-    margin-right: 10em;
     align-self: end;
     grid-area: l;
   }
 
   #rizzoIMG{
-    justify-self: left;
-    margin-left: 10em;
     align-self: center;
     grid-area: r;
   }
 
   #scialpiIMG{
-    justify-self: right;
-    margin-right: 10em;
     align-self: end;
     grid-area: s;
   }
 
   #grid_team #ct{
-    justify-self: left;
-    margin-left: 5em;
     align-self: start;
     grid-area: ct;
+    margin-bottom: 0.5em;
   }
 
   #grid_team #lt{
-    justify-self: right;
-    margin-right: 5em;
     align-self: start;
     grid-area: lt;
+    margin-bottom: 0.5em;
   }
 
   #grid_team #rt{
-    justify-self: left;
-    margin-left: 7em;
     align-self: start;
     grid-area: rt;
+    margin-bottom: 0.5em;
   }
 
   #grid_team #st{
-    justify-self: right;
-    margin-right: 5em;
     align-self: start;
     grid-area: st;
+    margin-bottom: 0.5em;
   }
 
   /* --------------- COLLABORAZIONI --------------------------------------------- */
@@ -1858,7 +1852,7 @@ body {
     margin: 1em;
     text-align: center;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr;
+    grid-template-rows: 0.25fr 1fr 0.25fr 1fr;
     grid-template-areas:  'i1'
                           't1'
                           'i2'
@@ -1873,18 +1867,18 @@ body {
   }
 
   #contentAbout h1{
-    font-size: 2em;
+    font-size: 1.75em;
     text-align: center;
   }
 
   #contentAbout h2{
     text-align: left;
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
   #contentAbout p{
     text-align: left;
-    font-size: 1.3em;
+    font-size: 0.9em;
     margin: 0.8em;
   }
 
@@ -1982,6 +1976,72 @@ body {
 
   #our_team .name{
     font-size: 1.5em;
+  }
+
+  #cisottoIMG{
+    justify-self: right;
+    align-self: center;
+    grid-area: c;
+  }
+
+  #lazzaroIMG{
+    justify-self: right;
+    align-self: center;
+    grid-area: l;
+  }
+
+  #rizzoIMG{
+    justify-self: right;
+    align-self: center;
+    grid-area: r;
+  }
+
+  #scialpiIMG{
+    justify-self: right;
+    align-self: center;
+    grid-area: s;
+  }
+
+  #grid_team{
+  display: grid;
+  grid-gap: 0.1em;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:  'c ct'
+                        'l lt'
+                        'r rt'
+                        's st';
+  }
+
+  #grid_team #ct{
+    justify-self: left;
+    align-self: center;
+    grid-area: ct;
+  }
+
+  #grid_team #lt{
+    justify-self: left;
+    align-self: center;
+    grid-area: lt;
+  }
+
+  #grid_team #rt{
+    justify-self: left;
+    align-self: center;
+    grid-area: rt;
+  }
+
+  #grid_team #st{
+    justify-self: left;
+    align-self: center;
+    grid-area: st;
+  }
+
+  .iconM{
+    max-width: 10em;
+    max-height: 10em;
+    vertical-align: -2.0em;
+    margin: 0em 0.5em 0em 0.5em;
   }
 /*---------------------CONTATTACI-------------------------------*/
 .header{
