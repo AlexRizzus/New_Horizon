@@ -13,14 +13,17 @@
   </head>
   <body>
     <div id="login">
-    <div id="navigation">
-            <button onclick="location.href='index.html'"  tabindex="1" xml:lang="en">Home</button>
-            <button onclick="location.href='missioni.html'" tabindex="2">Esplorazioni</button>
-            <button onclick="location.href='about.html'" tabindex="3">Chi siamo</button>
-            <button onclick="location.href='collaborazioni.html'" tabindex="4">Collaborazioni</button>
-            <button onclick="location.href='ricerca.html'" tabindex="5">Ricerca</button>
-            <button onclick="location.href='contattaci.html'" tabindex="6">Contattaci</button>
-            <button onclick="location.href='login.html'" class="position" disabled="disabled" tabindex="7" xml:lang="en">Login</button>
+    <div class="navigation">
+      <button class="nav-tgl" type="button" >
+        <span ></span>
+      </button>
+            <button onclick="location.href='index.html'"  class = "desktop button0" tabindex="1" xml:lang="en">Home</button>
+            <button onclick="location.href='missioni.html'" class = "desktop button1" tabindex="2">Esplorazioni</button>
+            <button onclick="location.href='about.html'" class = "desktop button2" tabindex="3">Chi siamo</button>
+            <button onclick="location.href='collaborazioni.html'" class = "desktop button3" tabindex="4">Collaborazioni</button>
+            <button onclick="location.href='ricerca.html'" class = "desktop button4" tabindex="5">Ricerca</button>
+            <button onclick="location.href='contattaci.html'" class = "desktop button5" tabindex="6">Contattaci</button>
+            <button onclick="location.href='login.html'" class = "position desktop button6" disabled="disabled" tabindex="7" xml:lang="en">Login</button>
     </div>
     <div class="login-content">
         <h1>L O G I N</h1>
@@ -49,5 +52,6 @@
       </div>
     </div>
   </div>
+  <script  src="index.js" type="text/javascript"></script>
     </body>
     </html>

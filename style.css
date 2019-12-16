@@ -193,7 +193,6 @@ body {
   padding-bottom:2em;
   padding-top:0.5em;
   text-decoration: none;
-  box-shadow: -0.3em 0.3em 0.3em 0.05em #838383;
 }
 .mission-home a {
   text-decoration: underline;
@@ -1574,10 +1573,10 @@ body {
   }
   .navigation {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-areas: '. . a''. z .''. b .''. c .''. d .''. e .''. f .''. g .''. h .';
-    grid-gap: 0.5em;
-    grid-row-gap: 1em;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-areas: '. . . a''. z b .''. c d .''. e f .''. g g .';
+    grid-gap: 2em;
+    grid-row-gap: 5em;
     height:0em;
     position: fixed;
     width:100%;
@@ -1696,7 +1695,7 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 2em;
-  width:70%;
+  width:100%;
   height: auto;
   z-index: 1;
 }
@@ -1706,7 +1705,7 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'a b';
     grid-gap: 0.5em;
-    margin-top:5.5em;
+    margin-top:3.5em;
     text-align: center;
     background-color: #002125;
     height: 7em;
@@ -1714,15 +1713,17 @@ body {
   }
   .validation {
     grid-area: a;
-    padding:1.4em;
+    padding-top: 0.7em;
+    margin: 0;
   }
   .validation a{
     padding: 0em 1em;
   }
   .social{
     grid-area: b;
+    padding-top: 0.6em;
     margin: 0em;
-    padding:1.6em;
+    margin-right: 1em;
   }
   .info {
     grid-area: m;
@@ -1816,14 +1817,14 @@ body {
     grid-row-gap: 3em;
   }
   .mission-home {
-    display: inline-block;
+    display: block;
     background-color:#d3d3d3;
     color:#002125;
-    width: 28%;
+    width: 60%;
     border-radius: 0.4em;
-    margin: 1em;
-    padding-bottom:5em;
-    padding-top:1em;
+    margin: 3em 20%;
+    padding-bottom:1em;
+    padding-top:0.3em;
     font-weight: bold;
     text-decoration: none;
   }
@@ -2152,6 +2153,8 @@ body {
   }
   .login-content h1{
       font-size: 4em;
+      margin:0;
+      padding: 1em 0em;
   }
   .login-content a{
     color: #d3d3d3
@@ -2165,14 +2168,13 @@ body {
 
   .login-box{
     background-color: #d3d3d3;
-    padding: 4em 0em;
+    padding: 2em 0em;
     margin: 1em 10%;
     color: #002125;
     border-radius: 0.4em;
   }
   .login-box img{
     padding: 0em;
-    margin-right:0.6em;
     width: 2.8em;
     height:3.2em;
     vertical-align: middle;
@@ -2180,9 +2182,9 @@ body {
   .login-box input{
     margin: 1em 0em;
     height: 2.5em;
-    margin-right: 2em;
+    margin-right: 0em;
     font-size: 1.3em;
-    width:18em;
+    width:13em;
     border: 0.2em;
     border-color: #002125;
     border-radius: 0.3em;
@@ -2191,9 +2193,9 @@ body {
   .login-box select{
     margin: 1em 0em;
     height: 2.5em;
-    margin-right: 2em;
+    margin-right: 0em;
     font-size: 1.3em;
-    width:18em;
+    width:13em;
     border: 0.2em;
     border-color: #002125;
     border-radius: 0.3em;
