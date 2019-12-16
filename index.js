@@ -11,7 +11,7 @@ const seventh_button = document.getElementsByClassName('desktop')[6];
 btn.onclick = function(evt) {
   if (!toggled) {
     toggled = true;
-    evt.target.classList.add('toggled');
+    btn.classList.add('toggled');
     nav.classList.add('active');
     first_button.classList.add('active');
     sec_button.classList.add('active');
@@ -22,7 +22,7 @@ btn.onclick = function(evt) {
     seventh_button.classList.add('active');
   } else {
     toggled = false;
-    evt.target.classList.remove('toggled');
+    btn.classList.remove('toggled');
     nav.classList.remove('active');
     first_button.classList.remove('active');
     sec_button.classList.remove('active');
