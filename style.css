@@ -1579,46 +1579,89 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 1fr;
     grid-template-areas: '. . . a''. z b .''. c d .''. e f .''. g g .';
-    grid-gap: 2em;
-    grid-row-gap: 5em;
+    grid-gap: 5%;
+    grid-row-gap: 8%;
     height:0em;
     position: fixed;
     width:100%;
-    z-index:10;
+    z-index:1;
     justify-content: center;
+    height: 10%;
+    background-color: #000;
+    transition: all 0.3s ease-out, background 1s ease-out;
+    transition-delay: 0.25s;
   }
   .navigation .desktop{
-    display:none;
+    opacity: 0;
+    margin-bottom: 2em;
+    width:100%;
+    height:2em;
+    transition: opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   }
   .navigation .button0{
     grid-area: z;
+    transition-delay: 0.4s;
   }
   .navigation .button1{
     grid-area: b;
+    transition-delay: 0.4s;
   }
   .navigation .button2{
     grid-area: c;
+    transition-delay: 0.3s;
   }
   .navigation .button3  {
     grid-area: d;
+    transition-delay: 0.3s;
   }
   .navigation .button4{
     grid-area: e;
+    transition-delay: 0.2s;
   }
   .navigation .button5{
     grid-area: f;
+    transition-delay: 0.2s;
   }
   .navigation .button6  {
     grid-area: g;
+    transition-delay: 0.1s;
+  }
+  .active.button0{
+    grid-area: z;
+    transition-delay: 0.1s;
+  }
+  .navigation.active .button1{
+    grid-area: b;
+    transition-delay: 0.1s;
+  }
+  .navigation.active .button2{
+    grid-area: c;
+    transition-delay: 0.3s;
+  }
+  .navigation.active .button3  {
+    grid-area: d;
+    transition-delay: 0.3s;
+  }
+  .navigation.active .button4{
+    grid-area: e;
+    transition-delay: 0.5s;
+  }
+  .navigation.active .button5{
+    grid-area: f;
+    transition-delay: 0.5s;
+  }
+  .navigation.active .button6  {
+    grid-area: g;
+    transition-delay: 0.6s;
   }
 
 .nav-tgl {
   grid-area: a;
-  margin-top: 20%;
+  margin-top: 15%;
   margin-left: 22%;
   display: inline-block;
-  width:4em;
-  height:4em;
+  width:3.5em;
+  height:3.5em;
   z-index: 1;
   border: none;
   border-radius: 50%;
@@ -1635,7 +1678,7 @@ body {
   background: #293335;
   vertical-align: middle;
 }
-.nav-tgl > span:before, .nav-tgl > span:after {
+.nav-tgl  span:before, .nav-tgl  span:after {
   display: inline-block;
   position: absolute;
   content: "";
@@ -1644,12 +1687,12 @@ body {
   background: #293335;
   transition: all 200ms;
 }
-.nav-tgl > span:before {
+.nav-tgl  span:before {
   top: -11px;
   left: 3px;
   width: 28px;
 }
-.nav-tgl > span:after {
+.nav-tgl  span:after {
   top: 11px;
   left: 6px;
   width: 22px;
@@ -1657,14 +1700,14 @@ body {
 .nav-tgl:focus {
   outline: none;
 }
-.nav-tgl:hover > span:after, .nav-tgl:hover > span:before {
+.nav-tgl:hover  span:after, .nav-tgl:hover  span:before {
   width: 34px;
   left: 0;
 }
-.nav-tgl.toggled > span {
+.nav-tgl.toggled  span {
   height: 0;
 }
-.nav-tgl.toggled > span:after, .nav-tgl.toggled > span:before {
+.nav-tgl.toggled  span:after, .nav-tgl.toggled  span:before {
   top: 0px;
   left: 0;
   width: 34px;
@@ -1676,32 +1719,19 @@ body {
   transform: rotate(45deg);
 }
 .nav-tgl.toggled {
-  background-color: #002545;
+  background-color: #fff;
 }
 
-.navigation:before {
-  content: '';
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.98);
-  transition: all 500ms ease-in-out;
-  clip-path: circle(30px at calc(100%) 0%);
-  visibility: hidden;
-}
-
-.active.navigation:before {
-  visibility: visible;
-  clip-path: circle(100%);
-  z-index: -1;
+.active.navigation {
+  height:100%;
+  transition: all 0.5s ease-in, background 0.5s ease-in;
+  transition-delay: 0.2s;
 }
 .active.desktop{
-  display: flex;
-  justify-content: center;
   margin-bottom: 2em;
   width:100%;
-  height: auto;
-  z-index: 1;
+  height:2em;
+  opacity: 1;
 }
 
   #footer {
