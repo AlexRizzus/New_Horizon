@@ -1579,16 +1579,16 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 1fr;
     grid-template-areas: '. . . a''. z b .''. c d .''. e f .''. g g .';
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 5%;
     grid-row-gap: 8%;
-    height:0em;
     position: fixed;
     width:100%;
     z-index:1;
     justify-content: center;
     height: 10%;
     background-color: #000;
-    transition: all 0.3s ease-out, background 1s ease-out;
+    transition: all 0.8s ease-out, background 1s ease-out;
     transition-delay: 0.25s;
   }
   .navigation .desktop{
@@ -1628,31 +1628,31 @@ body {
   }
   .active.button0{
     grid-area: z;
-    transition-delay: 0.1s;
+    transition-delay: 0.3s;
   }
   .navigation.active .button1{
     grid-area: b;
-    transition-delay: 0.1s;
+    transition-delay: 0.3s;
   }
   .navigation.active .button2{
     grid-area: c;
-    transition-delay: 0.3s;
+    transition-delay: 0.45s;
   }
   .navigation.active .button3  {
     grid-area: d;
-    transition-delay: 0.3s;
+    transition-delay: 0.45s;
   }
   .navigation.active .button4{
     grid-area: e;
-    transition-delay: 0.5s;
+    transition-delay: 0.65s;
   }
   .navigation.active .button5{
     grid-area: f;
-    transition-delay: 0.5s;
+    transition-delay: 0.65s;
   }
   .navigation.active .button6  {
     grid-area: g;
-    transition-delay: 0.6s;
+    transition-delay: 0.8s;
   }
 
 .nav-tgl {
@@ -1724,7 +1724,7 @@ body {
 
 .active.navigation {
   height:100%;
-  transition: all 0.5s ease-in, background 0.5s ease-in;
+  transition: all 0.6s ease-in, background 1s ease-in;
   transition-delay: 0.2s;
 }
 .active.desktop{
