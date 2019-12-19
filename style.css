@@ -737,6 +737,8 @@ body {
                         's1 s1 s1 im1'
                         'p1 p1 p1 im1'
                         't3 t3 t3 t3'
+                        'im2 s2 s2 s2'
+                        'im2 p2 p2 p2'
                         ;
 }
 
@@ -753,6 +755,11 @@ body {
 #contentResearch p{
   margin: 2em;
   font-size: 1.4em;
+}
+
+#contentResearch img{
+  margin: 1em;
+  border-radius: 2em;
 }
 
 #title_avanguardia{
@@ -792,6 +799,22 @@ body {
 
 #title_attrezzature{
   grid-area: t3;
+}
+
+#subtitle_fionda{
+  grid-area: s2;
+}
+
+#div_fionda{
+  grid-area: p2;
+}
+
+#contentResearch #img_fionda{
+  grid-area: im2;
+  max-width: 25em;
+  max-height: 25em;
+  align-self: center;
+    border-radius: 30em;
 }
 /* ------------ LOGIN ------------------------------------ */
 
@@ -1902,18 +1925,18 @@ body {
   }
 
   #contentAbout h1{
-    font-size: 1.75em;
+    font-size: 2.15em;
     text-align: center;
   }
 
   #contentAbout h2{
     text-align: left;
-    font-size: 1.3em;
+    font-size: 1.5em;
   }
 
   #contentAbout p{
     text-align: left;
-    font-size: 0.9em;
+    font-size: 1.25em;
     margin: 0.8em;
   }
 
