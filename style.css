@@ -1602,26 +1602,30 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 1fr;
     grid-template-areas: '. . . a''. z b .''. c d .''. e f .''. g g .';
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 5%;
     grid-row-gap: 8%;
-    height:0em;
+    opacity: 0.9;
     position: fixed;
     width:100%;
     z-index:1;
     justify-content: center;
     height: 10%;
     background-color: #000;
-    transition: all 0.3s ease-out, background 1s ease-out;
-    transition-delay: 0.25s;
+    transition: all 0.8s ease-out, background 1s ease-out;
+    transition-delay: 0.05s;
   }
   .navigation .desktop{
     opacity: 0;
     margin-bottom: 2em;
+    border: 0;
+    color:transparent;
     width:100%;
-    height:2em;
+    height:8em;
     transition: opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   }
   .navigation .button0{
+    background:url(images/icons8-casa-96.png) no-repeat;
     grid-area: z;
     transition-delay: 0.4s;
   }
@@ -1631,60 +1635,60 @@ body {
   }
   .navigation .button2{
     grid-area: c;
-    transition-delay: 0.3s;
+    transition-delay: 0.2s;
   }
   .navigation .button3  {
     grid-area: d;
-    transition-delay: 0.3s;
+    transition-delay: 0.2s;
   }
   .navigation .button4{
     grid-area: e;
-    transition-delay: 0.2s;
+    transition-delay: 0.15s;
   }
   .navigation .button5{
     grid-area: f;
-    transition-delay: 0.2s;
+    transition-delay: 0.15s;
   }
   .navigation .button6  {
     grid-area: g;
-    transition-delay: 0.1s;
+    transition-delay: 0.05s;
   }
   .active.button0{
     grid-area: z;
-    transition-delay: 0.1s;
+    transition-delay: 0.35s;
   }
   .navigation.active .button1{
     grid-area: b;
-    transition-delay: 0.1s;
+    transition-delay: 0.35s;
   }
   .navigation.active .button2{
     grid-area: c;
-    transition-delay: 0.3s;
+    transition-delay: 0.55s;
   }
   .navigation.active .button3  {
     grid-area: d;
-    transition-delay: 0.3s;
+    transition-delay: 0.55s;
   }
   .navigation.active .button4{
     grid-area: e;
-    transition-delay: 0.5s;
+    transition-delay: 0.75s;
   }
   .navigation.active .button5{
     grid-area: f;
-    transition-delay: 0.5s;
+    transition-delay: 0.75s;
   }
   .navigation.active .button6  {
     grid-area: g;
-    transition-delay: 0.6s;
+    transition-delay: 0.9s;
   }
 
 .nav-tgl {
   grid-area: a;
-  margin-top: 15%;
+  margin-top: 10%;
   margin-left: 22%;
   display: inline-block;
-  width:3.5em;
-  height:3.5em;
+  width: 4em;
+  height: 4em;
   z-index: 1;
   border: none;
   border-radius: 50%;
@@ -1747,13 +1751,17 @@ body {
 
 .active.navigation {
   height:100%;
-  transition: all 0.5s ease-in, background 0.5s ease-in;
-  transition-delay: 0.2s;
+  opacity: 1;
+  transition: all 0.6s ease-in, background 1s ease-in;
+  transition-delay: 0.05s;
 }
 .active.desktop{
   margin-bottom: 2em;
+  border: 0;
+  color:transparent;
+  background-position: center;
   width:100%;
-  height:2em;
+  height:8em;
   opacity: 1;
 }
 
@@ -1866,7 +1874,7 @@ body {
   }
 
   .grid-container {
-    padding-top: 5em;
+    padding-top: 30%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 'b' 'a' 'd' 'c' 'f' 'e' 'g' 'h';
