@@ -6,13 +6,12 @@
     $count=1;
 
     if($connessioneOK){
-        $query="SELECT 'nome', 'data_inizio', 'stato' FROM Missioni OREDR BY 'data_inizio DESC LIMIT 3";
-		$queryResult=mysqli_query($this->connection, $query);
+        $query="SELECT nome, data_inizio, stato FROM Missioni ORDER BY data_inizio DESC LIMIT 3";
+		$queryResult=mysqli_query($oggettoConnessione->connection, $query);
 
 		if(mysqli_num_rows($queryResult)==0){
 
-            throw new Exception("risultato query vuoto", 1);
-            ;
+            echo("risultato query vuoto");
 
         }else{
 
@@ -20,18 +19,19 @@
             while($row=mysqli_fetch_assoc($queryResult)){
                 array_push($result, $row);
             }
-            foreach($result as $array){
-                str_replace("<h2>nome_missione</h2>", $array['nome'], $paginaHTML, $count);
-                str_replace("<p>data_missione</p>", $array['data_inizio'], $paginaHTML, $count);
-                str_replace("<p>stato_missione</p>", $array['stato'], $paginaHTML,$count);
+            foreach($result as &$array){
+                $paginaHTML = str_replace("nome_missione".$count,$array['nome'], $paginaHTML);
+                $paginaHTML = str_replace("data_missione".$count, $array['data_inizio'], $paginaHTML);
+                $paginaHTML = str_replace("stato_missione".$count, $array['stato'], $paginaHTML);
+                $count = $count + 1;
             }
-            echo 
+            echo $paginaHTML;
         }
     }
     else
     {
-        throw new Exception("connessione fallita come rizzo", 1);
-        
+        echo("connessione fallita come rizzo" );
+
     }
 
 ?>
