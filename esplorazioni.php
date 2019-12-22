@@ -5,13 +5,10 @@ $connessioneOK=$oggettoConnessione->openDBConnection();
 $paginaHTML = file_get_contents('esplorazioni.html');
 
 if($connessioneOK){
-  $missioni = $oggettoConnessione->getMissioni_perLuogo("Marte") //parametro dal form
+  $missioni = $oggettoConnessione->getMissioni_perLuogo("Marte"); //parametro dal form
   if(mysqli_num_rows($queryResult)==0){
     echo("risultato query vuoto");
   }else{
-    while($row=mysqli_fetch_assoc($queryResult)){
-      array_push($result, $row);
-    }
     $stringa_missioni = "";
     foreach($result as $valore){
       $stringa_missioni .= "<div class="mission-box">" .
