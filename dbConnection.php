@@ -16,5 +16,31 @@
                 return true;
             }
         }
+
+        public function getMissioni_perLuogo($luogo_missione) {
+          $query = "SELECT nome, data_inizio, stato FROM Missioni ORDER BY data_inizio DESC LIMIT 3";
+          $queryResult=mysqli_query($oggettoConnessione->connection, $query);
+
+          if(mysqli_num_rows($queryResult) == 0)
+          {
+            return null;
+          }
+          else{
+            while($row = my_sqli_fetch_assoc($queryResult))
+            {
+              $arraySingolaMissione = array(
+                'Nome' => $row['nome'],
+                'Data di inizio' => $row['data_inizio'],
+                'Data di fine' => $row['data_fine'],
+                'Stato' => $row['stato'],
+                'Affiliazioni' => $row['affiliazioni'],
+                'Destinazione' => $row['destinazione'],
+                'Scopo' => $row['scopo']
+              );
+              array_push($result, $arraySingolaMissione);
+          }
+          return $result;
+        }
       }
-?>
+    }
+    ?>
