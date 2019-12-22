@@ -5,7 +5,7 @@ $connessioneOK=$oggettoConnessione->openDBConnection();
 $paginaHTML = file_get_contents('esplorazioni.html');
 
 if($connessioneOK){
-  $missioni = $oggettoConnessione->getMissioni_perLuogo("'Marte'"); //parametro dal form
+  $missioni = $oggettoConnessione->getMissioni_perLuogo("Marte"); //parametro dal form
   if(mysqli_num_rows($missioni)==0){
     echo("risultato query vuoto");
   } else {
