@@ -726,6 +726,19 @@ body {
     margin: 0em 3em 0em 3em;
     text-align: justify;
   }
+/*--------------ESPLORAZIONI------------------------------------------*/
+
+form#search {
+  width: 230px}
+form#search fieldset{border: 0px solid;padding: 0}
+form#search legend{text-indent: -9999px;font-size: 1px}
+form#search input{float: left;width: 170px;margin-top: 3px;
+    background: #FFF url(bk.png) repeat-x top left;
+    border: 1px solid;border-color: #999 #777 #777 #999;
+    font: 18px;color: #0D56D5}
+form#search button{border-radius: 0.5em;
+  cursor: pointer;}
+
 /* ------------ RICERCA ------------------------------------ */
 #contentResearch{
   display: grid;
