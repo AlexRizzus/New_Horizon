@@ -18,7 +18,7 @@
         }
 
         public function getMissioni_perLuogo($luogo_missione) {
-          $query = "SELECT nome, data_inizio, stato FROM Missioni ORDER BY data_inizio DESC LIMIT 3";
+          $query = "SELECT nome, data_inizio, data_fine, stato, affiliazioni, destinazione, scopo FROM Missioni WHERE nom = $luogo_missione ORDER BY data_inizio DESC";
           $queryResult=mysqli_query($oggettoConnessione->connection, $query);
 
           if(mysqli_num_rows($queryResult) == 0)

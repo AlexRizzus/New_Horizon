@@ -10,7 +10,7 @@ if($connessioneOK){
     echo("risultato query vuoto");
   }else{
     $stringa_missioni = "";
-    foreach($result as $valore){
+    foreach($missioni as $valore){
       $stringa_missioni .= "<div class="mission-box">" .
       "<h2>Nome della missione: " . $valore['Nome'] . "</h2>" .
       "<p>Iniziata in data: " . $valore['data_inizio'] . "</p>" .
@@ -21,7 +21,7 @@ if($connessioneOK){
       "<p>Scopo: " . $valore['scopo'] . "</p>" .
       "</div>";
     }
-    echo str_replace("<missionsHere/>", $stringaPersonaggi, $paginaHTML);
+    echo str_replace("<missionsHere/>", $stringa_missioni, $paginaHTML);
   }
   else
   {
