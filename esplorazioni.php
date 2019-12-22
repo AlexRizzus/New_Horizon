@@ -6,7 +6,7 @@ $paginaHTML = file_get_contents('esplorazioni.html');
 
 if($connessioneOK){
   $missioni = $oggettoConnessione->getMissioni_perLuogo("Marte"); //parametro dal form
-  if(mysqli_num_rows($missioni)==0){
+  if($missioni == null){
     echo("risultato query vuoto");
   } else {
       $stringa_missioni = "";
