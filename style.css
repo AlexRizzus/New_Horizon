@@ -727,17 +727,37 @@ body {
     text-align: justify;
   }
 /*--------------ESPLORAZIONI------------------------------------------*/
+#contentEsp h1{
+    text-align: center;
+    font-size: 2.6em;
+    margin-top: 1.5em;
+}
 
-form#search {
-  width: 230px}
-form#search fieldset{border: 0px solid;padding: 0}
-form#search legend{text-indent: -9999px;font-size: 1px}
-form#search input{float: left;width: 170px;margin-top: 3px;
+#search{
+  width: 230px
+}
+#search fieldset{border: 0px solid;padding: 0}
+#search legend{text-indent: -9999px;font-size: 1px}
+#search input{float: left;width: 170px;margin-top: 3px;
     background: #FFF url(bk.png) repeat-x top left;
     border: 1px solid;border-color: #999 #777 #777 #999;
     font: 18px;color: #0D56D5}
-form#search button{border-radius: 0.5em;
+#search button{border-radius: 0.5em;
   cursor: pointer;}
+
+.mission-box {
+    background-color:#d3d3d3;
+    color:#002125;
+    font-weight: bold;
+    border-radius: 0.4em;
+    padding: 1em;
+    text-decoration: none;
+    margin: 5em;
+  }
+
+.mission-box h2{
+    margin: 0em;
+}
 
 /* ------------ RICERCA ------------------------------------ */
 #contentResearch{
