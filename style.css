@@ -2586,4 +2586,122 @@ body {
   #validation2{
     padding:2em;
   }
+
+  /* --------------- COLLABORAZIONI --------------------------------------------- */
+
+  #Team{
+    display: grid;
+    grid-template-areas: 'ct1' 'ct2';
+  }
+  #astronauti
+  {
+    grid-area: ct1;
+    width: 13em;
+    height: 13em;
+    border-radius: 1em;
+    margin: 1em;
+    justify-self: center;
+  }
+  #Team.p
+  {
+    grid-area: ct2;
+  }
+
+  #Meeting{
+    display: grid;
+    grid-template-areas: 'cm1' 'cm2';
+  }
+  #meetimage
+  {
+    grid-area: cm1;
+    max-width: 18em;
+    max-height: 13em;
+    border-radius: 1em;
+    margin: 1em;
+    justify-self: center;
+  }
+  #Meeting.p
+  {
+    grid-area: cm2;
+  }
+
+  #contentCollab #center{
+    text-align: center;
+  }
+  #Partners{
+    text-align: center;
+    background-color: white;
+    border-radius: 1em;
+  }
+  .Partners{
+    width: 6em;
+    height: 6em;
+    margin: 1em;
+    border-radius: 1em;
+  }
+  #collab-vantaggi{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    grid-template-areas: 'cv1 cv2' 'cv3 cv4''cv5 cv6' 'cv7 cv8';
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    grid-column-gap: 1em;
+    justify-self: center;
+  }
+
+  #collab_vantaggio1{
+    grid-area: cv1;
+  }
+  #collab_vantaggio2{
+    grid-area: cv3;
+  }
+  #collab_vantaggio3{
+    grid-area: cv5;
+  }
+  #collab_vantaggio4{
+    grid-area: cv7;
+  }
+  .collab_icon{
+    width: 4em;
+    height: 4em;
+  }
+  #collab_icon1{
+    grid-area: cv2;
+  }
+  #collab_icon2{
+    grid-area: cv4;
+  }
+  #collab_icon3{
+    grid-area: cv6;
+  }
+  #collab_icon4{
+    grid-area: cv8;
+  }
+
+  #contentCollab{
+        margin: 4em;
+    }
+
+  #contentCollab abbr{
+      text-decoration: none;
+    }
+
+  #contentCollab h1{
+      text-align: center;
+      font-size: 3em;
+      margin-top: 1.5em;
+    }
+
+  #contentCollab h2{
+      text-align: center;
+      font-size: 2.5em;
+      margin-top: 1.5em;
+    }
+
+  #contentCollab p{
+      font-size: 1.5em;
+      text-align: justify;
+    }
 }
