@@ -246,7 +246,9 @@ body {
 }
 
 /*-----------------CHI SIAMO----------------------------------------------*/
-
+#contentAbout abbr{
+      text-decoration: none;
+}
 #green_data{
   display: grid;
   margin: 2em;
@@ -772,10 +774,18 @@ body {
                         't2 t2 t2 t2'
                         's1 s1 s1 im1'
                         'p1 p1 p1 im1'
+                        'im4 s4 s4 s4'
+                        'im4 p4 p4 p4'
                         't3 t3 t3 t3'
-                        'im2 s2 s2 s2'
-                        'im2 p2 p2 p2'
+                        's2 s2 s2 im2'
+                        'p2 p2 p2 im2'
+                        'im3 s3 s3 s3'
+                        'im3 p3 p3 p3'
                         ;
+}
+
+#contentResearch abbr{
+  text-decoration: none;
 }
 
 #contentResearch h1{
@@ -809,7 +819,7 @@ body {
 #n1{
   justify-self: center;
   align-self: center;
-  max-width: 6em;
+  max-width: 10em;
   grid-area: i1;
   transform: rotate(30deg);
 }
@@ -833,6 +843,21 @@ body {
   align-self: center;
 }
 
+#subtitle_neutrini{
+  grid-area: s4;
+}
+
+#div_neutrini{
+  grid-area: p4;
+}
+
+#contentResearch #img_neutrini{
+  grid-area: im4;
+  max-width: 20em;
+  justify-self: center;
+  align-self: center;
+}
+
 #title_attrezzature{
   grid-area: t3;
 }
@@ -852,6 +877,23 @@ body {
   align-self: center;
     border-radius: 30em;
 }
+
+#subtitle_sonde{
+  grid-area: s3;
+}
+
+#div_sonde{
+  grid-area: p3;
+}
+
+
+#contentResearch #img_sonda{
+  grid-area: im3;
+  max-width: 30em;
+  max-height: 30em;
+  align-self: center;
+}
+
 /* ------------ LOGIN ------------------------------------ */
 
 .login-content{
@@ -1143,6 +1185,9 @@ body {
     font-size: 1.6em;
     padding-top: 1em;
   }
+#contentAbout abbr{
+      text-decoration: none;
+}
 
   #contentAbout p{
     text-align: left;
@@ -1563,6 +1608,146 @@ body {
 #validation2{
   padding:2em;
 }
+
+/* ------------ RICERCA ------------------------------------ */
+#contentResearch{
+  line-height: 2.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  display: grid;
+  grid-gap: 0.1em;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr;
+  grid-template-areas:  't1 t1 t1 t1'
+                        'i1 d1 d1 d1'
+                        't2 t2 t2 t2'
+                        'im1 s1 s1 s1'
+                        'p1 p1 p1 p1'
+                        'im4 s4 s4 s4'
+                        'p4 p4 p4 p4'
+                        't3 t3 t3 t3'
+                        'im2 s2 s2 s2'
+                        'p2 p2 p2 p2'
+                        'im3 s3 s3 s3'
+                        'p3 p3 p3 p3'
+                        ;
+}
+
+#contentResearch abbr{
+  text-decoration: none;
+}
+
+#contentResearch h1{
+  font-size: 2.7em;
+  text-align: center;
+}
+
+#contentResearch h2{
+  font-size: 2.2em;
+  justify-self: left;
+}
+
+#contentResearch p{
+  margin: 2em;
+  font-size: 1.5em;
+}
+
+#contentResearch img{
+  margin: 0em;
+  border-radius: 2em;
+  justify-self: center;
+}
+
+#title_avanguardia{
+  grid-area: t1;
+}
+
+#d1{
+  grid-area: d1;
+}
+
+#n1{
+  justify-self: center;
+  align-self: center;
+  max-width: 6em;
+  grid-area: i1;
+  transform: rotate(30deg);
+}
+
+#title_scoperte{
+  grid-area: t2;
+}
+
+#subtitle_buco{
+  grid-area: s1;
+  align-self: center;
+}
+
+#div_buco{
+  grid-area: p1;
+}
+
+#contentResearch #img_buco{
+  grid-area: im1;
+  max-width: 10em;
+  border-radius: 4em;
+  align-self: center;
+}
+
+#subtitle_neutrini{
+  grid-area: s4;
+  align-self: center;
+}
+
+#div_neutrini{
+  grid-area: p4;
+}
+
+#contentResearch #img_neutrini{
+  grid-area: im4;
+  max-width: 10em;
+  align-self: center;
+}
+
+#title_attrezzature{
+  grid-area: t3;
+}
+
+#subtitle_fionda{
+  grid-area: s2;
+  align-self: center;
+}
+
+#div_fionda{
+  grid-area: p2;
+}
+
+#contentResearch #img_fionda{
+  grid-area: im2;
+  max-width: 18em;
+  max-height: 18em;
+  align-self: center;
+  border-radius: 30em;
+  margin: 0em 1em 0em 1em;
+  padding: 0em 1em 0em 1em;
+}
+
+#subtitle_sonde{
+  grid-area: s3;
+  align-self: center;
+}
+
+#div_sonde{
+  grid-area: p3;
+}
+
+
+#contentResearch #img_sonda{
+  grid-area: im3;
+  max-width: 15em;
+  max-height: 15em;
+  align-self: center;
+}
+
   /* --------------- LOGIN --------------------------------------------- */
 
   .login-content{
@@ -1627,6 +1812,7 @@ body {
 }
 
 @media screen and (max-width: 749px) and (orientation: portrait){
+  /*--------------GENERAL PURPOSE CSS-----------------------------------------*/
   body {
     padding:0em;
     margin:0em;
@@ -1964,23 +2150,28 @@ body {
   }
 
   #contentAbout{
-    margin-right: 4em;
-    margin left: 4em;
+    margin-right: 1em;
+    margin-left: 1em;
+    padding-top: 4em;
   }
 
   #contentAbout h1{
-    font-size: 2.15em;
+    font-size: 3em;
     text-align: center;
   }
 
   #contentAbout h2{
     text-align: left;
-    font-size: 1.5em;
+    font-size: 2.3em;
+  }
+
+  #contentAbout abbr{
+        text-decoration: none;
   }
 
   #contentAbout p{
-    text-align: left;
-    font-size: 1.25em;
+    text-align: center;
+    font-size: 1.6em;
     margin: 0.8em;
   }
 
@@ -2437,12 +2628,559 @@ body {
       text-align: justify;
     }
 
+    /* ------------ RICERCA ------------------------------------ */
+    #contentResearch{
+      display: grid;
+      grid-gap: 0.1em;
+      padding-top: 3em;
+      grid-template-columns: 1fr;
+      grid-template-areas:  't1'
+                            'i1'
+                            'd1'
+                            't2'
+                            's1'
+                            'im1'
+                            'p1'
+                            's4'
+                            'im4'
+                            'p4'
+                            't3'
+                            's2'
+                            'im2'
+                            'p2'
+                            's3'
+                            'im3'
+                            'p3'
+                            ;
+    }
 
+    #contentResearch abbr{
+      text-decoration: none;
+    }
+
+    #contentResearch h1{
+      font-size: 3em;
+      text-align: center;
+      justify-self: center;
+    }
+
+    #contentResearch h2{
+      margin-left: 1.5em;
+      font-size: 2.3em;
+      justify-self: center;
+    }
+
+    #contentResearch p{
+      margin: 2em;
+      font-size: 1.6em;
+      justify-self: center;
+    }
+
+    #contentResearch img{
+      margin: 1em;
+      border-radius: 2em;
+      justify-self: center;
+    }
+
+    #title_avanguardia{
+      grid-area: t1;
+    }
+
+    #d1{
+      grid-area: d1;
+    }
+
+    #n1{
+      justify-self: center;
+      align-self: center;
+      max-width: 10em;
+      grid-area: i1;
+      transform: rotate(30deg);
+    }
+
+    #title_scoperte{
+      grid-area: t2;
+    }
+
+    #subtitle_buco{
+      grid-area: s1;
+    }
+
+    #div_buco{
+      grid-area: p1;
+    }
+
+    #img_buco{
+      grid-area: im1;
+      max-width: 20em;
+      border-radius: 4em;
+      align-self: center;
+    }
+
+    #subtitle_neutrini{
+      grid-area: s4;
+    }
+
+    #div_neutrini{
+      grid-area: p4;
+    }
+
+    #contentResearch #img_neutrini{
+      grid-area: im4;
+      max-width: 20em;
+      justify-self: center;
+      align-self: center;
+    }
+
+    #title_attrezzature{
+      grid-area: t3;
+    }
+
+    #subtitle_fionda{
+      grid-area: s2;
+    }
+
+    #div_fionda{
+      grid-area: p2;
+    }
+
+    #contentResearch #img_fionda{
+      grid-area: im2;
+      max-width: 25em;
+      max-height: 25em;
+      align-self: center;
+        border-radius: 30em;
+    }
+
+    #subtitle_sonde{
+      grid-area: s3;
+    }
+
+    #div_sonde{
+      grid-area: p3;
+    }
+
+
+    #contentResearch #img_sonda{
+      grid-area: im3;
+      max-width: 30em;
+      max-height: 30em;
+      align-self: center;
+    }
 
 }
 
 @media screen and (max-width: 749px) and (orientation: landscape){
+  /*--------------GENERAL PURPOSE CSS-----------------------------------------*/
+  body {
+    padding:0em;
+    margin:0em;
+    background-image: linear-gradient(to bottom, #000206, #005660);
+    font-family: 'Oswald', sans-serif;
+    color: #d3d3d3;
+  }
+  .navigation {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-areas: '. . . a''. z b .''. c d .''. e f .''. g g .';
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 5%;
+    grid-row-gap: 8%;
+    opacity: 0.9;
+    position: fixed;
+    width:100%;
+    z-index:1;
+    justify-content: center;
+    height: 10%;
+    background-color: #000;
+    transition: all 0.8s ease-out, background 1s ease-out;
+    transition-delay: 0.05s;
+  }
+  .navigation .desktop{
+    opacity: 0;
+    margin-bottom: 2em;
+    border: 0;
+    color:transparent;
+    width:100%;
+    height:8em;
+    transition: opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  }
+  .navigation .button0{
+    background:url(images/icons8-casa-96.png) no-repeat;
+    grid-area: z;
+    transition-delay: 0.4s;
+  }
+  .navigation .button1{
+    grid-area: b;
+    transition-delay: 0.4s;
+  }
+  .navigation .button2{
+    grid-area: c;
+    transition-delay: 0.2s;
+  }
+  .navigation .button3  {
+    grid-area: d;
+    transition-delay: 0.2s;
+  }
+  .navigation .button4{
+    grid-area: e;
+    transition-delay: 0.15s;
+  }
+  .navigation .button5{
+    grid-area: f;
+    transition-delay: 0.15s;
+  }
+  .navigation .button6  {
+    grid-area: g;
+    transition-delay: 0.05s;
+  }
+  .active.button0{
+    grid-area: z;
+    transition-delay: 0.35s;
+  }
+  .navigation.active .button1{
+    grid-area: b;
+    transition-delay: 0.35s;
+  }
+  .navigation.active .button2{
+    grid-area: c;
+    transition-delay: 0.55s;
+  }
+  .navigation.active .button3  {
+    grid-area: d;
+    transition-delay: 0.55s;
+  }
+  .navigation.active .button4{
+    grid-area: e;
+    transition-delay: 0.75s;
+  }
+  .navigation.active .button5{
+    grid-area: f;
+    transition-delay: 0.75s;
+  }
+  .navigation.active .button6  {
+    grid-area: g;
+    transition-delay: 0.9s;
+  }
 
+.nav-tgl {
+  grid-area: a;
+  margin-top: 10%;
+  margin-left: 22%;
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  z-index: 1;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  background: #fff;
+  text-align: center;
+}
+.nav-tgl > span {
+  display: inline-block;
+  position: relative;
+  height: 2px;
+  width: 34px;
+  border-radius: 1px;
+  background: #293335;
+  vertical-align: middle;
+}
+.nav-tgl  span:before, .nav-tgl  span:after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  height: 2px;
+  border-radius: 1px;
+  background: #293335;
+  transition: all 200ms;
+}
+.nav-tgl  span:before {
+  top: -11px;
+  left: 3px;
+  width: 28px;
+}
+.nav-tgl  span:after {
+  top: 11px;
+  left: 6px;
+  width: 22px;
+}
+.nav-tgl:focus {
+  outline: none;
+}
+.nav-tgl:hover  span:after, .nav-tgl:hover  span:before {
+  width: 34px;
+  left: 0;
+}
+.nav-tgl.toggled  span {
+  height: 0;
+}
+.nav-tgl.toggled  span:after, .nav-tgl.toggled  span:before {
+  top: 0px;
+  left: 0;
+  width: 34px;
+}
+.nav-tgl.toggled > span:after {
+  transform: rotate(-45deg);
+}
+.nav-tgl.toggled > span:before {
+  transform: rotate(45deg);
+}
+.nav-tgl.toggled {
+  background-color: #fff;
+}
+
+.active.navigation {
+  height:100%;
+  opacity: 1;
+  transition: all 0.6s ease-in, background 1s ease-in;
+  transition-delay: 0.05s;
+}
+.active.desktop{
+  margin-bottom: 2em;
+  border: 0;
+  color:transparent;
+  background-position: center;
+  width:100%;
+  height:8em;
+  opacity: 1;
+}
+
+  #footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'a b';
+    grid-gap: 0.5em;
+    margin-top:3.5em;
+    text-align: center;
+    background-color: #002125;
+    height: 7em;
+    margin-bottom:0em;
+  }
+  .validation {
+    grid-area: a;
+    padding-top: 0.7em;
+    margin: 0;
+  }
+  .validation a{
+    padding: 0em 1em;
+  }
+  .social{
+    grid-area: b;
+    padding-top: 0.6em;
+    margin: 0em;
+    margin-right: 1em;
+  }
+  .info {
+    grid-area: m;
+    text-align: center;
+    display: none;
+  }
+  .footer-icon {
+    width: 9%;
+    margin-left: 7%;
+    height: auto;
+  }
+  /*-----------------CHI SIAMO----------------------------------------------*/
+
+  #green_data{
+    display: grid;
+    margin: 1em;
+    grid-template-columns: 0.25fr 0.75fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:  'i1 t1 t1'
+                          'i2 t2 t2';
+    grid-gap: 0.1em;
+    align-items: center;
+  }
+
+  #contentAbout{
+    margin-right: 1em;
+    margin-left: 1em;
+    padding-top: 4em;
+  }
+
+  #contentAbout h1{
+    font-size: 2.2em;
+    text-align: center;
+  }
+
+  #contentAbout h2{
+    text-align: left;
+    font-size: 1.8em;
+  }
+
+  #contentAbout abbr{
+        text-decoration: none;
+  }
+
+  #contentAbout p{
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0.8em;
+  }
+
+  #firstTitle{
+      padding-top: 0.67em;
+      margin-top: 0em;
+  }
+
+  .subtitle_cont{
+      margin: 0em;
+  }
+
+  #icon_fact{
+    vertical-align: 0.0em;
+  }
+
+  #subtitle_energia_pulita{
+    grid-area: st;
+  }
+
+  #subtitle_sviluppo{
+    margin-left: 0.5em;
+  }
+
+  #green_data h3{
+    font-size: 2em;
+    margin: 0.25em;
+  }
+
+  #contentAbout#green_data p{
+    font-size: 1.3em;
+  }
+
+  #curio_icon1{
+    grid-area: i1;
+  }
+
+  #curio_icon2{
+    grid-area: i2;
+  }
+
+  .curio_icon{
+    justify-self: center;
+    margin: 0.5em;
+    color: white;
+    max-width: 8em;
+    max-height: 8em;
+  }
+
+  .icon{
+    max-width: 1.75em;
+    max-height: 1.75em;
+    vertical-align: -0.5em;
+    margin: 0em 0.5em 0em 0.5em;
+  }
+
+  .iconM{
+    max-width: 7em;
+    max-height: 7em;
+    vertical-align: -1.5em;
+    margin: 0em 0.5em 0em 0.5em;
+  }
+
+  .iconNoMargin{
+    max-width: 1.75em;
+    max-height: 1.75em;
+    vertical-align: -0.5em;
+    margin: 0.3em;
+  }
+
+  #curio_data1{
+      justify-self: center;
+      grid-area: t1;
+  }
+
+  #curio_data2{
+      justify-self: center;
+      grid-area: t2;
+  }
+
+  .curio_data{
+    margin: 1em;
+    border-radius: 0.2em;
+    box-shadow: 0.2em 0.2em 1em 0.005em #d3d3d3;
+    padding: 0.25em 1em 0.25em 1em;
+    max-width: 35em;
+    background-color: #d3d3d3;
+    color: #002125;
+  }
+
+  #our_team p{
+    text-align: center;
+    margin: 0.1em;
+  }
+
+  #our_team .name{
+    font-size: 1.5em;
+  }
+
+  #cisottoIMG{
+    justify-self: right;
+    align-self: center;
+    grid-area: c;
+  }
+
+  #lazzaroIMG{
+    justify-self: right;
+    align-self: center;
+    grid-area: l;
+  }
+
+  #rizzoIMG{
+    justify-self: right;
+    align-self: center;
+    grid-area: r;
+  }
+
+  #scialpiIMG{
+    justify-self: right;
+    align-self: center;
+    grid-area: s;
+  }
+
+  #grid_team{
+  display: grid;
+  grid-gap: 0.1em;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:  'c ct'
+                        'l lt'
+                        'r rt'
+                        's st';
+  }
+
+  #grid_team #ct{
+    justify-self: left;
+    align-self: center;
+    grid-area: ct;
+  }
+
+  #grid_team #lt{
+    justify-self: left;
+    align-self: center;
+    grid-area: lt;
+  }
+
+  #grid_team #rt{
+    justify-self: left;
+    align-self: center;
+    grid-area: rt;
+  }
+
+  #grid_team #st{
+    justify-self: left;
+    align-self: center;
+    grid-area: st;
+  }
+
+  .iconM{
+    max-width: 10em;
+    max-height: 10em;
+    vertical-align: -2.0em;
+    margin: 0em 0.5em 0em 0.5em;
+  }
 
 /*-------------------------CONTATTACI------------------------------*/
   body {
@@ -2707,4 +3445,150 @@ body {
       font-size: 1.5em;
       text-align: justify;
     }
+
+    /* ------------ RICERCA ------------------------------------ */
+    #contentResearch{
+      line-height: 2.5em;
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+      display: grid;
+      grid-gap: 0.1em;
+      grid-template-columns: 1fr 1fr 1fr 0.5fr;
+      grid-template-areas:  't1 t1 t1 t1'
+                            'i1 d1 d1 d1'
+                            't2 t2 t2 t2'
+                            's1 s1 s1 im1'
+                            'p1 p1 p1 p1'
+                            's4 s4 s4 im4'
+                            'p4 p4 p4 p4'
+                            't3 t3 t3 t3'
+                            's2 s2 s2 im2'
+                            'p2 p2 p2 p2'
+                            's3 s3 s3 im3'
+                            'p3 p3 p3 p3'
+                            ;
+    }
+
+    #contentResearch abbr{
+      text-decoration: none;
+    }
+
+    #contentResearch h1{
+      font-size: 2.5em;
+      text-align: center;
+    }
+
+    #contentResearch h2{
+      font-size: 2.0em;
+      margin-left:1.5em;
+      justify-self: left;
+    }
+
+    #contentResearch p{
+      margin: 1.5em;
+      font-size: 1.4em;
+    }
+
+    #contentResearch img{
+      margin-right: 1em;
+      border-radius: 2em;
+      justify-self: center;
+    }
+
+    #title_avanguardia{
+      grid-area: t1;
+    }
+
+    #d1{
+      grid-area: d1;
+    }
+
+    #n1{
+      justify-self: center;
+      align-self: center;
+      max-width: 6em;
+      grid-area: i1;
+      transform: rotate(30deg);
+    }
+
+    #title_scoperte{
+      grid-area: t2;
+    }
+
+    #subtitle_buco{
+      grid-area: s1;
+      align-self: center;
+    }
+
+    #div_buco{
+      grid-area: p1;
+    }
+
+    #contentResearch #img_buco{
+      grid-area: im1;
+      max-width: 8em;
+      border-radius: 4em;
+      align-self: center;
+    }
+
+    #subtitle_neutrini{
+      grid-area: s4;
+      align-self: center;
+    }
+
+    #div_neutrini{
+      grid-area: p4;
+    }
+
+    #contentResearch #img_neutrini{
+      grid-area: im4;
+      max-width: 8em;
+      align-self: center;
+    }
+
+    #title_attrezzature{
+      grid-area: t3;
+    }
+
+    #subtitle_fionda{
+      grid-area: s2;
+      align-self: center;
+    }
+
+    #div_fionda{
+      grid-area: p2;
+    }
+
+    #contentResearch #img_fionda{
+      grid-area: im2;
+      max-width: 15em;
+      max-height: 15em;
+      align-self: center;
+      border-radius: 30em;
+    }
+
+    #subtitle_sonde{
+      grid-area: s3;
+      align-self: center;
+    }
+
+    #div_sonde{
+      grid-area: p3;
+    }
+
+
+    #contentResearch #img_sonda{
+      grid-area: im3;
+      max-width: 12em;
+      max-height: 12em;
+      align-self: center;
+    }
+
+}
+
+/*-------------------------------------------------------------------*/
+
+@media print
+{
+
 }
