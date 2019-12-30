@@ -110,6 +110,10 @@ body {
   margin-left: 7%;
   height: auto;
 }
+.error{
+  color: red;
+  width: 100%;
+}
 
 /*------------------------HOME PAGE-------------------------------------------------------------*/
 
@@ -938,6 +942,17 @@ body {
   border-radius: 0.3em;
   text-align: center;
 }
+.login-box select{
+  margin: 1em 0em;
+  height: 2.5em;
+  margin-right: 2em;
+  font-size: 1.3em;
+  width:18em;
+  border: 0.2em;
+  border-color: #002125;
+  border-radius: 0.3em;
+  text-align: center;
+}
 .login-button {
   background-color: #d3d3d3;
   color: #002125;
@@ -1007,16 +1022,9 @@ body {
     font-size: 1.2em;
     font-family: 'Oswald', sans-serif;
   }
-  .navigation .position img {
-    height: 2em;
-    width: auto;
-  }
 .nav-tgl{
   display: none;
 }
-  #mobile_menu{
-    display: none;
-  }
 
   #footer {
     display: grid;
