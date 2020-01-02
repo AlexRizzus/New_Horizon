@@ -1834,34 +1834,41 @@ body {
     grid-template-areas: '. . . a''. z b .''. c d .''. e f .''. g g .';
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 5%;
-    grid-row-gap: 8%;
+    grid-row-gap: 4%;
     opacity: 0.9;
     position: fixed;
     width:100%;
     z-index:1;
     justify-content: center;
     height: 10%;
-    background-color: #000;
+    background-color: #000a0a ;
     transition: all 0.8s ease-out, background 1s ease-out;
     transition-delay: 0.05s;
   }
   .navigation .desktop{
     opacity: 0;
     margin-bottom: 2em;
-    border: 0;
-    color:transparent;
+    border-style: groove;
+    border-width: 4px;
+    border-radius: 4em;
+    border-color: white;
+    color: white;
+    background-color: #000a0a;
     width:100%;
-    height:8em;
+    height:4em;
+    font-size: 1.5em;
     transition: opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   }
+  .navigation .desktop.position {
+    background-color: #001a1a;
+  }
   .navigation .button0{
-    background:url(images/icons8-casa-96.png) no-repeat;
     grid-area: z;
-    transition-delay: 0.4s;
+    transition-delay: 0.3s;
   }
   .navigation .button1{
     grid-area: b;
-    transition-delay: 0.4s;
+    transition-delay: 0.3s;
   }
   .navigation .button2{
     grid-area: c;
@@ -1873,43 +1880,42 @@ body {
   }
   .navigation .button4{
     grid-area: e;
-    transition-delay: 0.15s;
+    transition-delay: 0.10s;
   }
   .navigation .button5{
     grid-area: f;
-    transition-delay: 0.15s;
+    transition-delay: 0.10s;
   }
   .navigation .button6  {
     grid-area: g;
-    transition-delay: 0.05s;
   }
   .active.button0{
     grid-area: z;
-    transition-delay: 0.35s;
+    transition-delay: 0.30s;
   }
   .navigation.active .button1{
     grid-area: b;
-    transition-delay: 0.35s;
+    transition-delay: 0.30s;
   }
   .navigation.active .button2{
     grid-area: c;
-    transition-delay: 0.55s;
+    transition-delay: 0.45s;
   }
   .navigation.active .button3  {
     grid-area: d;
-    transition-delay: 0.55s;
+    transition-delay: 0.45s;
   }
   .navigation.active .button4{
     grid-area: e;
-    transition-delay: 0.75s;
+    transition-delay: 0.65s;
   }
   .navigation.active .button5{
     grid-area: f;
-    transition-delay: 0.75s;
+    transition-delay: 0.65s;
   }
   .navigation.active .button6  {
     grid-area: g;
-    transition-delay: 0.9s;
+    transition-delay: 0.80s;
   }
 
 .nav-tgl {
@@ -1932,7 +1938,7 @@ body {
   height: 2px;
   width: 34px;
   border-radius: 1px;
-  background: #293335;
+  background: #000a0a ;
   vertical-align: middle;
 }
 .nav-tgl  span:before, .nav-tgl  span:after {
@@ -1941,7 +1947,7 @@ body {
   content: "";
   height: 2px;
   border-radius: 1px;
-  background: #293335;
+  background: #000a0a ;
   transition: all 200ms;
 }
 .nav-tgl  span:before {
@@ -1986,13 +1992,16 @@ body {
   transition-delay: 0.05s;
 }
 .active.desktop{
-  margin-bottom: 2em;
-  border: 0;
-  color:transparent;
-  background-position: center;
+  border-style: groove;
+  border-width: 4px;
+  border-radius: 4em;
+  border-color: white;
+  color: white;
+  background-color: #000a0a;
   width:100%;
-  height:8em;
+  height:4em;
   opacity: 1;
+  font-size: 1.5em;
 }
 
   #footer {
