@@ -783,6 +783,43 @@ max-height: 15em;
 align-self: center;
 }
 
+/*--------------ESPLORAZIONI------------------------------------------*/
+#contentEsp h1{
+    text-align: center;
+    font-size: 2.6em;
+    margin-top: 1.5em;
+}
+
+#search{
+  width: 230px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#search fieldset{border: 0px solid;padding: 0}
+#search legend{text-indent: -9999px;font-size: 1px}
+#search input{float: left;width: 170px;margin-top: 3px;
+    background: #FFF url(bk.png) repeat-x top left;
+    border: 1px solid;border-color: #999 #777 #777 #999;
+    font: 18px;color: #0D56D5;
+  margin-right: 0.5em;}
+#search button{border-radius: 0.5em;
+  cursor: pointer;}
+
+.mission-box {
+    background-color:#d3d3d3;
+    color:#002125;
+    font-weight: bold;
+    border-radius: 0.4em;
+    padding: 1em;
+    text-decoration: none;
+    margin: 5em;
+  }
+
+.mission-box h2{
+    margin: 0em;
+}
+
+
 /* --------------- LOGIN --------------------------------------------- */
 
 .login-content{

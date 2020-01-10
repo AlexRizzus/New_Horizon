@@ -762,10 +762,12 @@ body {
     padding: 1em;
     text-decoration: none;
     margin: 5em;
+    width: 30em;
   }
 
 .mission-box h2{
     margin: 0em;
+    text-align: center;
 }
 
 /* ------------ RICERCA ------------------------------------ */
