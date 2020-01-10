@@ -761,7 +761,9 @@ body {
     border-radius: 0.4em;
     padding: 1em;
     text-decoration: none;
-    margin: 5em;
+    margin: 4em;
+    margin-left: auto;
+    margin-right: auto;
     width: 30em;
   }
 
