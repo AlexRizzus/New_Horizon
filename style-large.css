@@ -764,7 +764,7 @@ body {
     margin: 4em;
     margin-left: auto;
     margin-right: auto;
-    width: 30em;
+    max-width: 30em;
   }
 
 .mission-box h2{
