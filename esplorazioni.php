@@ -5,7 +5,7 @@ $connessioneOK=$oggettoConnessione->openDBConnection();
 $paginaHTML = file_get_contents('esplorazioni.html');
 
 if($connessioneOK){
-  $missioni = $oggettoConnessione->getMissioni_perLuogo("Marte"); //parametro dal form
+  $missioni = $oggettoConnessione->getMissioni();
   if($missioni == null){
     echo("risultato query vuoto");
   } else {
@@ -25,7 +25,7 @@ if($connessioneOK){
     }
   }else
   {
-    echo("connessione fallita come rizzo" );
+    echo("connessione fallita" );
   }
 
   ?>

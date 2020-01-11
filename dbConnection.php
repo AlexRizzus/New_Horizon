@@ -44,5 +44,34 @@ class DBAccess{
     }
     return $result;
   }
+
+
+public function getMissioni() {
+  $query = "SELECT nome, data_inizio, data_fine, stato, affiliazioni, destinazione, scopo FROM Missioni ORDER BY data_inizio DESC";
+  $queryResult=mysqli_query($this->connection, $query);
+
+  if(mysqli_num_rows($queryResult) == 0)
+  {
+    echo("Errore query");
+    return null;
+  }
+  else{
+    $result=array();
+    while($row = mysqli_fetch_assoc($queryResult))
+    {
+      $arraySingolaMissione = array(
+        'nome' => $row['nome'],
+        'data_inizio' => $row['data_inizio'],
+        'data_fine' => $row['data_fine'],
+        'stato' => $row['stato'],
+        'affiliazioni' => $row['affiliazioni'],
+        'destinazione' => $row['destinazione'],
+        'scopo' => $row['scopo']
+      );
+      array_push($result, $arraySingolaMissione);
+    }
+  }
+  return $result;
+}
 }
 ?>
