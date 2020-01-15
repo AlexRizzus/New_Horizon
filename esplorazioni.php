@@ -5,7 +5,15 @@ $connessioneOK=$oggettoConnessione->openDBConnection();
 $paginaHTML = file_get_contents('esplorazioni.html');
 
 if($connessioneOK){
+  if (isset($_GET['submit']))
+  {
+    $luogo_missione = $_GET['Nome_del_pianeta'];
+    $missioni = $oggettoConnessione->getMissioni_perLuogo();
+  }
+  else
+  {
   $missioni = $oggettoConnessione->getMissioni();
+  }
   if($missioni == null){
     echo("risultato query vuoto");
   } else {
@@ -25,7 +33,7 @@ if($connessioneOK){
     }
   }else
   {
-    echo("connessione fallita" );
+    echo("connessione fallita");
   }
 
   ?>
