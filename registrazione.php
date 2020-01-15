@@ -24,62 +24,64 @@
       return $error;
 
   }
-if (isset($_POST['submit'])) {
-      $username = $_POST['username'];
-      $password = $_POST['password'];
-      $email = $_POST['email'];
-      if ($_POST['sesso'] == 'Maschio')
-      {
-        $sesso = 'M';
-      }
-      else {
-        $sesso = 'F';
-      }
-      $occupazione = ['occupazione'];
-      $errori = checkInput($username,$email,$password);
-      if(!($errori == "")){
-        if (strstr($errori,"Nome"))
+
+if($connessioneOK)
+{
+  if (isset($_POST['submit'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $email = $_POST['email'];
+        if ($_POST['sesso'] == 'Maschio')
         {
-          $paginaHTML = str_replace("<erroreUsername/>",$errori, $paginaHTML);
-        }
-        if(strstr($errori,"Password"))
-        {
-          $paginaHTML = str_replace("<errorePassword/>",$errori, $paginaHTML);
-        }
-        if(strstr($errori,"email"))
-        {
-          $paginaHTML = str_replace("<erroreEmail/>",$errori, $paginaHTML);
-        }
-        $errori = "";
-        echo($paginaHTML);
-      }
-      else{
-      $query= "SELECT username FROM Utenti WHERE username = '" . $username . "'" ;
-      echo($query);
-      $result = mysqli_query($oggettoConnessione->connection, $query);
-      if(mysqli_num_rows($result) == 0)
-      {
-        $query= "INSERT INTO Utenti VALUES ('" . $username . "' , '" . $password . "' , '" . $sesso ."' , '" . $email ."' , '" . $occpuazione ."' , 'generico')" ;
-        $result = mysqli_query($oggettoConnessione->connection, $query);
-        echo($query);
-        if($result)
-        {
-         $paginaHTML = str_replace("<successo/>","<span>Congratulazioni! sei registrato.</span>", $paginaHTML);
+          $sesso = 'M';
         }
         else {
-          $paginaHTML = str_replace("<successo/>","<span class='error'>Sembra ci sia stato qualche problema, prova a ricompilare il form.</span>", $paginaHTML);
+          $sesso = 'F';
+        }
+        $occupazione = ['occupazione'];
+        $errori = checkInput($username,$email,$password);
+        if(!($errori == "")){
+          if (strstr($errori,"Nome"))
+          {
+            $paginaHTML = str_replace("<erroreUsername/>",$errori, $paginaHTML);
+          }
+          if(strstr($errori,"Password"))
+          {
+            $paginaHTML = str_replace("<errorePassword/>",$errori, $paginaHTML);
+          }
+          if(strstr($errori,"email"))
+          {
+            $paginaHTML = str_replace("<erroreEmail/>",$errori, $paginaHTML);
+          }
+          $errori = "";
+          echo($paginaHTML);
+        }
+        else{
+        $query= "SELECT username FROM Utenti WHERE username = '" . $username . "'" ;
+        echo($query);
+        $result = mysqli_query($oggettoConnessione->connection, $query);
+        if(mysqli_num_rows($result) == 0)
+        {
+          $query= "INSERT INTO Utenti VALUES ('" . $username . "' , '" . $password . "' , '" . $sesso ."' , '" . $email ."' , '" . $occpuazione ."' , 'generico')" ;
+          $result = mysqli_query($oggettoConnessione->connection, $query);
+          echo($query);
+          if($result)
+          {
+           $paginaHTML = str_replace("<successo/>","<span>Congratulazioni! sei registrato.</span>", $paginaHTML);
+          }
+          else {
+            $paginaHTML = str_replace("<successo/>","<span class='error'>Sembra ci sia stato qualche problema, prova a ricompilare il form.</span>", $paginaHTML);
+          }
+        }
+        else
+        {
+          $paginaHTML = str_replace("<erroreUsername/>","<span class='error'>Questo username esiste già</span>", $paginaHTML);
+        }
+        echo($paginaHTML);
         }
       }
-      else
-      {
-        $paginaHTML = str_replace("<erroreUsername/>","<span class='error'>Questo username esiste già</span>", $paginaHTML);
+      else {
+          echo($paginaHTML);
       }
-      echo($paginaHTML);
-    }
-    }
-    else {
-      {
-        echo($paginaHTML);
-      }
-    }
+}
  ?>
