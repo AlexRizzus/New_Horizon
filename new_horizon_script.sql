@@ -47,12 +47,30 @@ insert into Utenti(username, psswd, sesso, e_mail, occupazione, livello) values
     ('alberto', 'come and look', 'M', 'alberto@gmail.com', 'mamma mia','generico');
 
 insert into Missioni(nome, data_inizio, data_fine, stato, affiliazioni, destinazione, scopo) values
-	('andromeda1',null ,null , 'in preparazione', 'Nasa, Esa', 'Marte', 'stabilire una base operativa'),
-    ('voyager3', 2/1/2025, null, 'in preparazione', 'Nasa, Esa, SpaceX', 'spazio profondo', 'esplorazione e raccolta dati');
+	('Andromeda 1',5/4/2024 ,null , 'in preparazione', 'Nasa, Esa', 'Marte', 'stabilire una base operativa'),
+		('Andromeda 2',null ,null ,'in preparazione' , 'Nasa, Esa, Unipd', 'Marte', 'studio e raccolta di materiali preziosi da Marte'),
+		('AndromedaX 2',null ,null ,'in preparazione' , 'Nasa, Esa', 'Marte', 'rendere Marte non ostile all&rsquo uomo'),
+		('AndromedaX 3',null ,null ,'in preparazione' , 'Nasa, Esa', 'Marte', 'rendere Marte abitabile dall&rsquo uomo'),
+		('Venera 1', 12/2/1961, 19/2/1961, 'fallita', 'Nasa, Asi, Cnsa', 'Venere', 'prima prova di una sonda per raggiungere Venere'),
+		('Mariner 1', 22/7/1962, 22/7/1962, 'fallita', 'Nasa, Asi, Cnsa', 'Venere', 'seconda prova di una sonda per raggiungere Venere'),
+		('Mariner 2', 27/8/1962, 14/12/1962, 'terminata', 'Nasa, Asi, Cnsa', 'Venere', 'raccolta di informazioni sul pianeta Venere'),
+		('Deus', 10/10/1990, 12/12/1990, 'rientrata', 'Nasa, Asi', 'Giove', 'raccolta di informazioni'),
+		('Deus2', 15/1/1991, 16/5/1991, 'terminata', 'Nasa, Asi', 'Giove', 'raccolta di informazioni'),
+		('Iuran 24', 19/1/2020, null, 'in corso', 'Nasa, Unipd, Cnsa', 'Urano', 'raccolta di informazioni riguardanti il pianeta Nettuno'),
+    ('Voyager 3', 2/1/2025, null, 'in preparazione', 'Nasa, Esa, SpaceX, Maunakea', 'Spazio profondo', 'esplorazione e raccolta dati');
 
 insert into Utenti_Missioni(username, nome) values
-	('marcello','andromeda1'),
-    ('marcello','voyager3'),
-    ('alberto','voyager3');
+	('marcello','Andromeda 1'),
+		('marcello','Andromeda 2'),
+		('marcello','AndromedaX 2'),
+		('marcello','AndromedaX 3'),
+		('marcello','Venera 1'),
+		('marcello','Mariner 2'),
+		('marcello','Mariner 2'),
+		('marcello','Deus'),
+		('marcello','Deus2'),
+		('marcello','Iuran 24'),
+		('marcello','Voyager 3'),
+    ('alberto','Voyager 3');
 
 -- QUERY ---------------------------------------
