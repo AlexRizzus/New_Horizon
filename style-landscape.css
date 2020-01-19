@@ -713,7 +713,10 @@
         margin: 0em;
         text-align: center;
     }
-
+    #dida{
+      font-size: 0.8em;
+      text-align: center;
+    }
     /* ------------ RICERCA ------------------------------------ */
     #contentResearch{
       line-height: 2.5em;
