@@ -47,17 +47,17 @@ insert into Utenti(username, psswd, sesso, e_mail, occupazione, livello) values
     ('alberto', 'come and look', 'M', 'alberto@gmail.com', 'mamma mia','generico');
 
 insert into Missioni(nome, data_inizio, data_fine, stato, affiliazioni, destinazione, scopo) values
-	('Andromeda 1',05/04/2024 ,null , 'in preparazione', 'Nasa, Esa', 'Marte', 'stabilire una base operativa'),
+	('Andromeda 1','2024-04-05' ,null , 'in preparazione', 'Nasa, Esa', 'Marte', 'stabilire una base operativa'),
 		('Andromeda 2',null ,null ,'in preparazione' , 'Nasa, Esa, Unipd', 'Marte', 'studio e raccolta di materiali preziosi da Marte'),
-		('AndromedaX 2',null ,null ,'in preparazione' , 'Nasa, Esa', 'Marte', 'rendere Marte non ostile all&rsquo uomo'),
-		('AndromedaX 3',null ,null ,'in preparazione' , 'Nasa, Esa', 'Marte', 'rendere Marte abitabile dall&rsquo uomo'),
-		('Venera 1', 12/02/1961, 19/02/1961, 'fallita', 'Nasa, Asi, Cnsa', 'Venere', 'prima prova di una sonda per raggiungere Venere'),
-		('Mariner 1', 22/07/1962, 22/07/1962, 'fallita', 'Nasa, Asi, Cnsa', 'Venere', 'seconda prova di una sonda per raggiungere Venere'),
-		('Mariner 2', 27/08/1962, 14/12/1962, 'terminata', 'Nasa, Asi, Cnsa', 'Venere', 'raccolta di informazioni sul pianeta Venere'),
-		('Deus', 10/10/1990, 12/12/1990, 'rientrata', 'Nasa, Asi', 'Giove', 'raccolta di informazioni'),
-		('Deus2', 15/01/1991, 16/05/1991, 'terminata', 'Nasa, Asi', 'Giove', 'raccolta di informazioni'),
-		('Iuran 24', 19/01/2020, null, 'in corso', 'Nasa, Unipd, Cnsa', 'Urano', 'raccolta di informazioni riguardanti il pianeta Nettuno'),
-    ('Voyager 3', 02/01/2025, null, 'in preparazione', 'Nasa, Esa, SpaceX, Maunakea', 'Spazio profondo', 'esplorazione e raccolta dati');
+		('AndromedaX 2',null ,null ,'in preparazione' , 'Nasa, Esa', 'Marte', 'rendere Marte non ostile all&#8217 uomo'),
+		('AndromedaX 3',null ,null ,'in preparazione' , 'Nasa, Esa', 'Marte', 'rendere Marte abitabile dall&#8217 uomo'),
+		('Venera 1', '1961-02-12', '1961-02-19', 'fallita', 'Nasa, Asi, Cnsa', 'Venere', 'prima prova di una sonda per raggiungere Venere'),
+		('Mariner 1','1962-07-22', '1962-07-22', 'fallita', 'Nasa, Asi, Cnsa', 'Venere', 'seconda prova di una sonda per raggiungere Venere'),
+		('Mariner 2','1962-08-27', '1962-12-14', 'terminata', 'Nasa, Asi, Cnsa', 'Venere', 'raccolta di informazioni sul pianeta Venere'),
+		('Deus', '1990-10-10', '1990-12-12', 'rientrata', 'Nasa, Asi', 'Giove', 'raccolta di informazioni'),
+		('Deus2', '1991-01-15', '1991-05-16', 'terminata', 'Nasa, Asi', 'Giove', 'raccolta di informazioni'),
+		('Iuran 24', '2020-01-19', null, 'in corso', 'Nasa, Unipd, Cnsa', 'Urano', 'raccolta di informazioni riguardanti il pianeta Nettuno'),
+    ('Voyager 3','2025-01-02', null, 'in preparazione', 'Nasa, Esa, SpaceX, Maunakea', 'Spazio profondo', 'esplorazione e raccolta dati');
 
 insert into Utenti_Missioni(username, nome) values
 	('marcello','Andromeda 1'),
