@@ -1,4 +1,5 @@
 function myFocusFunction(x) {x.value = '';}
+function myBlurFunction(x) {x.value = 'cerca pianeta…';}
 
 const btn = document.getElementsById('pulsante_cerca_pianeta');
 
