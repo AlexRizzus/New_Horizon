@@ -801,7 +801,11 @@ align-self: center;
     background: #FFF url(bk.png) repeat-x top left;
     border: 1px solid;border-color: #999 #777 #777 #999;
     font: 18px;color: #0D56D5;
-  margin-right: 0.5em;}
+    padding-top: 6px;
+    padding-bottom: 4px;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+}
 #search button{border-radius: 0.5em;
   cursor: pointer;}
 
