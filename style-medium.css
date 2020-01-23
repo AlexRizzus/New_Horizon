@@ -786,7 +786,7 @@ align-self: center;
 /*--------------ESPLORAZIONI------------------------------------------*/
 #contentEsp h1{
     text-align: center;
-    font-size: 2.6em;
+    font-size: 3.8em;
     margin-top: 1.5em;
 }
 
@@ -797,17 +797,36 @@ align-self: center;
 }
 #search fieldset{border: 0px solid;padding: 0}
 #search legend{text-indent: -9999px;font-size: 1px}
-#search input{float: left;width: 170px;margin-top: 3px;
+#search input{
+    float: left;
+    width: 170px;
+    height: 2.4em;
+    margin: 1em 0em;
     background: #FFF url(bk.png) repeat-x top left;
-    border: 1px solid;border-color: #999 #777 #777 #999;
-    font: 18px;color: #0D56D5;
-    padding-top: 6px;
-    padding-bottom: 4px;
-    margin-right: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid;
+    font-size: 1.3em;
+    border-color: #002125;
+    border-radius: 0.3em;
 }
-#search button{border-radius: 0.5em;
-  cursor: pointer;}
+#search button{
+  border-radius: 0.5em;
+  cursor: pointer;
+  background-color: #d3d3d3;
+  color: #002125;
+  border: 0.2em solid #002125;
+  padding: 11px;
+  padding-bottom: 12px;
+  margin:0em;
+  font-size: 1.1em;
+  transition-duration: 0.4s;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+#search button:hover {
+  background-color:#002125;
+  color:#d3d3d3;
+}
 
 .mission-box {
     background-color:#d3d3d3;
@@ -827,7 +846,7 @@ align-self: center;
     text-align: center;
 }
 #dida{
-  font-size: 0.8em;
+  font-size: 1.25em;
   text-align: center;
 }
 
