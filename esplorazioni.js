@@ -1,3 +1,5 @@
+function myFocusFunction(x) {x.value = '';}
+
 const btn = document.getElementsById('pulsante_cerca_pianeta');
 
 btn.onclick = function()
