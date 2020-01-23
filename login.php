@@ -50,10 +50,10 @@
         $_SESSION['username'] = $array['username'];
         $_SESSION['email'] = $array['email'];
         $_SESSION['livello'] = $array['livello'];
-        header('location.php');
+        header('profilo.php');
       }
     }
-    }
+  }x
     else{
       echo($paginaHTML);
     }
