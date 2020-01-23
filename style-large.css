@@ -746,18 +746,34 @@ body {
 }
 #search fieldset{border: 0px solid;padding: 0}
 #search legend{text-indent: -9999px;font-size: 1px}
-#search input{float: left;width: 170px;margin-top: 3px;
+#search input{
+    float: left;
+    width: 170px;
+    height: 2.5em;
+    margin: 1em 0em;
     background: #FFF url(bk.png) repeat-x top left;
-    border: 1px solid;border-color: #999 #777 #777 #999;
-    font: 18px;color: #0D56D5;
+    border: 1px solid;
+    font-size: 1.3em;
+    color: #0D56D5;
+    border-color: #002125;
     padding-top: 6px;
     padding-bottom: 4px;
-    margin-right: 5px;
-    border: 1px solid #ddd;
+    border-radius: 0.3em;
 }
 
-#search button{border-radius: 0.5em;
-  cursor: pointer;}
+#search button{
+  border-radius: 0.5em;
+  cursor: pointer;
+  background-color: #d3d3d3;
+  color: #002125;
+  border: 0.2em solid #002125;
+  padding: 11px;
+  margin:0em;
+  font-size: 1.1em;
+  transition-duration: 0.4s;
+  font-weight: bold;
+  margin-top: 1em;
+}
 
   #contentMission {
       text-align: center;
