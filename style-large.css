@@ -735,7 +735,7 @@ body {
 /*--------------ESPLORAZIONI------------------------------------------*/
 #contentEsp h1{
     text-align: center;
-    font-size: 2.6em;
+    font-size: 5em;
     margin-top: 1.5em;
 }
 
@@ -766,6 +766,7 @@ body {
   color: #002125;
   border: 0.2em solid #002125;
   padding: 11px;
+  padding-bottom: 12px;
   margin:0em;
   font-size: 1.1em;
   transition-duration: 0.4s;
