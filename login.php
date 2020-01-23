@@ -46,13 +46,11 @@
       else
       {
         $array = mysqli_fetch_assoc($result);
-        if($array['livello'] == "generico")
-        {
-        header('Location: utente.php');
-        }
-        else {
-          header('Location: admin.php');
-        }
+        session_start();
+        $_SESSION['username'] = $array['username'];
+        $_SESSION['email'] = $array['email'];
+        $_SESSION['livello'] = $array['livello'];
+        header('location.php');
       }
     }
     }
