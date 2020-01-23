@@ -773,6 +773,11 @@ body {
   margin-top: 1em;
 }
 
+#search button:hover {
+  background-color:#002125;
+  color:#d3d3d3;
+}
+
   #contentMission {
       text-align: center;
   }
