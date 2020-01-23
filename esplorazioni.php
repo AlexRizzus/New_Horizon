@@ -9,20 +9,30 @@ if($connessioneOK){
   {
     $luogo_missione = $_GET['Nome_del_pianeta'];
     $missioni = $oggettoConnessione->getMissioni_perLuogo($luogo_missione);
-      if($missioni == null){$missioni = $oggettoConnessione->getMissioni();}
   }
   else
   {
   $missioni = $oggettoConnessione->getMissioni();
   }
-
-  else {
+  if($missioni == null){
+    echo("risultato query vuoto");
+  } else {
       $stringa_missioni = "";
       foreach($missioni as $valore){
+        $data_ini = "N/A";
+        $data_fin = "N/A";
+        if($valore['data_inizio'] != null)
+        {
+              $data_ini = $valore['data_inizio'];
+        }
+        if($valore['data_fine'] != null)
+        {
+          $data_fin = $valore['data_fine'];
+        }
         $stringa_missioni .= '<div class="mission-box">' .
         "<h2>Nome della missione: " . $valore['nome'] . "</h2>" .
-        "<p>Iniziata in data: " . $valore['data_inizio'] . "</p>" .
-        "<p>Fine in data: " . $valore['data_fine'] . "</p>" .
+        "<p>Iniziata in data: " . $data_ini . "</p>" .
+        "<p>Fine in data: " . $data_fin . "</p>" .
         "<p>Stato: " . $valore['stato'] . "</p>" .
         "<p>Affiliazioni: " . $valore['affiliazioni'] . "</p>" .
         "<p>Luogo: " . $valore['destinazione'] . "</p>" .

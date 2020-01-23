@@ -759,17 +759,26 @@ body {
 #search button{border-radius: 0.5em;
   cursor: pointer;}
 
-.mission-box {
-    background-color:#d3d3d3;
-    color:#002125;
+  #contentMission {
+      text-align: center;
+  }
+
+#contentMissioni p{
+  text-align: left;
+}
+
+  .mission-box {
+    background-color: #d3d3d3;
+    color: #002125;
     font-weight: bold;
     border-radius: 0.4em;
     padding: 1em;
     text-decoration: none;
     margin: 4em;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 30em;
+    margin-left: 2em;
+    margin-right: 2em;
+    width: 30em;
+    display: inline-block;
   }
 
 .mission-box h2{
