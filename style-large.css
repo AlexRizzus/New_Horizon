@@ -758,7 +758,6 @@ body {
     border-color: #002125;
     border-radius: 0.3em;
 }
-
 #search button{
   border-radius: 0.5em;
   cursor: pointer;
@@ -801,7 +800,7 @@ body {
     text-align: center;
 }
 #dida{
-  font-size: 0.8em;
+  font-size: 1.25em;
   text-align: center;
 }
 
