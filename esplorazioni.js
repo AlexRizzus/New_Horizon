@@ -2,12 +2,18 @@ function myFocusFunction(x) {x.value = '';}
 
 const btn = document.getElementsById('pulsante_cerca_pianeta');
 
-function check()
+/*
+document.getElementById("search").onsubmit = function()
 {
+  checkInput();
+}
+
+function checkInput{
   var input_nomePianeta = document.getElementById("cerca_missione");
   var risultatoInput = checkNomePianeta(input_nomePianeta);
   return risultatoInput;
 }
+
 
 function checkNomePianeta(nomePianeta) {
   var patt = new RegExp('^[a-zA-Z]{2,}$');
@@ -39,3 +45,4 @@ function togliErrore(input) {
     p.removeChild(p.children[0]);
   }
 }
+*/
