@@ -9,14 +9,14 @@ if($connessioneOK){
   {
     $luogo_missione = $_GET['Nome_del_pianeta'];
     $missioni = $oggettoConnessione->getMissioni_perLuogo($luogo_missione);
+      if($missioni == null){$missioni = $oggettoConnessione->getMissioni();}
   }
   else
   {
   $missioni = $oggettoConnessione->getMissioni();
   }
-  if($missioni == null){
-    echo("risultato query vuoto");
-  } else {
+
+  else {
       $stringa_missioni = "";
       foreach($missioni as $valore){
         $stringa_missioni .= '<div class="mission-box">' .
