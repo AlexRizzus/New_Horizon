@@ -47,7 +47,7 @@ class DBAccess{
 
   public function add_preferita($username,$missione)
   {
-    $query = "INSERT '$username', '$nome' INTO Utenti_Missioni";
+    $query = "INSERT INTO Utenti_Missioni (username, nome) VALUES ('$username', '$nome')";
   }
 
   public function remove_preferita($username,$missione)

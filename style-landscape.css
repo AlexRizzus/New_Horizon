@@ -765,6 +765,9 @@
       grid-area: d;
     }
 
+    .no_disp{
+      display: none;
+    }
     /* ------------ RICERCA ------------------------------------ */
     #contentResearch{
       line-height: 2.5em;

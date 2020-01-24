@@ -808,6 +808,10 @@ body {
   text-align: center;
 }
 
+.no_disp{
+  display: none;
+}
+
 /* ------------ RICERCA ------------------------------------ */
 #contentResearch{
   display: grid;

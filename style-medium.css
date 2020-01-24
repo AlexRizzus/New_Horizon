@@ -860,6 +860,10 @@ text-align: left;
   text-align: center;
 }
 
+.no_disp{
+  display: none;
+}
+
 /* --------------- LOGIN --------------------------------------------- */
 
 .login-content{
