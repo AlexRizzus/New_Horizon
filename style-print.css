@@ -14,7 +14,7 @@
   /*--------------ESPLORAZIONI------------------------------------------*/
   #dida
   {
-  display: none;
+    display: none;
   }
 
   #search
@@ -61,4 +61,44 @@
   }
   .collab_icon{
     display: none;
+  }
+  /*-----------------CHI SIAMO----------------------------------------------*/
+  #contentAbout
+  {
+    padding: 0.1em 1.5em 0.5em;
+  }
+
+  .curio_icon
+  {
+    display: none;
+  }
+
+  .icon
+  {
+    display: none;
+  }
+
+  .iconM
+  {
+    display: none;
+  }
+
+  #grid_team{
+  display: grid;
+  grid-gap: 0.1em;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:  'ct lt rt st';
+  }
+  #ct{
+    grid-area: ct;
+  }
+  #lt{
+    grid-area: lt;
+  }
+  #rt{
+    grid-area: rt;
+  }
+  #st{
+    grid-area: st;
   }
