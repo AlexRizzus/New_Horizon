@@ -3,13 +3,14 @@
 @media print
 {
   /*--------------GENERAL PURPOSE CSS------------------------------------------*/
-.navigation {
-  display: none;
-}
+  .navigation {
+    display: none;
+  }
 
-#footer{
-  display: none;
-}
+  #footer{
+    display: none;
+  }
+
   /*--------------ESPLORAZIONI------------------------------------------*/
   #dida
   {
@@ -20,9 +21,8 @@
   {
     display: none;
   }
+
   /*----------------------------COLLABORAZIONI----------------------------------*/
-
-
   #astronauti
   {
     display: none;
