@@ -52,10 +52,15 @@
         $_SESSION['sesso'] = $array['sesso'];
         $_SESSION['occupazione'] = $array['occupazione'];
         $_SESSION['livello'] = $array['livello'];
-        header('profilo.php');
+        if ($array['livello'] == 'amministratore') {
+          header('Location: admin.php');
+        }
+        else {
+          header('Location: utente.php');
+        }
       }
     }
-  }x
+  }
     else{
       echo($paginaHTML);
     }

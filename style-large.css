@@ -736,8 +736,7 @@ body {
 #contentEsp h1{
     text-align: center;
     font-size: 5em;
-    margin-top: 0em;
-    margin-bottom: 0em;
+    margin-top: 1.5em;
 }
 
 #search{
@@ -780,7 +779,6 @@ body {
 
   #contentMission {
       text-align: center;
-      min-height: 15em;
   }
 
 #contentMissioni p{
@@ -1010,5 +1008,15 @@ body {
 .login-button:hover {
   background-color:#002125;
   color:#d3d3d3;
+}
+/*-----------------SEZIONE AMMINISTRATIVA--------------------*/
+.gestione {
+  margin: 0 30%;
+}
+.mission{
+  background-color: #d3d3d3;
+  color: #002125;
+  border-radius: 0.3em;
+  width: 100%;
 }
 }

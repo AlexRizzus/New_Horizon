@@ -25,7 +25,7 @@ if($connessioneOK){
 
   if (isset($_GET['submit']))
   {
-    $luogo_missione = $_GET['Nome_del_pianeta'];
+    $luogo_missione = ucfirst(strtolower($_GET['Nome_del_pianeta']));
     $missioni = $oggettoConnessione->getMissioni_perLuogo($luogo_missione);
   }
   else
