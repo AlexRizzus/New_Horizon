@@ -63,7 +63,9 @@
   .collab_icon{
     display: none;
   }
+
   /*-----------------CHI SIAMO----------------------------------------------*/
+
   #contentAbout
   {
     padding: 0.1em 1.5em 0.5em;
@@ -102,4 +104,36 @@
   }
   #st{
     grid-area: st;
+  }
+
+  /* ------------ RICERCA ------------------------------------ */
+
+  #contentResearch
+  {
+    padding: 0.1em 1.5em 0.5em;
+  }
+
+  #n1
+  {
+    display: none;
+  }
+
+  #img_buco
+  {
+    display: none;
+  }
+
+  #img_neutrini
+  {
+    display: none;
+  }
+
+  #img_fionda
+  {
+    display: none;
+  }
+
+  #img_sonda
+  {
+    display: none;
   }
