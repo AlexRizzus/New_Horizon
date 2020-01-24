@@ -5,6 +5,24 @@ $connessioneOK=$oggettoConnessione->openDBConnection();
 $paginaHTML = file_get_contents('esplorazioni.html');
 
 if($connessioneOK){
+
+  if (isset($_POST['submit']))
+  {
+    $missione = $_POST['Nome_missione'];
+    if(isset($_SESSION['username']))
+    {
+      if($_POST['Azione'] == "ADD")
+      {
+        // qua aggiungo la missione ai preferiti
+        $oggettoConnessione->add_preferita($_SESSION['username'], $missione);
+      }
+      else {
+        // rimuovo la missione dai preferiti
+        $oggettoConnessione->remove_preferita($_SESSION['username'], $missione);
+      }
+    }
+  }
+
   if (isset($_GET['submit']))
   {
     $luogo_missione = ucfirst(strtolower($_GET['Nome_del_pianeta']));
@@ -18,12 +36,31 @@ if($connessioneOK){
     echo("risultato query vuoto");
   } else {
       $stringa_missioni = "";
+      if(isset($_SESSION['username']))
+      {
+        $missioni_preferite_utente = $oggettoConnessione->getMissioniPrefe($_SESSION['username']);
+      }
       foreach($missioni as $valore){
+        if(isset(['username']))
+        {
+          if(in_array($valore['nome'],$missioni_preferite_utente['nome']))
+          {
+            $icon = "images/star.png";
+            $azione = "REMOVE";
+          }
+          else {
+            $icon = "images/estar.png";
+            $azione = "ADD";
+          }
+        }
+        else {
+          $icon = "style=\"display: none;\" ";
+        }
         $data_ini = "N/A";
         $data_fin = "N/A";
         if($valore['data_inizio'] != null)
         {
-              $data_ini = $valore['data_inizio'];
+          $data_ini = $valore['data_inizio'];
         }
         if($valore['data_fine'] != null)
         {
@@ -31,6 +68,12 @@ if($connessioneOK){
         }
         $stringa_missioni .= '<div class="mission-box">' .
         "<h2>Nome della missione: " . $valore['nome'] . "</h2>" .
+        '<form>
+          <input type="hidden" name="Azione" value=' . $azione . '/>
+          <button type="submit">
+            <img src=' . $icon . ' alt="icona dei preferiti non trovata" title="icona dei preferiti"/>
+          </button>
+        </form>' .
         "<p>Iniziata in data: " . $data_ini . "</p>" .
         "<p>Fine in data: " . $data_fin . "</p>" .
         "<p>Stato: " . $valore['stato'] . "</p>" .

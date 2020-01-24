@@ -17,12 +17,13 @@
     display: none;
   }
 
-  #search
-  {
-    display: none;
-  }
+#footer{
+  display: none;
+}
 
   /*----------------------------COLLABORAZIONI----------------------------------*/
+
+
   #astronauti
   {
     display: none;

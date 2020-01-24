@@ -45,6 +45,38 @@ class DBAccess{
     return $result;
   }
 
+  public function add_preferita($username,$missione)
+  {
+    $query = "INSERT '$username', '$nome' INTO Utenti_Missioni";
+  }
+
+  public function remove_preferita($username,$missione)
+  {
+    $query = "DELETE FROM Utenti_Missioni WHERE username = '$username' AND nome = '$nome'";
+  }
+
+  public function getMissioniPrefe($username) {
+    $query = "SELECT username, nome FROM Utenti_Missioni WHERE username = '$username'";
+    $queryResult=mysqli_query($this->connection, $query);
+
+    if(mysqli_num_rows($queryResult) == 0)
+    {
+      return null;
+    }
+    else{
+      $result=array();
+      while($row = mysqli_fetch_assoc($queryResult))
+      {
+        $arraySingolaEntry = array(
+          'utente' => $row['username'],
+          'missione' => $row['nome'],
+        );
+        array_push($result, $arraySingolaEntry);
+      }
+    }
+    return $result;
+  }
+
 
 public function getMissioni() {
   $query = "SELECT nome, data_inizio, data_fine, stato, affiliazioni, destinazione, scopo FROM Missioni ORDER BY data_inizio DESC";
