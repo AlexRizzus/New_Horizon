@@ -46,6 +46,7 @@
       else
       {
         $array = mysqli_fetch_assoc($result);
+        session_destroy();
         session_start();
         $_SESSION['username'] = $array['username'];
         $_SESSION['email'] = $array['email'];
