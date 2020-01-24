@@ -49,6 +49,8 @@
         session_start();
         $_SESSION['username'] = $array['username'];
         $_SESSION['email'] = $array['email'];
+        $_SESSION['sesso'] = $array['sesso'];
+        $_SESSION['occupazione'] = $array['occupazione'];
         $_SESSION['livello'] = $array['livello'];
         header('profilo.php');
       }
