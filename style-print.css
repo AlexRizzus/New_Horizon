@@ -2,5 +2,54 @@
 
 @media print
 {
-
+  /*--------------GENERAL PURPOSE CSS------------------------------------------*/
+.navigation {
+  display: none;
 }
+
+#footer{
+  display: none;
+}
+
+  /*----------------------------COLLABORAZIONI----------------------------------*/
+
+
+  #astronauti
+  {
+    display: none;
+  }
+
+  #meetimage
+  {
+    display: none;
+  }
+
+  #contentCollab {
+    padding: 0.1em 1.5em 0.5em;
+  }
+
+  .Partners{
+    width: 3em;
+    height: 3em;
+    margin: 1em;
+  }
+  #collab-vantaggi{
+    display: grid;
+    grid-template-areas: 'cv1 cv2''cv3 cv4';
+
+  }
+  #collab_vantaggio1{
+    grid-area: cv1;
+  }
+  #collab_vantaggio2{
+    grid-area: cv2;
+  }
+  #collab_vantaggio3{
+    grid-area: cv3;
+  }
+  #collab_vantaggio4{
+    grid-area: cv4;
+  }
+  .collab_icon{
+    display: none;
+  }
