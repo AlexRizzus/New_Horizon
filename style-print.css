@@ -3,26 +3,17 @@
 @media print
 {
   /*--------------GENERAL PURPOSE CSS------------------------------------------*/
-  .navigation {
-    display: none;
-  }
-
-  #footer{
-    display: none;
-  }
-
-  /*--------------ESPLORAZIONI------------------------------------------*/
-  #dida
-  {
+.navigation {
   display: none;
-  }
+}
 
-  #search
-  {
-    display: none;
-  }
+#footer{
+  display: none;
+}
 
   /*----------------------------COLLABORAZIONI----------------------------------*/
+
+
   #astronauti
   {
     display: none;
@@ -62,3 +53,4 @@
   .collab_icon{
     display: none;
   }
+  /*----------------------------CHI SIAMO----------------------------------*/
