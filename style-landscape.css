@@ -676,22 +676,31 @@
     }
 
     /*--------------ESPLORAZIONI------------------------------------------*/
+    #contentEsp
+    {
+      display: grid;
+      grid-template-areas: 't i' 'd d';
+      grid-gap: 0.5em;
+      padding-top: 1.3em;
+    }
+
     #contentEsp h1{
-        text-align: center;
-        padding-top: 2em;
+        align-self: center;
+        justify-self: center;
         font-size: 2.4em;
         margin-top: 0em;
+        margin-bottom: 0em;
+        grid-area: t;
     }
 
     #search{
       width: 230px;
-      margin-left: auto;
-      margin-right: auto;
     }
-    #search fieldset{border: 0px solid;padding: 0}
+    #search fieldset{border: 0px solid;padding: 0;grid-area: i;}
     #search legend{text-indent: -9999px;font-size: 1px}
     #search input{
         float: left;
+        align-self: center;
         width: 170px;
         height: 2.4em;
         margin: 1em 0em;
@@ -702,6 +711,7 @@
         border-radius: 0.3em;
     }
     #search button{
+      align-self: center;
       border-radius: 0.5em;
       cursor: pointer;
       background-color: #d3d3d3;
@@ -714,6 +724,16 @@
       transition-duration: 0.4s;
       font-weight: bold;
       margin-top: 1em;
+    }
+
+
+    #contentMission {
+        text-align: center;
+        min-height: 5em;
+    }
+
+    #contentMissioni p{
+    text-align: left;
     }
 
     #search button:hover {
@@ -740,7 +760,9 @@
     }
     #dida{
       font-size: 1.0em;
-      text-align: center;
+      text-align: left;
+      margin: 0em 0em 0em 1em;
+      grid-area: d;
     }
 
     /* ------------ RICERCA ------------------------------------ */

@@ -830,6 +830,7 @@
         padding-top: 2em;
         font-size: 2.4em;
         margin-top: 0em;
+        margin-bottom: 0em;
     }
 
     #search{
@@ -865,6 +866,14 @@
       margin-top: 1em;
     }
 
+    #contentMission {
+        text-align: center;
+        min-height: 16em;
+    }
+
+    #contentMissioni p{
+    text-align: left;
+    }
     #search button:hover {
       background-color:#002125;
       color:#d3d3d3;
@@ -890,6 +899,7 @@
     #dida{
       font-size: 1.0em;
       text-align: center;
+      margin: 0em;
     }
     /* ------------ RICERCA ------------------------------------ */
     #contentResearch{

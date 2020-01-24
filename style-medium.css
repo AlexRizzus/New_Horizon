@@ -787,7 +787,7 @@ align-self: center;
 #contentEsp h1{
     text-align: center;
     font-size: 3.8em;
-    margin-top: 1.5em;
+    margin: 0.5em 0em 0em 0em;
 }
 
 #search{
@@ -828,6 +828,15 @@ align-self: center;
   color:#d3d3d3;
 }
 
+#contentMission {
+    text-align: center;
+    min-height: 24em;
+}
+
+#contentMissioni p{
+text-align: left;
+}
+
 .mission-box {
     background-color:#d3d3d3;
     color:#002125;
@@ -847,6 +856,7 @@ align-self: center;
 }
 #dida{
   font-size: 1.25em;
+  margin: 0em 0em 0em 0em;
   text-align: center;
 }
 
