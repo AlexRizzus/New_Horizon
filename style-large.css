@@ -744,8 +744,8 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-#search fieldset{border: 0px solid;padding: 0}
-#search legend{text-indent: -9999px;font-size: 1px}
+#search fieldset{border: 0px solid;padding: 0;}
+#search legend{text-indent: -9999px;font-size: 1px;}
 #search input{
     float: left;
     width: 170px;
