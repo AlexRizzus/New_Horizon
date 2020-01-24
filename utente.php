@@ -13,7 +13,7 @@ $connessioneOK=$oggettoConnessione->openDBConnection();
       $result_pref = mysqli_query($oggettoConnessione->connection, $query );
       $query= "SELECT nome FROM Utenti_Missioni WHERE username = '" . $_SESSION['username'] ."'";
       $result = mysqli_query($oggettoConnessione->connection, $query );
-
+      echo($paginaHTML);
     }
     else {
       // non è un utente, ridireziona alla pagina admin
