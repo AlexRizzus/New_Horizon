@@ -815,6 +815,8 @@
     }
 
     #title_avanguardia{
+      padding-top: 1.5em;
+      margin-top: 0em;
       grid-area: t1;
     }
 
