@@ -41,20 +41,22 @@ if($connessioneOK){
         $missioni_preferite_utente = $oggettoConnessione->getMissioniPrefe($_SESSION['username']);
       }
       foreach($missioni as $valore){
-        if(isset(['username']))
+        if(isset($_SESSION['username']))
         {
+          $no_disp = '';
           if(in_array($valore['nome'],$missioni_preferite_utente['nome']))
           {
-            $icon = "images/star.png";
+            $icon = 'src="images/star.png"';
             $azione = "REMOVE";
           }
           else {
-            $icon = "images/estar.png";
+            $icon = 'src="images/estar.png"';
             $azione = "ADD";
           }
         }
         else {
-          $icon = "style=\"display: none;\" ";
+          $icon = '';
+          $no_disp = 'style="display: none;"';
         }
         $data_ini = "N/A";
         $data_fin = "N/A";
@@ -70,8 +72,8 @@ if($connessioneOK){
         "<h2>Nome della missione: " . $valore['nome'] . "</h2>" .
         '<form>
           <input type="hidden" name="Azione" value=' . $azione . '/>
-          <button type="submit">
-            <img src=' . $icon . ' alt="icona dei preferiti non trovata" title="icona dei preferiti"/>
+          <button type="submit" ' . $no_disp . '>
+            <img ' . $icon . ' alt="icona dei preferiti non trovata" title="icona dei preferiti"/>
           </button>
         </form>' .
         "<p>Iniziata in data: " . $data_ini . "</p>" .
