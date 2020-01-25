@@ -56,7 +56,7 @@ class DBAccess{
   }
 
   public function getMissioniPrefe($username) {
-    $query = "SELECT username, nome FROM Utenti_Missioni WHERE username = '$username'";
+    $query = "SELECT username, Utenti_Missioni.nome, data_inizio, data_fine, stato, affiliazioni, destinazione, scopo  FROM Utenti_Missioni INNER JOIN Missioni ON Missioni.nome=Utenti_Missioni.nome WHERE username = '$username'";
     $queryResult=mysqli_query($this->connection, $query);
 
     if(mysqli_num_rows($queryResult) == 0)
@@ -70,6 +70,12 @@ class DBAccess{
         $arraySingolaEntry = array(
           'utente' => $row['username'],
           'missione' => $row['nome'],
+          'data_inizio' => $row['data_inizio'],
+          'data_fine' => $row['data_fine'],
+          'stato' => $row['stato'],
+          'affiliazioni' => $row['affiliazioni'],
+          'destinazione' => $row['destinazione'],
+          'scopo' => $row['scopo']
         );
         array_push($result, $arraySingolaEntry);
       }

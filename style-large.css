@@ -74,6 +74,7 @@ body {
   background-color: #002125;
   height: 7em;
   margin-bottom:0em;
+  bottom: 0;
 }
 .validation {
   grid-area: a;
@@ -1010,13 +1011,17 @@ body {
   color:#d3d3d3;
 }
 /*-----------------SEZIONE AMMINISTRATIVA--------------------*/
-.gestione {
-  margin: 0 30%;
+#utente{
+  background-color: #004145;
 }
-.mission{
+.utente-content{
   background-color: #d3d3d3;
-  color: #002125;
-  border-radius: 0.3em;
-  width: 100%;
+  color:#002125;
+  border-radius: 1em;
+  margin: 4em 10%;
+}
+.testo-amministrazione{
+  text-align: center;
+  font-size: 2.5em;
 }
 }

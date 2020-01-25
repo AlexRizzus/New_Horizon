@@ -36,7 +36,7 @@
         echo($paginaHTML);
       }
       else{
-      $query= "SELECT username, psswd, livello FROM Utenti WHERE username = '" . $username . "' AND psswd = '" . $password . "'" ;
+      $query= "SELECT username, e_mail, occupazione, psswd, livello FROM Utenti WHERE username = '" . $username . "' AND psswd = '" . $password . "'" ;
       $result = mysqli_query($oggettoConnessione->connection, $query );
       if(mysqli_num_rows($result) == 0)
       {
@@ -49,7 +49,7 @@
         session_destroy();
         session_start();
         $_SESSION['username'] = $array['username'];
-        $_SESSION['email'] = $array['email'];
+        $_SESSION['email'] = $array['e_mail'];
         $_SESSION['sesso'] = $array['sesso'];
         $_SESSION['occupazione'] = $array['occupazione'];
         $_SESSION['livello'] = $array['livello'];

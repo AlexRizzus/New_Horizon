@@ -11,9 +11,34 @@ $connessioneOK=$oggettoConnessione->openDBConnection();
       $elencopref = "";
       $query= "SELECT nome FROM Utenti_Missioni WHERE username = '" . $_SESSION['username'] ."'";
       $result_pref = mysqli_query($oggettoConnessione->connection, $query );
-      $query= "SELECT nome FROM Utenti_Missioni WHERE username = '" . $_SESSION['username'] ."'";
-      $result = mysqli_query($oggettoConnessione->connection, $query );
-      echo($paginaHTML);
+      $paginaHTML = str_replace("</username>","<span class='testo-amministrazione'>" .$_SESSION['username'] ."</span>",$paginaHTML);
+      $paginaHTML = str_replace("</email>","<span class='testo-amministrazione'>" .$_SESSION['email'] ."</span>",$paginaHTML);
+      $paginaHTML = str_replace("<tabellapreferiti></tabellapreferiti>","<div id='contentMission'><missions/> </div>",$paginaHTML);
+      $missioni = $oggettoConnessione->getMissioniPrefe($_SESSION['username']);
+      foreach($missioni as $valore){
+        $stringa_missioni = "";
+        $data_ini = "N/A";
+        $data_fin = "N/A";
+        if($valore['data_inizio'] != null)
+        {
+          $data_ini = $valore['data_inizio'];
+        }
+        if($valore['data_fine'] != null)
+        {
+          $data_fin = $valore['data_fine'];
+        }
+        $stringa_missioni .= '<div class="mission-box">' .
+        "<h2>Nome della missione: " . $valore['missione'] . "</h2>" .
+        "<p>Iniziata in data: " . $data_ini . "</p>" .
+        "<p>Fine in data: " . $data_fin . "</p>" .
+        "<p>Stato: " . $valore['stato'] . "</p>" .
+        "<p>Affiliazioni: " . $valore['affiliazioni'] . "</p>" .
+        "<p>Luogo: " . $valore['destinazione'] . "</p>" .
+        "<p>Scopo: " . $valore['scopo'] . "</p>" .
+        "</div>";
+    }
+        $paginaHTML = str_replace("<missions/>",$stringa_missioni,$paginaHTML);
+        echo($paginaHTML);
     }
     else {
       // non è un utente, ridireziona alla pagina admin
