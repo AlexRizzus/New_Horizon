@@ -15,29 +15,30 @@ if(isset($_SESSION['livello'])){
     } else {
 
 
-        if (isset($_POST['submitPrefe']))
+        if (isset($_POST['deleteMission']))
         {
             $missione = $_POST['nome'];
             if(isset($_SESSION['username']))
             {
             if($_POST['Azione'] == "RMV")
             {
-                // rimuovo la missione dai preferiti
-                echo("REMOVE");
-                echo($missione);
+                //rimuovo la missione
                 $oggettoConnessione->remove_mission($missione);
+                header("Refresh:0");
             
             }
+        }
         }
 
 
         $stringa_missioni = "";
         foreach($missioni as $valore){
             $stringa_missioni .= "<div class='amministratore-box' >" .
-            "<h2> Nome missione: " . $valore['dssa'] . "</h2>" .
+            "<h2> Nome missione: " . $valore['nome'] . "</h2>" .
             '<form action="gestione_admin.php" method="post">
             <input type="hidden" name="Azione" value="RMV"/>
-            <button type="submit" name="submitPrefe" >
+            <input type="hidden" name="nome" value="' . $valore['nome'] . '"/>
+            <button type="submit" name="deleteMission" >
             <img ' . $icon_del. ' alt=\"icona cancellazione non trovata\" title=\"icona cancellazione\"/>
             </button>
             </form>' ."</div>";
