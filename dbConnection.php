@@ -23,7 +23,7 @@ class DBAccess{
 
     if(mysqli_num_rows($queryResult) == 0)
     {
-      echo("Errore query");
+      echo("Errore query missioni per luogo");
       return null;
     }
     else{
@@ -47,34 +47,14 @@ class DBAccess{
 
   public function add_preferita($username,$missione)
   {
-    $query = "INSERT INTO Utenti_Missioni (username, nome) VALUES ('$username', '$nome')";
+    $query = "INSERT INTO Utenti_Missioni VALUES ('$username', '$missione')";
+    $queryResult=mysqli_query($this->connection, $query);
   }
 
   public function remove_preferita($username,$missione)
   {
-    $query = "DELETE FROM Utenti_Missioni WHERE username = '$username' AND nome = '$nome'";
-  }
-
-  public function getMissioniPrefe($username) {
-    $query = "SELECT username, nome FROM Utenti_Missioni WHERE username = '$username'";
+    $query = "DELETE FROM Utenti_Missioni WHERE username = '$username' AND nome = '$missione'";
     $queryResult=mysqli_query($this->connection, $query);
-
-    if(mysqli_num_rows($queryResult) == 0)
-    {
-      return null;
-    }
-    else{
-      $result=array();
-      while($row = mysqli_fetch_assoc($queryResult))
-      {
-        $arraySingolaEntry = array(
-          'utente' => $row['username'],
-          'missione' => $row['nome'],
-        );
-        array_push($result, $arraySingolaEntry);
-      }
-    }
-    return $result;
   }
 
 
@@ -84,7 +64,7 @@ public function getMissioni() {
 
   if(mysqli_num_rows($queryResult) == 0)
   {
-    echo("Errore query");
+    echo("Errore query missioni");
     return null;
   }
   else{
@@ -105,5 +85,25 @@ public function getMissioni() {
   }
   return $result;
 }
+
+public function getNomiMissioniPreferite($username) {
+  $query = "SELECT username, nome FROM Utenti_Missioni WHERE username = '$username'";
+  $queryResult=mysqli_query($this->connection, $query);
+
+  if(mysqli_num_rows($queryResult) == 0)
+  {
+    return null;
+  }
+  else{
+    $result=array();
+    while($row = mysqli_fetch_assoc($queryResult))
+    {
+      $singolaEntry = $row['nome'];
+      array_push($result, $singolaEntry);
+    }
+  }
+  return $result;
+}
+
 }
 ?>
