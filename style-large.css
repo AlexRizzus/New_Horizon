@@ -745,8 +745,8 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-#search fieldset{border: 0px solid;padding: 0;}
-#search legend{text-indent: -9999px;font-size: 1px;}
+#search fieldset{border: 0px solid;padding: 0}
+#search legend{text-indent: -9999px;font-size: 1px}
 #search input{
     float: left;
     width: 170px;
@@ -807,10 +807,6 @@ body {
 #dida{
   font-size: 1.25em;
   text-align: center;
-}
-
-.no_disp{
-  display: none;
 }
 
 /* ------------ RICERCA ------------------------------------ */
@@ -1027,5 +1023,9 @@ body {
 .testo-amministrazione{
   text-align: center;
   font-size: 2.5em;
+}
+.transparent{
+  background-color: transparent;
+  border-style: hidden;
 }
 }

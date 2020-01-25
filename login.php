@@ -3,6 +3,7 @@
   $oggettoConnessione=new DBAccess();
   $connessioneOK=$oggettoConnessione->openDBConnection();
   $paginaHTML = file_get_contents('login.html');
+  session_start();
   function checkInput($username,$email,$password) {
       $error = "";
 
@@ -20,6 +21,10 @@
       return $error;
 
   }
+  if($_SESSION['username'] != ''){
+    header('Location: utente.php');
+  }
+  else{
   if(isset($_POST['submit'])){
       $username = $_POST['username'];
       $password = $_POST['password'];
@@ -65,4 +70,5 @@
     else{
       echo($paginaHTML);
     }
+  }
  ?>
