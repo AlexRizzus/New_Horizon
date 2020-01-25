@@ -16,7 +16,7 @@ if(isset($_SESSION['livello'])){
         $stringa_missioni = "";
         foreach($missioni as $valore){
             $stringa_missioni .= '<div class="mission-box">' .
-            "<h2>Nome: " . $valore['nome'] . "</h2>" .
+            "<h2> Nome missione: " . $valore['nome'] . "</h2>" .
             "<img ' . $icon_mod .'  alt=\"icona modifica non trovata title\" title=\"icona modifica\"/>".
             "<img ' . $icon_del. ' alt=\"icona cancellazione non trovata\" title=\"icona cancellazione\"/>". "</div>";
         }
