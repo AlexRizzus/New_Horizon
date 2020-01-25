@@ -5,6 +5,8 @@ $connessioneOK=$oggettoConnessione->openDBConnection();
 $paginaHTML = file_get_contents('esplorazioni.html');
 session_start();
 
+global $luogo_missione;
+
 if($connessioneOK){
 
   if (isset($_POST['submitPrefe']))
@@ -27,18 +29,32 @@ if($connessioneOK){
   if (isset($_GET['submit']))
   {
     $luogo_missione = ucfirst(strtolower($_GET['Nome_del_pianeta']));
-    $toreplace = '<input type="hidden" id="cerca_missione" name="filtro" value="cerca pianeta…">';
-    $paginaHTML = str_replace($toreplace,'<input type="hidden" id="cerca_missione" name="filtro" value="' . $luogo_missione . '">', $paginaHTML);
     $missioni = $oggettoConnessione->getMissioni_perLuogo($luogo_missione);
   }
   else
   {
     if(isset($_GET['submitAnnullaFiltro']))
     {
+      $luogo_missione = "";
       $missioni = $oggettoConnessione->getMissioni();
     }
+    else {
+       if(isset($_POST['filtro']))
+       {
+         if($_POST['filtro'] == "")
+         {
+           $missioni = $oggettoConnessione->getMissioni();
+         }
+         else {
+           $missioni = $oggettoConnessione->getMissioni_perLuogo($_POST['filtro']);
+           $luogo_missione = $_POST['filtro'];
+         }
+       }
+       else {
+         $missioni = $oggettoConnessione->getMissioni();
+       }
+    }
   }
-  $counter = 13;
   if($missioni == null){
     echo("risultato query vuoto");
   } else {
@@ -77,12 +93,13 @@ if($connessioneOK){
       {
         $data_fin = $valore['data_fine'];
       }
-      $stringa_missioni .= '<div class="mission-box" tabindex="' . $counter . '">' .
+      $stringa_missioni .= '<div class="mission-box">' .
       "<h2>Nome della missione: " . $valore['nome'] . "</h2>" .
       '<form action="esplorazioni.php" method="post">
       <input type="hidden" name="Azione" value="' . $azione . '"/>
+      <input type="hidden" name="filtro" value="' . $luogo_missione . '"/>
       <input type="hidden" name="Nome_missione" value="' . $valore['nome'] . '"/>
-      <button type="submit" name="submitPrefe" ' . $no_disp . '>
+      <button class="button_prefe" type="submit" name="submitPrefe" ' . $no_disp . '/>
       <img ' . $icon . ' alt="icona dei preferiti non trovata" title="icona dei preferiti"/>
       </button>
       </form>' .
@@ -94,10 +111,6 @@ if($connessioneOK){
       "<p>Scopo: " . $valore['scopo'] . "</p>" .
       "</div>";
     }
-    $stringa_loghi = "<img src=\"images/twitter.png\" class=\"footer-icon\" tabindex=\"$counter+1\" alt=\"twitter logo\"/>" .
-    "<img src=\"images/facebook.png\" class=\"footer-icon\" tabindex=\"$counter+2\" alt=\"facebook logo\"/>" .
-    "<img src=\"images/instagram.png\" class=\"footer-icon\" tabindex=\"$counter+3\" alt=\"instagram logo\"/>";
-    $paginaHTML = str_replace("<imagesHere/>", $stringa_loghi, $paginaHTML);
     $paginaHTML = str_replace("<missionsHere/>",$stringa_missioni,$paginaHTML);
     echo($paginaHTML);
   }

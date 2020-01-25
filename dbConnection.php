@@ -1,4 +1,5 @@
 <?php
+
 class DBAccess{
   const HOST_DB = 'localhost';
   const USERNAME = 'meowhorizon';
@@ -53,12 +54,13 @@ class DBAccess{
 
   public function remove_preferita($username,$missione)
   {
-    $query = "DELETE FROM Utenti_Missioni WHERE username = '$username' AND nome = '$nome'";
+    $query = "DELETE FROM Utenti_Missioni WHERE username = '$username' AND nome = '$missione'";
     $queryResult=mysqli_query($this->connection, $query);
   }
   public function remove_mission($missione)
   {
     $query = "DELETE FROM Missioni WHERE nome = '$missione'";
+    $queryResult=mysqli_query($this->connection, $query);
   }
   public function getMissioniPrefe($username) {
     $query = "SELECT username, Utenti_Missioni.nome, data_inizio, data_fine, stato, affiliazioni, destinazione, scopo  FROM Utenti_Missioni INNER JOIN Missioni ON Missioni.nome=Utenti_Missioni.nome WHERE username = '$username'";

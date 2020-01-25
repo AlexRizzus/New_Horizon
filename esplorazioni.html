@@ -37,15 +37,11 @@
       <form id="search" action="esplorazioni.php" method="get">
       <fieldset>
       <legend>Cerca nel sito</legend>
-      <input tabindex="2" type="text" onfocus="myFocusFunction(this)" onblur="myBlurFunction(this)" id="cerca_missione" name="Nome_del_pianeta" value="cerca pianeta…">
-      <input type="hidden" id="cerca_missione" name="filtro" value="cerca pianeta…">
-      <button tabindex="3" type="submit" name="submit" id="pulsante_cerca_pianeta"><img src="images/cerca.png" alt="Cerca" title="avvia la ricerca"/></button>
+      <input tabindex="2" type="text" placeholder="cerca pianeta..." id="cerca_missione" name="Nome_del_pianeta"/>
+      <button tabindex="3" type="submit" name="submit" id="pulsante_cerca_pianeta"><img src="images/cerca.png" alt="Cerca" title="avvia la ricerca"></button>
       <button tabindex="4" type="submit" name="submitAnnullaFiltro" id="pulsante_cerca_tutte">Annulla filtro di ricerca</button>
       </fieldset>
-      </form>
-      <p tabindex="1" id="dida">cerca un pianeta per visualizzare solamente le missioni con quella destinazione</p>
-      <div id="contentMission">
-        <missionsHere/>
+      <missionsHere/>
       </div>
 
     </div>
@@ -60,7 +56,7 @@
           </a>
         </p>
         <p class ="info"><span xml:lang="en">New Horizon</span><br/> con la collaborazione di:<br/>Cisotto Emanuele, Lazzaro Davide, Rizzo Alessandro, Scialpi Paolo</p>
-        <div class="social"><p>  Seguici su: <imagesHere/></p>
+        <div class="social"><p>  Seguici su: <img src="images/twitter.png" class="footer-icon" alt="twitter logo"/><img src="images/facebook.png" class="footer-icon" alt="facebook logo"/><img src="images/instagram.png" class="footer-icon" alt="instagram logo"/></p>
         </div>
       </div>
   </body>

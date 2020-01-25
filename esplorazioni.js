@@ -1,8 +1,3 @@
-function myFocusFunction(x) {x.value = '';}
-function myBlurFunction(x) {x.value = 'cerca pianeta…';}
-
-//const btn = document.getElementsById('pulsante_cerca_pianeta');
-
 let toggled = false;
 const nav = document.getElementsByClassName('navigation')[0];
 const btn = document.getElementsByClassName('nav-tgl')[0];
@@ -36,7 +31,7 @@ btn.onclick = function(evt) {
     fifth_button.classList.remove('active');
     sixth_button.classList.remove('active');
     seventh_button.classList.remove('active');
-}
+  }
 }
 /*
 document.getElementById("search").onsubmit = function()
