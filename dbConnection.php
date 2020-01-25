@@ -44,7 +44,33 @@ class DBAccess{
     }
     return $result;
   }
+  public function getMissioni_perNome($nome_missione) {
+    $query = "SELECT nome, data_inizio, data_fine, stato, affiliazioni, destinazione, scopo FROM Missioni WHERE nome = '$nome_missione'";
+    $queryResult=mysqli_query($this->connection, $query);
 
+    if(mysqli_num_rows($queryResult) == 0)
+    {
+      echo("Errore query missioni per nome");
+      return null;
+    }
+    else{
+      $result=array();
+      while($row = mysqli_fetch_assoc($queryResult))
+      {
+        $arraySingolaMissione = array(
+          'nome' => $row['nome'],
+          'data_inizio' => $row['data_inizio'],
+          'data_fine' => $row['data_fine'],
+          'stato' => $row['stato'],
+          'affiliazioni' => $row['affiliazioni'],
+          'destinazione' => $row['destinazione'],
+          'scopo' => $row['scopo']
+        );
+        array_push($result, $arraySingolaMissione);
+      }
+    }
+    return $result;
+  }
   public function add_preferita($username,$missione)
   {
     $query = "INSERT INTO Utenti_Missioni VALUES ('$username', '$missione')";
