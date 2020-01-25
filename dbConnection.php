@@ -48,7 +48,6 @@ class DBAccess{
   public function getMissioni_perNome($nome_missione) {
     $query = "SELECT nome, data_inizio, data_fine, stato, affiliazioni, destinazione, scopo FROM Missioni WHERE nome = '$nome_missione'";
     $queryResult=mysqli_query($this->connection, $query);
-
     if(mysqli_num_rows($queryResult) == 0)
     {
       echo("Errore query missioni per nome");

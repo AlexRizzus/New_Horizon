@@ -10,14 +10,15 @@ if(isset($_SESSION['livello'])){
         if (isset($_POST['updateMission']))
         {
             $missione = $_POST['nome'];
-            echo($missione);
-            $stringa='Nome: <input type="text" placeholder='.$missione['nome'].'></nome><br>
-            Data inizio: <input type="text" placeholder=""></Data inizio><br>
-            Data di fine: <input type="text"></Data di fine><br>
-            Stato: <input type="text"></Stato><br>
-            Affiliazioni: <input type="text"></Affiliazioni><br>
-            Luogo: <input type="text"></Luogo><br>
-            Scopo: <input type="text"></Scopo>';
+            $missioni=[];
+            $missioni=$oggettoConnessione->getMissioni_perNome($missione);
+            $stringa='Nome: <input type="text" placeholder="'. $missioni[0]['nome'] .'"></nome><br>
+            Data inizio: <input type="text" placeholder="'. $missioni[0]['data_inizio'] .'"></Data inizio><br>
+            Data di fine: <input type="text" placeholder="'. $missioni[0]['data_fine'] .'"></Data di fine><br>
+            Stato: <input type="text" placeholder="'. $missioni[0]['stato'] .'"></Stato><br>
+            Affiliazioni: <input type="text" placeholder="'. $missioni[0]['affiliazioni'] .'"></Affiliazioni><br>
+            Luogo: <input type="text" placeholder="'. $missioni[0]['destinazione'] .'"></Luogo><br>
+            Scopo: <input type="text" placeholder="'. $missioni[0]['scopo'] .'"></Scopo>';
             $paginaHTML=str_replace("</campiDati>",$stringa, $paginaHTML);
             
         }
