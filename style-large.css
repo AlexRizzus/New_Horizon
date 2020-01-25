@@ -74,6 +74,7 @@ body {
   background-color: #002125;
   height: 7em;
   margin-bottom:0em;
+  bottom: 0;
 }
 .validation {
   grid-area: a;
@@ -1014,13 +1015,35 @@ body {
   color:#d3d3d3;
 }
 /*-----------------SEZIONE AMMINISTRATIVA--------------------*/
-.gestione {
-  margin: 0 30%;
+#utente{
+  background-color: #004145;
 }
-.mission{
+.utente-content{
   background-color: #d3d3d3;
-  color: #002125;
-  border-radius: 0.3em;
-  width: 100%;
+  color:#002125;
+  border-radius: 1em;
+  margin: 4em 10%;
 }
+.testo-amministrazione{
+  text-align: center;
+  font-size: 2.5em;
+}
+.amministratore-box{
+  background-color: #d3d3d3;
+  font-weight: bold;
+  border-radius: 0.4em;
+  padding: 1em;
+  text-decoration: none;
+  margin: 4em;
+  margin-left: 2em;
+  margin-right: 2em;
+  width: 30em;
+  display: inline-block;
+}
+.amministratore-box img{
+  max-width: 10%;
+  max-height: 10%;
+  background-color: inherit;
+}
+
 }
