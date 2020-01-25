@@ -15,9 +15,9 @@ if(isset($_SESSION['livello'])){
     } else {
         $stringa_missioni = "";
         foreach($missioni as $valore){
-            $stringa_missioni .= '<div class="mission-box">' .
+            $stringa_missioni .= "<div class='amministratore-box' >" .
             "<h2> Nome missione: " . $valore['nome'] . "</h2>" .
-            "<img ' . $icon_mod .'  alt=\"icona modifica non trovata title\" title=\"icona modifica\"/>".
+            "<img onclick=\"location.href='modifica_missione.php'\" ' . $icon_mod .'  alt=\"icona modifica non trovata title\" title=\"icona modifica\"/>".
             "<img ' . $icon_del. ' alt=\"icona cancellazione non trovata\" title=\"icona cancellazione\"/>". "</div>";
         }
         echo str_replace("</missionsHere>", $stringa_missioni, $paginaHTML);

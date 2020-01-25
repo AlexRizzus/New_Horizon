@@ -11,7 +11,7 @@ if(isset($_SESSION['livello'])){
         $email=$_SESSION['email'];
         $occupazione=$_SESSION['occupazione'];
 
-        $paginaHTML = str_replace("<span id='username'></span>","<span>".$username."</span>", $paginaHTML);
+        $paginaHTML = str_replace("<span></span>","<span>".$username."</span>", $paginaHTML);
         $paginaHTML = str_replace("<email></email>","<p>".$email."</p>", $paginaHTML);
         $paginaHTML = str_replace("<occupazione></occupazione>","<p>".$occupazione."</p>", $paginaHTML);
         echo($paginaHTML);

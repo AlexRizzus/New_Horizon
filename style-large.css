@@ -1028,4 +1028,22 @@ body {
   text-align: center;
   font-size: 2.5em;
 }
+.amministratore-box{
+  background-color: #d3d3d3;
+  font-weight: bold;
+  border-radius: 0.4em;
+  padding: 1em;
+  text-decoration: none;
+  margin: 4em;
+  margin-left: 2em;
+  margin-right: 2em;
+  width: 30em;
+  display: inline-block;
+}
+.amministratore-box img{
+  max-width: 10%;
+  max-height: 10%;
+  background-color: inherit;
+}
+
 }
