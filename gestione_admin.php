@@ -20,18 +20,13 @@ if(isset($_SESSION['livello'])){
             $missione = $_POST['nome'];
             if(isset($_SESSION['username']))
             {
-            if($_POST['Azione'] == "ADD")
+            if($_POST['Azione'] == "RMV")
             {
-                // qua aggiungo la missione ai preferiti
-                echo("ADD");
-                $oggettoConnessione->add_preferita($_SESSION['username'], $missione);
-            }
-            else {
                 // rimuovo la missione dai preferiti
                 echo("REMOVE");
                 echo($missione);
                 $oggettoConnessione->remove_mission($missione);
-            }
+            
             }
         }
 
@@ -39,7 +34,7 @@ if(isset($_SESSION['livello'])){
         $stringa_missioni = "";
         foreach($missioni as $valore){
             $stringa_missioni .= "<div class='amministratore-box' >" .
-            "<h2> Nome missione: " . $valore['nome'] . "</h2>" .
+            "<h2> Nome missione: " . $valore['dssa'] . "</h2>" .
             '<form action="gestione_admin.php" method="post">
             <input type="hidden" name="Azione" value="RMV"/>
             <button type="submit" name="submitPrefe" >
