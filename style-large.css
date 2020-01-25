@@ -1024,12 +1024,6 @@ body {
   text-align: center;
   font-size: 2.5em;
 }
-<<<<<<< HEAD
-.transparent{
-  background-color: transparent;
-  border-style: hidden;
-}
-=======
 .amministratore-box{
   background-color: #d3d3d3;
   font-weight: bold;
@@ -1048,5 +1042,8 @@ body {
   background-color: inherit;
 }
 
->>>>>>> 8e9471fa8e88008cdebf66cb539b018c31dbe06b
+.transparent{
+  background-color: transparent;
+  border-style: hidden;
+}
 }
