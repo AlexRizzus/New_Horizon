@@ -901,6 +901,10 @@
       text-align: center;
       margin: 0em;
     }
+
+    .no_disp{
+      display: none;
+    }
     /* ------------ RICERCA ------------------------------------ */
     #contentResearch{
       display: grid;

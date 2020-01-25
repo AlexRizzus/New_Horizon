@@ -860,6 +860,10 @@ text-align: left;
   text-align: center;
 }
 
+.no_disp{
+  display: none;
+}
+
 /* --------------- LOGIN --------------------------------------------- */
 
 .login-content{
@@ -911,7 +915,7 @@ text-align: left;
   border-radius: 0.3em;
   padding: 0.3em;
   margin:0em;
-  font-size: 1.2  em;
+  font-size: 1.2em;
   transition-duration: 0.4s;
   font-weight: bold;
   margin-top: 1em;
