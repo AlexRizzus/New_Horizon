@@ -15,35 +15,29 @@ if(isset($_SESSION['livello'])){
     } else {
 
 
-        if (isset($_POST['submitPrefe']))
+        if (isset($_POST['deleteMission']))
         {
             $missione = $_POST['nome'];
-            if(isset($_SESSION['username']))
-            {
-            if($_POST['Azione'] == "ADD")
-            {
-                // qua aggiungo la missione ai preferiti
-                echo("ADD");
-                $oggettoConnessione->add_preferita($_SESSION['username'], $missione);
-            }
-            else {
-                // rimuovo la missione dai preferiti
-                echo("REMOVE");
-                echo($missione);
-                $oggettoConnessione->remove_mission($missione);
-            }
-            }
+            //rimuovo la missione
+            $oggettoConnessione->remove_mission($missione);
+            header("Refresh:0");
+           
         }
-
 
         $stringa_missioni = "";
         foreach($missioni as $valore){
             $stringa_missioni .= "<div class='amministratore-box' >" .
             "<h2> Nome missione: " . $valore['nome'] . "</h2>" .
             '<form action="gestione_admin.php" method="post">
-            <input type="hidden" name="Azione" value="RMV"/>
-            <button type="submit" name="submitPrefe" >
-            <img ' . $icon_del. ' alt=\"icona cancellazione non trovata\" title=\"icona cancellazione\"/>
+            <input type="hidden" name="nome" value="' . $valore['nome'] . '"/>
+            <button type="submit" name="deleteMission" >
+            <img ' . $icon_del. ' alt="icona cancellazione non trovata" title="icona cancellazione"/>
+            </button>
+            </form>' .
+            '<form action="modifica_missione.php" method="post">
+            <input type="hidden" name="nome" value="' . $valore['nome'] . '"/>
+            <button type="submit" name="updateMission" >
+            <img ' . $icon_mod. ' alt="icona modifica bob trovata" title="icona modifica"/>
             </button>
             </form>' ."</div>";
         }
