@@ -11,8 +11,8 @@ $connessioneOK=$oggettoConnessione->openDBConnection();
       $elencopref = "";
       $query= "SELECT nome FROM Utenti_Missioni WHERE username = '" . $_SESSION['username'] ."'";
       $result_pref = mysqli_query($oggettoConnessione->connection, $query );
-      $paginaHTML = str_replace("</username>","<span class='testo-amministrazione'>" .$_SESSION['username'] ."</span>",$paginaHTML);
-      $paginaHTML = str_replace("</email>","<span class='testo-amministrazione'>" .$_SESSION['email'] ."</span>",$paginaHTML);
+      $paginaHTML = str_replace("<username/>","<span class='testo-amministrazione'>" .$_SESSION['username'] ."</span>",$paginaHTML);
+      $paginaHTML = str_replace("<email/>","<span class='testo-amministrazione'>" .$_SESSION['email'] ."</span>",$paginaHTML);
       $paginaHTML = str_replace("<tabellapreferiti></tabellapreferiti>","<div id='contentMission'><missions/> </div>",$paginaHTML);
       $missioni = $oggettoConnessione->getMissioniPrefe($_SESSION['username']);
       foreach($missioni as $valore){
