@@ -786,6 +786,11 @@ body {
   text-align: left;
 }
 
+.buttonPrefe{
+  max-width: 5em;
+  max-height: 5em;
+}
+
   .mission-box {
     background-color: #d3d3d3;
     color: #002125;
@@ -809,6 +814,9 @@ body {
   text-align: center;
 }
 
+#errorPlanetNotFound{
+  color: #9f0000;
+}
 /* ------------ RICERCA ------------------------------------ */
 #contentResearch{
   display: grid;

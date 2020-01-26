@@ -905,6 +905,10 @@
     .no_disp{
       display: none;
     }
+
+    #errorPlanetNotFound{
+      color: #9f0000;
+    }
     /* ------------ RICERCA ------------------------------------ */
     #contentResearch{
       display: grid;

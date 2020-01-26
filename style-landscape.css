@@ -768,6 +768,10 @@
     .no_disp{
       display: none;
     }
+
+    #errorPlanetNotFound{
+      color: #9f0000;
+    }
     /* ------------ RICERCA ------------------------------------ */
     #contentResearch{
       line-height: 2.5em;

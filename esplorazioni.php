@@ -56,7 +56,8 @@ if($connessioneOK){
     }
   }
   if($missioni == null){
-    echo("risultato query vuoto");
+    $paginaHTML = str_replace("<planetNotFound/>","<strong id=\"errorPlanetNotFound\">Non ci sono missioni attive o programmate presso la destinazione inserita. Ricontrollare il pianeta inserito.</strong>",$paginaHTML);
+    echo($paginaHTML);
   } else {
     $stringa_missioni = "";
     $missioni_preferite_utente = null;
@@ -64,18 +65,19 @@ if($connessioneOK){
     {
       $missioni_preferite_utente = $oggettoConnessione->getNomiMissioniPreferite($_SESSION['username']);
     }
+    $counter = 0;
     foreach($missioni as $valore){
-      $counter = $counter + 1;
+      $counter++;
       if(isset($_SESSION['username']))
       {
         $no_disp = '';
         if(in_array($valore['nome'],$missioni_preferite_utente))
         {
-          $icon = 'src="images/star.png"';
+          $icon = '<img src="images/star.png" alt="icona dei preferiti non trovata" title="togli la missione tra i tuoi preferiti cliccando qui"/>';
           $azione = "REMOVE";
         }
         else {
-          $icon = 'src="images/estar.png"';
+          $icon = '<img src="images/estar.png" alt="icona dei preferiti non trovata" title="metti la missione tra i tuoi preferiti cliccando qui"/>';
           $azione = "ADD";
         }
       }
@@ -93,15 +95,15 @@ if($connessioneOK){
       {
         $data_fin = $valore['data_fine'];
       }
-      $stringa_missioni .= '<div class="mission-box">' .
+      $stringa_missioni .= '<div class="mission-box" id="missionbox' . $counter . '">' .
       "<h2>Nome della missione: " . $valore['nome'] . "</h2>" .
-      '<form action="esplorazioni.php" method="post">
+      '<form action="esplorazioni.php" ' . $no_disp . ' method="post">
       <input type="hidden" name="Azione" value="' . $azione . '"/>
       <input type="hidden" name="filtro" value="' . $luogo_missione . '"/>
       <input type="hidden" name="Nome_missione" value="' . $valore['nome'] . '"/>
-      <button class="button_prefe" type="submit" name="submitPrefe" ' . $no_disp . '/>
-      <img ' . $icon . ' alt="icona dei preferiti non trovata" title="icona dei preferiti"/>
-      </button>
+      <button class="button_prefe" type="submit" name="submitPrefe"/>'
+      . $icon .
+      '</button>
       </form>' .
       "<p>Iniziata in data: " . $data_ini . "</p>" .
       "<p>Fine in data: " . $data_fin . "</p>" .

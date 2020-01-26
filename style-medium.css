@@ -864,6 +864,10 @@ text-align: left;
   display: none;
 }
 
+#errorPlanetNotFound{
+  color: #9f0000;
+}
+
 /* --------------- LOGIN --------------------------------------------- */
 
 .login-content{
