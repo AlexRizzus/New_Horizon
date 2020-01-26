@@ -34,8 +34,8 @@ btn.onclick = function(evt) {
 }
 }
 function validateLogin(){
-  p = document.getElementById("login-error");
-  if(p.children.length > 0){
+  parent = document.getElementById("login-error");
+  if(parent.children.length > 0){
   document.getElementsByClassName("error")[0].remove();
 }
   username = document.forms["login"]["username"].value;
@@ -47,36 +47,50 @@ function validateLogin(){
     return true;
   }
   else {
-    var strong = document.createElement("strong");
-    var text = document.createTextNode("Username o Password non corrette, riprova")
-    strong.appendChild(text);
-    strong.classList.add("error");
-    p.appendChild(strong);
-    return false;
+      displayerror(parent,"Username o Password errata, riprova");
+      return false;
   }
 
 }
 function validateRegistration(){
-  p = document.getElementById("login-error");
-  if(p.children.length > 0){
+  erremail = document.getElementById("email-error");
+  erruser = document.getElementById("username-error");
+  errpsw = document.getElementById("password-error");
+  if(erremail.children.length > 0){
   document.getElementsByClassName("error")[0].remove();
   }
-  if(p.children.length > 0){
+  if(erruser.children.length > 0){
   document.getElementsByClassName("error")[0].remove();
   }
-  if(p.children.length > 0){
+  if(errpsw.children.length > 0){
   document.getElementsByClassName("error")[0].remove();
   }
-  if(p.children.length > 0){
-  document.getElementsByClassName("error")[0].remove();
-  }
-  username = document.forms["login"]["username"].value;
+  username = document.forms["registrazione"]["username"].value;
   user = isUsername(username);
-  password = document.forms["login"]["password"].value;
+  if(!user)
+  {
+    displayerror(erruser,"Nome utente troppo corto");
+  }
+  password = document.forms["registrazione"]["password"].value;
   psw = isPassword(password);
-  email = document.forms["login"]["email"].value;
+  if(!psw)
+  {
+    displayerror(errpsw,"Prova con una password più complessa");
+  }
+  email = document.forms["registrazione"]["email"].value;
   email = isEmail(password);
-  return user && psw && email;
+  if(!email)
+  {
+    displayerror(erremail,"E-mail non valida");
+  }
+  return (user && psw && email) ;
+}
+function displayerror(parent, message){
+  var strong = document.createElement("strong");
+  var text = document.createTextNode(message);
+  strong.appendChild(text);
+  strong.classList.add("error");
+  parent.appendChild(strong);
 }
 function isUsername(username) {
     return username.length > 3;
