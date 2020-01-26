@@ -15,11 +15,11 @@
       <link href="style-landscape.css" rel="stylesheet" type="text/css" media="all" />
       <link href="style-print.css" rel="stylesheet" type="text/css" media="print" />
       </head>
-  <body>
-    <div class="navigation">
-      <button class="nav-tgl" type="button" aria-label="toggle menu">
-        <span aria-hidden="true"></span>
-      </button>
+      <body>
+        <div class="navigation">
+          <button class="nav-tgl" type="button">
+            <span></span>
+          </button>
             <button onclick="location.href='index.php'" class="desktop button0" xml:lang="en">Home</button>
             <button onclick="location.href='esplorazioni.php'" class="desktop button1">Esplorazioni</button>
             <button onclick="location.href='about.html'" class="desktop button2">Chi siamo</button>
@@ -29,7 +29,7 @@
             <button onclick="location.href='login.php'" class="desktop button6" xml:lang="en">Login</button>
     </div>
     <div id="contentResearch" class="content">
-      <h1 accesskey="m" id="title_avanguardia">AVANGUARDIA SPAZIALE</h1>
+      <h1 id="title_avanguardia">AVANGUARDIA SPAZIALE</h1>
       <p id="d1">La nostra società è all'avanguardia sia per attrezzatura che per scoperte. Le nostre scoperte e le ricerche più spinte non sarebbero state possibili senza l'attrezzatura di ultima generazione di cui disponiamo.</p>
       <img id="n1" src="images/n1.png" alt="icona rappresentante una medaglia per il primo posto"/>
       <h1 id="title_scoperte">LE NOSTRE SCOPERTE</h1>
@@ -48,13 +48,13 @@
       <h1 id="title_attrezzature">LE NOSTRE ATTREZZATURE</h1>
       <h2 id="subtitle_fionda">Fionda di lancio geotronica</h2>
       <div id="div_fionda">
-        <p id=p_fionda_intro>Questa bizzarra struttura geostazionaria permette di aiutare gli <span xml:lang="en">shuttle</span> ad uscire dall'atmosfera terrestre con un consumo considerevolmente ridotto di carburante.</p>
+        <p id="p_fionda_intro">Questa bizzarra struttura geostazionaria permette di aiutare gli <span xml:lang="en">shuttle</span> ad uscire dall'atmosfera terrestre con un consumo considerevolmente ridotto di carburante.</p>
         <p id="p_fionda_funzionamento">La fionda ha un lungo braccio dotato di attracco per gli <span xml:lang="en">shuttle</span> che continua a vorticare nell'alta atmosfera. In questo modo gli <span xml:lang="en">shuttle</span> dovrannò utilizzare carburante di propulsione sufficiente a raggiungere la zona d'attracco con la fionda. Da lì sarà onere della struttura geostazionaria aiutare lo shuttle ad uscire definitivamente dall'orbita terrestre.</p>
       </div>
       <img id="img_fionda" src="images/fionda.jpg" alt="immagine di un costrutto spaziale con un lungo braccio flessibile apparentemente molto lungo direzionato verso la Terra. È la fionda spaziale."/>
       <h2 id="subtitle_sonde">Sonde in lega composita</h2>
       <div id="div_sonde">
-        <p id=p_sonde_intro>Le sonde sono sottoposte a condizioni metereologiche e climatiche molto più rigide che quelle terrestri. Ad esempio le sonde su Mercurio devono sopportare temperature massime di <abbr title="430 gradi centigradi">430°C</abbr> di giorno e minime di <abbr title="185 gradi centigradi sotto zero">-185°C</abbr> durante la notte. Per rendere possibile l'esprlorazione in queste zone è stato necessario ideare nuove leghe di vario tipo resistenti a determinate condizioni climatiche e metereologiche.</p>
+        <p id="p_sonde_intro">Le sonde sono sottoposte a condizioni metereologiche e climatiche molto più rigide che quelle terrestri. Ad esempio le sonde su Mercurio devono sopportare temperature massime di <abbr title="430 gradi centigradi">430°C</abbr> di giorno e minime di <abbr title="185 gradi centigradi sotto zero">-185°C</abbr> durante la notte. Per rendere possibile l'esprlorazione in queste zone è stato necessario ideare nuove leghe di vario tipo resistenti a determinate condizioni climatiche e metereologiche.</p>
         <p id="p_sonde_materiali">La nuova innovazione delle sonde sta nella lega denominata &quot;luminescenzio&quot;. Questa lega è composta titanio, tungsteo e fluorite. La fluorite si lega al titanio formando un materiale iper-resistente agli urti e agli sforzi. Inoltre la presenza di fluorite fornisce proprietà fluorescenti che consentono alla sonda di illuminare l'area attorno a se, cosicché sia possibile registrare ciò che la sonda esegue senza consumare energia elettrica per alimentare i fari. Il nome della lega deriva proprio dalle sue proprietà fluorescenti e di resistenza al calore, la quale è dovuta alla presenza di tungsteno che spinge il limite superiore di temperatura al quale può funzionare la sonda a <abbr title="500 gradi centigradi">500°C</abbr>.</p>
       </div>
       <img id="img_sonda" src="images/sonda.png" alt="immagine di una sonda a 6 ruote con scheletro costruito con una lega composita di colore bianco"/>
@@ -73,6 +73,6 @@
       <div class="social"><p>  Seguici su: <img src="images/twitter.png" class="footer-icon" alt="twitter logo"/> <img src="images/facebook.png" class="footer-icon" alt="facebook logo"/> <img src="images/instagram.png" class="footer-icon" alt="instagram logo"/></p>
       </div>
     </div>
-    <script  src="index.js"></script>
+    <script  src="index.js" type="text/javascript"></script>
 </body>
 </html>
