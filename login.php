@@ -45,7 +45,7 @@
       $result = mysqli_query($oggettoConnessione->connection, $query );
       if(mysqli_num_rows($result) == 0)
       {
-          $paginaHTML = str_replace("<erroreUsername/>","<span class='error'>username o password non corrette, riprova</span>", $paginaHTML);
+          $paginaHTML = str_replace('<div id="login-error"> </div>'',"<span class='error'>username o password non corrette, riprova</span>", $paginaHTML);
           echo($paginaHTML);
       }
       else

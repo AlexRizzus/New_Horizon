@@ -33,3 +33,58 @@ btn.onclick = function(evt) {
     seventh_button.classList.remove('active');
 }
 }
+function validateLogin(){
+  p = document.getElementById("login-error");
+  if(p.children.length > 0){
+  document.getElementsByClassName("error")[0].remove();
+}
+  username = document.forms["login"]["username"].value;
+  user = isUsername(username);
+  password = document.forms["login"]["password"].value;
+  psw = isPassword(password);
+  if (user && psw)
+  {
+    return true;
+  }
+  else {
+    var strong = document.createElement("strong");
+    var text = document.createTextNode("Username o Password non corrette, riprova")
+    strong.appendChild(text);
+    strong.classList.add("error");
+    p.appendChild(strong);
+    return false;
+  }
+
+}
+function validateRegistration(){
+  p = document.getElementById("login-error");
+  if(p.children.length > 0){
+  document.getElementsByClassName("error")[0].remove();
+  }
+  if(p.children.length > 0){
+  document.getElementsByClassName("error")[0].remove();
+  }
+  if(p.children.length > 0){
+  document.getElementsByClassName("error")[0].remove();
+  }
+  if(p.children.length > 0){
+  document.getElementsByClassName("error")[0].remove();
+  }
+  username = document.forms["login"]["username"].value;
+  user = isUsername(username);
+  password = document.forms["login"]["password"].value;
+  psw = isPassword(password);
+  email = document.forms["login"]["email"].value;
+  email = isEmail(password);
+  return user && psw && email;
+}
+function isUsername(username) {
+    return username.length > 3;
+}
+function isEmail(email) {
+    return new RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/).test(email);
+}
+
+function isPassword(psw) {
+    return new RegExp(/^[0-9a-zA-Z]{4,}$/).test(psw);
+}
