@@ -44,11 +44,11 @@ if(isset($_SESSION['livello'])){
         echo str_replace("</missionsHere>", $stringa_missioni, $paginaHTML);
         }
     }else{
-        header('utente.php');
+        header('Location: utente.php');
     }
 }else
 {
-    header('login.php');
+    header('Location: login.php');
 }
 ?>
 

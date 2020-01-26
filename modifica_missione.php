@@ -44,10 +44,10 @@ if(isset($_SESSION['livello'])){
         
 
     }else{
-        header('utente.php');
+        header('Location: utente.php');
     }
 }else
 {
-    header('login.php');
+    header('Location: login.php');
 }
 ?>

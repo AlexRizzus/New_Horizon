@@ -16,10 +16,10 @@ if(isset($_SESSION['livello'])){
         $paginaHTML = str_replace("<occupazione></occupazione>","<p>".$occupazione."</p>", $paginaHTML);
         echo($paginaHTML);
     }else{
-        header('utente.php');
+        header('Location: utente.php');
     }
 }else
 {
-    header('login.php');
+    header('Location: login.php');
 }
 ?>
