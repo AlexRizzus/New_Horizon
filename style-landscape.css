@@ -3,7 +3,7 @@
   body {
     padding:0em;
     margin:0em;
-    background-image: linear-gradient(to bottom, #000206, #005660);
+    background-image: linear-gradient(to bottom, #000206, #00444C);
     font-family: 'Oswald', sans-serif;
     color: #d3d3d3;
   }
@@ -414,7 +414,7 @@
   body {
     padding:0em;
     margin:0em;
-    background-image: linear-gradient(to bottom, #000206, #005660);
+    background-image: linear-gradient(to bottom, #000206, #00444C);
     font-family: 'Oswald', sans-serif;
     color: #d3d3d3;
   }
@@ -758,19 +758,33 @@
         margin: 0em;
         text-align: center;
     }
-    #dida{
+    #contentEsp #dida{
       font-size: 1.0em;
       text-align: left;
       margin: 0em 0em 0em 1em;
       grid-area: d;
     }
 
+
+    .button_prefe{
+      max-width: 5em;
+      border-radius: 10em;
+    }
+
+    .button_prefe img{
+        max-width: 4em;
+    }
     .no_disp{
       display: none;
     }
 
     #errorPlanetNotFound{
       color: #9f0000;
+      text-align: center;
+    }
+
+    .no_disp{
+      display: none;
     }
     /* ------------ RICERCA ------------------------------------ */
     #contentResearch{

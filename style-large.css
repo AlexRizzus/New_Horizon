@@ -6,7 +6,7 @@
 body {
   padding:0em;
   margin:0em;
-  background-image: linear-gradient(to bottom, #000206, #005660);
+  background-image: linear-gradient(to bottom, #000206, #00444C);
   font-family: 'Oswald', sans-serif;
   color: #d3d3d3;
 }
@@ -414,7 +414,7 @@ body {
 body {
   padding:0em;
   margin:0em;
-  background-image: linear-gradient(to bottom, #0d0d0d, #005660);
+  background-image: linear-gradient(to bottom, #0d0d0d, #00444C);
   font-family: 'Oswald', sans-serif;
   color: #d3d3d3;
 }
@@ -741,9 +741,11 @@ body {
 }
 
 #search{
-  width: 230px;
-  margin-left: auto;
-  margin-right: auto;
+  display: grid;
+  grid-gap: 0.2em;
+  grid-template-areas: 'box but';
+  grid-template-columns: 1fr 1fr;
+  margin-left: 38%;
 }
 #search fieldset{border: 0px solid;padding: 0}
 #search legend{text-indent: -9999px;font-size: 1px}
@@ -778,17 +780,30 @@ body {
   color:#d3d3d3;
 }
 
-  #contentMission {
+  #contentEsp {
       text-align: center;
   }
 
-#contentMissioni p{
+#contentEsp p{
   text-align: left;
 }
 
 .buttonPrefe{
   max-width: 5em;
   max-height: 5em;
+}
+
+#filtro_scritta{
+  text-align: center;
+  font-size: 1.2em;
+  display: inline-block;
+  margin-left: 40%;
+}
+
+#filtro_attuale{
+  text-align: center;
+  font-size: 1.2em;
+  display: inline-block;
 }
 
   .mission-box {
@@ -809,14 +824,49 @@ body {
     margin: 0em;
     text-align: center;
 }
-#dida{
+#contentEsp #dida{
   font-size: 1.25em;
   text-align: center;
 }
 
 #errorPlanetNotFound{
-  color: #9f0000;
+  color: #fb5714;
+  font-size: 1.3em;
+  text-align: center;
+  display: block;
 }
+
+#filtro_scritta{
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#filtro_attuale{
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.button_prefe{
+  max-width: 5em;
+  border-radius: 10em;
+}
+
+.button_prefe img{
+    max-width: 4em;
+}
+
+.no_disp{
+  display: none;
+}
+
+#cerca_missione{
+  grid-area: box;
+}
+
+#pulsante_cerca_pianeta{
+  grid-area: but;
+}
+
 /* ------------ RICERCA ------------------------------------ */
 #contentResearch{
   display: grid;

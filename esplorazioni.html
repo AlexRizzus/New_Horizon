@@ -39,11 +39,13 @@
       <legend>Cerca nel sito</legend>
       <input tabindex="2" type="text" placeholder="cerca pianeta..." id="cerca_missione" name="Nome_del_pianeta"/>
       <button tabindex="3" type="submit" name="submit" id="pulsante_cerca_pianeta"><img src="images/cerca.png" alt="Cerca" title="avvia la ricerca"></button>
+      <p id="filtro_scritta">Filtro attuale: </p>
+      <actualFilterHere/>
       <button tabindex="4" type="submit" name="submitAnnullaFiltro" id="pulsante_cerca_tutte">Annulla filtro di ricerca</button>
       </fieldset>
       </form>
       <p id="dida">cerca un pianeta per visualizzare solamente le missioni con quella destinazione</p>
-      <planetNotFound/>
+      <planetNotFound></planetNotFound>
       <missionsHere/>
       </div>
     </div>

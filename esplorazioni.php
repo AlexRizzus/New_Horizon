@@ -30,6 +30,7 @@ if($connessioneOK){
   {
     $luogo_missione = ucfirst(strtolower($_GET['Nome_del_pianeta']));
     $missioni = $oggettoConnessione->getMissioni_perLuogo($luogo_missione);
+    $paginaHTML = str_replace("<actualFilterHere/>","<p id=\"filtro_attuale\">$luogo_missione</p>",$paginaHTML);
   }
   else
   {
@@ -37,6 +38,7 @@ if($connessioneOK){
     {
       $luogo_missione = "";
       $missioni = $oggettoConnessione->getMissioni();
+      $paginaHTML = str_replace("<actualFilterHere/>","<p>Nessun filtro</p>",$paginaHTML);
     }
     else {
        if(isset($_POST['filtro']))
@@ -44,19 +46,22 @@ if($connessioneOK){
          if($_POST['filtro'] == "")
          {
            $missioni = $oggettoConnessione->getMissioni();
+           $paginaHTML = str_replace("<actualFilterHere/>","<p>Nessun filtro</p>",$paginaHTML);
          }
          else {
            $missioni = $oggettoConnessione->getMissioni_perLuogo($_POST['filtro']);
            $luogo_missione = $_POST['filtro'];
+           $paginaHTML = str_replace("<actualFilterHere/>","<p>$luogo_missione</p>",$paginaHTML);
          }
        }
        else {
          $missioni = $oggettoConnessione->getMissioni();
+         $paginaHTML = str_replace("<actualFilterHere/>","<p>Nessun filtro</p>",$paginaHTML);
        }
     }
   }
   if($missioni == null){
-    $paginaHTML = str_replace("<planetNotFound/>","<strong id=\"errorPlanetNotFound\">Non ci sono missioni attive o programmate presso la destinazione inserita. Ricontrollare il pianeta inserito.</strong>",$paginaHTML);
+    $paginaHTML = str_replace("<planetNotFound></planetNotFound>","<strong id=\"errorPlanetNotFound\">Non ci sono missioni attive o programmate presso la destinazione inserita. Controllare il pianeta inserito.</strong>",$paginaHTML);
     echo($paginaHTML);
   } else {
     $stringa_missioni = "";
@@ -98,12 +103,14 @@ if($connessioneOK){
       $stringa_missioni .= '<div class="mission-box" id="missionbox' . $counter . '">' .
       "<h2>Nome della missione: " . $valore['nome'] . "</h2>" .
       '<form action="esplorazioni.php" ' . $no_disp . ' method="post">
+      <fieldset>
       <input type="hidden" name="Azione" value="' . $azione . '"/>
       <input type="hidden" name="filtro" value="' . $luogo_missione . '"/>
       <input type="hidden" name="Nome_missione" value="' . $valore['nome'] . '"/>
       <button class="button_prefe" type="submit" name="submitPrefe"/>'
       . $icon .
       '</button>
+      </fieldset>
       </form>' .
       "<p>Iniziata in data: " . $data_ini . "</p>" .
       "<p>Fine in data: " . $data_fin . "</p>" .
