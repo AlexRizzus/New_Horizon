@@ -13,17 +13,17 @@ if(isset($_SESSION['livello'])){
             $missione = $_POST['nome'];
             $missioni=[];
             $missioni=$oggettoConnessione->getMissioni_perNome($missione);
-            $stringa='Nome: <input type="text" name="nome" value="'. $missioni[0]['nome'] .'"></nome><br>
+            $stringa='<fieldset><legend>Missione:</legend>Nome: <input type="text" name="nome" value="'. $missioni[0]['nome'] .'"></nome><br>
             Data inizio: <input type="text" name="data_inizio" value="'. $missioni[0]['data_inizio'] .'"></Data inizio><br>
             Data di fine: <input type="text" name="data_fine" value="'. $missioni[0]['data_fine'] .'"></Data di fine><br>
             Stato: <input type="text" name="stato" value="'. $missioni[0]['stato'] .'"></Stato><br>
             Affiliazioni: <input type="text" name="affiliazioni" value="'. $missioni[0]['affiliazioni'] .'"></Affiliazioni><br>
             Luogo: <input type="text" name="destinazione" value="'. $missioni[0]['destinazione'] .'"></Luogo><br>
-            Scopo: <input type="text" name="scopo" value="'. $missioni[0]['scopo'] .'"></Scopo>';
+            Scopo: <input type="text" name="scopo" value="'. $missioni[0]['scopo'] .'"></Scopo></fieldset><br><br><input type="submit" value="Invia" name="change">';
             $paginaHTML=str_replace("</campiDati>",$stringa, $paginaHTML);
-            
+            echo($paginaHTML);
         }
-        echo($paginaHTML);
+        
 
         if (isset($_POST['change'])) {
             $nome= $data_inizio =$data_fine=$stato=$affiliazioni=$destinazione=$scopo= "";
@@ -34,9 +34,14 @@ if(isset($_SESSION['livello'])){
             $destinazione = $oggettoConnessione->test_input($_POST["destinazione"]);
             $scopo = $oggettoConnessione->test_input($_POST["scopo"]);
             $nome = $oggettoConnessione->test_input($_POST["nome"]);
-
-            
+            $stringa2='<p>Modifiche inviate</p>';
+            $stringa3='<p>Puoi tornare alla selezione missioni</p>';
+            $paginaHTML = file_get_contents('modifica_missione.html');
+            $paginaHTML=str_replace("</prova>",$stringa2, $paginaHTML);
+            $paginaHTML=str_replace("<p>Cliccando su Invia modifichi la missione con i valori che hai inserito</p>",$stringa3, $paginaHTML);
+            echo($paginaHTML);
         }
+        
 
     }else{
         header('utente.php');
