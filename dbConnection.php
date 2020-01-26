@@ -168,5 +168,34 @@ public function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
+public function modifica_nome($chiave, $valore){
+  $query= "UPDATE Missioni set nome= '$valore' where nome = '$chiave'";
+  $queryResult=mysqli_query($this->connection, $query);
+  echo('eseguita');
+}
+public function modifica_data_inizio($chiave, $valore){
+  $query= "UPDATE Missioni set data_inizio= '$valore' where nome = '$chiave'";
+  $queryResult=mysqli_query($this->connection, $query);
+}
+public function modifica_data_fine($chiave, $valore){
+  $query= "UPDATE Missioni set data_fine= '$valore' where nome = '$chiave'";
+  $queryResult=mysqli_query($this->connection, $query);
+}
+public function modifica_stato($chiave, $valore){
+  $query= "UPDATE Missioni set data_fine= '$valore' where nome = '$chiave'";
+  $queryResult=mysqli_query($this->connection, $query);
+}
+public function modifica_affiliazioni($chiave, $valore){
+  $query= "UPDATE Missioni set affiliazioni= '$valore' where nome = '$chiave'";
+  $queryResult=mysqli_query($this->connection, $query);
+}
+public function modifica_destinazione($chiave, $valore){
+  $query= "UPDATE Missioni set destinazione= '$valore' where nome = '$chiave'";
+  $queryResult=mysqli_query($this->connection, $query);
+}
+public function modifica_scopo($chiave, $valore){
+  $query= "UPDATE Missioni set scopo= '$valore' where nome = '$chiave'";
+  $queryResult=mysqli_query($this->connection, $query);
+}
 }
 ?>

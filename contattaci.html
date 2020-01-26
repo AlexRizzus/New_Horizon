@@ -34,10 +34,10 @@
     <div class="titolo">LE TUE PROPOSTE SONO SEMPRE LE MIGLIORI</div>
   </div>
       <div id="descrizione">
-        <p accesskey="m" class="testo_pulsanti_contattaci" id="testo_pulsante_form">Compila questa <span xml:lang="en">form</span> dopo esserti autenticato per contattarci direttamente dal sito <button tabindex="1" class="pulsanti_contattaci" type="button" name="compilaLaForm" onclick="location='#formid'" >Compila</button> </p>
+        <p class="testo_pulsanti_contattaci" id="testo_pulsante_form">Compila questa <span xml:lang="en">form</span> per contattarci direttamente dal sito, ti risponderemo sulla mail del tuo account <button tabindex="1" class="pulsanti_contattaci" type="button" name="compilaLaForm" onclick="location='#formid'" >Compila</button> </p>
         <p class="testo_pulsanti_contattaci" id="testo_pulsante_mail" >Puoi contattarci via <span xml:lang="en">mail</span> per ogni tipo di comunicazione o richiesta e saremo lieti di risponderti il prima possibile <button tabindex="2" class="pulsanti_contattaci" type="button" name="scriviMail" onclick="location='mailto:newhorizon@gmail.com?subject=informazioni'">Scrivici</button></p>
         <p class="testo_pulsanti_contattaci" id="testo_numero_tel">Chiama il nostro numero verde attivo dalle 10 AM alle 19 PM <button tabindex="3" class="pulsanti_contattaci" type="button" name="button">800-133-4567</button> </p>
-        <p class="testo_generico_contattaci" id="testo_social">Seguici sui social pi&ugrave; popolari per restare aggiornato sulle nostre attivit&agrave o per vedere spettacolari immagini catturate dalle nostre sonde </p>
+        <p class="testo_generico_contattaci" id="testo_social">Seguici sui social pi&ugrave; popolari per restare aggiornato sulle nostre attivit&agrave; o per vedere spettacolari immagini catturate dalle nostre sonde </p>
         <img class="logo_social" id="immagine_insta" src="images/instagram.png" alt="link per instagram" onclick="location.href='https://www.instagram.com/'"/>
         <img class="logo_social" id="immagine_face" src="images/facebook.png" alt="link per facebook" onclick="location.href='https://www.facebook.com/'"/>
         <img class="logo_social" id="immagine_twit" src="images/twitter.png" alt="link per twitter" onclick="location.href='https://www.twitter.com/'"/>
@@ -47,18 +47,7 @@
         <img class="foto_social" id="foto_social3" src="images/foto_social33.jpg" alt="foto galassia"/>
         <p class="testo_generico_contattaci" id="form_text">Utilizza questa <span xml:lang="en">form</span> per contattarci, ti risponderemo il prima possibile, il nostro messaggio ti arriver&agrave;
         direttamente nella casella <span><a tabindex="4" href="messaggi.html">messaggi</a></span> del tuo profilo</p>
-      <form id="formid" class="form" action="form.php" method="post">
-        <input tabindex="5" list="oggetti" name="oggetti"/>
-          <datalist id="oggetti">
-            <option value="Richiesta Informazioni"/>
-            <option value="Segnalazione di un problema"/>
-            <option value="Richiesta di collaborazione"/>
-            <option value="Una richiesta scientifica"/>
-            <option value="Altro"/>
-          </datalist>
-          <a name="invio"><input tabindex="7" id="invio" type="submit" name="pulsante invio"/></a> <br/>
-        <textarea tabindex="6" name="testo" rows="10" cols="100" placeholder="Scrivi qui il tuo messaggio."></textarea>
-      </form>
+      <sostituto></sostituto>
     </div>
       <div id="footer">
         <p class="validation">
