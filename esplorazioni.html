@@ -37,7 +37,7 @@
       <form id="search" action="esplorazioni.php" method="get">
       <fieldset>
       <legend>Cerca nel sito</legend>
-      <input tabindex="2" type="text" placeholder="cerca pianeta..." id="cerca_missione" name="Nome_del_pianeta"/>
+      <input type="text" onfocus="myFocusFunction(this)" onblur="myBlurFunction(this)" id="cerca_missione" name="Nome_del_pianeta" value="cerca pianeta…">
       <button tabindex="3" type="submit" name="submit" id="pulsante_cerca_pianeta"><img src="images/cerca.png" alt="Cerca" title="avvia la ricerca"></button>
       <p id="filtro_scritta">Filtro attuale: </p>
       <actualFilterHere/>

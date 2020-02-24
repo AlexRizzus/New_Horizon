@@ -1,3 +1,6 @@
+function myFocusFunction(x) {x.value = '';}
+function myBlurFunction(x) {x.value = 'cerca pianeta…';}
+
 let toggled = false;
 const nav = document.getElementsByClassName('navigation')[0];
 const btn = document.getElementsByClassName('nav-tgl')[0];
