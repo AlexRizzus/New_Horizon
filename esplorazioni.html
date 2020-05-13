@@ -32,18 +32,20 @@
             <script type="text/javascript" src="esplorazioni.js"></script>
     </div>
     <div id="contentEsp">
-      <h1 accesskey="m">MISSIONI</h1>
+      <h1>MISSIONI</h1>
 
       <form id="search" action="esplorazioni.php" method="get">
       <fieldset>
       <legend>Cerca nel sito</legend>
-      <input tabindex="2" type="text" placeholder="cerca pianeta..." id="cerca_missione" name="Nome_del_pianeta"/>
+      <input type="text" onfocus="myFocusFunction(this)" onblur="myBlurFunction(this)" id="cerca_missione" name="Nome_del_pianeta" value="cerca pianeta…">
       <button tabindex="3" type="submit" name="submit" id="pulsante_cerca_pianeta"><img src="images/cerca.png" alt="Cerca" title="avvia la ricerca"></button>
+      <p id="filtro_scritta">Filtro attuale: </p>
+      <actualFilterHere/>
       <button tabindex="4" type="submit" name="submitAnnullaFiltro" id="pulsante_cerca_tutte">Annulla filtro di ricerca</button>
       </fieldset>
       </form>
       <p id="dida">cerca un pianeta per visualizzare solamente le missioni con quella destinazione</p>
-      <planetNotFound/>
+      <planetNotFound></planetNotFound>
       <missionsHere/>
       </div>
     </div>

@@ -520,7 +520,7 @@ z-index: 2;
 body {
 padding:0em;
 margin:0em;
-background-image: linear-gradient(to bottom, #0d0d0d, #005660);
+background-image: linear-gradient(to bottom, #0d0d0d, #00444C);
 font-family: 'Oswald', sans-serif;
 color: #d3d3d3;
 }
@@ -854,7 +854,7 @@ text-align: left;
     margin: 0em;
     text-align: center;
 }
-#dida{
+#contentEsp #dida{
   font-size: 1.25em;
   margin: 0em 0em 0em 0em;
   text-align: center;
@@ -866,8 +866,21 @@ text-align: left;
 
 #errorPlanetNotFound{
   color: #9f0000;
+  text-align: center;
 }
 
+.button_prefe{
+  max-width: 5em;
+  border-radius: 10em;
+}
+
+.button_prefe img{
+    max-width: 4em;
+}
+
+.no_disp{
+  display: none;
+}
 /* --------------- LOGIN --------------------------------------------- */
 
 .login-content{
