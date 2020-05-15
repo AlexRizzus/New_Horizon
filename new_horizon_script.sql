@@ -1,6 +1,6 @@
 set foreign_key_checks = 0;
 
-drop table if exists Utente;
+drop table if exists Utenti;
 drop table if exists Messaggi;
 drop table if exists Missioni;
 drop table if exists Utenti_Missioni;
@@ -11,17 +11,16 @@ create table Utenti(
     sesso enum('M','F','A'),
     e_mail varchar(30) not null,
     occupazione varchar(50),
-    livello enum('generico','dipendente','amministratore'),
-    foreign key(username) references messaggi(mittente) on delete cascade on update cascade,
-	foreign key(username) references messaggi(destinatario) on delete cascade on update cascade
+    livello enum('generico','dipendente','amministratore')
 );
 
 create table Messaggi (
-	id smallint unsigned primary key,
     mittente varchar(20) not null references Utenti(username),
     destinatario varchar(20) not null references Utenti(username),
     oggetto varchar(100),
-    testo varchar(2000)
+    testo varchar(2000),
+	foreign key(mittente) references Utenti(username) on delete cascade on update cascade,
+	foreign key(destinatario) references Utenti(username) on delete cascade on update cascade
 );
 
 create table Missioni(
@@ -65,7 +64,6 @@ insert into Utenti_Missioni(username, nome) values
 		('marcello','AndromedaX 2'),
 		('marcello','AndromedaX 3'),
 		('marcello','Venera 1'),
-		('marcello','Mariner 2'),
 		('marcello','Mariner 2'),
 		('marcello','Deus'),
 		('marcello','Deus2'),

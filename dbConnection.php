@@ -2,7 +2,7 @@
 
 class DBAccess{
   const HOST_DB = 'localhost';
-  const USERNAME = 'meowhorizon';
+  const USERNAME = 'root';
   const PASSWORD = '';
   const DATABASE_NAME = 'my_meowhorizon';
 
