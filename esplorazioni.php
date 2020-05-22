@@ -76,17 +76,26 @@ if($connessioneOK){
       if(isset($_SESSION['username']))
       {
         $no_disp = '';
-        if(in_array($valore['nome'],$missioni_preferite_utente))
+        if(is_array($missioni_preferite_utente) === true)
         {
-          $icon = '<img src="images/star.png" alt="icona dei preferiti non trovata" title="togli la missione tra i tuoi preferiti cliccando qui"/>';
-          $azione = "REMOVE";
+          if(in_array($valore['nome'],$missioni_preferite_utente))
+          {
+            $icon = '<img src="images/star.png" alt="icona dei preferiti non trovata" title="togli la missione tra i tuoi preferiti cliccando qui"/>';
+            $azione = "REMOVE";
+          }
+          else {
+            $icon = '<img src="images/estar.png" alt="icona dei preferiti non trovata" title="metti la missione tra i tuoi preferiti cliccando qui"/>';
+            $azione = "ADD";
+          }
         }
-        else {
+        else
+        {
           $icon = '<img src="images/estar.png" alt="icona dei preferiti non trovata" title="metti la missione tra i tuoi preferiti cliccando qui"/>';
           $azione = "ADD";
         }
       }
       else {
+        $azione = null;
         $icon = '';
         $no_disp = 'class="no_disp"';
       }
@@ -104,6 +113,7 @@ if($connessioneOK){
       "<h2>Nome della missione: " . $valore['nome'] . "</h2>" .
       '<form action="esplorazioni.php" ' . $no_disp . ' method="post">
       <fieldset>
+      <input type="hidden" name="idForPosition" value="missionbox' . $counter . '">
       <input type="hidden" name="Azione" value="' . $azione . '"/>
       <input type="hidden" name="filtro" value="' . $luogo_missione . '"/>
       <input type="hidden" name="Nome_missione" value="' . $valore['nome'] . '"/>
@@ -121,6 +131,11 @@ if($connessioneOK){
       "</div>";
     }
     $paginaHTML = str_replace("<missionsHere/>",$stringa_missioni,$paginaHTML);
+    if (isset($_POST['submitPrefe']))
+    {
+      echo "REPLACING posscript";
+      $paginaHTML = str_replace('<posscript></posscript>','<script src="esplorazioni.js" type="text/javascript">resetPosition("' . $_POST['idForPosition'] . '");</script>',$paginaHTML);
+    }
     echo($paginaHTML);
   }
 }else

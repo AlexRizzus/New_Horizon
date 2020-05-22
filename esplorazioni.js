@@ -1,5 +1,10 @@
 function myFocusFunction(x) {x.value = '';}
-function myBlurFunction(x) {x.value = 'cerca pianeta…';}
+function myBlurFunction(x) { if(x.value === '') { x.value = 'cerca pianeta…'; }}
+
+function resetPosition(id) {
+  var elmnt = document.getElementById(id);
+  elmnt.scroll(0, 1000);
+}
 
 let toggled = false;
 const nav = document.getElementsByClassName('navigation')[0];
