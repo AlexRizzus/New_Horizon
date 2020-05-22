@@ -5,23 +5,47 @@ $connessioneOK=$oggettoConnessione->openDBConnection();
 $paginaHTML = file_get_contents('contattaci.html');
 session_start();
 
-$stringa='<form id="formid" class="form" action="contattaci.php" method="post"><div><input tabindex="5" name="oggetti"/>
-        <div/><datalist id="opzioni"><option value="Richiesta Informazioni"/><option value="Segnalazione di un problema"/><option value="Richiesta di collaborazione"/>
-        <option value="Una richiesta scientifica"/><option value="Altro"/></datalist><br/><textarea tabindex="6" name="testo" rows="10" cols="100" placeholder="Scrivi qui il tuo messaggio."></textarea>
+$stringa='<form id="formid" class="form" action="contattaci.php" method="post"><span class="errorEmail"></span>
+        <div><p>Inserisci qui l&#8217oggetto del tuo messaggio</p><input type="text" name="opzioni">
+        <span class="errorOggetto"></span></div>
+        <div><p>Inserisci qua sotto tutto quello che vuoi comunicarci</p><textarea tabindex="6" name="testo" rows="10" cols="100" ></textarea></div>
+        <span class="errorTextArea"></span>
         <div><input tabindex="7" type="submit" value="Invia" name="invio"></div></form>';
 $paginaHTML=str_replace("<sostituto id='formid'></sostituto>",$stringa, $paginaHTML);
-echo($paginaHTML);
+
 $testo = "";
+$reqTesto = "";
+$oggetto = "";
+$reqOggetto = "";
+$reqEmail="";
 if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['invio']))
 {
-    $testo = test_input($_POST["testo"]);
-    if(isset($_SESSION['email'])){
-
-        $headers = 'From: '.$_SESSION['email'].'';
-        echo($headers);
-        mail("newhorizon@gmail.com",$_POST['opzioni'], $_POST['testo'], $headers);
+    if(!(isset($_SESSION['email']))){
+        $reqEmail= '<span class="errorEmail">Devi fare il login per poter inviare la richiesta</span>';
+        $paginaHTML=str_replace('<span class="errorEmail"></span>',$reqEmail, $paginaHTML);   
     }
-}
+    if(empty($_POST["testo"])){
+        $reqTesto = '<span class="errorTextArea">Il testo non può essere vuoto</span>';
+        $paginaHTML=str_replace('<span class="errorTextArea"></span>',$reqTesto, $paginaHTML);
+    }
+    else{
+        $testo="true";
+    }
+    if(empty($_POST["opzioni"])){
+        $reqOggetto= '<span class="errorOggetto">Inserire un oggetto</span>';
+        $paginaHTML=str_replace('<span class="errorOggetto"></span>',$reqOggetto, $paginaHTML);
+    }
+    else{
+        $oggetto="true";
+    }
+    if(isset($_SESSION["email"]) && $testo=="true" && $oggetto=="true"){
+        $oggetto= test_input($_POST["opzioni"]);
+        $testo=test_input($_POST["testo"]);
+        $headers = 'From: webmaster@example.com'. phpversion();
+        mail("dmlazzaro98@gmail.com",$oggetto, $testo, $headers); 
+    }
+} 
+echo($paginaHTML);
 function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
