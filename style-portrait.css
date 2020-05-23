@@ -182,6 +182,9 @@
   opacity: 1;
   font-size: 1.5em;
 }
+.breadcrumb{
+  display: none;
+}
 
   #footer {
     display: grid;
