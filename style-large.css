@@ -736,15 +736,26 @@ body {
     text-align: justify;
   }
 
+<<<<<<< HEAD
 #btnScrollToTop
   {
     padding: 0em;
+=======
+  #btnScrollToTop
+    {
+      background-color: inherit;
+      border: 0em;
+      padding: 0em;
+>>>>>>> 364630a57cb366b6a9061866e09ac83e83a2cda9
       position: fixed;
       right: 1em;
       bottom: 1em;
       width: 3.5em;
       height: 3.5em;
+<<<<<<< HEAD
       border-radius: 50%;
+=======
+>>>>>>> 364630a57cb366b6a9061866e09ac83e83a2cda9
      cursor: pointer;
      background-color: inherit;
      border: 0em;
