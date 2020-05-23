@@ -736,21 +736,22 @@ body {
     text-align: justify;
   }
 
-  #btnScrollToTop
-    {
-      padding: 0em;
+#btnScrollToTop
+  {
+    padding: 0em;
       position: fixed;
       right: 1em;
       bottom: 1em;
       width: 3.5em;
       height: 3.5em;
-      color: 255 255 255 0;
+      border-radius: 50%;
      cursor: pointer;
-    }
+     background-color: inherit;
+     border: 0em;
+  }
 #btnScrollToTop #frecciasu
 {
-  right: 1em;
-  bottom: 1em;
+  padding: 0em;
   width: 3.5em;
   height: 3.5em;
   border-radius: 50%;
