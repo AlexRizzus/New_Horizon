@@ -738,13 +738,14 @@ body {
 
   #btnScrollToTop
     {
+      background-color: inherit;
+      border: 0em;
       padding: 0em;
       position: fixed;
       right: 1em;
       bottom: 1em;
       width: 3.5em;
       height: 3.5em;
-      color: 255 255 255 0;
      cursor: pointer;
     }
 #btnScrollToTop #frecciasu
