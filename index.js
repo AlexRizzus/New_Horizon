@@ -10,7 +10,7 @@ const sixth_button = document.getElementsByClassName('desktop')[5];
 const seventh_button = document.getElementsByClassName('desktop')[6];
 
 
-const btnScrollToTop = document.getElementById("#btnScrollToTop");
+const btnScrollToTop = document.getElementById("btnScrollToTop");
 btnScrollToTop.onclick = function(evt){window.scrollTo(0,0);};
 
 btn.onclick = function(evt) {
