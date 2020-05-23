@@ -182,6 +182,9 @@
   opacity: 1;
   font-size: 1.5em;
 }
+.breadcrumb{
+  display: none;
+}
 
   #footer {
     display: grid;
@@ -632,6 +635,13 @@
   left:10%;
   margin: 1em;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+}
+#textarea{
+  resize: none;
+  max-width: 70%;
+}
+.formdescription{
+  font-size: calc(1.5vw + 0.5vh + 0.5vmin);
 }
   /* --------------- LOGIN --------------------------------------------- */
 

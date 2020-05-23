@@ -173,6 +173,9 @@
   height:8em;
   opacity: 1;
 }
+.breadcrumb{
+  display: none;
+}
 
   #footer {
     display: grid;
@@ -548,6 +551,13 @@
   #formid{
     position:relative;
     left: 2em;
+  }
+  #textarea{
+    resize: none;
+    max-width: 70%;
+  }
+  .formdescription{
+    font-size: calc(1.5vw + 0.5vh + 0.5vmin);
   }
   .validation{
     padding:2em;

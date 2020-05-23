@@ -13,6 +13,7 @@ body {
 .navigation {
   margin-top: -0.3em;
   padding: 0em;
+  margin-bottom: -1em;
   height: 3.2em;
   width: 100%;
   background-color: #002125;
@@ -34,13 +35,13 @@ body {
   transition-duration: 0.5s;
 }
 .navigation button:hover{
-  font-size:1.6em;
   background-color: #003135;
 }
 #mobile_menu{
   display: none;
 }
 .nav-tgl{
+  margin:0em;
   display: none;
 }
 
@@ -57,34 +58,24 @@ body {
   width: 14.285%;
   font-size: 1.4em;
   font-family: 'Oswald', sans-serif;
-  box-shadow: 0em 0.3em 0.3em -0.1em #838383;
 }
 .navigation .position:hover {
   font-size:1.4em;
   background-color:#d3d3d3;
 }
 .breadcrumb {
-  padding: 2em 1em  ;
+  padding: 0.5em 1em  ;
+  margin: 0em;
   list-style: none;
-  background-color: #002125;
+  background-color: #001923;
 }
 .breadcrumb li {
-  margin-top: 1em;
   display: inline;
-  font-size: 18px;
-}
-.breadcrumb li+li:before {
-  margin-top: 1em;
-  color: black;
-  content: "/\00a0";
+  font-size: 1.3em;
 }
 .breadcrumb li a {
   color: #0275d8;
   text-decoration: none;
-}
-.breadcrumb li a:hover {
-  color: #01447e;
-  text-decoration: underline;
 }
 
 #footer {
@@ -422,25 +413,7 @@ body {
     align-self: center;
     grid-area: st;
   }
-/*-----------------------------CONTATTCI--------------------------------------*/
-.navigation {
-  margin-top: -0.3em;
-  padding: 0em;
-  height: 3.2em;
-  width: 100%;
-  background-color: #002125;
-  position: sticky;
-  top:0;
-  margin-bottom: 1em;
-  z-index: 2;
-}
-body {
-  padding:0em;
-  margin:0em;
-  background-image: linear-gradient(to bottom, #0d0d0d, #00444C);
-  font-family: 'Oswald', sans-serif;
-  color: #d3d3d3;
-}
+/*-----------------------------CONTATTACI--------------------------------------*/
 .header{
   position: relative;
   z-index: -1;
@@ -487,7 +460,7 @@ body {
   display: grid;
   margin: 1em;
   grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
-  grid-template-rows:  1.5fr 0.5fr 0.5fr 0.5fr 2.2fr 0.5fr 1fr;
+  grid-template-rows:  1fr 0.5fr 0.5fr 0.5fr 1.37fr 0.5fr 1fr;
   grid-template-areas:
     'b1 b2 b3 b4 b5'
     'c1 c2 c2 c2 c5'
@@ -630,7 +603,13 @@ body {
   grid-area: g2;
   background-color: inherit;
 }
-
+#textarea{
+  resize: none;
+  max-width: 80%;
+}
+.formdescription{
+  font-size: calc(1.5vw + 0.5vh + 0.5vmin);
+}
 #validation2{
   grid-area: b;
   padding:1.4em;
