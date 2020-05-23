@@ -641,7 +641,6 @@ body {
 }
 
 /*----------------------------COLLABORAZIONI----------------------------------*/
-
 #Team{
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -756,6 +755,26 @@ body {
     margin: 0em 3em 0em 3em;
     text-align: justify;
   }
+
+#btnScrollToTop
+  {
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    background: #e62739;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+#btnScrollToTop:active {
+  background: #cc2333;
+}
 /*--------------ESPLORAZIONI------------------------------------------*/
 #contentEsp h1{
     text-align: center;
