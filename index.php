@@ -30,7 +30,7 @@
     }
     else
     {
-        echo("connessione fallita come rizzo" );
+        echo("connesione non riuscita, prova a ricaricare la pagina!" );
 
     }
 

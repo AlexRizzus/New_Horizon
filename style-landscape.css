@@ -173,6 +173,9 @@
   height:8em;
   opacity: 1;
 }
+.breadcrumb{
+  display: none;
+}
 
   #footer {
     display: grid;
