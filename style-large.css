@@ -130,6 +130,26 @@ body {
   width: 100%;
 }
 
+#btnScrollToTop
+{
+  background-color: inherit;
+  border: 0em;
+  padding: 0em;
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  width: 3.5em;
+  height: 3.5em;
+  cursor: pointer;
+}
+#frecciasu
+{
+  padding: 0em;
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+}
+
 /*------------------------HOME PAGE-------------------------------------------------------------*/
 
 #background {
@@ -736,26 +756,6 @@ body {
     text-align: justify;
   }
 
-#btnScrollToTop
-  {
-    padding: 0em;
-      position: fixed;
-      right: 1em;
-      bottom: 1em;
-      width: 3.5em;
-      height: 3.5em;
-      border-radius: 50%;
-     cursor: pointer;
-     background-color: inherit;
-     border: 0em;
-  }
-#btnScrollToTop #frecciasu
-{
-  padding: 0em;
-  width: 3.5em;
-  height: 3.5em;
-  border-radius: 50%;
-}
 /*--------------ESPLORAZIONI------------------------------------------*/
 #contentEsp h1{
     text-align: center;

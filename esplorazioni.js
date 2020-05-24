@@ -6,6 +6,9 @@ function resetPosition(id) {
   elmnt.scroll(0, 1000);
 }
 
+const btnScrollToTop = document.getElementById("btnScrollToTop");
+btnScrollToTop.onclick = function(evt){window.scrollTo(0,0);};
+
 let toggled = false;
 const nav = document.getElementsByClassName('navigation')[0];
 const btn = document.getElementsByClassName('nav-tgl')[0];
@@ -16,6 +19,7 @@ const fourth_button = document.getElementsByClassName('desktop')[3];
 const fifth_button = document.getElementsByClassName('desktop')[4];
 const sixth_button = document.getElementsByClassName('desktop')[5];
 const seventh_button = document.getElementsByClassName('desktop')[6];
+
 btn.onclick = function(evt) {
   if (!toggled) {
     toggled = true;
@@ -41,6 +45,7 @@ btn.onclick = function(evt) {
     seventh_button.classList.remove('active');
   }
 }
+
 /*
 document.getElementById("search").onsubmit = function()
 {
