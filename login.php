@@ -21,7 +21,7 @@
       return $error;
 
   }
-  if($_SESSION['username'] != ''){
+  if(isset($_SESSION['username'])){
     header('Location: utente.php');
   }
   else{
