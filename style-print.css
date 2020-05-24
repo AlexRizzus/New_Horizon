@@ -157,6 +157,6 @@
   #login_mail
   {
     color: black;
-    border-bottom: none;
+    text-decoration: none;
   }
 }
