@@ -31,10 +31,10 @@
               <li> → Login</li>
             </ul>
     </div>
-    <div class="login-content">
+    <div id="login-content">
       <form name="login" method="post" action="login.php" onsubmit="return validateLogin()"> <!--there is no attribute "name"-->
         <h1>LOGIN</h1>
-        <div class="login-box">
+        <div id="login-box">
         <h2 accesskey="m">Inserisci <span xml:lang="en">username</span> e <span xml:lang="en">password</span></h2>
         <div id="login-error"> </div>
           <img src="images/icons8-astronaut-48.png" alt="User astronauta"/> <input accesskey="u" tabindex="1" type="text" name="username" placeholder="Username"/><br/>
@@ -42,7 +42,7 @@
           <button tabindex="3" type="submit" name="submit" class="login-button">Conferma</button>
         <p>Non sei ancora registrato? <button tabindex="4" type="button" onclick="location.href='registrazione.php'" name="login" class="login-button">registrati</button> </p>
       </div>
-        <p>Se non ti ricordi il tuo <span xml:lang="en">username</span> o la tua <span xml:lang="en">password</span>, hai qualche problema o vuoi semplicemente farci sapere quanto adori questo sito, inviaci una <a tabindex="5" href="contattaci.html#invio"><span xml:lang="en">mail</span></a></p>
+        <p>Se non ti ricordi il tuo <span xml:lang="en">username</span> o la tua <span xml:lang="en">password</span>, hai qualche problema o vuoi semplicemente farci sapere quanto adori questo sito, inviaci una <a id="login_mail" tabindex="5" href="contattaci.html#invio"><span xml:lang="en">mail</span></a></p>
       </form>
     </div>
     <div id="footer">
@@ -60,6 +60,6 @@
       </div>
     </div>
   </div>
-  <script  src="index.js" type="text/javascript"></script>
+  <script src="index.js" type="text/javascript"></script>
     </body>
     </html>

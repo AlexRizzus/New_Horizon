@@ -212,6 +212,11 @@
     margin-left: 7%;
     height: auto;
   }
+  
+  #btnScrollToTop{
+      display: none;
+  }
+
   /*-----------------CHI SIAMO----------------------------------------------*/
 
   #green_data{
