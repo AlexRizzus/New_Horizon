@@ -222,6 +222,10 @@
     height: auto;
   }
 
+#btnScrollToTop{
+    display: none;
+}
+
   /*----------------HOME PAGE------------------------------------------------*/
 
   #background {

@@ -15,6 +15,11 @@
     text-decoration: none;
   }
 
+  #btnScrollToTop{
+      display: none;
+  }
+
+
   /*--------------ESPLORAZIONI------------------------------------------*/
   #dida
   {
