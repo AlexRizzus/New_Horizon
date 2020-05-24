@@ -161,7 +161,39 @@
   }
 
 
-    /* ------------ RICERCA ------------------------------------ */
+    /* ------------ CONTATTACI ------------------------------------ */
+    .aurora{
+      display: none;
+    }
 
+    #descrizione img {
+      width: 30%;
+      margin-right: 2%;
+    }
+    #descrizione #immagine_face{
+      width: 6%;
+      margin-right: 4%;
+    }
+    #descrizione #immagine_insta{
+      width: 6%;
+      margin-right: 4%;
+    }
+    #descrizione #immagine_twit{
+      width: 6%;
+      margin-right: 4%;
+    }
+    #formid{
+      display: none;
+    }
+
+  /* ------------ REGISTRAZIONE ------------------------------------ */
+
+  .login-box div{
+    margin: 0.5em;
+  }
+
+  .login-content a{
+    color: black;
+  }
 
 }
