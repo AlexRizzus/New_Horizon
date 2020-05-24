@@ -14,6 +14,24 @@
   abbr {
     text-decoration: none;
   }
+  /*--------------ESPLORAZIONI------------------------------------------*/
+  #background
+  {
+    display: none;
+  }
+
+  .grid-container a
+  {
+    display: none;
+  }
+  .grid-container img
+  {
+    display: none;
+  }
+  .grid-container button
+  {
+    display: none;
+  }
 
   /*--------------ESPLORAZIONI------------------------------------------*/
   #dida
@@ -145,5 +163,5 @@
 
     /* ------------ RICERCA ------------------------------------ */
 
-    
+
 }
