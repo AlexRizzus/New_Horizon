@@ -71,6 +71,11 @@ class DBAccess{
     }
     return $result;
   }
+  public function add_mission($nome, $data_inizio, $data_fine, $stato, $affiliazioni, $destinazione, $scopo)
+  {
+    $query = "INSERT INTO Missioni VALUES ('$nome', '$data_inizio', '$data_fine', '$stato', '$affiliazioni', '$destinazione', '$scopo')";
+    $queryResult=mysqli_query($this->connection, $query);
+  }
   public function add_preferita($username,$missione)
   {
     $query = "INSERT INTO Utenti_Missioni VALUES ('$username', '$missione')";
