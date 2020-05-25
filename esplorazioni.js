@@ -9,6 +9,9 @@ function resetPosition(id) {
 const btnScrollToTop = document.getElementById("btnScrollToTop");
 btnScrollToTop.onclick = function(evt){window.scrollTo(0,0);};
 
+/*const btnPrefe = document.getElementByClass("button_prefe");
+btnPrefe.onclick = function(evt){alert("Missione aggiunta correttamente ai preferiti!");};*/
+
 let toggled = false;
 const nav = document.getElementsByClassName('navigation')[0];
 const btn = document.getElementsByClassName('nav-tgl')[0];
