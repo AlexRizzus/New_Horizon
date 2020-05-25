@@ -480,7 +480,7 @@ body {
   display: grid;
   margin: 1em;
   grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
-  grid-template-rows:  1fr 0.5fr 0.5fr 0.5fr 1.37fr 0.5fr 1fr;
+  grid-template-rows:  1fr 0.5fr 0.5fr 0.5fr 1.37fr 0.5fr 2.3fr;
   grid-template-areas:
     'b1 b2 b3 b4 b5'
     'c1 c2 c2 c2 c5'
@@ -639,6 +639,32 @@ body {
 .validation2 b{
     padding: 0em 1em;
 
+}
+.inputform{
+  background-color:#002125;
+  color:#d3d3d3;
+  border: 0.075em solid #d3d3d3;
+  border-radius: 0.3em;
+  padding: 0.3em;
+  margin:0em;
+  font-size: 2em;
+}
+#sendbutton {
+  background-color: #d3d3d3;
+  color: #002125;
+  border: 0.2em solid #002125;
+  border-radius: 0.3em;
+  padding: 0.3em;
+  margin:0em;
+  font-size: 2em;
+  transition-duration: 0.4s;
+  font-weight: bold;
+  margin-top: 1em;
+}
+#sendbutton:hover {
+  background-color:#002125;
+  color:#d3d3d3;
+  border: 0.2em solid #d3d3d3;;
 }
 
 /*----------------------------COLLABORAZIONI----------------------------------*/
