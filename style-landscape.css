@@ -558,7 +558,32 @@
   #validation2{
     padding:2em;
   }
-
+  .inputform{
+    background-color:#002125;
+    color:#d3d3d3;
+    border: 0.075em solid #d3d3d3;
+    border-radius: 0.3em;
+    padding: 0.3em;
+    margin:0em;
+    font-size: 2em;
+  }
+  #sendbutton {
+    background-color: #d3d3d3;
+    color: #002125;
+    border: 0.2em solid #002125;
+    border-radius: 0.3em;
+    padding: 0.3em;
+    margin:0em;
+    font-size: 2em;
+    transition-duration: 0.4s;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+  #sendbutton:hover {
+    background-color:#002125;
+    color:#d3d3d3;
+    border: 0.2em solid #d3d3d3;;
+  }
   /* --------------- COLLABORAZIONI --------------------------------------------- */
 
   #Team{
@@ -927,6 +952,46 @@
       max-width: 12em;
       max-height: 12em;
       align-self: center;
+    }
+
+    /*----------------------ADMIN---------------------------*/
+    .admin-content{
+      position: relative;
+      left: 20%;
+      right: 40%;
+      max-width: 50%;
+      background-color: #d3d3d3;
+      color: #002125;
+      border: 0.2em solid #002125;
+      border-radius: 0.3em;
+      padding: 0.3em;
+      margin:3em;
+      font-size: calc(1.5vw + 0.6vh + 0.6vmin);
+      text-align: center;
+    }
+    .adminbutton {
+      background-color: #d3d3d3;
+      color: #002125;
+      border: 0.2em solid #002125;
+      border-radius: 0.3em;
+      padding: 0.3em;
+      margin:0em;
+      font-size: 1em;
+      transition-duration: 0.4s;
+      font-weight: bold;
+      margin-top: 0.5em;
+    }
+    .adminbutton:hover {
+      background-color:#002125;
+      color:#d3d3d3;
+    }
+    .campidatiadmin{
+      background-color:#002125;
+      color:#d3d3d3;
+      border-radius: 0.3em;
+      padding: 0.3em;
+      margin:0em;
+      font-size: 1em;
     }
 
 }

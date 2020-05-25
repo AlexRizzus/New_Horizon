@@ -15,7 +15,6 @@
     <link href="style-print.css" rel="stylesheet" type="text/css" media="print" />    <link href="https://fonts.googleapis.com/css?family=Oswald:500&amp;display=swap" rel="stylesheet"/>
   </head>
   <body>
-    <div id="modifica">
         <div class="navigation">
         <button class="nav-tgl" type="button" >
             <span ></span>
@@ -29,18 +28,19 @@
                 <button onclick="location.href='admin.php'" class = "position desktop button6" xml:lang="en">Login</button>
                 <ul class="breadcrumb">
                   <li><a href="login.php"> → Profilo</a></li>
-                  <li><a href="gestione_admin.php"> → Gestione amministratore</a></li>
-                  <li> → Modifica missione</li>
+                  <li> → Aggiungi Missione</li>
                 </ul>
         </div>
-        <div class="modifica-content">
-            <h1>Aggiungi una missione</h1>
+        <div id="login-content">
+
+          <h1>Aggiungi una missione</h1>
+          <div id="login-box">
             <form action="aggiungi_missione.php" method="post">
                  <campiDati/>
                  <prova/>
                </form>
                <p>Cliccando su Invia aggiungi la missione con i valori che hai inserito</p>
-               <button tabindex="9" onclick="location.href='admin.php'">Ritorna al tuo profilo</button>
+               <button tabindex="9" class="login-button" onclick="location.href='admin.php'">Ritorna al tuo profilo</button>
         </div>
         <div id="footer">
             <p class="validation">
