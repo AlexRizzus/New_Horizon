@@ -48,6 +48,27 @@
     display: none;
   }
 
+  #esplorazLegend {
+    display: none;
+  }
+
+  #esplorazInput {
+    display: none;
+  }
+
+  #esplorazFilterBtn {
+    disply: none;
+  }
+
+
+  #esplorazResetFilterBtn {
+    display: none;
+  }
+
+  .starImg {
+    display: none;
+  }
+
   /*----------------------------COLLABORAZIONI----------------------------------*/
 
 
