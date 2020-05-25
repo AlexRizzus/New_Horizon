@@ -38,12 +38,13 @@
             <p>La tua occupazione:</p>
             <occupazione class="campidatiadmin"></occupazione>
             <p>Modfica una spedizione:</p>
-            <button tabindex="1 "onclick="location.href='gestione_admin.php'">MODIFICA</button>
+            <button class="adminbutton" tabindex="1 "onclick="location.href='gestione_admin.php'">MODIFICA</button>
             <p>Aggiungi una spedizione:</p>
-            <button tabindex="2">AGGIUNGI</button>
+            <button class="adminbutton" tabindex="2">AGGIUNGI</button>
+            <p>Esegui il <span xml:lang="en">logout</span></p>
             <form action="logout.php" method="post">
               <div>
-              <button type="submit" class="transparent" name="logout"> <img src="images/logout.png" alt="pulsante logout"/> </button>
+              <button class="adminbutton" type="submit" class="transparent" name="logout"> <img src="images/logout.png" alt="pulsante logout"/> </button>
               </div>
             </form>
         </div>
