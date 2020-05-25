@@ -1024,38 +1024,38 @@ body {
 
 /* ------------ LOGIN ------------------------------------ */
 
-.login-content{
+#login-content{
   text-align: center;
   align-content: center;
 }
-.login-content h1{
+#login-content h1{
     font-size: 4em;
 }
-.login-content a{
+#login-content a{
   color: #d3d3d3
 }
-.login-content p{
+#login-content p{
   margin-top: 1.5em;
 }
 #login{
   background-color: #001115;
 }
 
-.login-box{
+#login-box{
   background-color: #d3d3d3;
   padding: 4em 0em;
   margin: 1em 25%;
   color: #002125;
   border-radius: 0.4em;
 }
-.login-box img{
+#login-box img{
   padding: 0em;
   margin-right:0.6em;
   width: 2.8em;
   height:3.2em;
   vertical-align: middle;
 }
-.login-box input{
+#login-box input{
   margin: 1em 0em;
   height: 2.5em;
   margin-right: 2em;
@@ -1066,7 +1066,7 @@ body {
   border-radius: 0.3em;
   text-align: center;
 }
-.login-box select{
+#login-box select{
   margin: 1em 0em;
   height: 2.5em;
   margin-right: 2em;
