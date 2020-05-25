@@ -173,9 +173,6 @@
   height:8em;
   opacity: 1;
 }
-.breadcrumb{
-  display: none;
-}
 
   #footer {
     display: grid;
@@ -212,11 +209,6 @@
     margin-left: 7%;
     height: auto;
   }
-  
-  #btnScrollToTop{
-      display: none;
-  }
-
   /*-----------------CHI SIAMO----------------------------------------------*/
 
   #green_data{
@@ -459,16 +451,6 @@
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
-    color: white;
-    font-weight: bold;
-    border: 3px solid #f1f1f1;
-    width: 80%;
-    padding: 2%;
-    font-size: 3vw;
-    text-align: center;
-    max-height: 70%;
     text-shadow: 2px 2px 4px #000000;
    background-color: rgb(0,0,0);
    background-color: rgba(0,0,0, 0.6);
@@ -530,28 +512,34 @@
     margin: 3%;
     margin-left: 15%;
     max-width: 10%;
+    z-index: 0;
   }
   #immagine_face{
     margin: 3%;
     margin-left: 15%;
     max-width: 10%;
+    z-index: 0;
   }
   #immagine_twit{
     margin: 3%;
     margin-left: 15%;
     max-width: 10%;
+    z-index: 0;
   }
   #foto_social1{
     margin-left: 15%;
     max-width: 70%;
+    z-index: 0;
   }
   #foto_social2{
     margin-left: 15%;
     max-width: 70%;
+    z-index: 0;
   }
   #foto_social3{
     margin-left: 15%;
     max-width: 70%;
+    z-index: 0;
   }
   #formid{
     position:relative;
