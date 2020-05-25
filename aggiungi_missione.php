@@ -13,9 +13,9 @@ if(isset($_SESSION['livello'])){
             Stato: <input tabindex="4" type="text" name="stato"></Stato><br>
             Affiliazioni: <input tabindex="5" type="text" name="affiliazioni"></Affiliazioni><br>
             Luogo: <input tabindex="6" type="text" name="destinazione"></Luogo><br>
-            Scopo: <input tabindex="7" type="text" name="scopo"></Scopo></fieldset><br><br><input type="hidden" name="key"><input tabindex="8" type="submit" value="Invia" name="change">';
+            Scopo: <input tabindex="7" type="text" name="scopo"></Scopo></fieldset><br><br><input type="hidden" name="key">
+            <button tabindex="8" class="login-button" type="submit" name="add">Invia</button>';
             $paginaHTML=str_replace("<campiDati/>",$stringa, $paginaHTML);
-            echo($paginaHTML);
 
         if (isset($_POST['add'])) {
             $nome= $data_inizio =$data_fine=$stato=$affiliazioni=$destinazione=$scopo= "";
@@ -28,18 +28,16 @@ if(isset($_SESSION['livello'])){
             $destinazione = $oggettoConnessione->test_input($_POST["destinazione"]);
             $scopo = $oggettoConnessione->test_input($_POST["scopo"]);
 
+            $oggettoConnessione->add_mission($nome, $data_inizio, $data_fine, $stato, $affiliazioni, $destinazione, $scopo);
 
 
 
 
-            $stringa2='<p>Modifiche inviate</p>';
-            $stringa3='<p>Puoi tornare alla selezione missioni</p>';
-            $paginaHTML = file_get_contents('modifica_missione.html');
+
+            $stringa2='<p>Missione aggiunta</p>';
             $paginaHTML=str_replace("<prova/>",$stringa2, $paginaHTML);
-            $paginaHTML=str_replace("<p>Cliccando su Invia modifichi la missione con i valori che hai inserito</p>",$stringa3, $paginaHTML);
-            echo($paginaHTML);
         }
-
+            echo($paginaHTML);
 
     }else{
         header('Location: utente.php');
