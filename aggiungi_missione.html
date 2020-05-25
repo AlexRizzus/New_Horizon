@@ -15,7 +15,7 @@
     <link href="style-print.css" rel="stylesheet" type="text/css" media="print" />    <link href="https://fonts.googleapis.com/css?family=Oswald:500&amp;display=swap" rel="stylesheet"/>
   </head>
   <body>
-    <div id="admin">
+    <div id="modifica">
         <div class="navigation">
         <button class="nav-tgl" type="button" >
             <span ></span>
@@ -25,28 +25,22 @@
                 <button onclick="location.href='about.html'" class = "desktop button2">Chi siamo</button>
                 <button onclick="location.href='collaborazioni.html'" class = "desktop button3">Collaborazioni</button>
                 <button onclick="location.href='ricerca.html'" class = "desktop button4">Ricerca</button>
-                <button onclick="location.href='contattaci.php'" class = "desktop button5">Contattaci</button>
-                <button onclick="location.href='login.php'" class = "position desktop button6" xml:lang="en">Login</button>
+                <button onclick="location.href='contattaci.html'" class = "desktop button5">Contattaci</button>
+                <button onclick="location.href='admin.php'" class = "position desktop button6" xml:lang="en">Login</button>
                 <ul class="breadcrumb">
-                  <li> → Profilo</li>
+                  <li><a href="login.php"> → Profilo</a></li>
+                  <li><a href="gestione_admin.php"> → Gestione amministratore</a></li>
+                  <li> → Modifica missione</li>
                 </ul>
         </div>
-        <div class="admin-content">
-            <h1 >Bentornato <span></span></h1>
-            <p>La tua <span xml:lang="en">e-mail</span>:</p>
-            <email class="campidatiadmin"></email>
-            <p>La tua occupazione:</p>
-            <occupazione class="campidatiadmin"></occupazione>
-            <p>Modfica una spedizione:</p>
-            <button class="adminbutton" tabindex="1 "onclick="location.href='gestione_admin.php'">MODIFICA</button>
-            <p>Aggiungi una spedizione:</p>
-            <button class="adminbutton" tabindex="2" onclick="location.href='aggiungi_missione.php'">AGGIUNGI</button>
-            <p>Esegui il <span xml:lang="en">logout</span></p>
-            <form action="logout.php" method="post">
-              <div>
-              <button class="adminbutton" type="submit" class="transparent" name="logout"> <img src="images/logout.png" alt="pulsante logout"/> </button>
-              </div>
-            </form>
+        <div class="modifica-content">
+            <h1>Aggiungi una missione</h1>
+            <form action="aggiungi_missione.php" method="post">
+                 <campiDati/>
+                 <prova/>
+               </form>
+               <p>Cliccando su Invia aggiungi la missione con i valori che hai inserito</p>
+               <button tabindex="9" onclick="location.href='admin.php'">Ritorna al tuo profilo</button>
         </div>
         <div id="footer">
             <p class="validation">
