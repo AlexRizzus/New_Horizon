@@ -1047,4 +1047,27 @@ text-align: left;
   margin:0em;
   font-size: 0.8em;
 }
+.amministratore-box{
+  background-color: #d3d3d3;
+  font-weight: bold;
+  border-radius: 0.4em;
+  padding: 1em;
+  text-decoration: none;
+  margin: 4em;
+  margin-left: 2em;
+  margin-right: 2em;
+  max-width: 30%;
+  min-width: 10%;
+  display: inline-block;
+}
+.amministratore-box img{
+  max-width: 15%;
+  max-height: 15%;
+  background-color: inherit;
+}
+.nomemissione{
+  font-size: calc(1vw + 0.5vh + 0.5vmin);
+  text-align: center;
+  color: #000000;
+}
 }
