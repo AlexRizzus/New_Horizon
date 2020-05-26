@@ -80,17 +80,17 @@ if($connessioneOK){
         {
           if(in_array($valore['nome'],$missioni_preferite_utente))
           {
-            $icon = '<img src="images/star.png" alt="icona dei preferiti non trovata" title="togli la missione tra i tuoi preferiti cliccando qui"/>';
+            $icon = '<img class="starImg" src="images/star.png" alt="icona dei preferiti non trovata" title="togli la missione tra i tuoi preferiti cliccando qui"/>';
             $azione = "REMOVE";
           }
           else {
-            $icon = '<img src="images/estar.png" alt="icona dei preferiti non trovata" title="metti la missione tra i tuoi preferiti cliccando qui"/>';
+            $icon = '<img class="starImg" src="images/estar.png" alt="icona dei preferiti non trovata" title="metti la missione tra i tuoi preferiti cliccando qui"/>';
             $azione = "ADD";
           }
         }
         else
         {
-          $icon = '<img src="images/estar.png" alt="icona dei preferiti non trovata" title="metti la missione tra i tuoi preferiti cliccando qui"/>';
+          $icon = '<img class="starImg" src="images/estar.png" alt="icona dei preferiti non trovata" title="metti la missione tra i tuoi preferiti cliccando qui"/>';
           $azione = "ADD";
         }
       }
@@ -131,11 +131,11 @@ if($connessioneOK){
       "</div>";
     }
     $paginaHTML = str_replace("<missionsHere/>",$stringa_missioni,$paginaHTML);
-    if (isset($_POST['submitPrefe']))
+    /*if (isset($_POST['submitPrefe']))
     {
-      echo "REPLACING posscript";
+      // echo "REPLACING posscript";
       $paginaHTML = str_replace('<posscript></posscript>','<script src="esplorazioni.js" type="text/javascript">resetPosition("' . $_POST['idForPosition'] . '");</script>',$paginaHTML);
-    }
+    }*/
     echo($paginaHTML);
   }
 }else
