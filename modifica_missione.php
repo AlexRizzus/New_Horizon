@@ -20,7 +20,7 @@ if(isset($_SESSION['livello'])){
             Stato: <input tabindex="4" type="text" name="stato" value="'. $missioni[0]['stato'] .'"></Stato><br>
             Affiliazioni: <input tabindex="5" type="text" name="affiliazioni" value="'. $missioni[0]['affiliazioni'] .'"></Affiliazioni><br>
             Luogo: <input tabindex="6" type="text" name="destinazione" value="'. $missioni[0]['destinazione'] .'"></Luogo><br>
-            Scopo: <input tabindex="7" type="text" name="scopo" value="'. $missioni[0]['scopo'] .'"></Scopo></fieldset><br><br><input type="hidden" value="'.$missione.'" name="key"><input tabindex="8" type="submit" value="Invia" name="change">';
+            Scopo: <input tabindex="7" type="text" name="scopo" value="'. $missioni[0]['scopo'] .'"></Scopo></fieldset><br><br><input type="hidden" value="'.$missione.'" name="key"><button tabindex="8" type="submit" value="Invia" name="change">Invia</button>';
             $paginaHTML=str_replace("<campiDati/>",$stringa, $paginaHTML);
             echo($paginaHTML);
 
@@ -51,7 +51,7 @@ if(isset($_SESSION['livello'])){
             $stringa2='<p>Modifiche inviate</p>';
             $stringa3='<p>Puoi tornare alla selezione missioni</p>';
             $paginaHTML = file_get_contents('modifica_missione.html');
-            $paginaHTML=str_replace("<prova/>",$stringa2, $paginaHTML);
+            $paginaHTML=str_replace("<inviomodifiche/>",$stringa2, $paginaHTML);
             $paginaHTML=str_replace("<p>Cliccando su Invia modifichi la missione con i valori che hai inserito</p>",$stringa3, $paginaHTML);
             echo($paginaHTML);
         }

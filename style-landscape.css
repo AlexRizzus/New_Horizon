@@ -1,4 +1,4 @@
-@media screen and (max-width: 749px) and (orientation: landscape){
+@media screen and (max-width: 900px) and (orientation: landscape){
   /*--------------GENERAL PURPOSE CSS-----------------------------------------*/
   body {
     padding:0em;
@@ -997,6 +997,29 @@
       padding: 0.3em;
       margin:0em;
       font-size: 1em;
+    }
+    .amministratore-box{
+      background-color: #d3d3d3;
+      font-weight: bold;
+      border-radius: 0.4em;
+      padding: 0.5em;
+      text-decoration: none;
+      margin: 2em;
+      margin-left: 1em;
+      margin-right: 1em;
+      max-width: 40%;
+      min-width: 20%;
+      display: inline-block;
+    }
+    .amministratore-box img{
+      max-width: 15%;
+      max-height: 15%;
+      background-color: inherit;
+    }
+    .nomemissione{
+      font-size: calc(2vw + 0.5vh + 0.5vmin);
+      text-align: center;
+      color: #000000;
     }
 
 }
