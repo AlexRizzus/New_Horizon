@@ -1076,5 +1076,28 @@
       max-height: 30em;
       align-self: center;
     }
+    .amministratore-box{
+      background-color: #d3d3d3;
+      font-weight: bold;
+      border-radius: 0.4em;
+      padding: 0.5em;
+      text-decoration: none;
+      margin: 2em;
+      margin-left: 1em;
+      margin-right: 1em;
+      max-width: 90%;
+      min-width: 70%;
+      display: inline-block;
+    }
+    .amministratore-box img{
+      max-width: 15%;
+      max-height: 15%;
+      background-color: inherit;
+    }
+    .nomemissione{
+      font-size: calc(3vw + 0.5vh + 0.5vmin);
+      text-align: center;
+      color: #000000;
+    }
 
 }

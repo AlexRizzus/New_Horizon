@@ -26,22 +26,18 @@ if(isset($_SESSION['livello'])){
         $contatore = 0;
         $stringa_missioni = "";
         foreach($missioni as $valore){
-            $cotatore++;
-            $cotatore++;
-            $stringa_missioni .= "<div class='amministratore-box' >" .
-            "<h2> Nome missione: " . $valore['nome'] . "</h2>" .
-            '<form action="gestione_admin.php" method="post">
+            $contatore++;
+            $contatore++;
+            $stringa_missioni .= '<div class="amministratore-box" >
+            <h2 class="nomemissione"> Nome missione: "' . $valore["nome"] . '"</h2>
+            <form action="gestione_admin.php" method="post">
             <input type="hidden" name="nome" value="' . $valore['nome'] . '"/>
             <button tabindex="' . $contatore . '" type="submit" name="deleteMission" >
             <img ' . $icon_del. ' alt="icona cancellazione non trovata" title="icona cancellazione"/>
-            </button>
-            </form>' .
-            '<form action="modifica_missione.php" method="post">
+            </button></form><form action="modifica_missione.php" method="post">
             <input type="hidden" name="nome" value="' . $valore['nome'] . '"/>
-            <button tabindex= "' . $contatore + 1 . '" type="submit" name="updateMission" >
-            <img ' . $icon_mod. ' alt="icona modifica bob trovata" title="icona modifica"/>
-            </button>
-            </form>' ."</div>";
+            <button tabindex= "' . $contatore++ . '" type="submit" name="updateMission" >
+            <img ' . $icon_mod. ' alt="icona modifica non trovata" title="icona modifica"/></button></form></div>';
         }
         echo str_replace("</missionsHere>", $stringa_missioni, $paginaHTML);
         }

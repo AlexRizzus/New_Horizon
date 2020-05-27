@@ -1142,13 +1142,18 @@ body {
   margin: 4em;
   margin-left: 2em;
   margin-right: 2em;
-  width: 30em;
+  max-width: 30%;
+  min-width: 25%;
   display: inline-block;
 }
 .amministratore-box img{
   max-width: 10%;
   max-height: 10%;
   background-color: inherit;
+}
+.nomemissione{
+  text-align: center;
+  color: #000000;
 }
 
 .transparent{
