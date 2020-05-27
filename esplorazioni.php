@@ -111,13 +111,13 @@ if($connessioneOK){
       }
       $stringa_missioni .= '<div class="mission-box" id="missionbox' . $counter . '">' .
       "<h2>Nome della missione: " . $valore['nome'] . "</h2>" .
-      '<form action="esplorazioni.php" ' . $no_disp . ' method="post">
+      '<form id="missionForm' . $counter . '" action="esplorazioni.php" ' . $no_disp . ' method="post">
       <fieldset>
       <input type="hidden" name="idForPosition" value="missionbox' . $counter . '">
       <input type="hidden" name="Azione" value="' . $azione . '"/>
       <input type="hidden" name="filtro" value="' . $luogo_missione . '"/>
       <input type="hidden" name="Nome_missione" value="' . $valore['nome'] . '"/>
-      <button class="button_prefe" type="submit" name="submitPrefe"/>'
+      <button class="button_prefe" type="submit" name="submitPrefe" onsubmit="subm();">'
       . $icon .
       '</button>
       </fieldset>

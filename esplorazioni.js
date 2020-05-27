@@ -9,8 +9,18 @@ function resetPosition(id) {
 const btnScrollToTop = document.getElementById("btnScrollToTop");
 btnScrollToTop.onclick = function(evt){window.scrollTo(0,0);};
 
-/*const btnPrefe = document.getElementByClass("button_prefe");
-btnPrefe.onclick = function(evt){alert("Missione aggiunta correttamente ai preferiti!");};*/
+function subm(ev) {
+  alert(`Missione ${ev.}`);
+}
+
+var form = document.getElementById("missionForm1");
+function handleForm(event) { subm(event); return false; }
+form.addEventListener('submit', handleForm);
+
+/*const gogo = document.getElementById("missionForm1");
+gogo.onsubmit = function(evt){window.scrollTo(100,100);return false;};*/
+
+// btnPrefe.onclick = function(evt){alert("Missione aggiunta correttamente ai preferiti!");};
 
 let toggled = false;
 const nav = document.getElementsByClassName('navigation')[0];
