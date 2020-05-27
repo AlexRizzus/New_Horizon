@@ -111,7 +111,7 @@ if($connessioneOK){
       }
       $stringa_missioni .= '<div class="mission-box" id="missionbox' . $counter . '">' .
       "<h2>Nome della missione: " . $valore['nome'] . "</h2>" .
-      '<form id="missionForm' . $counter . '" action="esplorazioni.php" ' . $no_disp . ' method="post">
+      '<form class="missionform" id="missionForm' . $counter . '" action="esplorazioni.php" ' . $no_disp . ' method="post">
       <fieldset>
       <input type="hidden" name="idForPosition" value="missionbox' . $counter . '">
       <input type="hidden" name="Azione" value="' . $azione . '"/>
@@ -131,11 +131,6 @@ if($connessioneOK){
       "</div>";
     }
     $paginaHTML = str_replace("<missionsHere/>",$stringa_missioni,$paginaHTML);
-    /*if (isset($_POST['submitPrefe']))
-    {
-      // echo "REPLACING posscript";
-      $paginaHTML = str_replace('<posscript></posscript>','<script src="esplorazioni.js" type="text/javascript">resetPosition("' . $_POST['idForPosition'] . '");</script>',$paginaHTML);
-    }*/
     echo($paginaHTML);
   }
 }else
