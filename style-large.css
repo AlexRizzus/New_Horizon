@@ -1147,9 +1147,15 @@ body {
   display: inline-block;
 }
 .amministratore-box img{
-  max-width: 10%;
-  max-height: 10%;
+  max-width: 15%;
+  max-height: 15%;
   background-color: inherit;
+}
+.amministratore-box button{
+  width: 80%;
+  position:relative;
+  left: 10%;
+  right: 10%;
 }
 .nomemissione{
   text-align: center;

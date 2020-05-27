@@ -1016,6 +1016,12 @@
       max-height: 15%;
       background-color: inherit;
     }
+    .amministratore-box button{
+      width: 80%;
+      position:relative;
+      left: 10%;
+      right: 10%;
+    }
     .nomemissione{
       font-size: calc(2vw + 0.5vh + 0.5vmin);
       text-align: center;

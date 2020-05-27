@@ -1053,17 +1053,19 @@ text-align: left;
   border-radius: 0.4em;
   padding: 1em;
   text-decoration: none;
-  margin: 4em;
+  margin: 2em;
   margin-left: 2em;
   margin-right: 2em;
   max-width: 30%;
   min-width: 10%;
-  display: inline-block;
+  display: inline-flexbox;
 }
-.amministratore-box img{
-  max-width: 15%;
-  max-height: 15%;
-  background-color: inherit;
+
+.amministratore-box button{
+  width: 80%;
+  position:relative;
+  left: 10%;
+  right: 10%;
 }
 .nomemissione{
   font-size: calc(1vw + 0.5vh + 0.5vmin);
