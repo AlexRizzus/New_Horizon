@@ -1053,21 +1053,66 @@ text-align: left;
   border-radius: 0.4em;
   padding: 1em;
   text-decoration: none;
-  margin: 4em;
+  margin: 2em;
   margin-left: 2em;
   margin-right: 2em;
-  max-width: 30%;
-  min-width: 10%;
+  width: 30%;
   display: inline-block;
+  vertical-align: top;
 }
 .amministratore-box img{
-  max-width: 15%;
-  max-height: 15%;
+  max-width: 20%;
+  max-height: 20%;
   background-color: inherit;
 }
+
+.amministratore-box button{
+  width: 80%;
+  position:relative;
+  left: 10%;
+  right: 10%;
+}
 .nomemissione{
-  font-size: calc(1vw + 0.5vh + 0.5vmin);
+  font-size: calc(1.5vw + 0.5vh + 0.5vmin);
   text-align: center;
   color: #000000;
+}
+
+#titlemodificamissione{
+  padding-top: 1em;
+  font-size: calc(3vw + 0.5vh + 0.5vmin);
+}
+.scrittemodificamissione{
+  font-size: calc(1.5vw + 0.5vh + 0.5vmin);
+  background-color:#d3d3d3;
+  color:#002125;
+  border: 0.075em solid #d3d3d3;
+  border-radius: 0.3em;
+  padding: 0.3em;
+  margin:0.5em;
+}
+.buttoninputmodificamissione{
+  font-size: calc(1vw + 0.5vh + 0.5vmin);
+  background-color:#002125;
+  color:#d3d3d3;
+  border: 0.1em solid #001a1d;
+  border-radius: 0.3em;
+  padding: 0.3em;
+  margin:0.5em;
+  width: 70%;
+}
+.buttonmodificamissione{
+  font-size: calc(1.5vw + 0.5vh + 0.5vmin);
+  background-color:#002125;
+  color:#d3d3d3;
+  border: 0.1em solid #001a1d;
+  border-radius: 0.3em;
+  padding: 0.3em;
+  margin:0.5em;
+}
+.buttonmodificamissione:hover {
+  background-color:#d3d3d3;
+  color:#002125;
+  border: 0.1em solid #002125;
 }
 }
