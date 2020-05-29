@@ -655,17 +655,11 @@ margin: 3%;
 margin-left: 15%;
 max-width: 10%;
 }
-#foto_social1{
+#foto_social1, #foto_social2, #foto_social3{
 margin-left: 15%;
-max-width: 70%;
-}
-#foto_social2{
-margin-left: 15%;
-max-width: 70%;
-}
-#foto_social3{
-margin-left: 15%;
-max-width: 70%;
+width: 60%;
+position: relative;
+left: 5%;
 }
 #formid{
 position:relative;

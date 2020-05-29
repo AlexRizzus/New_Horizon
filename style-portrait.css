@@ -634,9 +634,9 @@
   max-width: 15%;
 }
 .foto_social{
-  max-width: 70%;
+  width: 60%;
   position:relative;
-  left:10%;
+  left:18%;
   margin: 1em;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
 }
@@ -646,6 +646,32 @@
 }
 .formdescription{
   font-size: calc(1.5vw + 0.5vh + 0.5vmin);
+}
+.inputform{
+  background-color:#002125;
+  color:#d3d3d3;
+  border: 0.075em solid #d3d3d3;
+  border-radius: 0.3em;
+  padding: 0.3em;
+  margin:0em;
+  font-size: 2em;
+}
+#sendbutton {
+  background-color: #d3d3d3;
+  color: #002125;
+  border: 0.2em solid #002125;
+  border-radius: 0.3em;
+  padding: 0.3em;
+  margin:0em;
+  font-size: 2em;
+  transition-duration: 0.4s;
+  font-weight: bold;
+  margin-top: 1em;
+}
+#sendbutton:hover {
+  background-color:#002125;
+  color:#d3d3d3;
+  border: 0.2em solid #d3d3d3;;
 }
   /* --------------- LOGIN --------------------------------------------- */
 
