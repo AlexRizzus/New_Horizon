@@ -39,11 +39,12 @@
       <form id="search" action="esplorazioni.php" method="get">
       <fieldset>
       <legend id="esplorazLegend">Cerca nel sito</legend>
-      <input id="esplorazInput" type="text" onfocus="myFocusFunction(this)" onblur="myBlurFunction(this)" id="cerca_missione" name="Nome_del_pianeta" value="cerca pianeta…">
-      <button id="esplorazFilterBtn" tabindex="3" type="submit" name="submit" id="pulsante_cerca_pianeta"><img src="images/cerca.png" alt="Cerca" title="avvia la ricerca"></button>
-      <p id="filtro_scritta">Filtro attuale: </p>
-      <actualFilterHere/>
-      <button id="esplorazResetFilterBtn" tabindex="4" type="submit" name="submitAnnullaFiltro" id="pulsante_cerca_tutte">Annulla filtro di ricerca</button>
+      <div id="search_section">
+        <input type="text" onfocus="myFocusFunction(this)" onblur="myBlurFunction(this)" id="cerca_missione" name="Nome_del_pianeta" value="cerca pianeta…"></input>
+        <button tabindex="3" type="submit" name="submit" id="pulsante_cerca_pianeta"><img src="images/cerca.png" id="search_img" alt="Cerca" title="avvia la ricerca"/></button>
+      </div>
+      <p id="filtro_scritta">Filtro attuale: <actualFilterHere/></p>
+      <button tabindex="4" type="submit" name="submitAnnullaFiltro" id="pulsante_cerca_tutte">Annulla filtro di ricerca</button>
       </fieldset>
       </form>
       <p id="dida">cerca un pianeta per visualizzare solamente le missioni con quella destinazione</p>

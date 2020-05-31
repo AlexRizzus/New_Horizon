@@ -52,16 +52,16 @@
     display: none;
   }
 
-  #esplorazInput {
+  #cerca_missione {
     display: none;
   }
 
-  #esplorazFilterBtn {
+  #pulsante_cerca_pianeta {
     disply: none;
   }
 
 
-  #esplorazResetFilterBtn {
+  #pulsante_cerca_tutte {
     display: none;
   }
 

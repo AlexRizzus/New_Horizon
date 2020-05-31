@@ -770,8 +770,7 @@
     }
 
     #search button:hover {
-      background-color:#002125;
-      color:#d3d3d3;
+      border-color:#d3d3d3;
     }
 
     .mission-box {
@@ -1016,7 +1015,7 @@
       max-height: 20%;
       background-color: inherit;
     }
-    
+
     .amministratore-box button{
       width: 80%;
       position:relative;

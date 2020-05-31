@@ -30,7 +30,7 @@ if($connessioneOK){
   {
     $luogo_missione = ucfirst(strtolower($_GET['Nome_del_pianeta']));
     $missioni = $oggettoConnessione->getMissioni_perLuogo($luogo_missione);
-    $paginaHTML = str_replace("<actualFilterHere/>","<p id=\"filtro_attuale\">$luogo_missione</p>",$paginaHTML);
+    $paginaHTML = str_replace("<actualFilterHere/>","<span id=\"filtro_attuale\">$luogo_missione</span>",$paginaHTML);
   }
   else
   {
@@ -38,7 +38,7 @@ if($connessioneOK){
     {
       $luogo_missione = "";
       $missioni = $oggettoConnessione->getMissioni();
-      $paginaHTML = str_replace("<actualFilterHere/>","<p>Nessun filtro</p>",$paginaHTML);
+      $paginaHTML = str_replace("<actualFilterHere/>","<span>Nessun filtro</span>",$paginaHTML);
     }
     else {
        if(isset($_POST['filtro']))
@@ -46,17 +46,17 @@ if($connessioneOK){
          if($_POST['filtro'] == "")
          {
            $missioni = $oggettoConnessione->getMissioni();
-           $paginaHTML = str_replace("<actualFilterHere/>","<p>Nessun filtro</p>",$paginaHTML);
+           $paginaHTML = str_replace("<actualFilterHere/>","<span>Nessun filtro</span>",$paginaHTML);
          }
          else {
            $missioni = $oggettoConnessione->getMissioni_perLuogo($_POST['filtro']);
            $luogo_missione = $_POST['filtro'];
-           $paginaHTML = str_replace("<actualFilterHere/>","<p>$luogo_missione</p>",$paginaHTML);
+           $paginaHTML = str_replace("<actualFilterHere/>","<span>$luogo_missione</span>",$paginaHTML);
          }
        }
        else {
          $missioni = $oggettoConnessione->getMissioni();
-         $paginaHTML = str_replace("<actualFilterHere/>","<p>Nessun filtro</p>",$paginaHTML);
+         $paginaHTML = str_replace("<actualFilterHere/>","<span>Nessun filtro</span>",$paginaHTML);
        }
     }
   }
@@ -97,7 +97,7 @@ if($connessioneOK){
       else {
         $azione = null;
         $icon = '';
-        $no_disp = 'class="no_disp"';
+        $no_disp = ' no_disp';
       }
       $data_ini = "N/A";
       $data_fin = "N/A";
@@ -111,7 +111,7 @@ if($connessioneOK){
       }
       $stringa_missioni .= '<div class="mission-box" id="missionbox' . $counter . '">' .
       "<h2>Nome della missione: " . $valore['nome'] . "</h2>" .
-      '<form class="missionform" id="missionForm' . $counter . '" action="esplorazioni.php" ' . $no_disp . ' method="post">
+      '<form class="missionform' . $no_disp . '" id="missionForm' . $counter . '" action="esplorazioni.php" method="post">
       <fieldset>
       <input type="hidden" name="idForPosition" value="missionbox' . $counter . '">
       <input type="hidden" name="Azione" value="' . $azione . '"/>
