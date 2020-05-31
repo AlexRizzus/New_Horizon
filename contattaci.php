@@ -5,13 +5,13 @@ $connessioneOK=$oggettoConnessione->openDBConnection();
 $paginaHTML = file_get_contents('contattaci.html');
 session_start();
 
-$stringa='<form id="formid" class="form" action="contattaci.php" method="post"><span class="errorEmail"></span>
-        <div><p class = "formdescription">Inserisci qui l&#8217oggetto del tuo messaggio</p><input class="inputform" type="text" name="opzioni">
-        <span class="errorOggetto"></span></div>
-        <div><p class = "formdescription">Inserisci qua sotto tutto quello che vuoi comunicarci</p><textarea class="inputform" tabindex="6" id="textarea" name="testo" rows="7" cols="200"></textarea></div>
-        <span class="errorTextArea"></span>
-        <div><input tabindex="7" type="submit" value="Invia" name="invio" id="sendbutton"></div></form>';
-$paginaHTML=str_replace("<sostituto id='formid'></sostituto>",$stringa, $paginaHTML);
+$stringa='<form id="formid" class="form" action="contattaci.php" method="post"><p class="errorEmail"></p>
+<div><p class = "formdescription">Inserisci qui l&#8217;oggetto del tuo messaggio</p><input class="inputform" type="text" name="opzioni"/>
+<p class="errorOggetto"></p></div>
+<div><p class = "formdescription">Inserisci qua sotto tutto quello che vuoi comunicarci</p><textarea class="inputform" tabindex="6" id="textarea" name="testo" rows="7" cols="200"></textarea></div>
+<p class="errorTextArea"></p>
+<div><input tabindex="7" type="submit" value="Invia" name="invio" id="sendbutton"/></div></form>';
+$paginaHTML=str_replace('<p id="sostituto"></p>',$stringa, $paginaHTML);
 
 $testo = "";
 $reqTesto = "";
@@ -21,19 +21,19 @@ $reqEmail="";
 if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['invio']))
 {
     if(!(isset($_SESSION['email']))){
-        $reqEmail= '<span class="errorEmail">Devi fare il login per poter inviare la richiesta</span>';
-        $paginaHTML=str_replace('<span class="errorEmail"></span>',$reqEmail, $paginaHTML);   
+        $reqEmail= '<p class="errorEmail">Devi fare il login per poter inviare la richiesta</p>';
+        $paginaHTML=str_replace('<p class="errorEmail"></p>',$reqEmail, $paginaHTML);   
     }
     if(empty($_POST["testo"])){
-        $reqTesto = '<span class="errorTextArea">Il testo non può essere vuoto</span>';
-        $paginaHTML=str_replace('<span class="errorTextArea"></span>',$reqTesto, $paginaHTML);
+        $reqTesto = '<p class="errorTextArea">Il testo non può essere vuoto</p>';
+        $paginaHTML=str_replace('<p class="errorTextArea"></p>',$reqTesto, $paginaHTML);
     }
     else{
         $testo="true";
     }
     if(empty($_POST["opzioni"])){
-        $reqOggetto= '<span class="errorOggetto">Inserire un oggetto</span>';
-        $paginaHTML=str_replace('<span class="errorOggetto"></span>',$reqOggetto, $paginaHTML);
+        $reqOggetto= '<p class="errorOggetto">Inserire un oggetto</p>';
+        $paginaHTML=str_replace('<p class="errorOggetto"></p>',$reqOggetto, $paginaHTML);
     }
     else{
         $oggetto="true";
@@ -43,7 +43,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['invio']))
         $testo=test_input($_POST["testo"]);
         $headers = 'From: webmaster@example.com'. phpversion();
         mail("dmlazzaro98@gmail.com",$oggetto, $testo, $headers); 
-        $paginaHTML=str_replace("<scriptalert></scriptalert>",'<script type="text/javascript">window.onload = function(){alert("Mail inviata con successo");}</script>', $paginaHTML);
+        $paginaHTML=str_replace('<p id="scriptalert"></p>','<script type="text/javascript">window.onload = function(){alert("Mail inviata con successo");}</script>', $paginaHTML);
     }
 } 
 echo($paginaHTML);

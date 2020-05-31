@@ -34,17 +34,17 @@
         <div class="admin-content">
             <h1 >Bentornato <span></span></h1>
             <p>La tua <span xml:lang="en">e-mail</span>:</p>
-            <email class="campidatiadmin"></email>
+            <p id="email" ></p>
             <p>La tua occupazione:</p>
-            <occupazione class="campidatiadmin"></occupazione>
+            <p id="occupazione" ></p>
             <p>Modfica una spedizione:</p>
-            <button class="adminbutton" tabindex="1 "onclick="location.href='gestione_admin.php'">MODIFICA</button>
+            <button class="adminbutton" tabindex="1" onclick="location.href='gestione_admin.php'">MODIFICA</button>
             <p>Aggiungi una spedizione:</p>
             <button class="adminbutton" tabindex="2" onclick="location.href='aggiungi_missione.php'">AGGIUNGI</button>
             <p>Esegui il <span xml:lang="en">logout</span></p>
             <form action="logout.php" method="post">
               <div>
-              <button class="adminbutton" type="submit" class="transparent" name="logout"> <img src="images/logout.png" alt="pulsante logout"/> </button>
+              <button class="adminbutton" type="submit" name="logout"> <img src="images/logout.png" alt="pulsante logout"/> </button>
               </div>
             </form>
         </div>

@@ -8,8 +8,8 @@ if(isset($_SESSION['livello'])){
     if($_SESSION['livello'] == "amministratore"){
         //INSERISCO CODICE PAGINA
     $missioni = $oggettoConnessione->getMissioni();
-    $icon_mod='src="images/modifica_icona.png"';
-    $icon_del='src="images/cestino_icona.png"';
+    $icon_mod="images/modifica_icona.png";
+    $icon_del="images/cestino_icona.png";
     if($missioni == null){
         echo("risultato query vuoto");
     } else {
@@ -31,15 +31,23 @@ if(isset($_SESSION['livello'])){
             $stringa_missioni .= '<div class="amministratore-box" >
             <h2 class="nomemissione"> Nome missione: "' . $valore["nome"] . '"</h2>
             <form action="gestione_admin.php" method="post">
-            <input type="hidden" name="nome" value="' . $valore['nome'] . '"/>
-            <button tabindex="' . $contatore . '" type="submit" name="deleteMission" >
-            <img ' . $icon_del. ' alt="icona cancellazione non trovata" title="icona cancellazione"/>
-            </button></form><form action="modifica_missione.php" method="post">
-            <input type="hidden" name="nome" value="' . $valore['nome'] . '"/>
-            <button tabindex= "' . $contatore++ . '" type="submit" name="updateMission" >
-            <img ' . $icon_mod. ' alt="icona modifica non trovata" title="icona modifica"/></button></form></div>';
+              <fieldset>
+              <input type="hidden" name="nome" value="' . $valore['nome'] . '"/>
+              <button tabindex="' . $contatore . '" type="submit" name="deleteMission" >
+                <img src="' . $icon_del. '" alt="icona cancellazione non trovata" title="icona cancellazione"/>
+              </button>
+          </fieldset>
+          </form><form action="modifica_missione.php" method="post">
+            <fieldset>
+              <input type="hidden" name="nome" value="' . $valore['nome'] . '"/>
+              <button tabindex= "' . $contatore++ . '" type="submit" name="updateMission" >
+                <img src="' . $icon_mod. '" alt="icona modifica non trovata" title="icona modifica"/>
+              </button>
+            </fieldset> 
+          </form>
+        </div>';
         }
-        echo str_replace("</missionsHere>", $stringa_missioni, $paginaHTML);
+        echo str_replace('<p id="missionsHere"></p>', $stringa_missioni, $paginaHTML);
         }
     }else{
         header('Location: utente.php');
