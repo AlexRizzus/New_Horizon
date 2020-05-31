@@ -866,24 +866,30 @@
     }
     /*--------------ESPLORAZIONI------------------------------------------*/
     #contentEsp h1{
-        text-align: center;
-        padding-top: 2em;
-        font-size: 2.4em;
-        margin-top: 0em;
-        margin-bottom: 0em;
+      text-align: center;
+      padding-top: 2em;
+      font-size: 2.4em;
+      margin-top: 0em;
+      margin-bottom: 0em;
+    }
+
+    #search_section {
+      text-align: left;
     }
 
     #search{
-      width: 230px;
-      margin-left: auto;
-      margin-right: auto;
+      display: grid;
+      grid-gap: 0.2em;
+      grid-template-areas: 'box but';
+      grid-template-columns: 1fr 1fr;
+      margin-left: 25%;
     }
-    #search fieldset{border: 0px solid;padding: 0;width: max-content;}
+    #search fieldset{border: 0px solid;padding: 0;}
     #search legend{text-indent: -9999px;font-size: 1px;}
     #search input{
         float: left;
-        width: 170px;
-        height: 2.4em;
+        width: 10em;
+        height: 2.5em;
         margin: 1em 0em;
         background: #FFF url(bk.png) repeat-x top left;
         border: 1px solid;
@@ -892,44 +898,60 @@
         border-radius: 0.3em;
     }
     #search button{
+      font-weight: bold;
       border-radius: 0.5em;
       cursor: pointer;
       background-color: #d3d3d3;
       color: #002125;
-      border: 0.2em solid #002125;
-      padding: 11px;
-      padding-bottom: 12px;
+      padding: 1.1em;
       margin:0em;
-      font-size: 1.1em;
       transition-duration: 0.4s;
-      font-weight: bold;
-      margin-top: 1em;
+      margin-top: 1.4em;
+      margin-left: 1em;
     }
 
-
-    #contentMission {
-        text-align: center;
-        min-height: 16em;
-    }
-
-    #contentMissioni p{
-    text-align: left;
-    }
     #search button:hover {
       border-color:#d3d3d3;
     }
 
-    .mission-box {
-        background-color:#d3d3d3;
-        color:#002125;
+      #contentEsp {
+          text-align: center;
+      }
+
+    #contentEsp p{
+      text-align: left;
+    }
+
+    .buttonPrefe{
+      max-width: 5em;
+      max-height: 5em;
+    }
+
+    #filtro_scritta{
+      text-align: center;
+      font-size: 1.2em;
+      // display: inline-block;
+      // margin-left: 40%;
+    }
+
+    #filtro_attuale{
+      text-align: center;
+      font-size: 1.2em;
+      display: inline-block;
+    }
+
+      .mission-box {
+        background-color: #d3d3d3;
+        color: #002125;
         font-weight: bold;
         border-radius: 0.4em;
         padding: 1em;
         text-decoration: none;
-        margin: 2em;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 30em;
+        margin: 4em;
+        margin-left: 2em;
+        margin-right: 2em;
+        width: 25em;
+        display: inline-block;
       }
 
     .mission-box h2{
@@ -937,9 +959,29 @@
         text-align: center;
     }
     #contentEsp #dida{
-      font-size: 1.0em;
+      font-size: 1.25em;
       text-align: center;
-      margin: 0em;
+    }
+
+    #errorPlanetNotFound{
+      color: #fb5714;
+      font-size: 1.3em;
+      text-align: center;
+      display: block;
+    }
+
+    #filtro_scritta{
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    #filtro_attuale{
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    #pulsante_cerca_tutte{
+      display: block;
     }
 
     .button_prefe{
@@ -949,15 +991,6 @@
 
     .button_prefe img{
         max-width: 4em;
-    }
-
-    .no_disp{
-      display: none;
-    }
-
-    #errorPlanetNotFound{
-      color: #9f0000;
-      text-align: center;
     }
 
     .no_disp{
