@@ -847,8 +847,8 @@ align-self: center;
 /*--------------ESPLORAZIONI------------------------------------------*/
 #contentEsp h1{
     text-align: center;
-    font-size: 3.8em;
-    margin: 0.5em 0em 0em 0em;
+    font-size: 5em;
+    margin-top: 1.5em;
 }
 
 #search_section {
@@ -856,20 +856,18 @@ align-self: center;
 }
 
 #search{
-  width: 230px;
-  margin-left: auto;
-  margin-right: auto;
+  display: grid;
+  grid-gap: 0.2em;
+  grid-template-areas: 'box but';
+  grid-template-columns: 1fr 1fr;
+  margin-left: 33%;
 }
-#search fieldset{
-  border: 0px solid;
-  padding: 0;
-  width: max-content;
-}
+#search fieldset{border: 0px solid;padding: 0;}
 #search legend{text-indent: -9999px;font-size: 1px;}
 #search input{
     float: left;
-    width: 170px;
-    height: 2.4em;
+    width: 10em;
+    height: 2.5em;
     margin: 1em 0em;
     background: #FFF url(bk.png) repeat-x top left;
     border: 1px solid;
@@ -878,44 +876,60 @@ align-self: center;
     border-radius: 0.3em;
 }
 #search button{
+  font-weight: bold;
   border-radius: 0.5em;
   cursor: pointer;
   background-color: #d3d3d3;
   color: #002125;
-  border: 0.2em solid #002125;
-  padding: 11px;
-  padding-bottom: 12px;
+  padding: 1.1em;
   margin:0em;
-  font-size: 1.1em;
   transition-duration: 0.4s;
-  font-weight: bold;
-  margin-top: 1em;
+  margin-top: 1.4em;
+  margin-left: 1em;
 }
 
 #search button:hover {
   border-color:#d3d3d3;
 }
 
-#contentMission {
-    text-align: center;
-    min-height: 24em;
+  #contentEsp {
+      text-align: center;
+  }
+
+#contentEsp p{
+  text-align: left;
 }
 
-#contentMissioni p{
-text-align: left;
+.buttonPrefe{
+  max-width: 5em;
+  max-height: 5em;
 }
 
-.mission-box {
-    background-color:#d3d3d3;
-    color:#002125;
+#filtro_scritta{
+  text-align: center;
+  font-size: 1.2em;
+  // display: inline-block;
+  // margin-left: 40%;
+}
+
+#filtro_attuale{
+  text-align: center;
+  font-size: 1.2em;
+  display: inline-block;
+}
+
+  .mission-box {
+    background-color: #d3d3d3;
+    color: #002125;
     font-weight: bold;
     border-radius: 0.4em;
     padding: 1em;
     text-decoration: none;
     margin: 4em;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 30em;
+    margin-left: 2em;
+    margin-right: 2em;
+    width: 30em;
+    display: inline-block;
   }
 
 .mission-box h2{
@@ -924,17 +938,28 @@ text-align: left;
 }
 #contentEsp #dida{
   font-size: 1.25em;
-  margin: 0em 0em 0em 0em;
   text-align: center;
-}
-
-.no_disp{
-  display: none;
 }
 
 #errorPlanetNotFound{
-  color: #9f0000;
+  color: #fb5714;
+  font-size: 1.3em;
   text-align: center;
+  display: block;
+}
+
+#filtro_scritta{
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#filtro_attuale{
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#pulsante_cerca_tutte{
+  display: block;
 }
 
 .button_prefe{
@@ -949,6 +974,7 @@ text-align: left;
 .no_disp{
   display: none;
 }
+
 /* --------------- LOGIN --------------------------------------------- */
 
 #login-content{

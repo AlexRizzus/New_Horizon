@@ -800,7 +800,7 @@ body {
   grid-gap: 0.2em;
   grid-template-areas: 'box but';
   grid-template-columns: 1fr 1fr;
-  margin-left: 38%;
+  margin-left: 40%;
 }
 #search fieldset{border: 0px solid;padding: 0;}
 #search legend{text-indent: -9999px;font-size: 1px;}
@@ -913,14 +913,6 @@ body {
 
 .no_disp{
   display: none;
-}
-
-#cerca_missione{
-  grid-area: box;
-}
-
-#pulsante_cerca_pianeta{
-  grid-area: but;
 }
 
 /* ------------ RICERCA ------------------------------------ */
