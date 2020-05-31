@@ -851,13 +851,21 @@ align-self: center;
     margin: 0.5em 0em 0em 0em;
 }
 
+#search_section {
+  text-align: left;
+}
+
 #search{
   width: 230px;
   margin-left: auto;
   margin-right: auto;
 }
-#search fieldset{border: 0px solid;padding: 0}
-#search legend{text-indent: -9999px;font-size: 1px}
+#search fieldset{
+  border: 0px solid;
+  padding: 0;
+  width: max-content;
+}
+#search legend{text-indent: -9999px;font-size: 1px;}
 #search input{
     float: left;
     width: 170px;
@@ -885,8 +893,7 @@ align-self: center;
 }
 
 #search button:hover {
-  background-color:#002125;
-  color:#d3d3d3;
+  border-color:#d3d3d3;
 }
 
 #contentMission {

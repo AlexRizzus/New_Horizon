@@ -791,6 +791,10 @@ body {
     margin-top: 1.5em;
 }
 
+#search_section {
+  text-align: left;
+}
+
 #search{
   display: grid;
   grid-gap: 0.2em;
@@ -798,8 +802,8 @@ body {
   grid-template-columns: 1fr 1fr;
   margin-left: 38%;
 }
-#search fieldset{border: 0px solid;padding: 0}
-#search legend{text-indent: -9999px;font-size: 1px}
+#search fieldset{border: 0px solid;padding: 0;}
+#search legend{text-indent: -9999px;font-size: 1px;}
 #search input{
     float: left;
     width: 10em;
@@ -823,8 +827,7 @@ body {
 }
 
 #search button:hover {
-  background-color:#002125;
-  color:#d3d3d3;
+  border-color:#d3d3d3;
 }
 
   #contentEsp {
@@ -843,8 +846,8 @@ body {
 #filtro_scritta{
   text-align: center;
   font-size: 1.2em;
-  display: inline-block;
-  margin-left: 40%;
+  // display: inline-block;
+  // margin-left: 40%;
 }
 
 #filtro_attuale{
@@ -891,6 +894,10 @@ body {
 #filtro_attuale{
   text-align: center;
   font-size: 1.2em;
+}
+
+#pulsante_cerca_tutte{
+  display: block;
 }
 
 .button_prefe{
