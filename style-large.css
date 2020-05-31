@@ -823,7 +823,8 @@ body {
   padding: 1.1em;
   margin:0em;
   transition-duration: 0.4s;
-  margin-top: 1em;
+  margin-top: 1.4em;
+  margin-left: 1em;
 }
 
 #search button:hover {
