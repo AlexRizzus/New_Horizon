@@ -816,6 +816,7 @@ body {
     border-radius: 0.3em;
 }
 #search button{
+  font-weight: bold;
   border-radius: 0.5em;
   cursor: pointer;
   background-color: #d3d3d3;
