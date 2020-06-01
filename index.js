@@ -1,40 +1,19 @@
 let toggled = false;
-const nav = document.getElementsByClassName('navigation')[0];
+const nav = document.getElementById('navigation');
 const btn = document.getElementsByClassName('nav-tgl')[0];
-const first_button = document.getElementsByClassName('desktop')[0];
-const sec_button = document.getElementsByClassName('desktop')[1];
-const third_button = document.getElementsByClassName('desktop')[2];
-const fourth_button = document.getElementsByClassName('desktop')[3];
-const fifth_button = document.getElementsByClassName('desktop')[4];
-const sixth_button = document.getElementsByClassName('desktop')[5];
-const seventh_button = document.getElementsByClassName('desktop')[6];
 const btnScrollToTop = document.getElementById("btnScrollToTop");
 
 btnScrollToTop.onclick = function(evt){window.scrollTo(0,0);};
 
 btn.onclick = function(evt) {
-  if (!toggled) {
-    toggled = true;
-    btn.classList.add('toggled');
-    nav.classList.add('active');
-    first_button.classList.add('active');
-    sec_button.classList.add('active');
-    third_button.classList.add('active');
-    fourth_button.classList.add('active');
-    fifth_button.classList.add('active');
-    sixth_button.classList.add('active');
-    seventh_button.classList.add('active');
-  } else {
+  if (toggled) {
     toggled = false;
-    btn.classList.remove('toggled');
-    nav.classList.remove('active');
-    first_button.classList.remove('active');
-    sec_button.classList.remove('active');
-    third_button.classList.remove('active');
-    fourth_button.classList.remove('active');
-    fifth_button.classList.remove('active');
-    sixth_button.classList.remove('active');
-    seventh_button.classList.remove('active');
+    btn.innerHTML = "&equiv;"
+    navigation.style.height = "0%";
+  } else {
+    toggled = true;
+    btn.innerHTML = "&times;"
+    navigation.style.height = "100%";
 }
 }
 function validateLogin(){
@@ -79,7 +58,7 @@ function validateRegistration(){
   psw = isPassword(password);
   if(!psw)
   {
-    displayerror(errpsw,"Prova con una password più complessa");
+    displayerror(errpsw,"Prova con una password pi&ugrave; complessa");
   }
   email = document.forms["registrazione"]["email"].value;
   email = isEmail(password);

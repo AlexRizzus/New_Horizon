@@ -8,8 +8,9 @@ body {
   background-color: #001115;
   font-family: 'Oswald', sans-serif;
   color: #d3d3d3;
+  min-width: fit-content;
 }
-.navigation {
+#navigation {
   margin-top: -0.3em;
   padding: 0em;
   height: 3.2em;
@@ -18,7 +19,7 @@ body {
   position: sticky;
   top:0;
 }
-.navigation button {
+#navigation button {
   color: white;
   border:none;
   background-color: #002125;
@@ -31,11 +32,8 @@ body {
   font-size: 1.2em;
   font-family: 'Oswald', sans-serif;
 }
-#hamburger{
-  visibility: hidden;
-}
 
-.navigation .position {
+#navigation .position {
   color: #002125;
   background-color: #d3d3d3;
   border:none;

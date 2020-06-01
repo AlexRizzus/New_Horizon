@@ -16,10 +16,8 @@
   </head>
   <body>
     <div id="modifica">
-        <div class="navigation">
-        <button class="nav-tgl" type="button" >
-            <span ></span>
-        </button>
+      <div id="navigation">
+        <div id="navigation-content">
                 <button onclick="location.href='index.php'"  class = "desktop button0" xml:lang="en">Home</button>
                 <button onclick="location.href='esplorazioni.php'" class = "desktop button1">Esplorazioni</button>
                 <button onclick="location.href='about.html'" class = "desktop button2">Chi siamo</button>
@@ -30,9 +28,12 @@
                 <ul class="breadcrumb">
                   <li><a href="login.php"> → Profilo</a></li>
                   <li><a href="gestione_admin.php"> → Gestione amministratore</a></li>
-                  <li> → Modifica missione</li>
+                  <li> &#8594; Modifica missione</li>
                 </ul>
-        </div>
+              </div>
+            </div>
+                  <!-- bottone per chiudere la navigation mobile -->
+            <a class="nav-tgl" title="menu">&equiv;</a>
         <div class="modifica-content">
             <h1 id="titlemodificamissione">Modifica la missione</h1>
             <form action="modifica_missione.php" method="post">
