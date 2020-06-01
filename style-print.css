@@ -2,6 +2,11 @@
 
 @media print
 {
+  html{
+    font-family: "Times New Roman", Times, serif;
+    font-size:12pt;
+    }
+
   /*--------------GENERAL PURPOSE CSS------------------------------------------*/
   .navigation {
     display: none;
@@ -61,7 +66,7 @@
   }
 
   #pulsante_cerca_pianeta {
-    disply: none;
+    display: none;
   }
 
   .missionform {
@@ -75,6 +80,7 @@
   .starImg {
     display: none;
   }
+ 
 
   /*----------------------------COLLABORAZIONI----------------------------------*/
 
@@ -209,7 +215,13 @@
     .aurora{
       display: none;
     }
-
+    .titolo{
+      font-size: 24pt;
+      text-align: center;
+    }
+    #form_text{
+      display: none;
+    }
     #descrizione img {
       width: 30%;
       margin-right: 2%;
@@ -229,6 +241,13 @@
     #formid{
       display: none;
     }
+    #testo_pulsante_form{
+      display: none;
+    }
+    #testo_pulsante_mail{
+      display: none;
+    }
+   
 
   /* ------------ REGISTRAZIONE ------------------------------------ */
 
@@ -239,5 +258,25 @@
   .login-content a{
     color: black;
   }
-
+/* --------------------------- ADMIN ------------------------------------ */
+.adminbutton{
+  display: none;
+}
+.admintext{
+  display: none;
+}
+/* --------------------------- GESTIONE-ADMIN ------------------------------------ */
+.invisibleprint{
+  display: none;
+}
+/* --------------------------- MODIFICA MISSIONE ------------------------------------ */
+.buttonmodificamissione{
+  display: none;
+}
+#printinvia{
+  display: none;
+}
+.scrittemodificamissione, .buttoninputmodificamissione{
+  font-size: 16pt;
+}
 }

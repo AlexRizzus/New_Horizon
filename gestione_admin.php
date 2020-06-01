@@ -30,17 +30,17 @@ if(isset($_SESSION['livello'])){
             $contatore++;
             $stringa_missioni .= '<div class="amministratore-box" >
             <h2 class="nomemissione"> Nome missione: "' . $valore["nome"] . '"</h2>
-            <form action="gestione_admin.php" method="post">
+            <form class="invisibleprint" action="gestione_admin.php" method="post">
               <fieldset>
-              <input type="hidden" name="nome" value="' . $valore['nome'] . '"/>
-              <button tabindex="' . $contatore . '" type="submit" name="deleteMission" >
+              <input class="invisibleprint" type="hidden" name="nome" value="' . $valore['nome'] . '"/>
+              <button class="invisibleprint" tabindex="' . $contatore . '" type="submit" name="deleteMission" >
                 <img src="' . $icon_del. '" alt="icona cancellazione non trovata" title="icona cancellazione"/>
               </button>
           </fieldset>
-          </form><form action="modifica_missione.php" method="post">
+          </form><form class="invisibleprint" action="modifica_missione.php" method="post">
             <fieldset>
-              <input type="hidden" name="nome" value="' . $valore['nome'] . '"/>
-              <button tabindex= "' . $contatore++ . '" type="submit" name="updateMission" >
+              <input class="invisibleprint" type="hidden" name="nome" value="' . $valore['nome'] . '"/>
+              <button class="invisibleprint" tabindex= "' . $contatore++ . '" type="submit" name="updateMission" >
                 <img src="' . $icon_mod. '" alt="icona modifica non trovata" title="icona modifica"/>
               </button>
             </fieldset> 
