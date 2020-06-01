@@ -6,11 +6,37 @@ function resetPosition(id) {
   elmnt.scroll(0, 1000);
 }
 
+var actual_pos = null;
+
 const btnScrollToTop = document.getElementById("btnScrollToTop");
 btnScrollToTop.onclick = function(evt){window.scrollTo(0,0);};
 
-/*const btnPrefe = document.getElementByClass("button_prefe");
-btnPrefe.onclick = function(evt){alert("Missione aggiunta correttamente ai preferiti!");};*/
+
+var forms = document.getElementsByClassName("missionform");
+
+for (var i = 0, len = forms.length; i < len; i++) {
+  forms[i].addEventListener('submit', handleForm);
+}
+
+//var testForm = document.getElementById("missionForm1");
+//testForm.addEventListener('submit', handleForm);
+
+function handleForm(event) {
+  // event.preventDefault();
+  localStorage.setItem("actual_pos", document.documentElement.scrollTop);
+  // window.alert(localStorage.getItem("actual_pos"));
+  // testForm.submit();
+}
+
+window.onload = function(){
+  // window.alert(localStorage.getItem("actual_pos"));
+  window.scrollTo(localStorage.getItem("actual_pos"), localStorage.getItem("actual_pos"));
+}
+
+/*const gogo = document.getElementById("missionForm1");
+gogo.onsubmit = function(evt){window.scrollTo(100,100);return false;};*/
+
+// btnPrefe.onclick = function(evt){alert("Missione aggiunta correttamente ai preferiti!");};
 
 let toggled = false;
 const nav = document.getElementsByClassName('navigation')[0];

@@ -1,7 +1,7 @@
 <?php
 
 class DBAccess{
-  const HOST_DB = 'localhost';
+  const HOST_DB = 'localhost:3306';
   const USERNAME = 'root';
   const PASSWORD = '';
   const DATABASE_NAME = 'my_meowhorizon';
@@ -176,7 +176,6 @@ public function test_input($data) {
 public function modifica_nome($chiave, $valore){
   $query= "UPDATE Missioni set nome= '$valore' where nome = '$chiave'";
   $queryResult=mysqli_query($this->connection, $query);
-  echo('eseguita');
 }
 public function modifica_data_inizio($chiave, $valore){
   $query= "UPDATE Missioni set data_inizio= '$valore' where nome = '$chiave'";
@@ -187,7 +186,7 @@ public function modifica_data_fine($chiave, $valore){
   $queryResult=mysqli_query($this->connection, $query);
 }
 public function modifica_stato($chiave, $valore){
-  $query= "UPDATE Missioni set data_fine= '$valore' where nome = '$chiave'";
+  $query= "UPDATE Missioni set stato= '$valore' where nome = '$chiave'";
   $queryResult=mysqli_query($this->connection, $query);
 }
 public function modifica_affiliazioni($chiave, $valore){

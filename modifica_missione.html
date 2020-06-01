@@ -28,20 +28,20 @@
                 <ul class="breadcrumb">
                   <li><a href="login.php"> → Profilo</a></li>
                   <li><a href="gestione_admin.php"> → Gestione amministratore</a></li>
-                  <li> → Modifica missione</li>
+                  <li> &#8594; Modifica missione</li>
                 </ul>
               </div>
             </div>
                   <!-- bottone per chiudere la navigation mobile -->
             <a class="nav-tgl" title="menu">&equiv;</a>
         <div class="modifica-content">
-            <h1>Modifica la missione</h1>
+            <h1 id="titlemodificamissione">Modifica la missione</h1>
             <form action="modifica_missione.php" method="post">
-                 <campiDati/>
-                 <prova/>
+              <p id="campiDati"></p>
+              <p id="aftersend"></p>
                </form>
-               <p>Cliccando su Invia modifichi la missione con i valori che hai inserito</p>
-               <button tabindex="9" onclick="location.href='gestione_admin.php'">Ritorna alle missioni</button>
+               <p class="scrittemodificamissione">Cliccando su Invia modifichi la missione con i valori che hai inserito</p>
+               <button class="buttonmodificamissione" type="button" tabindex="9" onclick="location.href='gestione_admin.php'">Ritorna alle missioni</button>
         </div>
         <div id="footer">
             <p class="validation">

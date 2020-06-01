@@ -37,8 +37,6 @@
       display: none;
   }
 
-
-  /*--------------ESPLORAZIONI------------------------------------------*/
   #dida
   {
     display: none;
@@ -52,16 +50,23 @@
     display: none;
   }
 
-  #esplorazInput {
+  #search_section {
     display: none;
   }
 
-  #esplorazFilterBtn {
+  #cerca_missione {
+    display: none;
+  }
+
+  #pulsante_cerca_pianeta {
     disply: none;
   }
 
+  .missionform {
+    display: none;
+  }
 
-  #esplorazResetFilterBtn {
+  #pulsante_cerca_tutte {
     display: none;
   }
 

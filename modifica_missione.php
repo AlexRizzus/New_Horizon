@@ -14,14 +14,18 @@ if(isset($_SESSION['livello'])){
             $missione = $_POST['nome'];
             $missioni=[];
             $missioni=$oggettoConnessione->getMissioni_perNome($missione);
-            $stringa='<fieldset><legend>Missione:</legend>Nome: <input tabindex="1" type="text" name="nome" value="'. $missioni[0]['nome'] .'"></nome><br>
-            Data inizio: <input tabindex="2" type="text" name="data_inizio" value="'. $missioni[0]['data_inizio'] .'"></Data inizio><br>
-            Data di fine: <input tabindex="3" type="text" name="data_fine" value="'. $missioni[0]['data_fine'] .'"></Data di fine><br>
-            Stato: <input tabindex="4" type="text" name="stato" value="'. $missioni[0]['stato'] .'"></Stato><br>
-            Affiliazioni: <input tabindex="5" type="text" name="affiliazioni" value="'. $missioni[0]['affiliazioni'] .'"></Affiliazioni><br>
-            Luogo: <input tabindex="6" type="text" name="destinazione" value="'. $missioni[0]['destinazione'] .'"></Luogo><br>
-            Scopo: <input tabindex="7" type="text" name="scopo" value="'. $missioni[0]['scopo'] .'"></Scopo></fieldset><br><br><input type="hidden" value="'.$missione.'" name="key"><input tabindex="8" type="submit" value="Invia" name="change">';
-            $paginaHTML=str_replace("<campiDati/>",$stringa, $paginaHTML);
+            $stringa='<fieldset class="scrittemodificamissione"><legend class="scrittemodificamissione">Missione:</legend>Nome: <input class="buttoninputmodificamissione" tabindex="1" type="text" name="nome" value="'. $missioni[0]['nome'] .'"/><br/>
+            Data inizio: <input class="buttoninputmodificamissione" tabindex="2" type="text" name="data_inizio" value="'. $missioni[0]['data_inizio'] .'"/><br/>
+            Data di fine: <input class="buttoninputmodificamissione" tabindex="3" type="text" name="data_fine" value="'. $missioni[0]['data_fine'] .'"/><br/>
+            Stato: <input class="buttoninputmodificamissione" tabindex="4" type="text" name="stato" value="'. $missioni[0]['stato'] .'"/><br/>
+            Affiliazioni: <input class="buttoninputmodificamissione" tabindex="5" type="text" name="affiliazioni" value="'. $missioni[0]['affiliazioni'] .'"/><br/>
+            Luogo: <input class="buttoninputmodificamissione" tabindex="6" type="text" name="destinazione" value="'. $missioni[0]['destinazione'] .'"/><br/>
+            Scopo: <input class="buttoninputmodificamissione" tabindex="7" type="text" name="scopo" value="'. $missioni[0]['scopo'] .'"/><br/>
+        </fieldset>
+        <div>
+        <input type="hidden" value="'.$missione.'" name="key"/>
+        <button class="buttonmodificamissione" tabindex="8" type="submit" value="Invia" name="change">Invia</button></div>';
+            $paginaHTML=str_replace('<p id="campiDati"></p>',$stringa, $paginaHTML);
             echo($paginaHTML);
 
 
@@ -51,7 +55,7 @@ if(isset($_SESSION['livello'])){
             $stringa2='<p>Modifiche inviate</p>';
             $stringa3='<p>Puoi tornare alla selezione missioni</p>';
             $paginaHTML = file_get_contents('modifica_missione.html');
-            $paginaHTML=str_replace("<prova/>",$stringa2, $paginaHTML);
+            $paginaHTML=str_replace('<p id="aftersend"></p>',$stringa2, $paginaHTML);
             $paginaHTML=str_replace("<p>Cliccando su Invia modifichi la missione con i valori che hai inserito</p>",$stringa3, $paginaHTML);
             echo($paginaHTML);
         }

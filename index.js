@@ -58,7 +58,7 @@ function validateRegistration(){
   psw = isPassword(password);
   if(!psw)
   {
-    displayerror(errpsw,"Prova con una password più complessa");
+    displayerror(errpsw,"Prova con una password pi&ugrave; complessa");
   }
   email = document.forms["registrazione"]["email"].value;
   email = isEmail(password);

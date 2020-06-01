@@ -28,7 +28,7 @@
             <button onclick="location.href='contattaci.php'" class="desktop button5">Contattaci</button>
             <button onclick="location.href='login.php'" class="desktop button6" xml:lang="en">Login</button>
             <ul class="breadcrumb">
-              <li> → Esplorazioni</li>
+              <li> &#8594; Esplorazioni</li>
             </ul>
           </div>
         </div>
@@ -38,16 +38,17 @@
       <h1>MISSIONI</h1>
 
       <form id="search" action="esplorazioni.php" method="get">
-      <fieldset>
+      <fieldset id="esplFieldset">
       <legend id="esplorazLegend">Cerca nel sito</legend>
-      <input id="esplorazInput" type="text" onfocus="myFocusFunction(this)" onblur="myBlurFunction(this)" id="cerca_missione" name="Nome_del_pianeta" value="cerca pianeta…">
-      <button id="esplorazFilterBtn" tabindex="3" type="submit" name="submit" id="pulsante_cerca_pianeta"><img src="images/cerca.png" alt="Cerca" title="avvia la ricerca"></button>
-      <p id="filtro_scritta">Filtro attuale: </p>
-      <actualFilterHere/>
-      <button id="esplorazResetFilterBtn" tabindex="4" type="submit" name="submitAnnullaFiltro" id="pulsante_cerca_tutte">Annulla filtro di ricerca</button>
+      <div id="search_section">
+        <input type="text" onfocus="myFocusFunction(this)" onblur="myBlurFunction(this)" id="cerca_missione" name="Nome_del_pianeta" value="cerca pianeta…"></input>
+        <button tabindex="3" type="submit" name="submit" id="pulsante_cerca_pianeta"><img src="images/cerca.png" id="search_img" alt="Cerca" title="avvia la ricerca"/></button>
+      </div>
+      <p id="filtro_scritta">Filtro attuale: <actualFilterHere/></p>
+      <button tabindex="4" type="submit" name="submitAnnullaFiltro" id="pulsante_cerca_tutte">Annulla filtro di ricerca</button>
       </fieldset>
       </form>
-      <p id="dida">cerca un pianeta per visualizzare solamente le missioni con quella destinazione</p>
+      <p id="dida">cerca un luogo per visualizzare solamente le missioni con quella destinazione</p>
       <planetNotFound></planetNotFound>
       <missionsHere/>
       </div>
@@ -69,7 +70,6 @@
         <div class="social"><p>  Seguici su: <img src="images/twitter.png" class="footer-icon" alt="twitter logo"/><img src="images/facebook.png" class="footer-icon" alt="facebook logo"/><img src="images/instagram.png" class="footer-icon" alt="instagram logo"/></p>
         </div>
       </div>
-      <posscript></posscript>
       <script type="text/javascript" src="esplorazioni.js"></script>
   </body>
   </html>

@@ -75,7 +75,7 @@ if($connessioneOK)
         }
         else
         {
-          $paginaHTML = str_replace("<erroreUsername/>","<span class='error'>Questo username esiste già</span>", $paginaHTML);
+          $paginaHTML = str_replace("<erroreUsername/>","<span class='error'>Questo username esiste gi&agrave;</span>", $paginaHTML);
         }
         echo($paginaHTML);
         }

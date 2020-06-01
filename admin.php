@@ -12,8 +12,8 @@ if(isset($_SESSION['livello'])){
         $occupazione=$_SESSION['occupazione'];
 
         $paginaHTML = str_replace("<span></span>","<span>".$username."</span>", $paginaHTML);
-        $paginaHTML = str_replace('<email class="campidatiadmin"></email>','<p class="campidatiadmin">'.$email.'</p>', $paginaHTML);
-        $paginaHTML = str_replace('<occupazione class="campidatiadmin"></occupazione>','<p class="campidatiadmin">'.$occupazione.'</p>', $paginaHTML);
+        $paginaHTML = str_replace('<p id="email" ></p>','<p class="campidatiadmin">'.$email.'</p>', $paginaHTML);
+        $paginaHTML = str_replace('<p id="occupazione" ></p>','<p class="campidatiadmin">'.$occupazione.'</p>', $paginaHTML);
         echo($paginaHTML);
     }else{
         header('Location: utente.php');

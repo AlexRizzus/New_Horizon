@@ -6,7 +6,7 @@
 <title>Contattaci | New Horizon</title>
 <meta name="title" content="contatti con New Horizon" />
 <meta name= "description" content="contacts with New Horizon s.p.a. company"/>
-<meta name= "keywords" content = "New, Horizon, New Horizon, Universtià, Space, Spazio, Contattaci, Visita, Telescopio, Scuole"/>
+<meta name= "keywords" content = "New, Horizon, New Horizon, Universti&agrave;, Space, Spazio, Contattaci, Visita, Telescopio, Scuole"/>
 <meta name="language" content="italian it"/>
 <meta name="author" content="Alessandro Rizzo, Emanuele Cisotto, Davide Lazzaro e Paolo Scialpi"/>
 <link href="style-large.css" rel="stylesheet" type="text/css" media="all" />
@@ -28,7 +28,7 @@
           <button onclick="location.href='contattaci.php'" class="position desktop button5" disabled="disabled">Contattaci</button>
           <button onclick="location.href='login.php'" class="desktop button6" xml:lang="en">Login</button>
           <ul class="breadcrumb">
-            <li> → Contattaci</li>
+            <li> &#8594; Contattaci</li>
           </ul>
         </div>
       </div>
@@ -45,18 +45,20 @@
         <p class="testo_generico_contattaci" id="testo_social">Seguici sui social pi&ugrave; popolari per restare aggiornato sulle nostre attivit&agrave; o per vedere spettacolari immagini catturate dalle nostre sonde </p>
         <img class="logo_social" id="immagine_insta" src="images/instagram.png" alt="link per instagram" onclick="location.href='https://www.instagram.com/'"/>
         <img class="logo_social" id="immagine_face" src="images/facebook.png" alt="link per facebook" onclick="location.href='https://www.facebook.com/'"/>
-        <img class="logo_social" id="immagine_twit" src="images/twitter.png" alt="link per twitter" onclick="location.href='https://www.twitter.com/'"/>
+        <img class="logo_social" id="immagine_twit" src="images/Twitter.png" alt="link per twitter" onclick="location.href='https://www.twitter.com/'"/>
         <p class="testo_generico_contattaci" id="testo_foto_social" >Ecco alcuni dei nostri scatti migliori</p>
-        <img class="foto_social" id="foto_social1" src="images/foto_social11.jpg" alt="foto spazio profondo"/>
+        <img class="foto_social" id="foto_social1" src="images/foto_social1.jpg" alt="foto spazio profondo"/>
         <img class="foto_social" id="foto_social2" src="images/foto_social2.jpg" alt="foto nebulosa"/>
-        <img class="foto_social" id="foto_social3" src="images/foto_social33.jpg" alt="foto galassia"/>
+        <img class="foto_social" id="foto_social3" src="images/foto_social3.jpg" alt="foto galassia"/>
         <p class="testo_generico_contattaci" id="form_text">Utilizza questa <span xml:lang="en">form</span> per contattarci, ti risponderemo il prima possibile, il nostro messaggio ti arriver&agrave;
         direttamente nella tua casella di posta elettronica</p>
-      <sostituto id='formid'></sostituto>
+        <p id="sostituto"></p>
     </div>
-    <button name="torna su" title="torna su" id ="btnScrollToTop" alt="freccia su">
-    <img id=frecciasu src="images/frecciaup.jpg" alt="freccia su"></img>
-    </button>
+    <div>
+      <button name="torna su" title="torna su" id ="btnScrollToTop">
+      <img id="frecciasu" src="images/frecciaup.jpg" alt="freccia su"/>
+      </button>
+    </div>
       <div id="footer">
         <p class="validation">
           <a href="http://validator.w3.org/check?uri=referer">
@@ -65,13 +67,11 @@
         <p class ="info"><span xml:lang="en">New Horizon</span><br/> con la collaborazione di:<br/>Cisotto Emanuele, Lazzaro Davide, Rizzo Alessandro, Scialpi Paolo</p>
         <p id="validation2">
         <a href="http://jigsaw.w3.org/css-validator/check/referer">
-            <img style="border:0;width:88px;height:31px"
-                src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
-                alt="CSS Valido!" />
+            <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valido!" />
             </a>
             </p>
       </div>
-      <scriptalert></scriptalert>
+      <p id="scriptalert"></p>
       <script  src="index.js" type="text/javascript"></script>
     </body>
     </html>
