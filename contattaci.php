@@ -25,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['invio']))
         $paginaHTML=str_replace('<p class="errorEmail"></p>',$reqEmail, $paginaHTML);   
     }
     if(empty($_POST["testo"])){
-        $reqTesto = '<p class="errorTextArea">Il testo non può essere vuoto</p>';
+        $reqTesto = '<p class="errorTextArea">Il testo non pu&ograve; essere vuoto</p>';
         $paginaHTML=str_replace('<p class="errorTextArea"></p>',$reqTesto, $paginaHTML);
     }
     else{

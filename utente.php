@@ -41,11 +41,11 @@ $connessioneOK=$oggettoConnessione->openDBConnection();
         echo($paginaHTML);
     }
     else {
-      // non è un utente, ridireziona alla pagina admin
+      // non &egrave; un utente, ridireziona alla pagina admin
       header('Location: admin.php');
     }
   }
   else {
-    // non è autenticato, ridireziona alla pagina login
+    // non &egrave; autenticato, ridireziona alla pagina login
     header('Location: login.php');
   }
