@@ -48,8 +48,8 @@ insert into Utenti(username, psswd, sesso, e_mail, occupazione, livello) values
 insert into Missioni(nome, data_inizio, data_fine, stato, affiliazioni, destinazione, scopo) values
 	('Andromeda 1','2024-04-05' ,null , 'in preparazione', 'Nasa, Esa', 'Marte', 'stabilire una base operativa'),
 		('Andromeda 2',null ,null ,'in preparazione' , 'Nasa, Esa, Unipd', 'Marte', 'studio e raccolta di materiali preziosi da Marte'),
-		('AndromedaX 2',null ,null ,'in preparazione' , 'Nasa, Esa', 'Marte', 'rendere Marte non ostile all&#8217 uomo'),
-		('AndromedaX 3',null ,null ,'in preparazione' , 'Nasa, Esa', 'Marte', 'rendere Marte abitabile dall&#8217 uomo'),
+		('AndromedaX 2',null ,null ,'in preparazione' , 'Nasa, Esa', 'Marte', 'rendere Marte non ostile all&apos; uomo'),
+		('AndromedaX 3',null ,null ,'in preparazione' , 'Nasa, Esa', 'Marte', 'rendere Marte abitabile dall&apos; uomo'),
 		('Venera 1', '1961-02-12', '1961-02-19', 'fallita', 'Nasa, Asi, Cnsa', 'Venere', 'prima prova di una sonda per raggiungere Venere'),
 		('Mariner 1','1962-07-22', '1962-07-22', 'fallita', 'Nasa, Asi, Cnsa', 'Venere', 'seconda prova di una sonda per raggiungere Venere'),
 		('Mariner 2','1962-08-27', '1962-12-14', 'terminata', 'Nasa, Asi, Cnsa', 'Venere', 'raccolta di informazioni sul pianeta Venere'),
