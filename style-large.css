@@ -10,7 +10,7 @@ body {
   font-family: 'Oswald', sans-serif;
   color: #d3d3d3;
 }
-.navigation {
+#navigation {
   margin-top: -0.3em;
   padding: 0em;
   margin-bottom: -1em;
@@ -20,7 +20,7 @@ body {
   top:0;
   z-index: 2;
 }
-.navigation button {
+#navigation button {
   color: white;
   border:none;
   background-color: #002125;
@@ -34,7 +34,7 @@ body {
   font-family: 'Oswald', sans-serif;
   transition-duration: 0.5s;
 }
-.navigation button:hover{
+#navigation button:hover{
   background-color: #003135;
 }
 #mobile_menu{
@@ -45,7 +45,7 @@ body {
   display: none;
 }
 
-.navigation .position {
+#navigation .position {
   color: #002125;
   background-color: #d3d3d3;
   border:none;
@@ -59,7 +59,7 @@ body {
   font-size: 1.4em;
   font-family: 'Oswald', sans-serif;
 }
-.navigation .position:hover {
+#navigation .position:hover {
   font-size:1.4em;
   background-color:#d3d3d3;
 }

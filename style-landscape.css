@@ -6,173 +6,52 @@
     background-image: linear-gradient(to bottom, #000206, #00444C);
     font-family: 'Oswald', sans-serif;
     color: #d3d3d3;
+    min-width: fit-content;
   }
   .navigation {
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
-    grid-template-areas: '. . . a''. z b .''. c d .''. e f .''. g g .';
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 5%;
-    grid-row-gap: 8%;
-    opacity: 0.9;
-    position: fixed;
-    width:100%;
-    z-index:1;
-    justify-content: center;
-    height: 10%;
-    background-color: #000;
-    transition: all 0.8s ease-out, background 1s ease-out;
-    transition-delay: 0.05s;
+    margin-top: -0.3em;
+    padding: 0em;
+    height: 3.2em;
+    width: 100%;
+    background-color: #002125;
+    position: sticky;
+    top:0;
   }
-  .navigation .desktop{
-    opacity: 0;
-    margin-bottom: 2em;
-    border: 0;
-    color:transparent;
-    width:100%;
-    height:8em;
-    transition: opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  }
-  .navigation .button0{
-    background:url(images/icons8-casa-96.png) no-repeat;
-    grid-area: z;
-    transition-delay: 0.4s;
-  }
-  .navigation .button1{
-    grid-area: b;
-    transition-delay: 0.4s;
-  }
-  .navigation .button2{
-    grid-area: c;
-    transition-delay: 0.2s;
-  }
-  .navigation .button3  {
-    grid-area: d;
-    transition-delay: 0.2s;
-  }
-  .navigation .button4{
-    grid-area: e;
-    transition-delay: 0.15s;
-  }
-  .navigation .button5{
-    grid-area: f;
-    transition-delay: 0.15s;
-  }
-  .navigation .button6  {
-    grid-area: g;
-    transition-delay: 0.05s;
-  }
-  .active.button0{
-    grid-area: z;
-    transition-delay: 0.35s;
-  }
-  .navigation.active .button1{
-    grid-area: b;
-    transition-delay: 0.35s;
-  }
-  .navigation.active .button2{
-    grid-area: c;
-    transition-delay: 0.55s;
-  }
-  .navigation.active .button3  {
-    grid-area: d;
-    transition-delay: 0.55s;
-  }
-  .navigation.active .button4{
-    grid-area: e;
-    transition-delay: 0.75s;
-  }
-  .navigation.active .button5{
-    grid-area: f;
-    transition-delay: 0.75s;
-  }
-  .navigation.active .button6  {
-    grid-area: g;
-    transition-delay: 0.9s;
+  .navigation button {
+    color: white;
+    border:none;
+    background-color: #002125;
+    float:left;
+    padding: 0em;
+    margin: 0em;
+    text-align: center;
+    height: 2.6em;
+    width: 14.285%;
+    font-size: 1.2em;
+    font-family: 'Oswald', sans-serif;
   }
 
-.nav-tgl {
-  grid-area: a;
-  margin-top: 10%;
-  margin-left: 22%;
-  display: inline-block;
-  width: 4em;
-  height: 4em;
-  z-index: 1;
-  border: none;
-  border-radius: 50%;
-  padding: 0;
-  background: #fff;
-  text-align: center;
-}
-.nav-tgl > span {
-  display: inline-block;
-  position: relative;
-  height: 2px;
-  width: 34px;
-  border-radius: 1px;
-  background: #293335;
-  vertical-align: middle;
-}
-.nav-tgl  span:before, .nav-tgl  span:after {
-  display: inline-block;
-  position: absolute;
-  content: "";
-  height: 2px;
-  border-radius: 1px;
-  background: #293335;
-  transition: all 200ms;
-}
-.nav-tgl  span:before {
-  top: -11px;
-  left: 3px;
-  width: 28px;
-}
-.nav-tgl  span:after {
-  top: 11px;
-  left: 6px;
-  width: 22px;
-}
-.nav-tgl:focus {
-  outline: none;
-}
-.nav-tgl:hover  span:after, .nav-tgl:hover  span:before {
-  width: 34px;
-  left: 0;
-}
-.nav-tgl.toggled  span {
-  height: 0;
-}
-.nav-tgl.toggled  span:after, .nav-tgl.toggled  span:before {
-  top: 0px;
-  left: 0;
-  width: 34px;
-}
-.nav-tgl.toggled > span:after {
-  transform: rotate(-45deg);
-}
-.nav-tgl.toggled > span:before {
-  transform: rotate(45deg);
-}
-.nav-tgl.toggled {
-  background-color: #fff;
-}
+  .navigation .position {
+    color: #002125;
+    background-color: #d3d3d3;
+    border:none;
+    float:left;
+    font-weight: bold;
+    padding: 0em;
+    margin: 0em;
+    text-align: center;
+    height: 2.6em;
+    width: 14.285%;
+    font-size: 1.2em;
+    font-family: 'Oswald', sans-serif;
+  }
+  .nav-tgl{
+  display: none;
+  }
 
-.active.navigation {
-  height:100%;
-  opacity: 1;
-  transition: all 0.6s ease-in, background 1s ease-in;
-  transition-delay: 0.05s;
-}
-.active.desktop{
-  margin-bottom: 2em;
-  border: 0;
-  color:transparent;
-  background-position: center;
-  width:100%;
-  height:8em;
-  opacity: 1;
-}
+  .breadcrumb {
+  display: none;
+  }
 
   #footer {
     display: grid;
@@ -212,6 +91,11 @@
 
   #btnScrollToTop{
       display: none;
+  }
+
+  /*-----------------HOME----------------------------------------------*/
+  #background{
+    display: none;
   }
 
   /*-----------------CHI SIAMO----------------------------------------------*/
