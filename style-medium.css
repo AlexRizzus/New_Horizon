@@ -543,6 +543,7 @@ z-index: -1;
 text-align: center;
 }
 .aurora{
+background-image: image();
 width: 100%;
 filter: blur(8px);
 -webkit-filter: blur(8px);
@@ -592,7 +593,6 @@ padding-right: 1.5em;
 text-shadow: 2px 2px 4px #000000;
 box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
 max-width: 60%;
-
 }
 .pulsanti_contattaci{
 max-height: 30%;
@@ -636,7 +636,7 @@ max-width: 10%;
 }
 #foto_social1, #foto_social2, #foto_social3{
 margin-left: 15%;
-width: 60%;
+width: 30%;
 position: relative;
 left: 5%;
 }
@@ -1018,16 +1018,15 @@ align-self: center;
 /* --------------- ADMIN------------------------- */
 .admin-content{
   position: relative;
-  left: 20%;
-  right: 40%;
-  max-width: 50%;
+  left:5%;
+  max-width: 70%;
   background-color: #d3d3d3;
   color: #002125;
   border: 0.2em solid #002125;
   border-radius: 0.3em;
   padding: 0.3em;
   margin:3em;
-  font-size: calc(1vw + 0.4vh + 0.4vmin);
+  font-size: calc(1.5vw + 0.8vh + 0.8vmin);
   text-align: center;
 }
 .adminbutton {
