@@ -8,7 +8,6 @@ body {
   background-color: #001115;
   font-family: 'Oswald', sans-serif;
   color: #d3d3d3;
-  min-width: fit-content;
 }
 #navigation {
   margin-top: -0.3em;
@@ -538,24 +537,6 @@ grid-template-areas:  'c  .'
   }
 
 /*----------------------------CONTATTACI----------------------------------*/
-.navigation {
-margin-top: -0.3em;
-padding: 0em;
-height: 3.2em;
-width: 100%;
-background-color: #002125;
-position: sticky;
-top:0;
-margin-bottom: 1em;
-z-index: 2;
-}
-body {
-padding:0em;
-margin:0em;
-background-image: linear-gradient(to bottom, #0d0d0d, #00444C);
-font-family: 'Oswald', sans-serif;
-color: #d3d3d3;
-}
 .header{
 position: relative;
 z-index: -1;

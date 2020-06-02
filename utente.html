@@ -15,7 +15,7 @@
     <link href="style-print.css" rel="stylesheet" type="text/css" media="print" />    <link href="https://fonts.googleapis.com/css?family=Oswald:500&amp;display=swap" rel="stylesheet"/>
   </head>
   <body>
-    <div id="utente">
+    <div id="admin">
       <div id="navigation">
         <div id="navigation-content">
                 <button onclick="location.href='index.php'"  class = "desktop button0" xml:lang="en">Home</button>
@@ -27,20 +27,22 @@
                 <button onclick="location.href='login.php'" class = "position desktop button6" xml:lang="en">Login</button>
                 <ul class="breadcrumb">
                   <li> &#8594; Profilo</li>
-                </ul></div>
-        <div class="utente-content">
-            <h1 class="testo-amministrazione">BENVENUTO UTENTE</h1>
-            <p class="testo-amministrazione">Il tuo <span xml:lang="en">username</span>:</p>
-            <username/>
-            <p class="testo-amministrazione">La tua <span xml:lang="en">e-mail</span>:</p>
-            <email/>
-            <br/>
-            <form action="logout.php" method="post">
-              <div>
-              <button type="submit" class="transparent" name="logout"> <img src="images/logout.png" alt="pulsante logout"/> </button>
+                </ul>
               </div>
-            </form>
-        </div>
+            </div>
+                  <!-- bottone per chiudere la navigation mobile -->
+            <a class="nav-tgl" title="menu">&equiv;</a>
+                <div class="admin-content">
+                    <h1 >Bentornato <span><username/></span></h1>
+                    <p>La tua <span xml:lang="en">e-mail</span>:</p>
+                    <p class="campidatiadmin" ><email/></p>
+                    <p class="admintext">Esegui il <span xml:lang="en">logout</span></p>
+                    <form action="logout.php" method="post">
+                      <div>
+                      <button class="adminbutton" type="submit" name="logout"> <img src="images/logout.png" alt="pulsante logout"/> </button>
+                      </div>
+                    </form>
+                </div>
         <p class="testo-amministrazione" >Ecco le tue spedizioni preferite:</p>
         <tabellapreferiti/>
         <div id="footer">
