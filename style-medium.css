@@ -538,18 +538,7 @@ grid-template-areas:  'c  .'
   }
 
 /*----------------------------CONTATTACI----------------------------------*/
-.navigation {
-margin-top: -0.3em;
-padding: 0em;
-height: 3.2em;
-width: 100%;
-background-color: #002125;
-position: sticky;
-top:0;
-margin-bottom: 1em;
-z-index: 2;
-}
-body {
+body{
 padding:0em;
 margin:0em;
 background-image: linear-gradient(to bottom, #0d0d0d, #00444C);
@@ -562,6 +551,7 @@ z-index: -1;
 text-align: center;
 }
 .aurora{
+background-image: image();
 width: 100%;
 filter: blur(8px);
 -webkit-filter: blur(8px);
@@ -611,7 +601,6 @@ padding-right: 1.5em;
 text-shadow: 2px 2px 4px #000000;
 box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
 max-width: 60%;
-
 }
 .pulsanti_contattaci{
 max-height: 30%;
@@ -655,7 +644,7 @@ max-width: 10%;
 }
 #foto_social1, #foto_social2, #foto_social3{
 margin-left: 15%;
-width: 60%;
+width: 30%;
 position: relative;
 left: 5%;
 }

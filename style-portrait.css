@@ -421,6 +421,7 @@
   text-align: center;
 }
 .aurora{
+  background-image: image();
   width: 100%;
   filter: blur(8px);
   -webkit-filter: blur(8px);
