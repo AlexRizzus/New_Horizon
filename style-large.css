@@ -444,6 +444,7 @@ body {
   text-align: center;
 }
 .aurora{
+  background-image: image();
   width: 100%;
   filter: blur(8px);
   -webkit-filter: blur(8px);
@@ -1179,7 +1180,7 @@ body {
   border-radius: 0.3em;
   padding: 0.3em;
   margin:3em;
-  font-size: calc(1vw + 0.4vh + 0.4vmin);
+  font-size: calc(1.2vw + 0.8vh + 0.8vmin);
   text-align: center;
 }
 .adminbutton {

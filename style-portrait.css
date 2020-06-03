@@ -6,7 +6,6 @@
     background-image: linear-gradient(to bottom, #000206, #00444C);
     font-family: 'Oswald', sans-serif;
     color: #d3d3d3;
-    min-width: fit-content;
   }
   /* The Overlay (background) */
 #navigation {
@@ -421,6 +420,7 @@
   text-align: center;
 }
 .aurora{
+  background-image: image();
   width: 100%;
   filter: blur(8px);
   -webkit-filter: blur(8px);
@@ -1080,5 +1080,36 @@
       color:#002125;
       border: 0.1em solid #002125;
     }
-
+    .admin-content{
+      position: relative;
+      max-width: 90%;
+      background-color: #d3d3d3;
+      color: #002125;
+      border: 0.2em solid #002125;
+      border-radius: 0.3em;
+      padding: 0.3em;
+      margin:3em;
+      font-size: calc(2vw + 1vh + 1vmin);
+      text-align: center;
+    }
+    .adminbutton {
+      background-color: #d3d3d3;
+      color: #002125;
+      border: 0.2em solid #002125;
+      border-radius: 0.3em;
+      padding: 0.3em;
+      margin:0em;
+      font-size: 0.8em;
+      transition-duration: 0.4s;
+      font-weight: bold;
+      margin-top: 0.5em;
+    }
+    .campidatiadmin{
+      background-color:#002125;
+      color:#d3d3d3;
+      border-radius: 0.3em;
+      padding: 0.3em;
+      margin:0em;
+      font-size: calc(2vw + 1vh + 1vmin);
+    }
 }

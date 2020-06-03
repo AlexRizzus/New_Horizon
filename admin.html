@@ -15,11 +15,9 @@
     <link href="style-print.css" rel="stylesheet" type="text/css" media="print" />    <link href="https://fonts.googleapis.com/css?family=Oswald:500&amp;display=swap" rel="stylesheet"/>
   </head>
   <body>
-    <div id="admin">
-        <div class="navigation">
-        <button class="nav-tgl" type="button" >
-            <span ></span>
-        </button>
+    <body>
+      <div id="navigation">
+        <div id="navigation-content">
                 <button onclick="location.href='index.php'"  class = "desktop button0" xml:lang="en">Home</button>
                 <button onclick="location.href='esplorazioni.php'" class = "desktop button1">Esplorazioni</button>
                 <button onclick="location.href='about.html'" class = "desktop button2">Chi siamo</button>
@@ -30,7 +28,10 @@
                 <ul class="breadcrumb">
                   <li> &#8594; Profilo</li>
                 </ul>
-        </div>
+              </div>
+            </div>
+                  <!-- bottone per chiudere la navigation mobile -->
+            <a class="nav-tgl" title="menu">&equiv;</a>
         <div class="admin-content">
             <h1 >Bentornato <span></span></h1>
             <p>La tua <span xml:lang="en">e-mail</span>:</p>
