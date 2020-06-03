@@ -537,9 +537,12 @@ grid-template-areas:  'c  .'
   }
 
 /*----------------------------CONTATTACI----------------------------------*/
+#navigation{
+  z-index: 2;
+}
 .header{
 position: relative;
-z-index: -1;
+margin-top: 2.7em;
 text-align: center;
 }
 .aurora{
@@ -593,6 +596,7 @@ padding-right: 1.5em;
 text-shadow: 2px 2px 4px #000000;
 box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
 max-width: 60%;
+
 }
 .pulsanti_contattaci{
 max-height: 30%;
@@ -636,7 +640,7 @@ max-width: 10%;
 }
 #foto_social1, #foto_social2, #foto_social3{
 margin-left: 15%;
-width: 30%;
+width: 60%;
 position: relative;
 left: 5%;
 }
