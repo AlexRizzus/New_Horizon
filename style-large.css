@@ -148,6 +148,8 @@ body {
   width: 3.5em;
   height: 3.5em;
   border-radius: 50%;
+  background-image: url('images/frecciaup.jpg');
+  background-size: 3.5em;
 }
 
 /*------------------------HOME PAGE-------------------------------------------------------------*/
@@ -338,6 +340,8 @@ body {
   margin: 0.5em;
   color: white;
 }
+
+
 
 .icon{
   max-width: 1.75em;
