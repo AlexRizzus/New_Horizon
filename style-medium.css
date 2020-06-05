@@ -98,6 +98,16 @@ display: none;
   text-decoration: none;
 }
 
+#frecciasu
+{
+  padding: 0em;
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  background-image: url('images/frecciaup.jpg');
+  background-size: 3.5em;
+}
+
 #btnScrollToTop
 {
   background-color: inherit;
