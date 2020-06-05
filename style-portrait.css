@@ -532,6 +532,10 @@
 .formdescription{
   font-size: calc(1.5vw + 0.5vh + 0.5vmin);
 }
+.formerror{
+  font-size: calc(1.5vw + 0.5vh + 0.5vmin);
+  color: crimson;
+}
 .inputform{
   background-color:#002125;
   color:#d3d3d3;

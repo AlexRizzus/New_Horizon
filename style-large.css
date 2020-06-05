@@ -637,6 +637,10 @@ body {
 .formdescription{
   font-size: calc(1.5vw + 0.5vh + 0.5vmin);
 }
+.formerror{
+  font-size: calc(1.5vw + 0.5vh + 0.5vmin);
+  color: crimson;
+}
 #validation2{
   grid-area: b;
   padding:1.4em;
