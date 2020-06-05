@@ -61,7 +61,7 @@ if($connessioneOK){
     }
   }
   if($missioni == null){
-    $paginaHTML = str_replace("<planetNotFound></planetNotFound>","<strong id=\"errorPlanetNotFound\">Non ci sono missioni attive o programmate presso la destinazione inserita. Controllare il pianeta inserito.</strong>",$paginaHTML);
+    $paginaHTML = str_replace("<p id='planetNotFound'/>","<strong id=\"errorPlanetNotFound\">Non ci sono missioni attive o programmate presso la destinazione inserita. Controllare il pianeta inserito.</strong>",$paginaHTML);
     echo($paginaHTML);
   } else {
     $stringa_missioni = "";
