@@ -854,19 +854,6 @@ body {
   max-height: 5em;
 }
 
-#filtro_scritta{
-  text-align: center;
-  font-size: 1.2em;
-  // display: inline-block;
-  // margin-left: 40%;
-}
-
-#filtro_attuale{
-  text-align: center;
-  font-size: 1.2em;
-  display: inline-block;
-}
-
   .mission-box {
     background-color: #d3d3d3;
     color: #002125;
@@ -898,13 +885,9 @@ body {
 }
 
 #filtro_scritta{
+  margin-left: 40%;
   text-align: center;
-  font-size: 1.2em;
-}
-
-#filtro_attuale{
-  text-align: center;
-  font-size: 1.2em;
+  font-size: 1.8em;
 }
 
 #pulsante_cerca_tutte{
