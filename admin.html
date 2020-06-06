@@ -8,6 +8,8 @@
     <meta name= "keywords" content = "New, Horizon, New Horizon, Space, Shuttle, Moon, Mars, Earth, Spazio, Terra, Luna, Marte"/>
     <meta name="language" content="italian it"/>
     <meta name="author" content="Alessandro Rizzo, Emanuele Cisotto, Davide Lazzaro e Paolo Scialpi"/>
+    <meta http-equiv="Content-Script-Type" content="type"/>
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
     <link href="style-large.css" rel="stylesheet" type="text/css" media="all" />
     <link href="style-medium.css" rel="stylesheet" type="text/css" media="all" />
     <link href="style-portrait.css" rel="stylesheet" type="text/css" media="all" />
@@ -15,7 +17,6 @@
     <link href="style-print.css" rel="stylesheet" type="text/css" media="print" />    <link href="https://fonts.googleapis.com/css?family=Oswald:500&amp;display=swap" rel="stylesheet"/>
   </head>
   <body>
-    <body>
       <div id="navigation">
         <div id="navigation-content">
                 <button onclick="location.href='index.php'"  class = "desktop button0" xml:lang="en">Home</button>
@@ -31,13 +32,13 @@
               </div>
             </div>
                   <!-- bottone per chiudere la navigation mobile -->
-            <a class="nav-tgl" title="menu">&equiv;</a>
+            <p><a class="nav-tgl">&equiv;</a></p>
         <div class="admin-content">
             <h1 >Bentornato <span></span></h1>
-            <p>La tua <span xml:lang="en">e-mail</span>:</p>
-            <p id="email" ></p>
-            <p>La tua occupazione:</p>
-            <p id="occupazione" ></p>
+            <label for="email">La tua <span xml:lang="en">e-mail</span>:</label>
+            <p id="email2" ></p>
+            <label for="occupazione">La tua occupazione:</label>
+            <p id="occupazione2" ></p>
             <p class="admintext" >Modfica una spedizione:</p>
             <button class="adminbutton" tabindex="1" onclick="location.href='gestione_admin.php'">MODIFICA</button>
             <p class="admintext" >Aggiungi una spedizione:</p>
@@ -63,6 +64,5 @@
             <div class="social"><p>  Seguici su: <img src="images/twitter.png" class="footer-icon" alt="twitter logo"/> <img src="images/facebook.png" class="footer-icon" alt="facebook logo"/> <img src="images/instagram.png" class="footer-icon" alt="instagram logo"/></p>
             </div>
         </div>
-    </div>
-</body>
+  </body>
 </html>
