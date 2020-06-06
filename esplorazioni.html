@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Esplorazioni | New Horizon</title>
-    <meta name="title" content="esplorazioni di New Horizon" />
+    <meta name="title" content="esplorazioni di New Horizon"/>
     <meta name= "description" content="missions and esplorations about New Horizon"/>
     <meta name= "keywords" content = "New, Horizon, New Horizon, Missioni, Esplorazioni, Space, Spazio, Esplorations, Missions, Company"/>
     <meta name="language" content="italian it"/>
@@ -33,7 +33,9 @@
           </div>
         </div>
               <!-- bottone per chiudere la navigation mobile -->
+      <div>
         <a class="nav-tgl" title="menu">&equiv;</a>
+      </div>
     <div id="contentEsp">
       <h1>MISSIONI</h1>
 
@@ -41,21 +43,22 @@
       <fieldset id="esplFieldset">
       <legend id="esplorazLegend">Cerca nel sito</legend>
       <div id="search_section">
-        <input type="text" onfocus="myFocusFunction(this)" onblur="myBlurFunction(this)" id="cerca_missione" name="Nome_del_pianeta" value="cerca pianeta…"></input>
-        <button tabindex="3" type="submit" name="submit" id="pulsante_cerca_pianeta"><img src="images/cerca.png" id="search_img" alt="Cerca" title="avvia la ricerca"/></button>
+        <input type="text" onfocus="myFocusFunction(this)" onblur="myBlurFunction(this)" id="cerca_missione" name="Nome_del_pianeta" value="cerca pianeta…"/>
+        <button tabindex="3" type="submit" name="submit" id="pulsante_cerca_pianeta"/><img src="images/cerca.png" id="search_img" alt="Cerca" title="avvia la ricerca"/>
       </div>
-      <p id="filtro_scritta">Filtro attuale: <actualFilterHere/></p>
       <button tabindex="4" type="submit" name="submitAnnullaFiltro" id="pulsante_cerca_tutte">Annulla filtro di ricerca</button>
       </fieldset>
       </form>
       <p id="dida">cerca un luogo per visualizzare solamente le missioni con quella destinazione</p>
-      <planetNotFound></planetNotFound>
-      <missionsHere/>
-      </div>
+      <p id="filtro_scritta">Filtro attuale: <span id='actualFilterHere'/></p>
+      <p id='planetNotFound'/>
+      <div id='missionsHere'/>
     </div>
-    <button name="torna su" title="torna su" id ="btnScrollToTop" alt="freccia su">
-    <img id=frecciasu src="images/frecciaup.jpg" alt="freccia su"></img>
-    </button>
+    <div>
+      <a class="nav-tgl" title="menu">&equiv;</a>
+      <button tabindex="33" name="torna su" title="torna su" id ="btnScrollToTop"/>
+    </div>
+    <div id="frecciasu"></div>
     <div id="footer">
       <p class="validation">
         <a href="http://validator.w3.org/check?uri=referer"><img

@@ -30,7 +30,7 @@ if($connessioneOK){
   {
     $luogo_missione = ucfirst(strtolower($_GET['Nome_del_pianeta']));
     $missioni = $oggettoConnessione->getMissioni_perLuogo($luogo_missione);
-    $paginaHTML = str_replace("<actualFilterHere/>","<span id=\"filtro_attuale\">$luogo_missione</span>",$paginaHTML);
+    $paginaHTML = str_replace("<span id='actualFilterHere'/>","<span id=\"filtro_attuale\">$luogo_missione</span>",$paginaHTML);
   }
   else
   {
@@ -61,7 +61,7 @@ if($connessioneOK){
     }
   }
   if($missioni == null){
-    $paginaHTML = str_replace("<planetNotFound></planetNotFound>","<strong id=\"errorPlanetNotFound\">Non ci sono missioni attive o programmate presso la destinazione inserita. Controllare il pianeta inserito.</strong>",$paginaHTML);
+    $paginaHTML = str_replace("<p id='planetNotFound'/>","<strong id=\"errorPlanetNotFound\">Non ci sono missioni attive o programmate presso la destinazione inserita. Controllare il pianeta inserito.</strong>",$paginaHTML);
     echo($paginaHTML);
   } else {
     $stringa_missioni = "";
@@ -113,7 +113,7 @@ if($connessioneOK){
       "<h2>Nome della missione: " . $valore['nome'] . "</h2>" .
       '<form class="missionform' . $no_disp . '" id="missionForm' . $counter . '" action="esplorazioni.php" method="post">
       <fieldset>
-      <input type="hidden" name="idForPosition" value="missionbox' . $counter . '">
+      <input type="hidden" name="idForPosition" value="missionbox' . $counter . '"/>
       <input type="hidden" name="Azione" value="' . $azione . '"/>
       <input type="hidden" name="filtro" value="' . $luogo_missione . '"/>
       <input type="hidden" name="Nome_missione" value="' . $valore['nome'] . '"/>
@@ -130,7 +130,7 @@ if($connessioneOK){
       "<p>Scopo: " . $valore['scopo'] . "</p>" .
       "</div>";
     }
-    $paginaHTML = str_replace("<missionsHere/>",$stringa_missioni,$paginaHTML);
+    $paginaHTML = str_replace("<div id='missionsHere'/>",$stringa_missioni,$paginaHTML);
     echo($paginaHTML);
   }
 }else
