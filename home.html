@@ -8,7 +8,9 @@
     <meta name= "keywords" content = "New, Horizon, New Horizon, Space, Shuttle, Moon, Mars, Earth, Spazio, Terra, Luna, Marte"/>
     <meta name="language" content="italian it"/>
     <meta name="author" content="Alessandro Rizzo, Emanuele Cisotto, Davide Lazzaro e Paolo Scialpi"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="style-large.css" rel="stylesheet" type="text/css" media="all" />
     <link href="style-medium.css" rel="stylesheet" type="text/css" media="all" />
     <link href="style-portrait.css" rel="stylesheet" type="text/css" media="all" />
@@ -18,7 +20,7 @@
   </head>
   <body>
     <div class="">
-      <img src="images/backgroundv23.jpg" id="background" alt="background image"/>
+      <img src="images/backgroundv23.jpg" id="background" alt="background"/>
     </div>
     <div id="navigation">
       <div id="navigation-content">
@@ -35,7 +37,7 @@
       </div>
     </div>
           <!-- bottone per chiudere la navigation mobile -->
-    <a class="nav-tgl" title="menu">&equiv;</a>
+    <div><a class="nav-tgl">&equiv;</a></div>
     <div class="grid-container">
       <div class="item1"><p><span xml:lang="en">New Horizon</span> &egrave; una compagnia non governativa <span xml:lang="en">leader</span> nelle esplorazioni spaziali per scopi scientifici, abbiamo collaborato con diverse agenzie spaziali governative per molte missioni spaziali costruendo
         sonde e componenti dei lanciatori.</p></div>
@@ -63,13 +65,13 @@
     </div>
     <div class="item4">
       <p>Partecipiamo a missioni in tutto il sistema solare e anche oltre in collaborazione con le altre agenzie spaziali, con i migliori astronauti e tecnologie all&apos;avanguardia.<br/>
-      <button tabindex="4" type="button" class="find-more-button" name="missioni-scopri" onclick="location.href='esplorazioni.php'">scopri di pi&ugrave;</button></p>
+      <button tabindex="4" type="button" class="find-more-button" name="missioni-scopri" onclick="location.href='esplorazioni.php'"title="scopri tecnologie">scopri di pi&ugrave;</button></p>
     </div>
     <div class="item5" ><p>Ad oggi abbiamo sedi sparse in tutto il mondo, centri di ricerca in Europa e Stati Uniti, osservatori in Sud-America e centri di lancio in Cina. Ma stiamo gi&agrave; partecipando agli studi per costruire nel prossimo futuro una base sul suolo lunare. <br/>
-      <button tabindex="5" type="button" class="find-more-button" name="missioni-scopri" onclick="location.href='about.html'">scopri di pi&ugrave;</button></p></div>
+      <button tabindex="5" type="button" class="find-more-button" name="missioni-scopri" onclick="location.href='about.html'" title="scopri su di noi">scopri di pi&ugrave;</button></p></div>
     <div class="item6"><img src="images/lunar-base.png" alt="base lunare"/></div>
     <div class="item7"><img src="images/space-telescope.png" alt="telescopio"/></div>
-    <div class="item8"><p> Nel mentre studiamo lo spazio da qui nei nostri centri di ricerca e utilizziamo quei dati per dare spiegazioni a tutti quei fenomeni che ancora non conosciamo.<br/><button tabindex="6" type="button" class="find-more-button" name="missioni-scopri" onclick="location.href='ricerca.html'">scopri di pi&ugrave;</button></p></div>
+    <div class="item8"><p> Nel mentre studiamo lo spazio da qui nei nostri centri di ricerca e utilizziamo quei dati per dare spiegazioni a tutti quei fenomeni che ancora non conosciamo.<br/><button tabindex="6" type="button" class="find-more-button" name="missioni-scopri" onclick="location.href='ricerca.html'" title="scopri il futuro">scopri di pi&ugrave;</button></p></div>
     <div>
           <button tabindex="33" name="torna su" title="torna su" id ="btnScrollToTop"/>
           <div id="frecciasu"></div>

@@ -229,13 +229,18 @@ display: none;
   border: 0.2em solid white;
   border-radius: 0.5em;
   padding: 0.3em;
-  margin:0em;
+  margin: 0;
   font-size: 0.5em;
   transition-duration: 0.4s;
 }
 .find-more-button:hover {
   background-color:white;
   color:black;
+}
+.error{
+  color: red;
+  width: 100%;
+  display: block;
 }
 /*-----------------CHI SIAMO----------------------------------------------*/
 
@@ -987,6 +992,7 @@ align-self: center;
 }
 #login-content p{
   margin-top: 1.5em;
+  margin-bottom: 0;
 }
 #login{
   background-color: #001115;
@@ -994,24 +1000,33 @@ align-self: center;
 
 #login-box{
   background-color: #d3d3d3;
-  padding: 4em 0em;
-  margin: 1em 10%;
+  padding: 4em 0;
+  margin: 1em 18%;
   color: #002125;
   border-radius: 0.4em;
 }
 #login-box img{
-  padding: 0em;
+  padding: 0;
   margin-right:0.6em;
   width: 2.8em;
   height:3.2em;
   vertical-align: middle;
 }
 #login-box input{
-  margin: 1em 0em;
+  margin: 1em 6em;
   height: 2.5em;
-  margin-right: 2em;
   font-size: 1.3em;
-  width:18em;
+  width: 18em;
+  border: 0.2em;
+  border-color: #002125;
+  border-radius: 0.3em;
+  text-align: center;
+}
+#login-box select{
+  margin: 1em 6em;
+  height: 2.5em;
+  font-size: 1.3em;
+  width: 18em;
   border: 0.2em;
   border-color: #002125;
   border-radius: 0.3em;

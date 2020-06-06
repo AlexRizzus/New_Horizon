@@ -43,15 +43,15 @@ if($connessioneOK)
         if(!($errori == "")){
           if (strstr($errori,"Nome"))
           {
-            $paginaHTML = str_replace("<erroreUsername/>",$errori, $paginaHTML);
+            $paginaHTML = str_replace('<div id="username-error"> </div>',$errori, $paginaHTML);
           }
           if(strstr($errori,"Password"))
           {
-            $paginaHTML = str_replace("<errorePassword/>",$errori, $paginaHTML);
+            $paginaHTML = str_replace('<div id="password-error"> </div>',$errori, $paginaHTML);
           }
           if(strstr($errori,"email"))
           {
-            $paginaHTML = str_replace("<erroreEmail/>",$errori, $paginaHTML);
+            $paginaHTML = str_replace('<div id="email-error"> </div>',$errori, $paginaHTML);
           }
           $errori = "";
           echo($paginaHTML);
@@ -67,15 +67,15 @@ if($connessioneOK)
           echo($query);
           if($result)
           {
-           $paginaHTML = str_replace("<successo/>","<span>Congratulazioni! sei registrato.</span>", $paginaHTML);
+           $paginaHTML = str_replace('<div id="successo"> </div>',"<span>Congratulazioni! sei registrato.</span>", $paginaHTML);
           }
           else {
-            $paginaHTML = str_replace("<successo/>","<span class='error'>Sembra ci sia stato qualche problema, prova a ricompilare il form.</span>", $paginaHTML);
+            $paginaHTML = str_replace('<div id="successo"> </div>',"<span class='error'>Sembra ci sia stato qualche problema, prova a ricompilare il form.</span>", $paginaHTML);
           }
         }
         else
         {
-          $paginaHTML = str_replace("<erroreUsername/>","<span class='error'>Questo username esiste gi&agrave;</span>", $paginaHTML);
+          $paginaHTML = str_replace('<div id="successo"> </div>',"<span class='error'>Questo username esiste gi&agrave;</span>", $paginaHTML);
         }
         echo($paginaHTML);
         }

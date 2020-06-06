@@ -128,6 +128,7 @@ body {
 .error{
   color: red;
   width: 100%;
+  display: block;
 }
 
 #btnScrollToTop
@@ -1051,6 +1052,7 @@ body {
 }
 #login-content p{
   margin-top: 1.5em;
+  margin-bottom: 0;
 }
 #login{
   background-color: #001115;
@@ -1071,9 +1073,8 @@ body {
   vertical-align: middle;
 }
 #login-box input{
-  margin: 1em 0em;
+  margin: 1em 5em;
   height: 2.5em;
-  margin-right: 2em;
   font-size: 1.3em;
   width:18em;
   border: 0.2em;
@@ -1082,9 +1083,8 @@ body {
   text-align: center;
 }
 #login-box select{
-  margin: 1em 0em;
+  margin: 1em 5em;
   height: 2.5em;
-  margin-right: 2em;
   font-size: 1.3em;
   width:18em;
   border: 0.2em;
@@ -1097,12 +1097,13 @@ body {
   color: #002125;
   border: 0.2em solid #002125;
   border-radius: 0.3em;
+  margin: 0;
   padding: 0.3em;
-  margin:0em;
   font-size: 1.1em;
   transition-duration: 0.4s;
   font-weight: bold;
   margin-top: 1em;
+  vertical-align: middle;
 }
 .login-button:hover {
   background-color:#002125;

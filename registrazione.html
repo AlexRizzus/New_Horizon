@@ -38,37 +38,28 @@
         <h1>REGISTRATI</h1>
         <div id="login-box">
         <h2>Inserisci le tue credenziali</h2>
-        <form name="registrazione" method="post" action="registrazione.php" onsubmit="return validateRegistration()"> <!-- there is no attribute "name" -->
+        <form method="post" action="registrazione.php" onsubmit="return validateRegistration()">
+          <div>
           <div id="email-error"> </div>
-          <div>
-          <input accesskey="e" tabindex="1" type="email" name="email" placeholder="email"/><br/> <!-- there is no attribute "placeholder" -->    <!-- sostituire type="email" con uno tra "text", "password", "checkbox", "radio", "submit", "reset", "file", "hidden", "image", "button" -->
-          </div>
+          <p>email:</p> <input accesskey="e" tabindex="1" type="text" name="email"/>
           <div id="username-error"> </div>
-          <div>
-          <input accesskey="u" tabindex="2" type="text" name="username" placeholder="username"/><br/>
-          </div>
-          <div>
-          <select tabindex="3" name="sesso">
+          <p>username:</p> <input accesskey="u" tabindex="2" type="text" name="username"/>
+          <p>sesso:</p> <select tabindex="3" name="sesso">
             <option value="Maschio">Maschio</option>
             <option value="Femmina">Femmina</option>
             <option value="Altro">Altro..</option>
-          </select><br/>
-          </div>
-          <div>
-          <input tabindex="4" list="cosafai" name="occupazione" placeholder="Cosa fai nella vita?"/>  <!-- there is no attribute "list"-->
-          </div>
-          <datalist id="cosafai">      <!-- there is no attribute "id"-->   <!-- element "datalist" undefined-->
-            <option value="Studente"/>
-            <option value="Ricercatore"/>
-            <option value="Lavoro nel privato"/>
-            <option value="Altro"/>
-          </datalist> <div><br/>
+          </select>
+          <p> occupazione:</p> <select tabindex="4" name="occupazione">
+            <option value="Studente">Studente</option>
+            <option value="Ricercatore">Ricercatore</option>
+            <option value="Lavoro nel privato">Lavoro nel privato</option>
+            <option value="Altro">Altro..</option>
+          </select>
             <div id="password-error"> </div>
-          <input accesskey="p" tabindex="5" type="password" name="password" placeholder="Password"/><br/> </div>
-          <successo/>
-          <div>
+          <p> password:</p> <input accesskey="p" tabindex="5" type="password" name="password"/>
+          <div id="successo"> </div>
           <button tabindex="6" type="submit" name="submit" class="login-button">Conferma</button>
-          </div>
+        </div>
         </form>
         </div>
         <p>Sei gi&agrave; registrato? allora ti basta fare il <a tabindex="7" href="login.html"><span xml:lang="en">login</span></a> </p>
@@ -88,7 +79,7 @@
       <p class ="info"><span xml:lang="en">New Horizon</span><br/> con la collaborazione di:<br/>Cisotto Emanuele, Lazzaro Davide, Rizzo Alessandro, Scialpi Paolo</p>
       <div class="social"><p>  Seguici su: <img src="images/twitter.png" class="footer-icon" alt="twitter logo"/> <img src="images/facebook.png" class="footer-icon" alt="facebook logo"/> <img src="images/instagram.png" class="footer-icon" alt="instagram logo"/></p>
       </div>
-    </div>          <!-- sarebbe meglio eleminare tutti i div e farne un gigante dentro il form che li racchiuda tutti se non si incasina tutto -->
+    </div>
   </div>
   <script  src="index.js" type="text/javascript"></script>
     </body>
