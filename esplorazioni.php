@@ -28,15 +28,23 @@ if($connessioneOK){
 
   if (isset($_GET['submit']))
   {
-    $luogo_missione = ucfirst(strtolower($_GET['Nome_del_pianeta']));
-    $missioni = $oggettoConnessione->getMissioni_perLuogo($luogo_missione);
-    $paginaHTML = str_replace("<span id='actualFilterHere'/>","<span id=\"filtro_attuale\">$luogo_missione</span>",$paginaHTML);
+    if($_GET['Nome_del_pianeta'] != "Cerca luogo…") {
+      $luogo_missione = ucfirst(strtolower($_GET['Nome_del_pianeta']));
+      $filtroAttStr = 'Filtro attuale: ' . $luogo_missione;
+      $missioni = $oggettoConnessione->getMissioni_perLuogo($luogo_missione);
+      $paginaHTML = str_replace("<span id='actualFilterHere'/>","<span id=\"filtro_attuale\">$luogo_missione</span>",$paginaHTML);
+      $paginaHTML = str_replace('<p id="searchError">Errore, inserire un nume di un luogo da cercare!</p>','<p id="searchError"></p>',$paginaHTML);
+    }
+    else {
+      $paginaHTML = str_replace('<p id="searchError"></p>','<p id="searchError">Errore, inserire un nume di un luogo da cercare!</p>',$paginaHTML);
+    }
   }
   else
   {
     if(isset($_GET['submitAnnullaFiltro']))
     {
       $luogo_missione = "";
+      $filtroAttStr = 'Nessun filtro attualmente applicato';
       $missioni = $oggettoConnessione->getMissioni();
       $paginaHTML = str_replace("<actualFilterHere/>","<span>Nessun filtro</span>",$paginaHTML);
     }
@@ -51,6 +59,7 @@ if($connessioneOK){
          else {
            $missioni = $oggettoConnessione->getMissioni_perLuogo($_POST['filtro']);
            $luogo_missione = $_POST['filtro'];
+           $filtroAttStr = 'Filtro attuale: ' . $luogo_missione;
            $paginaHTML = str_replace("<actualFilterHere/>","<span>$luogo_missione</span>",$paginaHTML);
          }
        }
@@ -60,7 +69,7 @@ if($connessioneOK){
        }
     }
   }
-  if($missioni == null){
+  if(!isset($missioni)){
     $paginaHTML = str_replace("<p id='planetNotFound'/>","<strong id=\"errorPlanetNotFound\">Non ci sono missioni attive o programmate presso la destinazione inserita. Controllare il pianeta inserito.</strong>",$paginaHTML);
     echo($paginaHTML);
   } else {
@@ -82,16 +91,19 @@ if($connessioneOK){
           {
             $icon = '<img class="starImg" src="images/star.png" alt="icona dei preferiti non trovata" title="togli la missione tra i tuoi preferiti cliccando qui"/>';
             $azione = "REMOVE";
+            $azioneStr = "Rimuovi missione dai preferiti";
           }
           else {
             $icon = '<img class="starImg" src="images/estar.png" alt="icona dei preferiti non trovata" title="metti la missione tra i tuoi preferiti cliccando qui"/>';
             $azione = "ADD";
+            $azioneStr = "Aggiungi missione ai preferiti";
           }
         }
         else
         {
           $icon = '<img class="starImg" src="images/estar.png" alt="icona dei preferiti non trovata" title="metti la missione tra i tuoi preferiti cliccando qui"/>';
           $azione = "ADD";
+          $azioneStr = "Aggiungi missione ai preferiti";
         }
       }
       else {
@@ -109,15 +121,20 @@ if($connessioneOK){
       {
         $data_fin = $valore['data_fine'];
       }
+      if(!isset($filtroAttStr)) {
+        $filtroAttStr = "";
+      }
       $stringa_missioni .= '<div class="mission-box" id="missionbox' . $counter . '">' .
       "<h2>Nome della missione: " . $valore['nome'] . "</h2>" .
       '<form class="missionform' . $no_disp . '" id="missionForm' . $counter . '" action="esplorazioni.php" method="post">
       <fieldset>
-      <input type="hidden" name="idForPosition" value="missionbox' . $counter . '"/>
-      <input type="hidden" name="Azione" value="' . $azione . '"/>
-      <input type="hidden" name="filtro" value="' . $luogo_missione . '"/>
-      <input type="hidden" name="Nome_missione" value="' . $valore['nome'] . '"/>
-      <button class="button_prefe" type="submit" name="submitPrefe" onsubmit="subm();">'
+      <label id="actionLabel" type="hidden" for="actionInp">' . $azioneStr . '</label>
+      <input type="hidden" id="actionInp" name="Azione" value="' . $azione . '"/>
+      <label class="notToDisp" type="hidden" for="filterInp">' . $filtroAttStr . '</label>
+      <input type="hidden" id="filterInp" name="filtro" value="' . $luogo_missione . '"/>
+      <label class="notToDisp" type="hidden" for="nomeInp">Missione denominata ' . $valore['nome'] . '</label>
+      <input type="hidden" id="nomeInp" name="Nome_missione" value="' . $valore['nome'] . '"/>
+      <button class="button_prefe" type="submit" title="' . $azioneStr . '" name="submitPrefe" onsubmit="subm();">'
       . $icon .
       '</button>
       </fieldset>

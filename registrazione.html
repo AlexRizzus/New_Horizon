@@ -8,6 +8,8 @@
     <meta name= "keywords" content = "New, Horizon, New Horizon, Space, Shuttle, Moon, Mars, Earth, Spazio, Terra, Luna, Marte"/>
     <meta name="language" content="italian it"/>
     <meta name="author" content="Alessandro Rizzo, Emanuele Cisotto, Davide Lazzaro e Paolo Scialpi"/>
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
     <link href="style-large.css" rel="stylesheet" type="text/css" media="all" />
     <link href="style-medium.css" rel="stylesheet" type="text/css" media="all" />
     <link href="style-portrait.css" rel="stylesheet" type="text/css" media="all" />
@@ -27,13 +29,13 @@
               <button onclick="location.href='contattaci.html'" class = "desktop button5">Contattaci</button>
               <button onclick="location.href='login.html'" class = "position desktop button6" xml:lang="en">Login</button>
               <ul class="breadcrumb">
-                <li><a href="login.php"> → Login</a></li>
+                <li><a href="login.php"> &#8594; Login</a></li>
                 <li> &#8594; Registrazione</li>
               </ul>
             </div>
           </div>
                 <!-- bottone per chiudere la navigation mobile -->
-          <a class="nav-tgl" title="menu">&equiv;</a>
+          <a class="nav-tgl">&equiv;</a>
     <div id="login-content">
         <h1>REGISTRATI</h1>
         <div id="login-box">
@@ -41,22 +43,22 @@
         <form method="post" action="registrazione.php" onsubmit="return validateRegistration()">
           <div>
           <div id="email-error"> </div>
-          <p>email:</p> <input accesskey="e" tabindex="1" type="text" name="email"/>
+          <p>email:</p> <input accesskey="e" tabindex="1" type="text" name="email" title="campo email"/>
           <div id="username-error"> </div>
-          <p>username:</p> <input accesskey="u" tabindex="2" type="text" name="username"/>
-          <p>sesso:</p> <select tabindex="3" name="sesso">
+          <p>username:</p> <input accesskey="u" tabindex="2" type="text" name="username" title="campo username"/>
+          <p>sesso:</p> <select tabindex="3" name="sesso" title="campo sesso">
             <option value="Maschio">Maschio</option>
             <option value="Femmina">Femmina</option>
             <option value="Altro">Altro..</option>
           </select>
-          <p> occupazione:</p> <select tabindex="4" name="occupazione">
+          <p> occupazione:</p> <select tabindex="4" name="occupazione" title="campo occupazione">
             <option value="Studente">Studente</option>
             <option value="Ricercatore">Ricercatore</option>
             <option value="Lavoro nel privato">Lavoro nel privato</option>
             <option value="Altro">Altro..</option>
           </select>
             <div id="password-error"> </div>
-          <p> password:</p> <input accesskey="p" tabindex="5" type="password" name="password"/>
+          <p> password:</p> <input accesskey="p" tabindex="5" type="password" name="password" title="campo password"/>
           <div id="successo"> </div>
           <button tabindex="6" type="submit" name="submit" class="login-button">Conferma</button>
         </div>

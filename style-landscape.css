@@ -721,6 +721,17 @@
     }
 
 
+    #actionLabel {
+      display: block;
+    }
+
+    #searchError {
+      color: red;
+    }
+     .notToDisp {
+       display: none;
+     }
+
     #contentMission {
         text-align: center;
         min-height: 5em;
