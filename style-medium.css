@@ -891,6 +891,17 @@ align-self: center;
   margin-left: 1em;
 }
 
+#actionLabel {
+  display: block;
+}
+#searchError {
+  color: red;
+}
+
+ .notToDisp {
+   display: none;
+ }
+
 #search button:hover {
   border-color:#d3d3d3;
 }
