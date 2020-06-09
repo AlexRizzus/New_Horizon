@@ -110,8 +110,9 @@
   #actionLabel {
     display: block;
   }
-  #searchError {
+  #contentEsp #searchError {
     color: red;
+    text-align: center;
   }
 
    .notToDisp {
@@ -802,6 +803,15 @@
         border-color: #002125;
         border-radius: 0.3em;
     }
+
+    .dis_block{
+      display: block;
+    }
+
+    #pulsante_cerca_pianeta {
+      display: block;
+    }
+
     #search button{
       font-weight: bold;
       border-radius: 0.5em;
@@ -862,10 +872,6 @@
     .mission-box h2{
         margin: 0em;
         text-align: center;
-    }
-    #contentEsp #dida{
-      font-size: 1.25em;
-      text-align: center;
     }
 
     #errorPlanetNotFound{

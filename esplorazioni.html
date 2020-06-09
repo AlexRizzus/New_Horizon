@@ -43,16 +43,15 @@
       <fieldset id="esplFieldset">
       <legend id="esplorazLegend">Cerca nel sito</legend>
       <div id="search_section">
-        <label for="cerca_missione" type="text">Inserire il luogo secondo cui filtrare le spedizioni</label>
-        <input type="text" onfocus="myFocusFunction(this)" onblur="myBlurFunction(this)" id="cerca_missione" name="Nome_del_pianeta" value="Cerca luogo…"/>
+        <label for="cerca_missione" class="dis_block" type="text">Inserire il luogo secondo cui filtrare le spedizioni</label>
+        <input type="text" class="dis_block" onfocus="myFocusFunction(this)" onblur="myBlurFunction(this)" id="cerca_missione" name="Nome_del_pianeta" value="Cerca luogo…"/>
         <button tabindex="3" title="Cerca missioni per il luogo selezionato" type="submit" name="submit" id="pulsante_cerca_pianeta"/><img src="images/cerca.png" id="search_img" alt="Cerca" title="avvia la ricerca"/>
       </div>
       <button tabindex="4" type="submit" name="submitAnnullaFiltro" id="pulsante_cerca_tutte">Annulla filtro di ricerca</button>
       </fieldset>
       </form>
       <p id="searchError"></p>
-      <p id="dida">cerca un luogo per visualizzare solamente le missioni con quella destinazione</p>
-      <p id="filtro_scritta">Filtro attuale: <span id='actualFilterHere'/></p>
+      <p id="filtro_scritta">Filtro attuale: <span id='actualFilterHere'>nessun filtro</span></p>
       <p id='planetNotFound'/>
       <div id='missionsHere'/>
     </div>

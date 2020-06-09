@@ -12,6 +12,12 @@ const btnScrollToTop = document.getElementById("btnScrollToTop");
 btnScrollToTop.onclick = function(evt){window.scrollTo(0,0);};
 
 
+const btnAnnullaFiltro = document.getElementById("pulsante_cerca_tutte");
+btnAnnullaFiltro.onclick = function(evt){localStorage.setItem("actual_pos", document.documentElement.scrollTop);};
+
+const btnCercaPianeta = document.getElementById("pulsante_cerca_pianeta");
+btnCercaPianeta.onclick = function(evt){localStorage.setItem("actual_pos", document.documentElement.scrollTop);};
+
 var forms = document.getElementsByClassName("missionform");
 
 for (var i = 0, len = forms.length; i < len; i++) {

@@ -858,6 +858,14 @@ align-self: center;
   width: 150%;
 }
 
+#pulsante_cerca_pianeta {
+  display: block;
+}
+
+.dis_block{
+  display: block;
+}
+
 #search{
   display: grid;
   grid-gap: 0.2em;
@@ -894,8 +902,9 @@ align-self: center;
 #actionLabel {
   display: block;
 }
-#searchError {
+#contentEsp #searchError {
   color: red;
+  text-align: center;
 }
 
  .notToDisp {
@@ -949,10 +958,6 @@ align-self: center;
 .mission-box h2{
     margin: 0em;
     text-align: center;
-}
-#contentEsp #dida{
-  font-size: 1.25em;
-  text-align: center;
 }
 
 #errorPlanetNotFound{

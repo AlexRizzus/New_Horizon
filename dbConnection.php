@@ -24,7 +24,6 @@ class DBAccess{
 
     if(mysqli_num_rows($queryResult) == 0)
     {
-      echo("Errore query missioni per luogo");
       return null;
     }
     else{

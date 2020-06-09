@@ -8,7 +8,6 @@ session_start();
 global $luogo_missione;
 
 if($connessioneOK){
-
   if (isset($_POST['submitPrefe']))
   {
     $missione = $_POST['Nome_missione'];
@@ -28,25 +27,25 @@ if($connessioneOK){
 
   if (isset($_GET['submit']))
   {
+    $error_invalid_filter = false;
     if($_GET['Nome_del_pianeta'] != "Cerca luogo…") {
       $luogo_missione = ucfirst(strtolower($_GET['Nome_del_pianeta']));
       $filtroAttStr = 'Filtro attuale: ' . $luogo_missione;
       $missioni = $oggettoConnessione->getMissioni_perLuogo($luogo_missione);
-      $paginaHTML = str_replace("<span id='actualFilterHere'/>","<span id=\"filtro_attuale\">$luogo_missione</span>",$paginaHTML);
+      $paginaHTML = str_replace("<span id='actualFilterHere'>nessun filtro</span>","<span id=\"filtro_attuale\">$luogo_missione</span>",$paginaHTML);
       $paginaHTML = str_replace('<p id="searchError">Errore, inserire un nume di un luogo da cercare!</p>','<p id="searchError"></p>',$paginaHTML);
     }
     else {
-      $paginaHTML = str_replace('<p id="searchError"></p>','<p id="searchError">Errore, inserire un nume di un luogo da cercare!</p>',$paginaHTML);
+      $error_invalid_filter = true;
+      $paginaHTML = str_replace('<p id="searchError"></p>','<p id="searchError">Errore, inserire un nome di un luogo da cercare!</p>',$paginaHTML);
     }
   }
   else
   {
     if(isset($_GET['submitAnnullaFiltro']))
     {
-      $luogo_missione = "";
       $filtroAttStr = 'Nessun filtro attualmente applicato';
       $missioni = $oggettoConnessione->getMissioni();
-      $paginaHTML = str_replace("<actualFilterHere/>","<span>Nessun filtro</span>",$paginaHTML);
     }
     else {
        if(isset($_POST['filtro']))
@@ -54,23 +53,22 @@ if($connessioneOK){
          if($_POST['filtro'] == "")
          {
            $missioni = $oggettoConnessione->getMissioni();
-           $paginaHTML = str_replace("<actualFilterHere/>","<span>Nessun filtro</span>",$paginaHTML);
          }
          else {
            $missioni = $oggettoConnessione->getMissioni_perLuogo($_POST['filtro']);
            $luogo_missione = $_POST['filtro'];
            $filtroAttStr = 'Filtro attuale: ' . $luogo_missione;
-           $paginaHTML = str_replace("<actualFilterHere/>","<span>$luogo_missione</span>",$paginaHTML);
          }
        }
        else {
          $missioni = $oggettoConnessione->getMissioni();
-         $paginaHTML = str_replace("<actualFilterHere/>","<span>Nessun filtro</span>",$paginaHTML);
        }
     }
   }
   if(!isset($missioni)){
-    $paginaHTML = str_replace("<p id='planetNotFound'/>","<strong id=\"errorPlanetNotFound\">Non ci sono missioni attive o programmate presso la destinazione inserita. Controllare il pianeta inserito.</strong>",$paginaHTML);
+    if(!$error_invalid_filter === true) {
+      $paginaHTML = str_replace("<p id='planetNotFound'/>","<strong id=\"errorPlanetNotFound\">Non ci sono missioni attive o programmate presso la destinazione inserita. Controllare il pianeta inserito.</strong>",$paginaHTML);
+    }
     echo($paginaHTML);
   } else {
     $stringa_missioni = "";
@@ -107,6 +105,7 @@ if($connessioneOK){
         }
       }
       else {
+        $azioneStr = '';
         $azione = null;
         $icon = '';
         $no_disp = ' no_disp';

@@ -687,6 +687,14 @@
         grid-area: t;
     }
 
+    #pulsante_cerca_pianeta {
+      display: block;
+    }
+
+    .dis_block{
+      display: block;
+    }
+
     #search{
       width: 230px;
     }
@@ -725,8 +733,9 @@
       display: block;
     }
 
-    #searchError {
+    #contentEsp #searchError {
       color: red;
+      text-align: center;
     }
      .notToDisp {
        display: none;
@@ -763,12 +772,6 @@
         margin: 0em;
         text-align: center;
     }
-    #contentEsp #dida{
-      font-size: 1.0em;
-      text-align: center;
-      margin: 0em;
-    }
-
 
     .button_prefe{
       max-width: 5em;

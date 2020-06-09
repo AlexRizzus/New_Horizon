@@ -826,12 +826,21 @@ body {
     border-radius: 0.3em;
 }
 
+#pulsante_cerca_pianeta {
+  display: block;
+}
+
+.dis_block{
+  display: block;
+}
+
 #actionLabel {
   display: block;
 }
 
-#searchError {
+#contentEsp #searchError {
   color: red;
+  text-align: center;
 }
 
  .notToDisp {
@@ -885,10 +894,6 @@ body {
 .mission-box h2{
     margin: 0em;
     text-align: center;
-}
-#contentEsp #dida{
-  font-size: 1.25em;
-  text-align: center;
 }
 
 #errorPlanetNotFound{
