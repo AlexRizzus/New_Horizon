@@ -29,18 +29,18 @@ if(isset($_SESSION['livello'])){
             $contatore++;
             $contatore++;
             $stringa_missioni .= '<div class="amministratore-box" >
-            <h2 class="nomemissione"> Nome missione: "' . $valore["nome"] . '"</h2>
+            <h1 class="nomemissione"> Nome missione: "' . $valore["nome"] . '"</h1>
             <form class="invisibleprint" action="gestione_admin.php" method="post">
               <fieldset>
               <input class="invisibleprint" type="hidden" name="nome" value="' . $valore['nome'] . '"/>
-              <button class="invisibleprint" tabindex="' . $contatore . '" type="submit" name="deleteMission" >
+              <button title="Cancella la missione" class="invisibleprint" tabindex="' . $contatore . '" type="submit" name="deleteMission" >
                 <img src="' . $icon_del. '" alt="icona cancellazione non trovata" title="icona cancellazione"/>
               </button>
           </fieldset>
           </form><form class="invisibleprint" action="modifica_missione.php" method="post">
             <fieldset>
               <input class="invisibleprint" type="hidden" name="nome" value="' . $valore['nome'] . '"/>
-              <button class="invisibleprint" tabindex= "' . $contatore++ . '" type="submit" name="updateMission" >
+              <button title="Modifica la missione" class="invisibleprint" tabindex= "' . $contatore++ . '" type="submit" name="updateMission" >
                 <img src="' . $icon_mod. '" alt="icona modifica non trovata" title="icona modifica"/>
               </button>
             </fieldset> 

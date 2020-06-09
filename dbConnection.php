@@ -200,5 +200,10 @@ public function modifica_scopo($chiave, $valore){
   $query= "UPDATE Missioni set scopo= '$valore' where nome = '$chiave'";
   $queryResult=mysqli_query($this->connection, $query);
 }
+public function add_message($username, $oggetto, $messaggio)
+{
+  $query = "INSERT INTO Messaggi_utenti VALUES ('','$username', '$oggetto', '$messaggio')";
+  $queryResult=mysqli_query($this->connection, $query);
+}
 }
 ?>

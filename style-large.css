@@ -1150,8 +1150,7 @@ body {
   margin: 4em;
   margin-left: 2em;
   margin-right: 2em;
-  max-width: 30%;
-  min-width: 25%;
+ width :25%;
   display: inline-block;
 }
 .amministratore-box img{
@@ -1168,6 +1167,7 @@ body {
 .nomemissione{
   text-align: center;
   color: #000000;
+  font-size: calc(1.2vw + 0.8vh + 0.8vmin);
 }
 
 .transparent{
@@ -1249,5 +1249,8 @@ body {
   background-color:#d3d3d3;
   color:#002125;
   border: 0.1em solid #002125;
+}
+.scrittemodificamissione, .buttoninputmodificamissione{
+  display: block;
 }
 }
