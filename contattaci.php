@@ -6,11 +6,11 @@ $paginaHTML = file_get_contents('contattaci.html');
 session_start();
 
 $stringa='<form id="formid" class="form" action="contattaci.php" method="post"><p class="errorEmail"></p>
-<div><p class = "formdescription">Inserisci qui l&#8217;oggetto del tuo messaggio</p><label class = "formdescription" for="oggetto">Oggetto del messaggio: </label><input id="oggetto" class="inputform" type="text" tabindex="10" name="opzioni"/>
+<div><p class = "formdescription">Inserisci qui l&#8217;oggetto del tuo messaggio</p><label class = "formdescription" for="oggetto">Oggetto del messaggio: </label><input id="oggetto" class="inputform" type="text" name="opzioni"/>
 <p class="errorOggetto"></p></div>
-<div><label class = "formdescription" for="textarea">Scrivi qua il messaggio: </label><textarea class="inputform" tabindex="11" id="textarea" name="testo" rows="7" cols="200"></textarea></div>
+<div><label class = "formdescription" for="textarea">Scrivi qua il messaggio: </label><textarea class="inputform" id="textarea" name="testo" rows="7" cols="200"></textarea></div>
 <p class="errorTextArea"></p>
-<div><label class = "formdescription" for="sendbutton">Invia il messagio al nostro staff: </label><input tabindex="12" type="submit" value="Invia" name="invio" id="sendbutton"/></div></form>';
+<div><label class = "formdescription" for="sendbutton">Invia il messagio al nostro staff: </label><input type="submit" value="Invia" name="invio" id="sendbutton"/></div></form>';
 $paginaHTML=str_replace('<p id="sostituto"></p>',$stringa, $paginaHTML);
 
 $testo = "";

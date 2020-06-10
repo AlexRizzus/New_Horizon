@@ -15,17 +15,17 @@ if(isset($_SESSION['livello'])){
             $missioni=[];
             $missioni=$oggettoConnessione->getMissioni_perNome($missione);
             $stringa='<fieldset class="scrittemodificamissione"><legend class="scrittemodificamissione">Missione:</legend>Nome: <input title="Modifica il nome della missione" class="buttoninputmodificamissione" tabindex="1" type="text" name="nome" value="'. $missioni[0]['nome'] .'"/>
-            Data inizio: <input title="Modifica la data inizio missione" class="buttoninputmodificamissione" tabindex="2" type="text" name="data_inizio" value="'. $missioni[0]['data_inizio'] .'"/>
-            Data di fine: <input title="Modifica la data di fine missione" class="buttoninputmodificamissione" tabindex="3" type="text" name="data_fine" value="'. $missioni[0]['data_fine'] .'"/>
+            Data inizio: <input title="Modifica la data inizio missione" class="buttoninputmodificamissione" type="text" name="data_inizio" value="'. $missioni[0]['data_inizio'] .'"/>
+            Data di fine: <input title="Modifica la data di fine missione" class="buttoninputmodificamissione"  type="text" name="data_fine" value="'. $missioni[0]['data_fine'] .'"/>
             <p class="scrittemodificamissione">Per lo stato è possibile inserire solamente: in preparazione, in corso, terminata o fallita.</p>
-            Stato: <input title="Modifica lo stato della missione" class="buttoninputmodificamissione" tabindex="4" type="text" name="stato" value="'. $missioni[0]['stato'] .'"/>
-            Affiliazioni: <input title="Modifica le agenzie associate alla missione" class="buttoninputmodificamissione" tabindex="5" type="text" name="affiliazioni" value="'. $missioni[0]['affiliazioni'] .'"/>
-            Luogo: <input title="Modifica il luogo della missione" class="buttoninputmodificamissione" tabindex="6" type="text" name="destinazione" value="'. $missioni[0]['destinazione'] .'"/>
-            Scopo: <input title="Modifica lo scopo della missione" class="buttoninputmodificamissione" tabindex="7" type="text" name="scopo" value="'. $missioni[0]['scopo'] .'"/>
+            Stato: <input title="Modifica lo stato della missione" class="buttoninputmodificamissione"  type="text" name="stato" value="'. $missioni[0]['stato'] .'"/>
+            Affiliazioni: <input title="Modifica le agenzie associate alla missione" class="buttoninputmodificamissione"  type="text" name="affiliazioni" value="'. $missioni[0]['affiliazioni'] .'"/>
+            Luogo: <input title="Modifica il luogo della missione" class="buttoninputmodificamissione"  type="text" name="destinazione" value="'. $missioni[0]['destinazione'] .'"/>
+            Scopo: <input title="Modifica lo scopo della missione" class="buttoninputmodificamissione"  type="text" name="scopo" value="'. $missioni[0]['scopo'] .'"/>
         </fieldset>
         <div>
         <input type="hidden" value="'.$missione.'" name="key"/>
-        <button title="Invia le modifiche" class="buttonmodificamissione" tabindex="8" type="submit" value="Invia" name="change">Invia</button></div>';
+        <button title="Invia le modifiche" class="buttonmodificamissione"  type="submit" value="Invia" name="change">Invia</button></div>';
             $paginaHTML=str_replace('<p id="campiDati"></p>',$stringa, $paginaHTML);
             echo($paginaHTML);
 
@@ -40,7 +40,7 @@ if(isset($_SESSION['livello'])){
             $stato = $oggettoConnessione->test_input($_POST["stato"]);
             $affiliazioni = $oggettoConnessione->test_input($_POST["affiliazioni"]);
             $destinazione = $oggettoConnessione->test_input($_POST["destinazione"]);
-            $scopo = $oggettoConnessione->test_input($_POST["scopo"]);
+            $scopo =$oggettoConnessione->test_input($_POST["scopo"]);
 
 
             $oggettoConnessione->modifica_nome($missione, $nome);
