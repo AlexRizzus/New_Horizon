@@ -1083,15 +1083,9 @@ body {
   color: #002125;
   border-radius: 0.4em;
 }
-#login-box img{
-  padding: 0em;
-  margin-right:0.6em;
-  width: 2.8em;
-  height:3.2em;
-  vertical-align: middle;
-}
 #login-box input{
-  margin: 1em 5em;
+  vertical-align: middle;
+  margin: 1em 18%;
   height: 2.5em;
   font-size: 1.3em;
   width:18em;
@@ -1101,7 +1095,8 @@ body {
   text-align: center;
 }
 #login-box select{
-  margin: 1em 5em;
+  vertical-align: middle;
+  margin: 1em 18%;
   height: 2.5em;
   font-size: 1.3em;
   width:18em;
