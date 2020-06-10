@@ -1,7 +1,7 @@
 <?php
 
 class DBAccess{
-  const HOST_DB = 'localhost:3306';
+  const HOST_DB = 'localhost:3307';
   const USERNAME = 'root';
   const PASSWORD = '';
   const DATABASE_NAME = 'my_meowhorizon';
