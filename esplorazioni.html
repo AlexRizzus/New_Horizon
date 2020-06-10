@@ -20,7 +20,7 @@
   <body>
     <div id="navigation">
       <div id="navigation-content">
-            <button onclick="location.href='index.php'" class="desktop button0" xml:lang="en">Home</button>
+            <button onclick="location.href='index.php'" tabindex="0" class="desktop button0" xml:lang="en">Home</button>
             <button onclick="location.href='esplorazioni.php'" class="position desktop button1" disabled="disabled">Esplorazioni</button>
             <button onclick="location.href='about.html'" class="desktop button2">Chi siamo</button>
             <button onclick="location.href='collaborazioni.html'" class="desktop button3">Collaborazioni</button>
@@ -43,11 +43,11 @@
       <fieldset id="esplFieldset">
       <legend id="esplorazLegend">Cerca nel sito</legend>
       <div id="search_section">
-        <label for="cerca_missione" class="dis_block" type="text">Inserire il luogo secondo cui filtrare le spedizioni</label>
+        <label for="cerca_missione" class="dis_block">Inserire il luogo secondo cui filtrare le spedizioni</label>
         <input type="text" class="dis_block" onfocus="myFocusFunction(this)" onblur="myBlurFunction(this)" id="cerca_missione" name="Nome_del_pianeta" value="Cerca luogo…"/>
-        <button tabindex="3" title="Cerca missioni per il luogo selezionato" type="submit" name="submit" id="pulsante_cerca_pianeta"/><img src="images/cerca.png" id="search_img" alt="Cerca" title="avvia la ricerca"/>
+        <button title="Cerca missioni per il luogo selezionato" type="submit" name="submit" id="pulsante_cerca_pianeta"/><img src="images/cerca.png" id="search_img" alt="Cerca" title="avvia la ricerca"/>
       </div>
-      <button tabindex="4" type="submit" name="submitAnnullaFiltro" id="pulsante_cerca_tutte">Annulla filtro di ricerca</button>
+      <button type="submit" name="submitAnnullaFiltro" id="pulsante_cerca_tutte">Annulla filtro di ricerca</button>
       </fieldset>
       </form>
       <p id="searchError"></p>
@@ -56,7 +56,7 @@
       <div id='missionsHere'/>
     </div>
     <div>
-          <button tabindex="33" name="torna su" title="torna su" id ="btnScrollToTop"/>
+          <button name="torna su" title="torna su" id ="btnScrollToTop"/>
           <div id="frecciasu"></div>
     </div>
     <div id="footer">

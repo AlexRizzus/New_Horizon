@@ -27,8 +27,8 @@ if($connessioneOK){
 
   if (isset($_GET['submit']))
   {
-    $error_invalid_filter = false;
-    if($_GET['Nome_del_pianeta'] != "Cerca luogo…") {
+    if($_GET['Nome_del_pianeta'] !== "Cerca luogo…") {
+      $error_invalid_filter = false;
       $luogo_missione = ucfirst(strtolower($_GET['Nome_del_pianeta']));
       $filtroAttStr = 'Filtro attuale: ' . $luogo_missione;
       $missioni = $oggettoConnessione->getMissioni_perLuogo($luogo_missione);
@@ -37,6 +37,7 @@ if($connessioneOK){
     }
     else {
       $error_invalid_filter = true;
+      $missioni = $oggettoConnessione->getMissioni();
       $paginaHTML = str_replace('<p id="searchError"></p>','<p id="searchError">Errore, inserire un nome di un luogo da cercare!</p>',$paginaHTML);
     }
   }
@@ -125,15 +126,15 @@ if($connessioneOK){
       }
       $stringa_missioni .= '<div class="mission-box" id="missionbox' . $counter . '">' .
       "<h2>Nome della missione: " . $valore['nome'] . "</h2>" .
-      '<form class="missionform' . $no_disp . '" id="missionForm' . $counter . '" action="esplorazioni.php" method="post">
+      '<form class="missionform' . $no_disp . '" id="missionForm' . $counter . '" action="esplorazioni.php" method="post" onsubmit="subm();">
       <fieldset>
-      <label id="actionLabel" type="hidden" for="actionInp">' . $azioneStr . '</label>
-      <input type="hidden" id="actionInp" name="Azione" value="' . $azione . '"/>
-      <label class="notToDisp" type="hidden" for="filterInp">' . $filtroAttStr . '</label>
-      <input type="hidden" id="filterInp" name="filtro" value="' . $luogo_missione . '"/>
-      <label class="notToDisp" type="hidden" for="nomeInp">Missione denominata ' . $valore['nome'] . '</label>
-      <input type="hidden" id="nomeInp" name="Nome_missione" value="' . $valore['nome'] . '"/>
-      <button class="button_prefe" type="submit" title="' . $azioneStr . '" name="submitPrefe" onsubmit="subm();">'
+      <label class="actionLabel" for="actionInp' . $counter . '">' . $azioneStr . '</label>
+      <input type="hidden" id="actionInp' . $counter . '" name="Azione" value="' . $azione . '"/>
+      <label class="notToDisp" for="filterInp' . $counter . '">' . $filtroAttStr . '</label>
+      <input type="hidden" id="filterInp' . $counter . '" name="filtro" value="' . $luogo_missione . '"/>
+      <label class="notToDisp" for="nomeInp' . $counter . '">Missione denominata ' . $valore['nome'] . '</label>
+      <input type="hidden" id="nomeInp' . $counter . '" name="Nome_missione" value="' . $valore['nome'] . '"/>
+      <button class="button_prefe" type="submit" title="' . $azioneStr . '" name="submitPrefe">'
       . $icon .
       '</button>
       </fieldset>
