@@ -1162,7 +1162,7 @@ body {
 .nomemissione{
   text-align: center;
   color: #000000;
-  font-size: calc(1.2vw + 0.8vh + 0.8vmin);
+  font-size: calc(1vw + 0.6vh + 0.6vmin);
 }
 
 .transparent{

@@ -39,17 +39,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['invio']))
         $oggetto="true";
     }
     if(isset($_SESSION["email"]) && $testo=="true" && $oggetto=="true"){
-        $oggetto= test_input($_POST["opzioni"]);
-        $testo=test_input($_POST["testo"]);
+        $oggetto= $oggettoConnessione->test_input($_POST["opzioni"]);
+        $testo=$oggettoConnessione->test_input($_POST["testo"]);
         $oggettoConnessione->add_message($_SESSION["username"], $oggetto, $testo);
         $paginaHTML=str_replace('<p id="scriptalert"></p>','<script type="text/javascript">window.onload = function(){alert("Mail inviata con successo");}</script>', $paginaHTML);
     }
 } 
 echo($paginaHTML);
-function test_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
 ?>

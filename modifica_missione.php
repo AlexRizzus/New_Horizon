@@ -5,6 +5,7 @@ $connessioneOK=$oggettoConnessione->openDBConnection();
 $paginaHTML = file_get_contents('modifica_missione.html');
 session_start();
 
+
 if(isset($_SESSION['livello'])){
     if($_SESSION['livello'] == "amministratore"){
         //creazione form modifica

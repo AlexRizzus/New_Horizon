@@ -170,6 +170,7 @@ public function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
+  $data = mysqli_real_escape_string($this->connection, $data);
   return $data;
 }
 public function modifica_nome($chiave, $valore){
