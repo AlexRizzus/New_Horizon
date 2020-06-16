@@ -924,16 +924,15 @@
     /*----------------------ADMIN---------------------------*/
     .admin-content{
       position: relative;
-      left: 20%;
-      right: 40%;
-      max-width: 50%;
+      left: 3%;
+      max-width: 80%;
       background-color: #d3d3d3;
       color: #002125;
       border: 0.2em solid #002125;
       border-radius: 0.3em;
       padding: 0.3em;
       margin:3em;
-      font-size: calc(1.5vw + 0.6vh + 0.6vmin);
+      font-size: calc(1.5vw + 1vh + 1vmin);
       text-align: center;
     }
     .adminbutton {
@@ -947,10 +946,6 @@
       transition-duration: 0.4s;
       font-weight: bold;
       margin-top: 0.5em;
-    }
-    .adminbutton:hover {
-      background-color:#002125;
-      color:#d3d3d3;
     }
     .campidatiadmin{
       background-color:#002125;
@@ -992,10 +987,11 @@
     }
     #titlemodificamissione{
       padding-top: 1em;
-      font-size: calc(3vw + 0.5vh + 0.5vmin);
+      position: relative;
+      left :30%;
+      font-size: calc(3vw + 1vh + 1vmin);
     }
     .scrittemodificamissione{
-      font-size: calc(1.5vw + 0.5vh + 0.5vmin);
       background-color:#d3d3d3;
       color:#002125;
       border: 0.075em solid #d3d3d3;
@@ -1004,7 +1000,6 @@
       margin:0.5em;
     }
     .buttoninputmodificamissione{
-      font-size: calc(1vw + 0.5vh + 0.5vmin);
       background-color:#002125;
       color:#d3d3d3;
       border: 0.1em solid #001a1d;
@@ -1014,7 +1009,7 @@
       width: 70%;
     }
     .buttonmodificamissione{
-      font-size: calc(1.5vw + 0.5vh + 0.5vmin);
+      font-size: calc(3vw + 0.5vh + 0.5vmin);
       background-color:#002125;
       color:#d3d3d3;
       border: 0.1em solid #001a1d;
@@ -1022,10 +1017,9 @@
       padding: 0.3em;
       margin:0.5em;
     }
-    .buttonmodificamissione:hover {
-      background-color:#d3d3d3;
-      color:#002125;
-      border: 0.1em solid #002125;
+    .scrittemodificamissione, .buttoninputmodificamissione{
+      display: flex;
+      font-size: calc(2vw + 0.5vh + 0.5vmin);
     }
     /* --------------- LOGIN --------------------------------------------- */
 
