@@ -54,6 +54,7 @@
   top: 0.2em;
   right: 0.6em;
   font-size: 5em;
+  mix-blend-mode: difference;
 }
 .breadcrumb{
   display: none;
@@ -548,8 +549,9 @@
   transition-duration: 0.4s;
   font-weight: bold;
   margin-top: 1em;
+  font-size: calc(2.6vw + 1vh + 1vmin);
 }
-.formdescription, .formerror, #sendbutton, .testo_generico_contattaci, .testo_pulsanti_contattaci{
+.formdescription, .formerror, .testo_generico_contattaci, .testo_pulsanti_contattaci{
   font-size: calc(2vw + 0.8vh + 0.8vmin);
 }
 .formerror{
@@ -823,8 +825,8 @@
     #filtro_scritta{
       text-align: center;
       font-size: 1.2em;
-      // display: inline-block;
-      // margin-left: 40%;
+      display: inline-block;
+      margin-left: 40%;
     }
 
     #filtro_attuale{
@@ -1025,6 +1027,10 @@
       max-height: 30em;
       align-self: center;
     }
+    /*---------------------------------------------------- MODIFICA MISSIONE - GESTIONE ADMIN-------------------------------------------------------------------*/
+    .nav-tgl {
+      color: white;
+    }
     .amministratore-box{
       background-color: #d3d3d3;
       font-weight: bold;
@@ -1094,15 +1100,15 @@
       color:#002125;
       border: 0.1em solid #002125;
     }
+    /*----------------------------------------------------ADMIN -------------------------------------------------------------------*/
     .admin-content{
-      position: relative;
-      max-width: 90%;
+      max-width: 100%;
       background-color: #d3d3d3;
       color: #002125;
       border: 0.2em solid #002125;
       border-radius: 0.3em;
       padding: 0.3em;
-      margin:3em;
+      margin:0.5em;
       font-size: calc(2vw + 1vh + 1vmin);
       text-align: center;
     }
