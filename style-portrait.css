@@ -448,10 +448,8 @@
   text-align: center;
 }
 .aurora{
-  background-image: image();
   width: 100%;
   filter: blur(8px);
-  -webkit-filter: blur(8px);
 }
 .titolo{
  position: absolute;
@@ -465,21 +463,10 @@
   border: 3px solid #f1f1f1;
   width: 80%;
   padding: 2%;
-  font-size: 3vw;
+  font-size: calc(1.5vw + 1vh + 1vmin);
   text-align: center;
   max-height: 70%;
   text-shadow: 2px 2px 4px #000000;
- background-color: rgb(0,0,0);
- background-color: rgba(0,0,0, 0.6);
- color: white;
- font-weight: bold;
- border: 3px solid #f1f1f1;
- border-radius: 10px;
- width: 80%;
- padding: 2%;
- font-size: 3vw;
- text-align: center;
- max-height: 70%;
 }
 .testo{
   margin: 0em;
@@ -491,7 +478,6 @@
   text-align: center;
   position: relative;
   left: 5%;
-  font-size: calc(1vw + 0.5vh + 1vmin);
   background-image: linear-gradient(to bottom, #000d33, #330033);
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -501,7 +487,7 @@
 }
 .pulsanti_contattaci{
   max-height: 30%;
-  font-size: calc(1.2vw + 0.5vh + 1.5vmin);
+  font-size: calc(3vw + 0.5vh + 1.5vmin);
   min-width: 80%;
   margin: 0.5em;
   margin-left: 1em;
@@ -517,42 +503,31 @@
   text-align: center;
   position:relative;
   left:5%;
-  font-size: calc(1.5vw + 0.5vh + 1vmin);
   text-shadow: 2px 2px 4px #000000;
   background-color: rgba(200,255,210, 0.1);
   border: 3px solid rgba(200,255,210, 0.1);
   max-width: 90%;
 }
-#immagine_insta{
+#immagine_insta, #immagine_face, #immagine_twit{
   margin: 5%;
-  margin-left: 15%;
-  max-width: 15%;
-}
-#immagine_face{
-  margin: 5%;
-  max-width: 15%;
-}
-#immagine_twit{
-  margin: 5%;
+  margin-left: 10%;
   max-width: 15%;
 }
 .foto_social{
-  width: 60%;
+  width: 80%;
   position:relative;
-  left:18%;
+  left:8%;
   margin: 1em;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
 }
+#formid{
+  position:relative;
+  left: 10%;
+  max-width: 80%;
+}
 #textarea{
   resize: none;
-  max-width: 70%;
-}
-.formdescription{
-  font-size: calc(1.5vw + 0.5vh + 0.5vmin);
-}
-.formerror{
-  font-size: calc(1.5vw + 0.5vh + 0.5vmin);
-  color: crimson;
+  max-width: 100%;
 }
 .inputform{
   background-color:#002125;
@@ -561,7 +536,7 @@
   border-radius: 0.3em;
   padding: 0.3em;
   margin:0em;
-  font-size: 2em;
+
 }
 #sendbutton {
   background-color: #d3d3d3;
@@ -570,15 +545,18 @@
   border-radius: 0.3em;
   padding: 0.3em;
   margin:0em;
-  font-size: 2em;
   transition-duration: 0.4s;
   font-weight: bold;
   margin-top: 1em;
 }
-#sendbutton:hover {
-  background-color:#002125;
-  color:#d3d3d3;
-  border: 0.2em solid #d3d3d3;;
+.formdescription, .formerror, #sendbutton, .testo_generico_contattaci, .testo_pulsanti_contattaci{
+  font-size: calc(2vw + 0.8vh + 0.8vmin);
+}
+.formerror{
+  color: crimson;
+}
+.formdescription, .formerror, .inputform{
+  display: flex;
 }
   /* --------------- LOGIN --------------------------------------------- */
 

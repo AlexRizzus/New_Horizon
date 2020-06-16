@@ -445,10 +445,8 @@ body {
   text-align: center;
 }
 .aurora{
-  background-image: image();
   width: 100%;
   filter: blur(8px);
-  -webkit-filter: blur(8px);
 }
 .titolo{
  position: absolute;
@@ -532,7 +530,7 @@ body {
   font-size: calc(1.5vw + 0.5vh + 0.5vmin);
   text-shadow: 2px 2px 4px #000000;
   background-color: rgba(200,255,210, 0.1);
-  border: 3px solid rgba(200,255,210, 0.1);
+  border: 3px solid rgba(200,255,210, 0.2);
 }
 .testo_generico_contattaci:hover{
   background-color: rgba(100,100,100, 0.3);
@@ -1216,7 +1214,7 @@ body {
   font-size: calc(1.5vw + 0.5vh + 0.5vmin);
   background-color:#d3d3d3;
   color:#002125;
-  border: 0.075em solid #d3d3d3;
+  border: 0.075em solid rgb(211,211,211, 0.5);
   border-radius: 0.3em;
   padding: 0.3em;
   margin:0.5em;
