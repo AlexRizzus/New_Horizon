@@ -41,7 +41,7 @@
         <h1>REGISTRATI</h1>
         <div id="login-box">
         <h2>Inserisci le tue credenziali</h2>
-        <form method="post" action="registrazione.php" onsubmit="return validateRegistration()">
+        <form name="registrazione" method="post" action="registrazione.php" onsubmit="return validateRegistration()" onchange="validateRegistration()">
           <div>
           <div id="email-error"> </div>
           <p>email:</p> <input accesskey="e" tabindex="1" type="text" name="email" title="campo email"/>
