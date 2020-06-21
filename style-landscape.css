@@ -987,8 +987,7 @@
     }
     #titlemodificamissione{
       padding-top: 1em;
-      position: relative;
-      left :30%;
+      margin-left: 3em;
       font-size: calc(3vw + 1vh + 1vmin);
     }
     .scrittemodificamissione{
@@ -1017,9 +1016,12 @@
       padding: 0.3em;
       margin:0.5em;
     }
-    .scrittemodificamissione, .buttoninputmodificamissione{
+    .scrittemodificamissione, .buttoninputmodificamissione, .erroreModifica{
       display: flex;
       font-size: calc(2vw + 0.5vh + 0.5vmin);
+    }
+    .erroreModifica{
+      color: crimson;
     }
     /* --------------- LOGIN --------------------------------------------- */
 

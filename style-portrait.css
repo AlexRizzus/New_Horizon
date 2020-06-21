@@ -1073,8 +1073,11 @@
       padding: 0.3em;
       margin:0.5em;
     }
-    .scrittemodificamissione, .buttoninputmodificamissione{
+    .scrittemodificamissione, .buttoninputmodificamissione, .erroreModifica{
       display: flex;
+    }
+    .erroreModifica{
+      color: crimson;
     }
     .buttoninputmodificamissione{
       font-size: calc(1.5vw + 1.5vh + 1.5vmin);
@@ -1094,11 +1097,6 @@
       border-radius: 0.3em;
       padding: 0.3em;
       margin:0.5em;
-    }
-    .buttonmodificamissione:hover {
-      background-color:#d3d3d3;
-      color:#002125;
-      border: 0.1em solid #002125;
     }
     /*----------------------------------------------------ADMIN -------------------------------------------------------------------*/
     .admin-content{
