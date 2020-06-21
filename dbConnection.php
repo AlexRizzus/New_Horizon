@@ -206,5 +206,10 @@ public function add_message($username, $oggetto, $messaggio)
   $query = "INSERT INTO Messaggi_utenti VALUES ('','$username', '$oggetto', '$messaggio')";
   $queryResult=mysqli_query($this->connection, $query);
 }
+public function validateDate($date, $format = 'Y-m-d H:i:s')
+{
+    $d = DateTime::createFromFormat($format, $date);
+    return $d && $d->format($format) == $date;
+}
 }
 ?>
