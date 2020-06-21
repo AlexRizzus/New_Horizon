@@ -37,7 +37,7 @@
               <!-- bottone per chiudere la navigation mobile -->
         <a class="nav-tgl"  >&equiv;</a>
     <div id="login-content">
-      <form method="post" action="login.php" onsubmit="return validateLogin()"> <!--there is no attribute "name"-->
+      <form name = "login" method="post" action="login.php" onsubmit="return validateLogin()" onchange="validateLogin()">
         <h1>LOGIN</h1>
         <div id="login-box">
         <h2>Inserisci <span xml:lang="en">username</span> e <span xml:lang="en">password</span></h2>

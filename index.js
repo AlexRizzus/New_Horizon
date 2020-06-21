@@ -22,24 +22,24 @@ function validateLogin(){
   if(parent.children.length > 0){
   document.getElementsByClassName("error")[0].remove();
 }
-  username = document.forms["login"]["username"].value;
-  user = isUsername(username);
-  password = document.forms["login"]["password"].value;
-  psw = isPassword(password);
+  var username = document.forms["login"]["username"].value;
+  var user = isUsername(username);
+  var password = document.forms["login"]["password"].value;
+  var psw = isPassword(password);
   if (user && psw)
   {
     return true;
   }
   else {
-      displayerror(parent,"Username o Password errata, riprova");
+      displayerror(parent,"Lo Username o la password non rispettano i parametri");
       return false;
   }
 
 }
 function validateRegistration(){
-  erremail = document.getElementById("email-error");
-  erruser = document.getElementById("username-error");
-  errpsw = document.getElementById("password-error");
+  var erremail = document.getElementById("email-error");
+  var erruser = document.getElementById("username-error");
+  var errpsw = document.getElementById("password-error");
   if(erremail.children.length > 0){
   document.getElementsByClassName("error")[0].remove();
   }
@@ -49,21 +49,21 @@ function validateRegistration(){
   if(errpsw.children.length > 0){
   document.getElementsByClassName("error")[0].remove();
   }
-  username = document.forms["registrazione"]["username"].value;
-  user = isUsername(username);
+  var username = document.forms["registrazione"]["username"].value;
+  var user = isUsername(username);
   if(!user)
   {
     displayerror(erruser,"Nome utente troppo corto");
   }
-  password = document.forms["registrazione"]["password"].value;
-  psw = isPassword(password);
+  var password = document.forms["registrazione"]["password"].value;
+  var psw = isPassword(password);
   if(!psw)
   {
     displayerror(errpsw,"Prova con una password pi&ugrave; complessa");
   }
-  email = document.forms["registrazione"]["email"].value;
-  email = isEmail(password);
-  if(!email)
+  var email = document.forms["registrazione"]["email"].value;
+  var mail = isEmail(email);
+  if(!mail)
   {
     displayerror(erremail,"E-mail non valida");
   }
@@ -80,7 +80,7 @@ function isUsername(username) {
     return username.length > 3;
 }
 function isEmail(email) {
-    return new RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/).test(email);
+  return new RegExp('^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9])+$').test(email);
 }
 
 function isPassword(psw) {
