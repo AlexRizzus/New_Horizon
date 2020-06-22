@@ -131,18 +131,16 @@
 
   /*----------------HOME PAGE------------------------------------------------*/
 
+
   #background {
     display: none;
-    width: 100%;
     height:auto;
-    padding: 0em;
-    margin:0em;
   }
   .item1 {
     grid-area: a;
     font-size: 2.6em;
     text-align: center;
-    padding: 0em 2em;
+  
   }
   .item2 {
     grid-area: b;
@@ -163,14 +161,14 @@
     font-size: 3em;
     text-align: center;
     align-items: center;
-    padding:1.2em 3em;
+
+   
   }
   .item5 {
     grid-area: e;
     font-size: 3em;
     text-align: center;
     align-items: center;
-    padding:1.2em 3em;
   }
   .item6 {
     grid-area: f;
@@ -198,7 +196,6 @@
     font-size: 3em;
     text-align: center;
     align-items: center;
-    padding:1.2em 3em;
   }
 
   .grid-container {
@@ -206,16 +203,18 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 'b' 'a' 'd' 'c' 'f' 'e' 'g' 'h';
+    justify-items: center;
     grid-gap: 1em;
-    grid-row-gap: 3em;
+    max-width: 100%;
+
   }
   .mission-home {
     display: block;
     background-color:#d3d3d3;
     color:#002125;
-    width: 60%;
+    width: 90%;
     border-radius: 0.4em;
-    margin: 3em 20%;
+    margin: 2em 20%;
     padding-bottom:1em;
     padding-top:0.3em;
     font-weight: bold;
