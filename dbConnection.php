@@ -211,5 +211,22 @@ public function validateDate($date, $format = 'Y-m-d H:i:s')
     $d = DateTime::createFromFormat($format, $date);
     return $d && $d->format($format) == $date;
 }
+public function validateName($name){
+  $query = "SELECT nome FROM Missioni ORDER BY data_inizio DESC";
+  $queryResult=mysqli_query($this->connection, $query);
+  $result=array();
+    while($row = mysqli_fetch_assoc($queryResult))
+    {
+      $singolaEntry = $row['nome'];
+      array_push($result, $singolaEntry);
+    }
+  foreach($result as $valore){
+    if($name == $valore){
+      return false;
+    }
+  }
+  return true;
+
+}
 }
 ?>

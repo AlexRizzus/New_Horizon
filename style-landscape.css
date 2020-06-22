@@ -993,18 +993,12 @@
     .scrittemodificamissione{
       background-color:#d3d3d3;
       color:#002125;
-      border: 0.075em solid #d3d3d3;
-      border-radius: 0.3em;
-      padding: 0.3em;
-      margin:0.5em;
     }
     .buttoninputmodificamissione{
       background-color:#002125;
       color:#d3d3d3;
       border: 0.1em solid #001a1d;
       border-radius: 0.3em;
-      padding: 0.3em;
-      margin:0.5em;
       width: 70%;
     }
     .buttonmodificamissione{
@@ -1013,8 +1007,6 @@
       color:#d3d3d3;
       border: 0.1em solid #001a1d;
       border-radius: 0.3em;
-      padding: 0.3em;
-      margin:0.5em;
     }
     .scrittemodificamissione, .buttoninputmodificamissione, .erroreModifica{
       display: flex;
