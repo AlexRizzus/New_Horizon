@@ -1115,6 +1115,8 @@ body {
   font-weight: bold;
   margin-top: 1em;
   vertical-align: middle;
+  display: flex;
+  margin-left: 45%;
 }
 .login-button:hover {
   background-color:#002125;

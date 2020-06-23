@@ -34,6 +34,7 @@ if(isset($_SESSION['livello'])){
 
 
 
+
             
             if(!preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$data_inizio) || !$oggettoConnessione->validateDate($data_inizio, 'Y-m-d')){
                
@@ -58,13 +59,13 @@ if(isset($_SESSION['livello'])){
                 $errore_stato=true;
             }
             
-            if(strlen($nome)<26){
-                $oggettoConnessione->modifica_nome($missione, $nome);
+            if(strlen($nome)<26 && strlen($nome)>6){
+                 $oggettoConnessione->modifica_nome($missione, $nome);
             }
             else{
                 $errore_nome = true;
             }
-
+            
             if(strlen($affiliazioni)<201){
                 $oggettoConnessione->modifica_affiliazioni($missione, $affiliazioni);
             }
@@ -72,7 +73,7 @@ if(isset($_SESSION['livello'])){
                 $errore_affiliazione=true;
             }
 
-            if(strlen($destinazione)<41){
+            if(strlen($destinazione)<41 && strlen($destinazione)>3){
                 $oggettoConnessione->modifica_destinazione($missione, $destinazione);
             }
             else{
@@ -132,7 +133,7 @@ if(isset($_SESSION['livello'])){
                 $errori = true;
             }
             if($errore_nome){
-                $erroreNome = '<p class="erroreModifica">Il nome non deve eccedere 25 caratteri</p>';
+                $erroreNome = '<p class="erroreModifica">Il nome non deve eccedere 25 caratteri ma deve superare 6 caratteri di lunghezza</p>';
                 $paginaHTML=str_replace('<p id="erroreNome"></p>', $erroreNome, $paginaHTML);
                 $errori = true;
             }
@@ -141,7 +142,7 @@ if(isset($_SESSION['livello'])){
                 $errori = true;
             }
             if($errore_destionazione){
-                $erroreLuogo = '<p class="erroreModifica">Luogo non deve superare 40 caratteri</p>';
+                $erroreLuogo = '<p class="erroreModifica">Luogo non deve superare 40 caratteri ma deve essere almeno di 3 caratteri</p>';
                 $paginaHTML=str_replace('<p id="erroreLuogo"></p>', $erroreLuogo, $paginaHTML);
                 $errori = true;
             }
