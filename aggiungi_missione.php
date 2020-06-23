@@ -8,16 +8,16 @@ session_start();
 if(isset($_SESSION['livello'])){
     if($_SESSION['livello'] == "amministratore"){
             $stringa='<fieldset class="scrittemodificamissione"><legend class="scrittemodificamissione">Missione:</legend>
-            <p id="erroreNome"></p>Nome: <input titile="Inserisci il nome della missione" tabindex="1" class="buttoninputmodificamissione" type="text" name="nome"/>
-            <p id="erroreDataInizio"></p>Data inizio: <input titile="Inserisci la data iniziale" tabindex="2" class="buttoninputmodificamissione" type="text" name="data_inizio"/>
-            <p id="erroreDataFine"></p>Data di fine: <input titile="Inserisci la data di fine" tabindex="3" class="buttoninputmodificamissione" type="text" name="data_fine"/>
+            <p id="erroreNome"></p>Nome: <input title="Inserisci il nome della missione" tabindex="1" class="buttoninputmodificamissione" type="text" name="nome"/>
+            <p id="erroreDataInizio"></p>Data inizio: <input title="Inserisci la data iniziale" tabindex="2" class="buttoninputmodificamissione" type="text" name="data_inizio"/>
+            <p id="erroreDataFine"></p>Data di fine: <input title="Inserisci la data di fine" tabindex="3" class="buttoninputmodificamissione" type="text" name="data_fine"/>
             <p class="scrittemodificamissione">Per lo stato è possibile inserire solamente: in preparazione, in corso, terminata o fallita.</p>
             <p id="erroreStato"></p>Stato: <input title="Inserisci lo stato della missione, puoi inserire in preparazione, in corso, terminata o fallita" tabindex="4" class="buttoninputmodificamissione" type="text" name="stato"/>
             <p id="erroreAffiliazioni"></p>Affiliazioni: <input title="Inserisci le agenzie affiliate nella missione" tabindex="5" class="buttoninputmodificamissione" type="text" name="affiliazioni"/>
             <p id="erroreLuogo"></p>Luogo: <input title="Inserisci il luogo della missione" tabindex="6" class="buttoninputmodificamissione" type="text" name="destinazione"/>
             <p id="erroreScopo"></p>Scopo: <input title="Inserisci lo scopo della missione" tabindex="7" class="buttoninputmodificamissione" type="text" name="scopo"/></fieldset>
-            <input type="hidden" name="key"/>
-            <button tabindex="8"  class="buttonmodificamissione" type="submit" name="add">Invia</button>';
+            <div><input type="hidden" name="key"/>
+            <button tabindex="8"  class="buttonmodificamissione" type="submit" name="add">Invia</button></div>';
             $paginaHTML=str_replace('<p id="campiDati"></p>',$stringa, $paginaHTML);
 
         if (isset($_POST['add'])) {
