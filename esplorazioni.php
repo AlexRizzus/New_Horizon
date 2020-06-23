@@ -68,7 +68,7 @@ if($connessioneOK){
   }
   if(!isset($missioni)){
     if(!$error_invalid_filter === true) {
-      $paginaHTML = str_replace("<p id='planetNotFound'/>","<strong id=\"errorPlanetNotFound\">Non ci sono missioni attive o programmate presso la destinazione inserita. Controllare il pianeta inserito.</strong>",$paginaHTML);
+      $paginaHTML = str_replace("<p id='planetNotFound'></p>","<strong id=\"errorPlanetNotFound\">Non ci sono missioni attive o programmate presso la destinazione inserita. Controllare il pianeta inserito.</strong>",$paginaHTML);
     }
     echo($paginaHTML);
   } else {
@@ -128,12 +128,9 @@ if($connessioneOK){
       "<h2>Nome della missione: " . $valore['nome'] . "</h2>" .
       '<form class="missionform' . $no_disp . '" id="missionForm' . $counter . '" action="esplorazioni.php" method="post" onsubmit="subm();">
       <fieldset id="fieldser'. $counter .'">
-      <label class="actionLabel" for="actionInp' . $counter . '">' . $azioneStr . '</label>
-      <input type="hidden" id="actionInp' . $counter . '" name="Azione" value="' . $azione . '"/>
-      <label class="notToDisp" for="filterInp' . $counter . '">' . $filtroAttStr . '</label>
-      <input type="hidden" id="filterInp' . $counter . '" name="filtro" value="' . $luogo_missione . '"/>
-      <label class="notToDisp" for="nomeInp' . $counter . '">Missione denominata ' . $valore['nome'] . '</label>
-      <input type="hidden" id="nomeInp' . $counter . '" name="Nome_missione" value="' . $valore['nome'] . '"/>
+      <input title="' . $azioneStr . '" type="hidden" id="actionInp' . $counter . '" name="Azione" value="' . $azione . '"/>
+      <input type="' .$filtroAttStr. '" type="hidden" id="filterInp' . $counter . '" name="filtro" value="' . $luogo_missione . '"/>
+      <input title="Missione denominata ' . $valore['nome'] . '" type="hidden" id="nomeInp' . $counter . '" name="Nome_missione" value="' . $valore['nome'] . '"/>
       <button class="button_prefe" type="submit" title="' . $azioneStr . '" name="submitPrefe">'
       . $icon .
       '</button>
@@ -147,7 +144,7 @@ if($connessioneOK){
       "<p>Scopo: " . $valore['scopo'] . "</p>" .
       "</div>";
     }
-    $paginaHTML = str_replace("<div id='missionsHere'/>",$stringa_missioni,$paginaHTML);
+    $paginaHTML = str_replace("<div id='missionsHere'></div>",$stringa_missioni,$paginaHTML);
     echo($paginaHTML);
   }
 }else
