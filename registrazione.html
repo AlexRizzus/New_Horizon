@@ -41,12 +41,12 @@
         <h1>REGISTRATI</h1>
         <div id="login-box">
         <h2>Inserisci le tue credenziali</h2>
-        <form name="registrazione" method="post" action="registrazione.php" onsubmit="return validateRegistration()" onchange="validateRegistration()">
+        <form method="post" action="registrazione.php" onsubmit="return validateRegistration()">
           <div>
           <div id="email-error"> </div>
-          <p>email:</p> <input accesskey="e" tabindex="1" type="text" name="email" title="campo email"/>
+          <p>email:</p> <input id="emailfield" accesskey="e" tabindex="1" type="text" name="email" title="campo email"/>
           <div id="username-error"> </div>
-          <p>username:</p> <input accesskey="u" tabindex="2" type="text" name="username" title="campo username"/>
+          <p>username:</p> <input id="userfield" accesskey="u" tabindex="2" type="text" name="username" title="campo username"/>
           <p>sesso:</p> <select tabindex="3" name="sesso" title="campo sesso">
             <option value="Maschio">Maschio</option>
             <option value="Femmina">Femmina</option>
@@ -59,7 +59,7 @@
             <option value="Altro">Altro..</option>
           </select>
             <div id="password-error"> </div>
-          <p> password:</p> <input accesskey="p" tabindex="5" type="password" name="password" title="campo password"/>
+          <p> password:</p> <input id="passfield" accesskey="p" tabindex="5" type="password" name="password" title="campo password"/>
           <div id="successo"> </div>
           <button tabindex="6" type="submit" name="submit" class="login-button">Conferma</button>
         </div>
