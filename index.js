@@ -22,9 +22,9 @@ function validateLogin(){
   if(parent.children.length > 0){
   document.getElementsByClassName("error")[0].remove();
 }
-  var username = document.forms["login"]["username"].value;
+  var username = document.getElementById("userfield");
   var user = isUsername(username);
-  var password = document.forms["login"]["password"].value;
+  var password = document.getElementById("passfield");
   var psw = isPassword(password);
   if (user && psw)
   {
@@ -49,19 +49,20 @@ function validateRegistration(){
   if(errpsw.children.length > 0){
   document.getElementsByClassName("error")[0].remove();
   }
-  var username = document.forms["registrazione"]["username"].value;
+  var username = document.getElementById("userfield").value;
   var user = isUsername(username);
   if(!user)
   {
     displayerror(erruser,"Nome utente troppo corto");
   }
-  var password = document.forms["registrazione"]["password"].value;
+  var password = document.getElementById("passfield").value;
   var psw = isPassword(password);
   if(!psw)
   {
     displayerror(errpsw,"Prova con una password pi&ugrave; complessa");
   }
-  var email = document.forms["registrazione"]["email"].value;
+  var email = document.getElementById("emailfield").value;
+  console.log(email);
   var mail = isEmail(email);
   if(!mail)
   {
