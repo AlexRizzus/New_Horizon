@@ -15,29 +15,33 @@ $connessioneOK=$oggettoConnessione->openDBConnection();
       $paginaHTML = str_replace("<email/>",$_SESSION['email'],$paginaHTML);
       $paginaHTML = str_replace("<tabellapreferiti/>","<div id='contentMission'><missions/> </div>",$paginaHTML);
       $missioni = $oggettoConnessione->getMissioniPrefe($_SESSION['username']);
-      foreach($missioni as $valore){
-        $stringa_missioni = "";
-        $data_ini = "N/A";
-        $data_fin = "N/A";
-        if($valore['data_inizio'] != null)
-        {
-          $data_ini = $valore['data_inizio'];
+      if(isset($missioni)) {
+        foreach($missioni as $valore){
+          $stringa_missioni = "";
+          $data_ini = "N/A";
+          $data_fin = "N/A";
+          if($valore['data_inizio'] != null)
+          {
+            $data_ini = $valore['data_inizio'];
+          }
+          if($valore['data_fine'] != null)
+          {
+            $data_fin = $valore['data_fine'];
+          }
+          $stringa_missioni .= '<div class="mission-box">' .
+          "<h2>Nome della missione: " . $valore['missione'] . "</h2>" .
+          "<p>Iniziata in data: " . $data_ini . "</p>" .
+          "<p>Fine in data: " . $data_fin . "</p>" .
+          "<p>Stato: " . $valore['stato'] . "</p>" .
+          "<p>Affiliazioni: " . $valore['affiliazioni'] . "</p>" .
+          "<p>Luogo: " . $valore['destinazione'] . "</p>" .
+          "<p>Scopo: " . $valore['scopo'] . "</p>" .
+          "</div>";
         }
-        if($valore['data_fine'] != null)
-        {
-          $data_fin = $valore['data_fine'];
+      }
+        if(isset($stringa_missioni)) {
+          $paginaHTML = str_replace("<missions/>",$stringa_missioni,$paginaHTML);
         }
-        $stringa_missioni .= '<div class="mission-box">' .
-        "<h2>Nome della missione: " . $valore['missione'] . "</h2>" .
-        "<p>Iniziata in data: " . $data_ini . "</p>" .
-        "<p>Fine in data: " . $data_fin . "</p>" .
-        "<p>Stato: " . $valore['stato'] . "</p>" .
-        "<p>Affiliazioni: " . $valore['affiliazioni'] . "</p>" .
-        "<p>Luogo: " . $valore['destinazione'] . "</p>" .
-        "<p>Scopo: " . $valore['scopo'] . "</p>" .
-        "</div>";
-    }
-        $paginaHTML = str_replace("<missions/>",$stringa_missioni,$paginaHTML);
         echo($paginaHTML);
     }
     else {
