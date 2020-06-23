@@ -496,7 +496,7 @@
     resize: none;
     max-width: 100%;
   }
-  
+
   #validation2{
     padding:2em;
   }
@@ -653,10 +653,8 @@
     /*--------------ESPLORAZIONI------------------------------------------*/
     #contentEsp
     {
-      display: grid;
-      grid-template-areas: 't i';
-      grid-gap: 0.5em;
       padding-top: 1.3em;
+      text-align: center;
     }
 
     #contentEsp h1{
@@ -665,7 +663,6 @@
         font-size: 2.4em;
         margin-top: 0em;
         margin-bottom: 0em;
-        grid-area: t;
     }
 
     #pulsante_cerca_pianeta {
@@ -677,14 +674,14 @@
     }
 
     #filtro_scritta{
-      margin-left: 40%;
-      text-align: center;
       font-size: 1.2em;
+      align-self: center;
     }
 
 
     #search{
-      width: 230px;
+      width: 20em;
+      margin-left: 25%;
     }
     #search fieldset{border: 0px solid;padding: 0;grid-area: i;}
     #search legend{text-indent: -9999px;font-size: 1px}

@@ -140,7 +140,7 @@
     grid-area: a;
     font-size: 2.6em;
     text-align: center;
-  
+
   }
   .item2 {
     grid-area: b;
@@ -162,7 +162,7 @@
     text-align: center;
     align-items: center;
 
-   
+
   }
   .item5 {
     grid-area: e;
@@ -759,7 +759,7 @@
 
     #search_section {
       text-align: left;
-      width: 150%;
+      // width: 150%;
     }
 
     #search{
@@ -781,6 +781,7 @@
         font-size: 1.3em;
         border-color: #002125;
         border-radius: 0.3em;
+        display: block;
     }
 
     .dis_block{
@@ -801,7 +802,6 @@
       margin:0em;
       transition-duration: 0.4s;
       margin-top: 1.4em;
-      margin-left: 1em;
     }
 
     #search button:hover {
@@ -844,7 +844,7 @@
         margin: 4em;
         margin-left: 2em;
         margin-right: 2em;
-        width: 25em;
+        width: 16em;
         display: inline-block;
       }
 
@@ -861,8 +861,7 @@
     }
 
     #filtro_scritta{
-      margin-left: 40%;
-      text-align: center;
+      margin-left: 10%;
       font-size: 1.2em;
     }
 
