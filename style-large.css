@@ -1243,10 +1243,7 @@ body {
   color:#002125;
   border: 0.1em solid #002125;
 }
-.scrittemodificamissione, .buttoninputmodificamissione, .erroreModifica{
+.scrittemodificamissione, .buttoninputmodificamissione{
   display: block;
-}
-.erroreModifica{
-  color: crimson;
 }
 }

@@ -131,16 +131,18 @@
 
   /*----------------HOME PAGE------------------------------------------------*/
 
-
   #background {
     display: none;
+    width: 100%;
     height:auto;
+    padding: 0em;
+    margin:0em;
   }
   .item1 {
     grid-area: a;
     font-size: 2.6em;
     text-align: center;
-  
+    padding: 0em 2em;
   }
   .item2 {
     grid-area: b;
@@ -161,14 +163,14 @@
     font-size: 3em;
     text-align: center;
     align-items: center;
-
-   
+    padding:1.2em 3em;
   }
   .item5 {
     grid-area: e;
     font-size: 3em;
     text-align: center;
     align-items: center;
+    padding:1.2em 3em;
   }
   .item6 {
     grid-area: f;
@@ -196,6 +198,7 @@
     font-size: 3em;
     text-align: center;
     align-items: center;
+    padding:1.2em 3em;
   }
 
   .grid-container {
@@ -203,18 +206,16 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 'b' 'a' 'd' 'c' 'f' 'e' 'g' 'h';
-    justify-items: center;
     grid-gap: 1em;
-    max-width: 100%;
-
+    grid-row-gap: 3em;
   }
   .mission-home {
     display: block;
     background-color:#d3d3d3;
     color:#002125;
-    width: 90%;
+    width: 60%;
     border-radius: 0.4em;
-    margin: 2em 20%;
+    margin: 3em 20%;
     padding-bottom:1em;
     padding-top:0.3em;
     font-weight: bold;
@@ -1072,11 +1073,8 @@
       padding: 0.3em;
       margin:0.5em;
     }
-    .scrittemodificamissione, .buttoninputmodificamissione, .erroreModifica{
+    .scrittemodificamissione, .buttoninputmodificamissione{
       display: flex;
-    }
-    .erroreModifica{
-      color: crimson;
     }
     .buttoninputmodificamissione{
       font-size: calc(1.5vw + 1.5vh + 1.5vmin);
@@ -1096,6 +1094,11 @@
       border-radius: 0.3em;
       padding: 0.3em;
       margin:0.5em;
+    }
+    .buttonmodificamissione:hover {
+      background-color:#d3d3d3;
+      color:#002125;
+      border: 0.1em solid #002125;
     }
     /*----------------------------------------------------ADMIN -------------------------------------------------------------------*/
     .admin-content{

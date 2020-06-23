@@ -42,8 +42,8 @@ create table Utenti_Missioni(
 -- inserimento dati ----------------------------------
 
 insert into Utenti(username, psswd, sesso, e_mail, occupazione, livello) values
-	('admin', 'admin', 'M', 'marcello@gmail.com', 'holding a gun', 'amministratore'),
-    ('user', 'user', 'M', 'alberto@gmail.com', 'mamma mia','generico');
+	('marcello', 'what is it', 'M', 'marcello@gmail.com', 'holding a gun', 'amministratore'),
+    ('alberto', 'come and look', 'M', 'alberto@gmail.com', 'mamma mia','generico');
 
 insert into Missioni(nome, data_inizio, data_fine, stato, affiliazioni, destinazione, scopo) values
 	('Andromeda 1','2024-04-05' ,null , 'in preparazione', 'Nasa, Esa', 'Marte', 'stabilire una base operativa'),
@@ -59,16 +59,16 @@ insert into Missioni(nome, data_inizio, data_fine, stato, affiliazioni, destinaz
     ('Voyager 3','2025-01-02', null, 'in preparazione', 'Nasa, Esa, SpaceX, Maunakea', 'Spazio profondo', 'esplorazione e raccolta dati');
 
 insert into Utenti_Missioni(username, nome) values
-	('user','Andromeda 1'),
-		('user','Andromeda 2'),
-		('user','AndromedaX 2'),
-		('user','AndromedaX 3'),
-		('user','Venera 1'),
-		('user','Mariner 2'),
-		('user','Deus'),
-		('user','Deus2'),
-		('user','Iuran 24'),
-		('user','Voyager 3'),
-    ('user','Voyager 3');
+	('marcello','Andromeda 1'),
+		('marcello','Andromeda 2'),
+		('marcello','AndromedaX 2'),
+		('marcello','AndromedaX 3'),
+		('marcello','Venera 1'),
+		('marcello','Mariner 2'),
+		('marcello','Deus'),
+		('marcello','Deus2'),
+		('marcello','Iuran 24'),
+		('marcello','Voyager 3'),
+    ('alberto','Voyager 3');
 
 -- QUERY ---------------------------------------
