@@ -888,29 +888,8 @@
       display: none;
     }
     /* ------------ RICERCA ------------------------------------ */
-    #contentResearch{
-      display: grid;
-      grid-gap: 0.1em;
-      padding-top: 3em;
-      grid-template-columns: 1fr;
-      grid-template-areas:  't1'
-                            'i1'
-                            'd1'
-                            't2'
-                            's1'
-                            'im1'
-                            'p1'
-                            's4'
-                            'im4'
-                            'p4'
-                            't3'
-                            's2'
-                            'im2'
-                            'p2'
-                            's3'
-                            'im3'
-                            'p3'
-                            ;
+    #contentResearch{ 
+      display: block;                       
     }
 
     #contentResearch abbr{
@@ -919,6 +898,7 @@
 
     #contentResearch h1{
       font-size: 3em;
+      max-width: 80%;
       text-align: center;
       justify-self: center;
     }
@@ -941,95 +921,37 @@
       justify-self: center;
     }
 
-    #title_avanguardia{
-      grid-area: t1;
-    }
-
-    #d1{
-      grid-area: d1;
-    }
-
     #n1{
-      justify-self: center;
-      align-self: center;
-      max-width: 10em;
-      grid-area: i1;
       transform: rotate(30deg);
+      width: 50%;
+      position: relative;
+      left: 10%;
     }
-
-    #title_scoperte{
-      grid-area: t2;
-    }
-
-    #subtitle_buco{
-      grid-area: s1;
-    }
-
-    #div_buco{
-      grid-area: p1;
-    }
-
     #img_buco{
-      grid-area: im1;
       max-width: 20em;
       border-radius: 4em;
       align-self: center;
     }
 
     #subtitle_neutrini{
-      grid-area: s4;
+      max-width: 70%;
     }
-
-    #div_neutrini{
-      grid-area: p4;
-    }
-
     #contentResearch #img_neutrini{
-      grid-area: im4;
       max-width: 20em;
       justify-self: center;
       align-self: center;
     }
-
-    #title_attrezzature{
-      grid-area: t3;
+    #img_fionda{
+      max-width: 70%;
+      position: relative;
+      left: 15%;
+      border-radius: 30em;
     }
 
-    #subtitle_fionda{
-      grid-area: s2;
-    }
-
-    #div_fionda{
-      grid-area: p2;
-    }
-
-    #contentResearch #img_fionda{
-      grid-area: im2;
-      max-width: 25em;
-      max-height: 25em;
-      align-self: center;
-        border-radius: 30em;
-    }
-
-    #subtitle_sonde{
-      grid-area: s3;
-    }
-
-    #div_sonde{
-      grid-area: p3;
-    }
-
-
-    #contentResearch #img_sonda{
-      grid-area: im3;
-      max-width: 30em;
-      max-height: 30em;
-      align-self: center;
+    #img_sonda{
+      width: 90%;
     }
     /*---------------------------------------------------- MODIFICA MISSIONE - GESTIONE ADMIN-------------------------------------------------------------------*/
-    .nav-tgl {
-      color: white;
-    }
     .amministratore-box{
       background-color: #d3d3d3;
       font-weight: bold;
