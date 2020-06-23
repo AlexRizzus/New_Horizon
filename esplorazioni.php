@@ -127,7 +127,7 @@ if($connessioneOK){
       $stringa_missioni .= '<div class="mission-box" id="missionbox' . $counter . '">' .
       "<h2>Nome della missione: " . $valore['nome'] . "</h2>" .
       '<form class="missionform' . $no_disp . '" id="missionForm' . $counter . '" action="esplorazioni.php" method="post" onsubmit="subm();">
-      <fieldset>
+      <fieldset id="fieldser'. $counter .'">
       <label class="actionLabel" for="actionInp' . $counter . '">' . $azioneStr . '</label>
       <input type="hidden" id="actionInp' . $counter . '" name="Azione" value="' . $azione . '"/>
       <label class="notToDisp" for="filterInp' . $counter . '">' . $filtroAttStr . '</label>
