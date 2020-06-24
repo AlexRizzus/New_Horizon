@@ -39,10 +39,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['invio']))
         $oggetto="true";
     }
     if(isset($_SESSION["email"]) && $testo=="true" && $oggetto=="true"){
-        $oggetto= $oggettoConnessione->test_input($_POST["opzioni"]);
-        $testo=$oggettoConnessione->test_input($_POST["testo"]);
-        $oggettoConnessione->add_message($_SESSION["username"], $oggetto, $testo);
-        $paginaHTML=str_replace('<p id="scriptalert"></p>','<script type="text/javascript">window.onload = function(){alert("Mail inviata con successo");}</script>', $paginaHTML);
+        $lunghezzaOggetto=true;
+        $lunghezzaTesto=true;
+       if(strlen($oggetto)>256){
+        $reqOggetto= '<p class = "formerror">Oggetto troppo lungo, massimo 256 caratteri</p>';
+        $paginaHTML=str_replace('<p class="errorOggetto"></p>',$reqOggetto, $paginaHTML);
+       }
+       if(strlen($testo)>1024){
+        $reqTesto = '<p class = "formerror">Il testo è troppo lungo, massimo 1024 caratteri</p>';
+        $paginaHTML=str_replace('<p class="errorTextArea"></p>',$reqTesto, $paginaHTML);
+
+       }
+        if($lunghezzaOggetto && $lunghezzaTesto){
+            $oggetto= $oggettoConnessione->test_input($_POST["opzioni"]);
+            $testo=$oggettoConnessione->test_input($_POST["testo"]);
+            $oggettoConnessione->add_message($_SESSION["username"], $oggetto, $testo);
+            $paginaHTML=str_replace('<p id="scriptalert"></p>','<script type="text/javascript">window.onload = function(){alert("Mail inviata con successo");}</script>', $paginaHTML);
+        }
     }
 } 
 echo($paginaHTML);
