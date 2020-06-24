@@ -128,8 +128,8 @@ if($connessioneOK){
       "<h2>Nome della missione: " . $valore['nome'] . "</h2>" .
       '<form class="missionform' . $no_disp . '" id="missionForm' . $counter . '" action="esplorazioni.php" method="post" onsubmit="subm();">
       <fieldset id="fieldser'. $counter .'">
-      <input title="' . $azioneStr . '" type="hidden" id="actionInp' . $counter . '" name="Azione" value="' . $azione . '"/>
-      <input type="' .$filtroAttStr. '" type="hidden" id="filterInp' . $counter . '" name="filtro" value="' . $luogo_missione . '"/>
+      <input title="' . $azioneStr . '" type="hidden" id="actionInp' . $counter . '" name="Azione'. $counter .'" value="' . $azione . '"/>
+      <input title="' .$filtroAttStr. '" type="hidden" id="filterInp' . $counter . '" name="filtro'. $counter .'" value="' . $luogo_missione . '"/>
       <input title="Missione denominata ' . $valore['nome'] . '" type="hidden" id="nomeInp' . $counter . '" name="Nome_missione" value="' . $valore['nome'] . '"/>
       <button class="button_prefe" type="submit" title="' . $azioneStr . '" name="submitPrefe">'
       . $icon .
