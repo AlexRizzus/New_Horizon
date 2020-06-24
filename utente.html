@@ -9,6 +9,8 @@
     <meta name="language" content="italian it"/>
     <meta name="author" content="Alessandro Rizzo, Emanuele Cisotto, Davide Lazzaro e Paolo Scialpi"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
+<meta http-equiv="Content-Script-Type" content="type"/>
     <link href="style-large.css" rel="stylesheet" type="text/css" media="all" />
     <link href="style-medium.css" rel="stylesheet" type="text/css" media="all" />
     <link href="style-portrait.css" rel="stylesheet" type="text/css" media="all" />
@@ -32,7 +34,7 @@
               </div>
             </div>
                   <!-- bottone per chiudere la navigation mobile -->
-            <a class="nav-tgl" title="menu">&equiv;</a>
+                  <p><a class="nav-tgl">&equiv;</a></p>
                 <div class="admin-content">
                     <h1 >Bentornato <span><username/></span></h1>
                     <p>La tua <span xml:lang="en">e-mail</span>:</p>
@@ -40,7 +42,7 @@
                     <p class="admintext">Esegui il <span xml:lang="en">logout</span></p>
                     <form action="logout.php" method="post">
                       <div>
-                      <button class="adminbutton" type="submit" name="logout"> <img src="images/logout.png" alt="pulsante logout"/> </button>
+                      <button class="adminbutton" type="submit" name="logout" title="logout"> <img src="images/logout.png" alt="pulsante logout"/> </button>
                       </div>
                     </form>
                 </div>
