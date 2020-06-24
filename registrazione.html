@@ -22,7 +22,7 @@
     <div id="login">
       <div id="navigation">
         <div id="navigation-content">
-              <button onclick="location.href='index.php'"  class = "desktop button0" xml:lang="en">Home</button>
+              <button tabindex="0" onclick="location.href='index.php'"  class = "desktop button0" xml:lang="en">Home</button>
               <button onclick="location.href='missioni.php'" class = "desktop button1">Esplorazioni</button>
               <button onclick="location.href='about.html'" class = "desktop button2">Chi siamo</button>
               <button onclick="location.href='collaborazioni.html'" class = "desktop button3">Collaborazioni</button>
@@ -44,34 +44,34 @@
         <form method="post" action="registrazione.php" onsubmit="return validateRegistration()">
           <div>
           <div id="email-error"> </div>
-          <p>email:</p> <input id="emailfield" accesskey="e" tabindex="1" type="text" name="email" title="campo email"/>
+          <p>email:</p> <input id="emailfield" accesskey="e"  type="text" name="email" title="campo email"/>
           <div id="username-error"> </div>
-          <p>username:</p> <input id="userfield" accesskey="u" tabindex="2" type="text" name="username" title="campo username"/>
-          <p>sesso:</p> <select tabindex="3" name="sesso" title="campo sesso">
+          <p>username:</p> <input id="userfield" accesskey="u"  type="text" name="username" title="campo username"/>
+          <p>sesso:</p> <select name="sesso" title="campo sesso">
             <option value="Maschio">Maschio</option>
             <option value="Femmina">Femmina</option>
             <option value="Altro">Altro..</option>
           </select>
-          <p> occupazione:</p> <select tabindex="4" name="occupazione" title="campo occupazione">
+          <p> occupazione:</p> <select  name="occupazione" title="campo occupazione">
             <option value="Studente">Studente</option>
             <option value="Ricercatore">Ricercatore</option>
             <option value="Lavoro nel privato">Lavoro nel privato</option>
             <option value="Altro">Altro..</option>
           </select>
             <div id="password-error"> </div>
-          <p> password:</p> <input id="passfield" accesskey="p" tabindex="5" type="password" name="password" title="campo password"/>
+          <p> password:</p> <input id="passfield" accesskey="p" type="password" name="password" title="campo password"/>
           <div id="successo"> </div>
-          <button tabindex="6" type="submit" name="submit" class="login-button">Conferma</button>
+          <button  type="submit" name="submit" class="login-button">Conferma</button>
         </div>
         </form>
         </div>
-        <p>Sei gi&agrave; registrato? allora ti basta fare il <a tabindex="7" href="login.html"><span xml:lang="en">login</span></a> </p>
-        <p>Problemi con la registrazione? inviaci una <a tabindex="8" href="contattaci.html#invio"><span xml:lang="en">mail</span></a></p>
+        <p>Sei gi&agrave; registrato? allora ti basta fare il <a href="login.html"><span xml:lang="en">login</span></a> </p>
+        <p>Problemi con la registrazione? inviaci una <a href="contattaci.html#invio"><span xml:lang="en">mail</span></a></p>
 
     </div>
     <div>
-      <button name="torna su" title="torna su" id="btnScrollToTop" />
-      <div id="frecciasu"></div>
+      <button name="torna su" title="torna su" id ="btnScrollToTop">
+      <div id="frecciasu"></div></button>
     </div>
     <div id="footer">
       <p class="validation">
@@ -84,7 +84,7 @@
         </a>
       </p>
       <p class ="info"><span xml:lang="en">New Horizon</span><br/> con la collaborazione di:<br/>Cisotto Emanuele, Lazzaro Davide, Rizzo Alessandro, Scialpi Paolo</p>
-      <div class="social"><p>  Seguici su: <img src="images/twitterfooter.png" class="footer-icon" alt="twitter logo"/> <img src="images/facebookfooter.png" class="footer-icon" alt="facebook logo"/> <img src="images/instagramfooter.png" class="footer-icon" alt="instagram logo"/></p>
+      <div class="social"><p>  Seguici su: <img src="images/twitterfooter.png" class="footer-icon" alt="twitter logo" onclick="location.href='contattaci.php'"/> <img src="images/facebookfooter.png" class="footer-icon" alt="facebook logo" onclick="location.href='contattaci.php'"/> <img src="images/instagramfooter.png" class="footer-icon" alt="instagram logo" onclick="location.href='contattaci.php'"/></p>
       </div>
     </div>
   </div>

@@ -101,7 +101,7 @@ if(isset($_SESSION['livello'])){
         }
         $missioni=[];
         $missioni=$oggettoConnessione->getMissioni_perNome($missione);
-        $stringa='<fieldset class="scrittemodificamissione"><legend class="scrittemodificamissione">Missione:</legend><p id="erroreNome"></p>Nome: <input title="Modifica il nome della missione" class="buttoninputmodificamissione" tabindex="1" type="text" name="nome" value="'. $missioni[0]['nome'] .'"/>
+        $stringa='<fieldset class="scrittemodificamissione"><legend class="scrittemodificamissione">Missione:</legend><p id="erroreNome"></p>Nome: <input title="Modifica il nome della missione" class="buttoninputmodificamissione" type="text" name="nome" value="'. $missioni[0]['nome'] .'"/>
         <p id="erroreDataInizio"></p>Data inizio: <input title="Modifica la data inizio missione" class="buttoninputmodificamissione" type="text" name="data_inizio" value="'. $missioni[0]['data_inizio'] .'"/>
         <p id="erroreDataFine"></p>Data di fine: <input title="Modifica la data di fine missione" class="buttoninputmodificamissione"  type="text" name="data_fine" value="'. $missioni[0]['data_fine'] .'"/>
         <p class="scrittemodificamissione">Per lo stato è possibile inserire solamente: in preparazione, in corso, terminata o fallita.</p>

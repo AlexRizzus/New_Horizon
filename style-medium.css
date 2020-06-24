@@ -911,8 +911,6 @@ align-self: center;
 #filtro_scritta{
   text-align: center;
   font-size: 1.2em;
-  // display: inline-block;
-  // margin-left: 40%;
 }
 
 #filtro_attuale{

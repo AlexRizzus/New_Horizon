@@ -24,8 +24,8 @@
     </div>
     <div id="navigation">
       <div id="navigation-content">
-        <button onclick="location.href='index.php'" class="position desktop" xml:lang="en">Home</button>
-        <button onclick="location.href='esplorazioni.php'" class="desktop">Esplorazioni</button>
+        <button onclick="location.href='index.php'" class="position desktop" xml:lang="en" disabled="disabled">Home</button>
+        <button tabindex="0" onclick="location.href='esplorazioni.php'" class="desktop">Esplorazioni</button>
         <button onclick="location.href='about.html'" class="desktop">Chi siamo</button>
         <button onclick="location.href='collaborazioni.html'" class="desktop">Collaborazioni</button>
         <button onclick="location.href='ricerca.html'" class="desktop">Ricerca</button>
@@ -68,16 +68,16 @@
     </div>
     <div class="item4">
       <p>Partecipiamo a missioni in tutto il sistema solare e anche oltre in collaborazione con le altre agenzie spaziali, con i migliori astronauti e tecnologie all&apos;avanguardia.<br/>
-      <button tabindex="4" type="button" class="find-more-button" name="missioni-scopri" onclick="location.href='esplorazioni.php'" title="scopri tecnologie">scopri di pi&ugrave;</button></p>
+      <button  type="button" class="find-more-button" name="missioni-scopri" onclick="location.href='esplorazioni.php'" title="scopri tecnologie">scopri di pi&ugrave;</button></p>
     </div>
     <div class="item5" ><p>Ad oggi abbiamo sedi sparse in tutto il mondo, centri di ricerca in Europa e Stati Uniti, osservatori in Sud-America e centri di lancio in Cina. Ma stiamo gi&agrave; partecipando agli studi per costruire nel prossimo futuro una base sul suolo lunare. <br/>
-      <button tabindex="5" type="button" class="find-more-button" name="missioni-scopri" onclick="location.href='about.html'" title="scopri su di noi">scopri di pi&ugrave;</button></p></div>
+      <button type="button" class="find-more-button" name="missioni-scopri" onclick="location.href='about.html'" title="scopri su di noi">scopri di pi&ugrave;</button></p></div>
     <div class="item6"><img src="images/lunar-base.png" alt="base lunare"/></div>
     <div class="item7"><img src="images/space-telescope.png" alt="telescopio"/></div>
-    <div class="item8"><p> Nel mentre studiamo lo spazio da qui nei nostri centri di ricerca e utilizziamo quei dati per dare spiegazioni a tutti quei fenomeni che ancora non conosciamo.<br/><button tabindex="6" type="button" class="find-more-button" name="missioni-scopri" onclick="location.href='ricerca.html'" title="scopri il futuro">scopri di pi&ugrave;</button></p></div>
+    <div class="item8"><p> Nel mentre studiamo lo spazio da qui nei nostri centri di ricerca e utilizziamo quei dati per dare spiegazioni a tutti quei fenomeni che ancora non conosciamo.<br/><button type="button" class="find-more-button" name="missioni-scopri" onclick="location.href='ricerca.html'" title="scopri il futuro">scopri di pi&ugrave;</button></p></div>
     <div>
-          <button tabindex="33" name="torna su" title="torna su" id ="btnScrollToTop"/>
-          <div id="frecciasu"></div>
+          <button name="torna su" title="torna su" id ="btnScrollToTop">
+          <div id="frecciasu"></div></button>
     </div>
   </div>
 <div id="footer">
@@ -91,7 +91,7 @@
     </a>
   </p>
   <p class ="info"><span xml:lang="en">New Horizon</span><br/> con la collaborazione di:<br/>Cisotto Emanuele, Lazzaro Davide, Rizzo Alessandro, Scialpi Paolo</p>
-  <div class="social"><p>  Seguici su: <img src="images/twitterfooter.png" class="footer-icon" alt="twitter logo"/> <img src="images/facebookfooter.png" class="footer-icon" alt="facebook logo"/> <img src="images/instagramfooter.png" class="footer-icon" alt="instagram logo"/></p>
+  <div class="social"><p>  Seguici su: <img src="images/twitterfooter.png" class="footer-icon" alt="twitter logo" onclick="location.href='contattaci.php'"/> <img src="images/facebookfooter.png" class="footer-icon" alt="facebook logo" onclick="location.href='contattaci.php'"/> <img src="images/instagramfooter.png" class="footer-icon" alt="instagram logo" onclick="location.href='contattaci.php'"/></p>
   </div>
 </div>
 <script  src="index.js" type="text/javascript"></script>
