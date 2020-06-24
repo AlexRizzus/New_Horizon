@@ -19,7 +19,7 @@
 <body>
   <div id="navigation">
     <div id="navigation-content">
-      <button onclick="location.href='index.php'" class="desktop" xml:lang="en">Home</button>
+      <button tabindex="0" onclick="location.href='index.php'" class="desktop" xml:lang="en">Home</button>
       <button onclick="location.href='esplorazioni.php'" class="desktop">Esplorazioni</button>
       <button onclick="location.href='about.html'" class="desktop">Chi siamo</button>
       <button onclick="location.href='collaborazioni.html'" class="desktop">Collaborazioni</button>
@@ -34,8 +34,6 @@
   <!-- bottone per chiudere la navigation mobile -->
   <div>
     <a class="nav-tgl" title="menu">&equiv;</a>
-    <button name="torna su" title="torna su" id ="btnScrollToTop"/>
-    <div id="frecciasu"></div>
   </div>
   <div id="contentResearch" class="content">
     <h1 id="title_avanguardia">AVANGUARDIA SPAZIALE</h1>
@@ -68,6 +66,10 @@
     </div>
     <img id="img_sonda" src="images/sonda.png" alt="immagine di una sonda a 6 ruote con scheletro costruito con una lega composita di colore bianco"/>
   </div>
+  <div>
+    <button name="torna su" title="torna su" id ="btnScrollToTop">
+    <div id="frecciasu"></div></button>
+  </div>
   <div id="footer">
     <p class="validation">
       <a href="http://validator.w3.org/check?uri=referer"><img
@@ -79,7 +81,7 @@
         </a>
       </p>
       <p class ="info"><span xml:lang="en">New Horizon</span><br/> con la collaborazione di:<br/>Cisotto Emanuele, Lazzaro Davide, Rizzo Alessandro, Scialpi Paolo</p>
-      <div class="social"><p>  Seguici su: <img src="images/twitterfooter.png" class="footer-icon" alt="twitter logo"/> <img src="images/facebookfooter.png" class="footer-icon" alt="facebook logo"/> <img src="images/instagramfooter.png" class="footer-icon" alt="instagram logo"/></p>
+      <div class="social"><p>  Seguici su: <img src="images/twitterfooter.png" class="footer-icon" alt="twitter logo" onclick="location.href='contattaci.php'"/> <img src="images/facebookfooter.png" class="footer-icon" alt="facebook logo" onclick="location.href='contattaci.php'"/> <img src="images/instagramfooter.png" class="footer-icon" alt="instagram logo" onclick="location.href='contattaci.php'"/></p>
       </div>
     </div>
     <script  src="index.js" type="text/javascript"></script>

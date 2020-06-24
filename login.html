@@ -22,7 +22,7 @@
     <div id="login">
       <div id="navigation">
         <div id="navigation-content">
-            <button onclick="location.href='index.php'"  class = "desktop button0" xml:lang="en">Home</button>
+            <button tabindex="0" onclick="location.href='index.php'"  class = "desktop button0" xml:lang="en">Home</button>
             <button onclick="location.href='esplorazioni.php'" class = "desktop button1">Esplorazioni</button>
             <button onclick="location.href='about.html'" class = "desktop button2">Chi siamo</button>
             <button onclick="location.href='collaborazioni.html'" class = "desktop button3">Collaborazioni</button>
@@ -43,14 +43,18 @@
         <h2>Inserisci <span xml:lang="en">username</span> e <span xml:lang="en">password</span></h2>
         <div id="login-error"> </div>
         <div id="username-error"> </div>
-          <p>Username:</p> <input id="userfield" accesskey="u" tabindex="1" type="text" name="username" title="username field"/>
+          <p>Username:</p> <input id="userfield" accesskey="u"  type="text" name="username" title="username field"/>
         <div id="password-error"> </div>
-          <p>Password:</p> <input id="passfield" accesskey="p" tabindex="2" type="password" name="password" title="password field"/>
-          <button tabindex="3" type="submit" name="submit" class="login-button">Conferma</button>
-        <p>Non sei ancora registrato? <button tabindex="4" type="button" onclick="location.href='registrazione.php'" name="login" class="login-button">registrati</button> </p>
+          <p>Password:</p> <input id="passfield" accesskey="p"  type="password" name="password" title="password field"/>
+          <button type="submit" name="submit" class="login-button">Conferma</button>
+        <p>Non sei ancora registrato? <button  type="button" onclick="location.href='registrazione.php'" name="login" class="login-button">registrati</button> </p>
       </div>
-        <p>Se non ti ricordi il tuo <span xml:lang="en">username</span> o la tua <span xml:lang="en">password</span>, hai qualche problema o vuoi semplicemente farci sapere quanto adori questo sito, inviaci una <a id="login_mail" tabindex="5" href="contattaci.html#invio"><span xml:lang="en">mail</span></a></p>
+        <p>Se non ti ricordi il tuo <span xml:lang="en">username</span> o la tua <span xml:lang="en">password</span>, hai qualche problema o vuoi semplicemente farci sapere quanto adori questo sito, inviaci una <a id="login_mail"  href="contattaci.html#invio"><span xml:lang="en">mail</span></a></p>
       </form>
+    </div>
+    <div>
+      <button name="torna su" title="torna su" id ="btnScrollToTop">
+      <div id="frecciasu"></div></button>
     </div>
     <div id="footer">
       <p class="validation">
@@ -63,7 +67,7 @@
         </a>
       </p>
       <p class ="info"><span xml:lang="en">New Horizon</span><br/> con la collaborazione di:<br/>Cisotto Emanuele, Lazzaro Davide, Rizzo Alessandro, Scialpi Paolo</p>
-      <div class="social"><p>  Seguici su: <img src="images/twitterfooter.png" class="footer-icon" alt="twitter logo"/> <img src="images/facebookfooter.png" class="footer-icon" alt="facebook logo"/> <img src="images/instagramfooter.png" class="footer-icon" alt="instagram logo"/></p>
+      <div class="social"><p>  Seguici su: <img src="images/twitterfooter.png" class="footer-icon" alt="twitter logo" onclick="location.href='contattaci.php'"/> <img src="images/facebookfooter.png" class="footer-icon" alt="facebook logo" onclick="location.href='contattaci.php'"/> <img src="images/instagramfooter.png" class="footer-icon" alt="instagram logo" onclick="location.href='contattaci.php'"/></p>
       </div>
     </div>
   </div>
