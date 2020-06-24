@@ -16,8 +16,8 @@ $connessioneOK=$oggettoConnessione->openDBConnection();
       $paginaHTML = str_replace("<tabellapreferiti/>","<div id='contentMission'><missions/> </div>",$paginaHTML);
       $missioni = $oggettoConnessione->getMissioniPrefe($_SESSION['username']);
       if(isset($missioni)) {
+        $stringa_missioni = "";
         foreach($missioni as $valore){
-          $stringa_missioni = "";
           $data_ini = "N/A";
           $data_fin = "N/A";
           if($valore['data_inizio'] != null)
