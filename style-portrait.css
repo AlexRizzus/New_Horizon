@@ -637,6 +637,10 @@
     background-color:#002125;
     color:#d3d3d3;
   }
+  #selezionaoccupazione, #selezionasesso{
+    position: relative;
+    left: -10%;
+  }
 
   /* --------------- COLLABORAZIONI --------------------------------------------- */
 
