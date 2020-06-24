@@ -17,7 +17,7 @@
       {
           $error = "<span class='error'>Password troppo corta</span>";
       }
-      if(!strstr("@",$email))
+      if(!preg_match("/^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9])*$/",$email))
       {
         $error = "<span class='error'> email non valida</span>";
       }
@@ -38,7 +38,7 @@ if($connessioneOK)
         else {
           $sesso = 'F';
         }
-        $occupazione = ['occupazione'];
+        $occupazione = $_POST['occupazione'];
         $errori = checkInput($username,$email,$password);
         if(!($errori == "")){
           if (strstr($errori,"Nome"))
@@ -58,13 +58,11 @@ if($connessioneOK)
         }
         else{
         $query= "SELECT username FROM Utenti WHERE username = '" . $username . "'" ;
-        echo($query);
         $result = mysqli_query($oggettoConnessione->connection, $query);
         if(mysqli_num_rows($result) == 0)
         {
-          $query= "INSERT INTO Utenti VALUES ('" . $username . "' , '" . $password . "' , '" . $sesso ."' , '" . $email ."' , '" . $occpuazione ."' , 'generico')" ;
+          $query= "INSERT INTO Utenti VALUES ('" . $username . "' , '" . $password . "' , '" . $sesso ."' , '" . $email ."' , '" . $occupazione ."' , 'generico')" ;
           $result = mysqli_query($oggettoConnessione->connection, $query);
-          echo($query);
           if($result)
           {
            $paginaHTML = str_replace('<div id="successo"> </div>',"<span>Congratulazioni! sei registrato.</span>", $paginaHTML);
