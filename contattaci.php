@@ -4,7 +4,9 @@ $oggettoConnessione=new DBAccess();
 $connessioneOK=$oggettoConnessione->openDBConnection();
 $paginaHTML = file_get_contents('contattaci.html');
 session_start();
-
+if(isset($_SESSION['livello'])){
+    $paginaHTML=str_replace('<button  onclick="location.href=\'login.php\'" class="desktop button6" xml:lang="en">Login</button>','<button  onclick="location.href=\'login.php\'" class="desktop button6" xml:lang="en">Profilo</button>', $paginaHTML); 
+}
 $stringa='<form id="formid" class="form" action="contattaci.php" method="post"><p class="errorEmail"></p>
 <div><p class = "formdescription">Inserisci qui l&#8217;oggetto del tuo messaggio</p><label class = "formdescription" for="oggetto">Oggetto del messaggio: </label><input id="oggetto" class="inputform" type="text" name="opzioni"/>
 <p class="errorOggetto"></p></div>

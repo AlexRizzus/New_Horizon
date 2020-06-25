@@ -3,17 +3,23 @@
     $oggettoConnessione=new DBAccess();
     $connessioneOK=$oggettoConnessione->openDBConnection();
     $paginaHTML = file_get_contents('home.html');
+    session_start();
     $count=1;
 
     if($connessioneOK){
         $query="SELECT nome, data_inizio, stato FROM Missioni ORDER BY data_inizio DESC LIMIT 3";
-		$queryResult=mysqli_query($oggettoConnessione->connection, $query);
+        $queryResult=mysqli_query($oggettoConnessione->connection, $query);
+        
+        
 
 		if(mysqli_num_rows($queryResult)==0){
 
             echo("risultato query vuoto");
 
         }else{
+            if(isset($_SESSION['livello'])){
+                $paginaHTML=str_replace('<button onclick="location.href=\'login.php\'" class="desktop" xml:lang="en">Login</button>','<button onclick="location.href=\'login.php\'" class="desktop" xml:lang="en">Profilo</button>', $paginaHTML); 
+            }
 
             $result=array();
             while($row=mysqli_fetch_assoc($queryResult)){

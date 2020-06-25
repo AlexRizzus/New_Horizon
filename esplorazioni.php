@@ -8,6 +8,12 @@ session_start();
 global $luogo_missione;
 
 if($connessioneOK){
+
+  if(isset($_SESSION['livello'])){
+    $paginaHTML=str_replace('<button onclick="location.href=\'login.php\'" class="desktop button6" xml:lang="en">Login</button>','<button onclick="location.href=\'login.php\'" class="desktop button6" xml:lang="en">Profilo</button>', $paginaHTML); 
+  }
+
+
   if (isset($_POST['submitPrefe']))
   {
     $missione = $_POST['Nome_missione'];

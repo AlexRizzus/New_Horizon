@@ -1,10 +1,10 @@
 <?php
 
 class DBAccess{
-  const HOST_DB = 'localhost:3306';
-  const USERNAME = 'root';
-  const PASSWORD = '';
-  const DATABASE_NAME = 'my_meowhorizon';
+  const HOST_DB = '';
+  const USERNAME = 'dlazzaro';
+  const PASSWORD = 'ke3Ohgeef0woir0o';
+  const DATABASE_NAME = 'dlazzaro';
 
   public $connection = null;
 
