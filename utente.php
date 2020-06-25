@@ -39,6 +39,9 @@ $connessioneOK=$oggettoConnessione->openDBConnection();
           "</div>";
         }
       }
+      else{
+        $paginaHTML = str_replace('<p class="testo-amministrazione" >Ecco le tue spedizioni preferite:</p>', '<p class="testo-amministrazione" >Non hai ancora delle missioni preferite</p>', $paginaHTML);
+      }
         if(isset($stringa_missioni)) {
           $paginaHTML = str_replace("<missions/>",$stringa_missioni,$paginaHTML);
         }

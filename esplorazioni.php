@@ -10,7 +10,7 @@ global $luogo_missione;
 if($connessioneOK){
 
   if(isset($_SESSION['livello'])){
-    $paginaHTML=str_replace('<button onclick="location.href=\'login.php\'" class="desktop button6" xml:lang="en">Login</button>','<button onclick="location.href=\'login.php\'" class="desktop button6" xml:lang="en">Profilo</button>', $paginaHTML); 
+    $paginaHTML=str_replace('<button onclick="location.href=\'login.php\'" class="desktop  " xml:lang="en">Login</button>','<button onclick="location.href=\'login.php\'" class="desktop  " xml:lang="en">Profilo</button>', $paginaHTML); 
   }
 
 
@@ -87,7 +87,7 @@ if($connessioneOK){
     $counter = 0;
     foreach($missioni as $valore){
       $counter++;
-      if(isset($_SESSION['username']))
+      if(isset($_SESSION['username']) &&  $_SESSION['livello'] !== "amministratore")
       {
         $no_disp = '';
         if(is_array($missioni_preferite_utente) === true)
