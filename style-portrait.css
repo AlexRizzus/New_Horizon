@@ -666,8 +666,13 @@
     display: grid;
     grid-template-areas: 'cm1' 'cm2';
   }
+#metetImgPara {
+  max-width: 100%;
+}
+
   #meetimage
   {
+    max-width: 100%;
     grid-area: cm1;
     max-width: 18em;
     max-height: 13em;
