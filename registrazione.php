@@ -65,7 +65,7 @@ if($connessioneOK)
           $result = mysqli_query($oggettoConnessione->connection, $query);
           if($result)
           {
-           $paginaHTML = str_replace('<div id="successo"> </div>',"<span>Congratulazioni! sei registrato.</span>", $paginaHTML);
+           $paginaHTML = str_replace('<div id="successo"> </div>',"<span id='reg_succ'>Congratulazioni! sei registrato.</span>", $paginaHTML);
           }
           else {
             $paginaHTML = str_replace('<div id="successo"> </div>',"<span class='error'>Sembra ci sia stato qualche problema, prova a ricompilare il form.</span>", $paginaHTML);
