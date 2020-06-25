@@ -7,6 +7,7 @@ session_start();
 
 if(isset($_SESSION['livello'])){
     if($_SESSION['livello'] == "amministratore"){
+        if(!isset($_POST['nome'])){
             $stringa='<fieldset class="scrittemodificamissione"><legend class="scrittemodificamissione">Missione:</legend>
             <p id="erroreNome"></p>Nome: <input title="Inserisci il nome della missione"  class="buttoninputmodificamissione" type="text" name="nome"/>
             <p id="erroreDataInizio"></p>Data inizio nel formato YYYY-MM-DD: <input title="Inserisci la data iniziale"  class="buttoninputmodificamissione" type="text" name="data_inizio"/>
@@ -19,7 +20,7 @@ if(isset($_SESSION['livello'])){
             <div><input type="hidden" name="key"/>
             <button  class="buttonmodificamissione" type="submit" name="add">Invia</button></div>';
             $paginaHTML=str_replace('<p id="campiDati"></p>',$stringa, $paginaHTML);
-
+        }
         if (isset($_POST['add'])) {
             $nome= $data_inizio =$data_fine=$stato=$affiliazioni=$destinazione=$scopo= "";
             $missione=$_POST['key'];
