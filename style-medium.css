@@ -454,7 +454,7 @@ grid-template-areas:  'c  .'
 
 #Meeting{
   display: grid;
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns: 3fr 7fr;
   grid-template-areas: 'cm1 cm2';
 }
 #meetimage
