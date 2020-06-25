@@ -992,6 +992,10 @@ align-self: center;
   background-color: #001115;
 }
 
+#reg_succ {
+  display: block;
+}
+
 #login-box{
   background-color: #d3d3d3;
   padding: 4em 0;
